@@ -1,0 +1,9 @@
+{
+  "base_types": [
+    { "id": "fox_spirit", "name": "Hồ Ly Tinh", "icon": "🦊" },
+    { "id": "jiangshi", "name": "Cương Thi", "icon": "💀" },
+    { "id": "oni", "name": "Quỷ Dạ Xoa", "icon": "👁️" }
+  ],
+  "world_adjective": "Yêu Ma",
+  "skills": ["Mê Hoặc", "Hút Hồn", "Cuồng Nộ"]
+}

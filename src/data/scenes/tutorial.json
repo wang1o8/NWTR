@@ -1,0 +1,99 @@
+{
+  "start": {
+    "id": "start",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Chà, lại một mảnh rác nữa trôi dạt vào bờ biển của Điểm Giao Thoa (Nexus). Ngươi có còn nhớ tên mình không?",
+    "choices": [
+      {
+        "text": "Hình như là {playerName}. Dù sao ở đây cũng chẳng quan trọng.",
+        "next": "explain"
+      }
+    ]
+  },
+  "explain": {
+    "id": "explain",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Tôi nhìn xung quanh. Không có gì ngoài một màu xám xịt cuộn xoáy. Quê hương tôi đã biến mất. Hóa thành tro bụi, hay thủy tinh, hay hư vô. Tôi thậm chí không thể nhớ khuôn mặt của những người tôi đã bỏ lại. Chỉ còn lại... sự trống rỗng này.",
+    "choices": [
+      {
+        "text": "\"Vậy, cái giá phải trả là gì? Tôi đã chết rồi sao?\"",
+        "next": "show_worlds"
+      }
+    ]
+  },
+  "show_worlds": {
+    "id": "show_worlds",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Chưa chết. Chỉ là... mất đi sự ràng buộc. Ngươi giờ là một Kẻ Lang Thang (Wanderer). Có những thế giới khác, mỗi thế giới đều vỡ vụn theo một cách riêng. Và nhìn kìa, một ủy ban chào mừng. Một con Slime Hư Vô.",
+    "choices": [
+      {
+        "text": "\"Tuyệt. Ngay cả hư vô cũng có sâu bọ.\" (Lẻn qua)",
+        "roll": { "stat": "dex", "target": 12, "successScene": "win_tutorial", "failScene": "tutorial_battle" }
+      },
+      {
+        "text": "\"Hãy kết thúc chuyện này nhanh đi.\" (Tấn công)",
+        "next": "tutorial_battle"
+      }
+    ]
+  },
+  "tutorial_battle": {
+    "id": "tutorial_battle",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Khối chất lỏng vô định hình lao về phía tôi. Thật tuyệt vời.",
+    "battle": {
+      "monsterId": "slime",
+      "winScene": "win_tutorial",
+      "loseScene": "lose_tutorial"
+    }
+  },
+  "win_tutorial": {
+    "id": "win_tutorial",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Ngươi sống sót. Vừa vặn. Các cánh cổng đang mở ra. Hãy chọn liều thuốc độc của ngươi, Kẻ Lang Thang.",
+    "choices": [
+      {
+        "text": "Bước vào cổng Vương Quốc Sương Mù. \"Để xem nơi này thảm hại đến mức nào.\"",
+        "next": "fantasy_start",
+        "sets": { "flags": ["visited_fantasy"], "worldStats": { "day": 1, "loop_count": 0 } }
+      }
+    ]
+  },
+  "lose_tutorial": {
+    "id": "lose_tutorial",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Ngươi đã gục ngã. Nhưng hư vô không dễ dàng buông tha như vậy. Ngươi mất đi một mảnh linh hồn, nhưng lại tỉnh giấc.",
+    "choices": [
+      {
+        "text": "\"Cái chết cũng là một thứ xa xỉ, tôi đoán vậy.\"",
+        "next": "start",
+        "sets": { "stats": { "hp": 20 } }
+      }
+    ]
+  },
+  "game_over": {
+    "id": "game_over",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Linh hồn của bạn cuối cùng cũng vỡ vụn. Hư vô hoàn toàn nuốt chửng bạn. Không còn lại gì cả.",
+    "choices": [
+      {
+        "text": "Hòa mình vào hư vô. (Chơi lại)",
+        "next": "start",
+        "sets": { "stats": { "hp": 20, "lives": 3, "memoryFragments": 0, "affection_mage": 0, "affection_fox": 0, "gold": 0 } }
+      }
+    ]
+  }
+}

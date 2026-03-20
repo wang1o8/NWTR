@@ -1,0 +1,95 @@
+{
+  "postapoc_start": {
+    "id": "postapoc_start",
+    "world": "postapoc",
+    "speaker": null,
+    "text": "Thế giới thứ tư. Một vùng đất hoang tàn đầy rỉ sét và bụi bặm. Bầu trời mang một màu tím bầm dập. Nó làm tôi nhớ đến quê nhà, ngay trước ngày tận thế.",
+    "choices": [
+      { "text": "Tìm kiếm trong đống đổ nát.", "next": "postapoc_ruins" },
+      { "text": "Đi về phía cột khói.", "next": "postapoc_trader" }
+    ]
+  },
+  "postapoc_ruins": {
+    "id": "postapoc_ruins",
+    "world": "postapoc",
+    "speaker": null,
+    "text": "Tôi đào bới đống xà bần. Một con chuột cống khổng lồ đột biến lao ra, nhe nanh. Nó đang chết đói. Tôi cũng vậy.",
+    "battle": { 
+      "monsterId": "giant_rat",
+      "winScene": "postapoc_end",
+      "loseScene": "game_over"
+    }
+  },
+  "postapoc_trader": {
+    "id": "postapoc_trader",
+    "world": "postapoc",
+    "speaker": "trader",
+    "text": "Một thương nhân ngồi bên đống lửa, đang nướng một thứ gì đó không thể nhận ra. 'Trông cậu như thể vừa đi bộ cả ngàn dặm vậy. Tôi có áo giáp, nếu cậu có tiền.'",
+    "choices": [
+      { "text": "Mua nâng cấp áo giáp (20 Vàng)", "requires": { "stats": { "gold": ">=20" } }, "sets": { "stats": { "gold": "-20", "armor": "+1" } }, "next": "postapoc_end" },
+      { "text": "\"Tôi không cần áo giáp. Tôi cần câu trả lời.\"", "next": "postapoc_trader_talk" }
+    ]
+  },
+  "postapoc_trader_talk": {
+    "id": "postapoc_trader_talk",
+    "world": "postapoc",
+    "speaker": "trader",
+    "text": "Hắn bật cười, một âm thanh khô khốc, lách cách. 'Câu trả lời ư? Ở vùng đất hoang này sao? Câu trả lời duy nhất ở đây là sinh tồn. Nhưng tôi có tìm thấy hòn đá lấp lánh này. Của cậu với giá 10 vàng.'",
+    "choices": [
+      { "text": "Mua Mảnh Ký Ức (10 Vàng)", "requires": { "stats": { "gold": ">=10" } }, "sets": { "stats": { "gold": "-10", "memoryFragments": "+1" } }, "next": "postapoc_end" },
+      { "text": "\"Giữ lấy đi.\"", "next": "postapoc_end" }
+    ]
+  },
+  "postapoc_end": {
+    "id": "postapoc_end",
+    "world": "postapoc",
+    "speaker": null,
+    "text": "Tôi đứng ở rìa vùng đất hoang. Gió rít gào. Tôi đã thu thập được những mảnh vỡ của quá khứ, nhưng bức tranh vẫn chưa hoàn chỉnh. Liệu đây có phải là tất cả?",
+    "choices": [
+      { "text": "Đối mặt với Sự Thật (Cần 3 Mảnh Ký Ức)", "requires": { "stats": { "memoryFragments": ">=3" } }, "next": "true_ending" },
+      { "text": "Kêu gọi những mối liên kết (Cần Hảo Cảm Pháp Sư & Hồ Ly)", "requires": { "stats": { "affection_mage": ">=1", "affection_fox": ">=1" } }, "next": "secret_ending" },
+      { "text": "Tiếp tục lang thang.", "next": "start" }
+    ]
+  },
+  "secret_ending": {
+    "id": "secret_ending",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Tôi nhắm mắt lại, không phải để nhớ về quá khứ, mà là nhớ về những người tôi đã gặp. Nụ cười buồn bã của cô pháp sư, tiếng cười tinh nghịch của nàng hồ ly. Hư Không dường như không còn quá trống rỗng nữa. Tôi không cần phải xây dựng lại thế giới cũ. Tôi đã có một thế giới mới.",
+    "choices": [
+      { "text": "Bắt đầu lại", "next": "start", "sets": { "stats": { "hp": 20, "memoryFragments": 0, "affection_mage": 0, "affection_fox": 0 } } }
+    ]
+  },
+  "true_ending": {
+    "id": "true_ending",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Những mảnh vỡ cộng hưởng. Một ánh sáng chói lòa. Tôi nhớ ra rồi. Tôi nhớ ngọn lửa. Tôi nhớ những khuôn mặt. Đó không phải lỗi của tôi. Nhưng tôi đã không thể ngăn cản nó. Điểm Nối mở ra một con đường cuối cùng.",
+    "choices": [
+      { "text": "Bước vào ánh sáng. Cố gắng xây dựng lại.", "next": "ending_rebuild" },
+      { "text": "Quay lưng lại. Tìm một ngôi nhà mới trong đống tro tàn.", "next": "ending_wander" }
+    ]
+  },
+  "ending_rebuild": {
+    "id": "ending_rebuild",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Tôi bước qua. Thật khó khăn. Thật đau đớn. Nhưng lần đầu tiên sau một thời gian dài, tôi cảm thấy một điều gì đó khác ngoài sự trống rỗng. Tôi cảm thấy hy vọng. [KẾT CỤC THỰC SỰ: NGƯỜI KIẾN TẠO]",
+    "choices": [
+      { "text": "Bắt đầu lại", "next": "start", "sets": { "stats": { "hp": 20, "memoryFragments": 0, "affection_mage": 0, "affection_fox": 0 } } }
+    ]
+  },
+  "ending_wander": {
+    "id": "ending_wander",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Tôi để những mảnh vỡ tan biến vào Hư Không. Quá khứ đã chết. Tôi là Kẻ Lang Thang. Và vẫn còn những thế giới cần đến tôi. [KẾT CỤC THỰC SỰ: KẺ LANG THANG VĨNH CỬU]",
+    "choices": [
+      { "text": "Bắt đầu lại", "next": "start", "sets": { "stats": { "hp": 20, "memoryFragments": 0, "affection_mage": 0, "affection_fox": 0 } } }
+    ]
+  }
+}

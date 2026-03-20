@@ -1,0 +1,70 @@
+{
+  "eastern_start": {
+    "id": "eastern_start",
+    "world": "eastern",
+    "speaker": null,
+    "text": "Thế giới thứ ba. Những ngọn núi mờ sương trông như một bức tranh thủy mặc. Gần như là yên bình. Gần như vậy. Sự tĩnh lặng này quá nặng nề.",
+    "choices": [
+      { "text": "Leo lên ngôi đền.", "next": "eastern_temple" },
+      { "text": "Đi dọc theo dòng sông.", "next": "eastern_river" }
+    ]
+  },
+  "eastern_temple": {
+    "id": "eastern_temple",
+    "world": "eastern",
+    "speaker": "monk",
+    "text": "Một nhà sư già đang quét dọn sân. Ông ta không ngẩng lên nhìn. 'Thí chủ mang một gánh nặng quá lớn. Quá khứ là một bóng ma chỉ ám ảnh những ai để cho nó làm vậy.'",
+    "choices": [
+      { "text": "\"Những bóng ma của tôi rất chân thực.\"", "next": "eastern_temple_talk" },
+      { "text": "Mặc kệ ông ta quét dọn.", "next": "eastern_river" }
+    ]
+  },
+  "eastern_temple_talk": {
+    "id": "eastern_temple_talk",
+    "world": "eastern",
+    "speaker": "monk",
+    "text": "Ông ta dừng chổi. 'Vậy thì có lẽ thí chủ nên hỏi Hồ Ly Tinh bên bờ sông. Cô ta thu thập những thứ bị đánh mất. Kể cả ký ức.'",
+    "choices": [
+      { "text": "\"Cảm ơn vì lời khuyên.\"", "next": "eastern_river" }
+    ]
+  },
+  "eastern_river": {
+    "id": "eastern_river",
+    "world": "eastern",
+    "speaker": "fox_spirit",
+    "text": "Một người phụ nữ với chín cái đuôi mờ ảo ngồi bên bờ nước. 'Ngươi có mùi của tro tàn và sự hối tiếc. Muốn chơi một trò chơi không? Thắng, ta sẽ trả lại một phần những gì ngươi đã mất. Thua, ngươi phải giao sinh lực cho ta.'",
+    "choices": [
+      { "text": "\"Tôi không còn nhiều sinh lực để cho đâu.\"", "roll": { "stat": "int", "target": 14, "successScene": "eastern_game_win", "failScene": "eastern_game_lose" } },
+      { "text": "\"Không hứng thú.\"", "next": "eastern_demon" }
+    ]
+  },
+  "eastern_game_win": {
+    "id": "eastern_game_win",
+    "world": "eastern",
+    "speaker": "fox_spirit",
+    "text": "Cô ta bĩu môi, đưa ra một mảnh vỡ phát sáng. 'Ngươi thật nhàm chán. Nhưng thỏa thuận là thỏa thuận.' Tôi chạm vào mảnh vỡ. Một khuôn mặt xẹt qua. Một người tôi từng yêu? Nó biến mất quá nhanh.",
+    "choices": [
+      { "text": "Lấy mảnh vỡ. (Nhận Mảnh Ký Ức, +1 Hảo Cảm Hồ Ly)", "sets": { "stats": { "memoryFragments": "+1", "affection_fox": "+1" } }, "next": "eastern_demon" }
+    ]
+  },
+  "eastern_game_lose": {
+    "id": "eastern_game_lose",
+    "world": "eastern",
+    "speaker": "fox_spirit",
+    "text": "Cô ta cười lớn, âm thanh như tiếng chuông reo. 'Quá chậm.' Tôi cảm thấy một luồng khí lạnh lan tỏa trong ngực khi cô ta hút lấy sinh khí của tôi.",
+    "choices": [
+      { "text": "Chịu đựng nỗi đau. (Mất HP)", "sets": { "stats": { "hp": "-5" } }, "next": "eastern_demon" }
+    ]
+  },
+  "eastern_demon": {
+    "id": "eastern_demon",
+    "world": "eastern",
+    "speaker": null,
+    "text": "Dòng sông sục sôi. Một con quỷ chìm trong ngọn lửa xanh trồi lên từ đáy sâu. Nó gào thét, một âm thanh của sự đau đớn tột cùng. Nó không muốn chiến đấu. Nó chỉ muốn nỗi đau dừng lại. Tôi có thể đồng cảm với điều đó.",
+    "battle": { 
+      "monsterId": "blue_demon",
+      "winScene": "postapoc_start",
+      "loseScene": "game_over"
+    }
+  }
+}

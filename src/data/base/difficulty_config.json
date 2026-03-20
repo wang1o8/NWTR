@@ -1,0 +1,61 @@
+{
+  "monster_scaling": {
+    "hp_per_scene": 2.5,
+    "atk_per_scene": 0.8,
+    "def_per_scene": 0.4,
+    "exp_per_scene": 1.5,
+    "gold_per_scene": 1.2
+  },
+  "elite_events": {
+    "trigger_threshold": {
+      "power_ratio": 1.5,
+      "min_scenes": 20
+    },
+    "types": [
+      {
+        "id": "world_boss_early",
+        "name": "Thế Giới Chủ Xuất Hiện Sớm",
+        "description": "Một thực thể hùng mạnh xuất hiện trước thời hạn, chặn đứng mọi ngả đường tìm kiếm tài nguyên.",
+        "effect": "blocks_loot_paths"
+      },
+      {
+        "id": "curse_event",
+        "name": "Lời Nguyền Của Thế Giới",
+        "description": "Thế giới này đang cố gắng đào thải bạn.",
+        "effect": "stat_debuff"
+      },
+      {
+        "id": "ambush",
+        "name": "Phục Kích Bất Ngờ",
+        "description": "Kẻ thù đã chờ sẵn bạn từ lâu.",
+        "effect": "forced_combat"
+      }
+    ]
+  },
+  "catch_up_events": {
+    "trigger_threshold": {
+      "power_ratio": 0.6,
+      "min_scenes": 30
+    },
+    "types": [
+      {
+        "id": "mysterious_benefactor",
+        "name": "Ân Nhân Bí Ẩn",
+        "description": "Một bóng người lạ mặt để lại cho bạn một gói đồ cứu trợ.",
+        "effect": "grant_items"
+      },
+      {
+        "id": "safe_zone",
+        "name": "Vùng An Toàn",
+        "description": "Bạn tìm thấy một nơi trú ẩn an toàn để hồi phục sức lực.",
+        "effect": "full_heal"
+      },
+      {
+        "id": "skill_scroll",
+        "name": "Cuộn Giấy Kỹ Năng",
+        "description": "Một kiến thức cổ xưa giúp bạn đột phá sức mạnh.",
+        "effect": "grant_skill"
+      }
+    ]
+  }
+}

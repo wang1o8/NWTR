@@ -1,0 +1,12 @@
+{
+  "true_end": {
+    "id": "true_end",
+    "name": "Chủ Nhân Các Thế Giới",
+    "description": "Bạn đã chinh phục mọi thế giới và tìm ra sự thật."
+  },
+  "bad_end": {
+    "id": "bad_end",
+    "name": "Lạc Lối Trong Hư Không",
+    "description": "Bạn đã bỏ mạng trong khoảng không giữa các thế giới."
+  }
+}

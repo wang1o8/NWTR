@@ -1,0 +1,73 @@
+{
+  "guide": {
+    "id": "guide",
+    "name": "Người Dẫn Đường",
+    "world": "tutorial",
+    "color": "#aaaaaa",
+    "personality": "Bí ẩn và hữu ích",
+    "image": "https://picsum.photos/seed/guide_character/150/150"
+  },
+  "mage": {
+    "id": "mage",
+    "name": "Elara",
+    "world": "fantasy",
+    "color": "#b0c4de",
+    "image": "https://picsum.photos/seed/female_mage/150/150"
+  },
+  "merchant": {
+    "id": "merchant",
+    "name": "Thương Nhân Bí Ẩn",
+    "world": "fantasy",
+    "color": "#8b4513",
+    "image": "https://picsum.photos/seed/old_merchant/150/150"
+  },
+  "dark_knight": {
+    "id": "dark_knight",
+    "name": "Gael",
+    "world": "fantasy",
+    "color": "#4a4a4a",
+    "image": "https://picsum.photos/seed/dark_knight/150/150"
+  },
+  "android": {
+    "id": "android",
+    "name": "Unit-73",
+    "world": "scifi",
+    "color": "#00ffff",
+    "image": "https://picsum.photos/seed/female_android/150/150"
+  },
+  "bounty_hunter": {
+    "id": "bounty_hunter",
+    "name": "Jax",
+    "world": "scifi",
+    "color": "#cd853f",
+    "image": "https://picsum.photos/seed/bounty_hunter/150/150"
+  },
+  "fox_spirit": {
+    "id": "fox_spirit",
+    "name": "Ahri",
+    "world": "eastern",
+    "color": "#ffb6c1",
+    "image": "https://picsum.photos/seed/fox_spirit/150/150"
+  },
+  "monk": {
+    "id": "monk",
+    "name": "Đại Sư Lao",
+    "world": "eastern",
+    "color": "#f5deb3",
+    "image": "https://picsum.photos/seed/wise_monk/150/150"
+  },
+  "survivor": {
+    "id": "survivor",
+    "name": "Riley",
+    "world": "postapoc",
+    "color": "#8fbc8f",
+    "image": "https://picsum.photos/seed/female_survivor/150/150"
+  },
+  "trader": {
+    "id": "trader",
+    "name": "Scrap",
+    "world": "postapoc",
+    "color": "#d2b48c",
+    "image": "https://picsum.photos/seed/wasteland_trader/150/150"
+  }
+}

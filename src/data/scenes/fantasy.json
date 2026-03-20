@@ -1,0 +1,225 @@
+{
+  "fantasy_start": {
+    "id": "fantasy_start",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_forest/1280/720",
+    "speaker": null,
+    "text": "Thế giới đầu tiên: Vương Quốc Sương Mù Aethelgard. Không khí đặc quánh mùi đất ẩm và máu khô. Mọi người đang nhảy múa trong một lễ hội, nhưng ánh mắt họ trống rỗng, nụ cười gượng gạo như những con rối.",
+    "choices": [
+      {
+        "text": "Bắt đầu khám phá.",
+        "next": "fantasy_hub"
+      }
+    ]
+  },
+  "fantasy_hub": {
+    "id": "fantasy_hub",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_town/1280/720",
+    "speaker": null,
+    "text": "Bầu trời xám xịt. Cảm giác như thời gian đang đọng lại. Mọi thứ lặp đi lặp lại một cách kỳ lạ.",
+    "choices": [
+      {
+        "text": "Ánh sáng trắng nuốt chửng tất cả... (Ngày 7)",
+        "requires": { "worldStats": { "day": ">=7" } },
+        "next": "fantasy_reset"
+      },
+      {
+        "text": "Đi vào thị trấn (Tốn 1 ngày)",
+        "requires": { "worldStats": { "day": "<7" } },
+        "next": "fantasy_town",
+        "sets": { "worldStats": { "day": "+1" } }
+      },
+      {
+        "text": "Vào rừng sương mù (Tốn 1 ngày)",
+        "requires": { "worldStats": { "day": "<7" } },
+        "next": "fantasy_forest",
+        "sets": { "worldStats": { "day": "+1" } }
+      },
+      {
+        "text": "Đến nhà thờ đổ nát (Tốn 1 ngày)",
+        "requires": { "worldStats": { "day": "<7" } },
+        "next": "fantasy_church",
+        "sets": { "worldStats": { "day": "+1" } }
+      },
+      {
+        "text": "Tìm Lyra (Kẻ Lưu Đày)",
+        "requires": { "worldStats": { "loop_count": ">=1", "day": "<7" } },
+        "next": "fantasy_lyra_loop2",
+        "sets": { "worldStats": { "day": "+1" } }
+      },
+      {
+        "text": "Tiến vào Lâu Đài Cốt (Phá vỡ vòng lặp)",
+        "requires": { "worldStats": { "loop_count": ">=2", "day": "<7" } },
+        "next": "fantasy_castle"
+      }
+    ]
+  },
+  "fantasy_town": {
+    "id": "fantasy_town",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_town/1280/720",
+    "speaker": "Lyra",
+    "text": "Một cô gái với mái tóc bạc rối bù giật lấy tấm bản đồ của tôi. 'Ngươi cũng thấy bầu trời đang khóc, đúng không?' Cô ta lẩm bẩm. Những người xung quanh gọi cô là Kẻ Lưu Đày và ném đá vào cô.",
+    "choices": [
+      {
+        "text": "Bảo vệ cô ấy.",
+        "roll": { "stat": "cha", "target": 12, "successScene": "fantasy_lyra_trust", "failScene": "fantasy_lyra_flee" }
+      },
+      {
+        "text": "Mặc kệ cô ta.",
+        "next": "fantasy_hub"
+      }
+    ]
+  },
+  "fantasy_lyra_trust": {
+    "id": "fantasy_lyra_trust",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_town/1280/720",
+    "speaker": "Lyra",
+    "text": "Cô ấy nhìn tôi chằm chằm. 'Ngươi không thuộc về vòng lặp này.' Cô ấy dúi vào tay tôi một Bình Máu Nứt.",
+    "choices": [
+      {
+        "text": "Cảm ơn.",
+        "next": "fantasy_hub",
+        "sets": { "addItem": "potion", "stats": { "affection_mage": "+1" } }
+      }
+    ]
+  },
+  "fantasy_lyra_flee": {
+    "id": "fantasy_lyra_flee",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_town/1280/720",
+    "speaker": null,
+    "text": "Đám đông quá hung hãn. Lyra hoảng sợ bỏ chạy vào hẻm tối.",
+    "choices": [
+      {
+        "text": "Quay lại.",
+        "next": "fantasy_hub"
+      }
+    ]
+  },
+  "fantasy_forest": {
+    "id": "fantasy_forest",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_forest/1280/720",
+    "speaker": "Kaelen",
+    "text": "Một kỵ sĩ trong bộ giáp đen gỉ sét chặn đường. Kỵ Sĩ Tro Tàn Kaelen. 'Vòng lặp này là sự cứu rỗi duy nhất. Quay lại đi, Kẻ Lang Thang.'",
+    "choices": [
+      {
+        "text": "Tấn công hắn.",
+        "next": "fantasy_kaelen_battle1"
+      },
+      {
+        "text": "Rời đi.",
+        "next": "fantasy_hub"
+      }
+    ]
+  },
+  "fantasy_kaelen_battle1": {
+    "id": "fantasy_kaelen_battle1",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_forest/1280/720",
+    "speaker": null,
+    "text": "Hắn quá mạnh. Bạn không thể đánh bại hắn lúc này.",
+    "battle": {
+      "monsterId": "ash_knight",
+      "winScene": "fantasy_hub",
+      "loseScene": "fantasy_hub"
+    }
+  },
+  "fantasy_church": {
+    "id": "fantasy_church",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/ruined_castle/1280/720",
+    "speaker": "Tu Sĩ Mù Vicar",
+    "text": "Tu Sĩ Mù Vicar đang thuyết giáo cho những cái xác không hồn. 'Ánh sáng ngày thứ bảy sẽ gột rửa tất cả! Nữ Hoàng Elara đã hy sinh vì chúng ta!'",
+    "choices": [
+      {
+        "text": "Lắng nghe.",
+        "next": "fantasy_hub"
+      }
+    ]
+  },
+  "fantasy_reset": {
+    "id": "fantasy_reset",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/void/1280/720",
+    "speaker": null,
+    "text": "Ngày thứ 7. Bầu trời nứt toác. Một cơn bão Tro Xám - thứ y hệt đã hủy diệt thế giới của tôi - ập đến. Nhưng ngay trước khi nó chạm đất, một chiếc Đồng Hồ Cát khổng lồ trên đỉnh lâu đài vỡ vụn. Ánh sáng trắng xóa. Mọi thứ quay lại từ đầu.",
+    "choices": [
+      {
+        "text": "Mở mắt ra.",
+        "next": "fantasy_hub",
+        "sets": { "worldStats": { "day": 1, "loop_count": "+1" } }
+      }
+    ]
+  },
+  "fantasy_lyra_loop2": {
+    "id": "fantasy_lyra_loop2",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/dark_fantasy_town/1280/720",
+    "speaker": "Lyra",
+    "text": "Lyra kéo tôi vào hẻm. 'Ngươi nhớ đúng không? Nữ Hoàng Elara đã dùng Lõi Thời Gian để đóng băng vương quốc trước khi Tro Xám ập đến. Ta là con gái bà ấy... Ta đã bị hiến tế, nhưng linh hồn ta vẫn kẹt lại đây.'",
+    "choices": [
+      {
+        "text": "Tôi sẽ giúp cô phá vỡ nó.",
+        "next": "fantasy_hub",
+        "sets": { "stats": { "affection_mage": "+1" } }
+      }
+    ]
+  },
+  "fantasy_castle": {
+    "id": "fantasy_castle",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/ruined_castle/1280/720",
+    "speaker": "Kaelen",
+    "text": "Kaelen đứng trước cổng Lâu Đài Cốt. 'Ta biết ngươi định làm gì. Nếu ngươi phá vỡ Lõi Thời Gian, Tro Xám sẽ nuốt chửng nơi này. Ta đã thề bảo vệ Nữ Hoàng và vương quốc này, dù nó chỉ là một giấc mơ giả tạo!'",
+    "choices": [
+      {
+        "text": "Giấc mơ này phải kết thúc.",
+        "next": "fantasy_boss_battle"
+      }
+    ]
+  },
+  "fantasy_boss_battle": {
+    "id": "fantasy_boss_battle",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/ruined_castle/1280/720",
+    "speaker": null,
+    "text": "Kỵ Sĩ Tro Tàn rút thanh gươm rực lửa ra.",
+    "battle": {
+      "monsterId": "ash_knight",
+      "winScene": "fantasy_core",
+      "loseScene": "fantasy_hub"
+    }
+  },
+  "fantasy_core": {
+    "id": "fantasy_core",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/ruined_castle/1280/720",
+    "speaker": null,
+    "text": "Lõi Thời Gian đập từng nhịp như một trái tim. Bên trong là Nữ Hoàng Elara, hóa đá. Phá vỡ nó đồng nghĩa với việc để Tro Xám - thứ đã hủy diệt quê hương tôi - nuốt chửng nốt nơi này. Nhưng đó là cách duy nhất để giải thoát họ.",
+    "choices": [
+      {
+        "text": "Phá vỡ Lõi Thời Gian.",
+        "next": "fantasy_end",
+        "sets": { "addItem": "bronze_pendant", "stats": { "memoryFragments": "+1" } }
+      }
+    ]
+  },
+  "fantasy_end": {
+    "id": "fantasy_end",
+    "world": "fantasy",
+    "background": "https://picsum.photos/seed/void/1280/720",
+    "speaker": null,
+    "text": "Lõi vỡ vụn. Tro Xám tràn vào. Tiếng la hét vang lên, nhưng lần đầu tiên sau 300 năm, đó là những cảm xúc thật. Lyra mỉm cười tan biến vào hư vô. Tôi nhặt lấy Mặt Dây Chuyền Bằng Đồng và một Mảnh Ký Ức rơi ra từ tro tàn, sau đó bước qua cổng không gian mới.",
+    "choices": [
+      {
+        "text": "Tiến vào thế giới tiếp theo.",
+        "next": "scifi_start",
+        "sets": { "flags": ["visited_scifi"] }
+      }
+    ]
+  }
+}

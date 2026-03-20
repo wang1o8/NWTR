@@ -1,0 +1,7 @@
+{
+  "id": "scifi",
+  "name": "Sci-Fi",
+  "bg": "bg-gradient-to-br from-slate-900 via-blue-950 to-cyan-950",
+  "music_key": "theme_scifi",
+  "special_mechanic": "battery_drain"
+}

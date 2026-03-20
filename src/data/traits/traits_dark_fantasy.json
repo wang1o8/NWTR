@@ -1,0 +1,6 @@
+{
+  "world": [
+    { "id": "t_w_df_1", "name": "Hơi Thở Vực Thẳm", "effect": { "RES": 5, "INT": 2 }, "lore": "Đã quen với bầu không khí ngột ngạt của Dark Fantasy." },
+    { "id": "t_w_df_2", "name": "Kẻ Săn Đêm", "effect": { "AGI": 5, "CRIT_RATE": 10 }, "lore": "Bóng tối là đồng minh tốt nhất." }
+  ]
+}

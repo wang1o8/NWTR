@@ -1,0 +1,24 @@
+{
+  "base_types": [
+    { "id": "sword", "name": "Kiếm", "icon": "⚔️" },
+    { "id": "bow", "name": "Cung", "icon": "🏹" },
+    { "id": "staff", "name": "Trượng", "icon": "🪄" },
+    { "id": "gun", "name": "Súng", "icon": "🔫" },
+    { "id": "blade", "name": "Đao", "icon": "🗡️" },
+    { "id": "relic", "name": "Thánh Tích", "icon": "🔮" }
+  ],
+  "stat_pool": [
+    "STR", "CRIT_DMG", "CRIT_RATE", "ATK_SPD", "HEAVY_ATK", "COMBO", "LIFESTEAL"
+  ],
+  "special_effects": [
+    "Phá Hồn", "Hút Máu", "Dây Chuyền", "Hành Quyết", "Quá Tải", "Phá Nát", "Tiếng Vang", "Đánh Cắp", "Hư Không", "Lưỡi Kiếm Nguyền Rủa"
+  ],
+  "name_prefixes": {
+    "COMMON": "Phàm Cấp",
+    "UNCOMMON": "Linh Cấp",
+    "RARE": "Huyền Cấp",
+    "EPIC": "Địa Cấp",
+    "LEGENDARY": "Thiên Cấp",
+    "MYTHIC": "Thần Cấp"
+  }
+}

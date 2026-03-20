@@ -1,0 +1,29 @@
+{
+  "combat": [
+    { "id": "t_str_1", "name": "Sức Mạnh Bộc Phát", "effect": { "STR": 5 }, "lore": "Cơ bắp cuồn cuộn, sức mạnh phi thường." },
+    { "id": "t_agi_1", "name": "Thân Thủ Nhanh Nhẹn", "effect": { "AGI": 5 }, "lore": "Di chuyển như gió, không ai bắt kịp." },
+    { "id": "t_def_1", "name": "Mình Đồng Da Sắt", "effect": { "DEF": 5 }, "lore": "Da thịt cứng như thép, đao thương bất nhập." },
+    { "id": "t_combat_master", "name": "Bậc Thầy Chiến Đấu", "effect": { "STR": 3, "AGI": 3, "DEF": 3 }, "lore": "Kinh nghiệm chiến đấu phong phú." }
+  ],
+  "magic": [
+    { "id": "t_int_1", "name": "Trí Tuệ Siêu Phàm", "effect": { "INT": 5 }, "lore": "Đầu óc nhạy bén, thấu hiểu ma pháp." },
+    { "id": "t_res_1", "name": "Kháng Phép Bẩm Sinh", "effect": { "RES": 5 }, "lore": "Cơ thể tự động phản ứng với ma lực." },
+    { "id": "t_mp_1", "name": "Nguồn Mana Dồi Dào", "effect": { "maxMp": 20 }, "lore": "Mana chảy trong huyết quản như dòng sông." },
+    { "id": "t_magic_master", "name": "Pháp Sư Thiên Tài", "effect": { "INT": 3, "RES": 3, "maxMp": 10 }, "lore": "Sinh ra để điều khiển các nguyên tố." }
+  ],
+  "luck": [
+    { "id": "t_lck_1", "name": "Đứa Con Của Thần May Mắn", "effect": { "LCK": 5 }, "lore": "Đi đường cũng nhặt được vàng." },
+    { "id": "t_lck_2", "name": "Linh Cảm Tốt", "effect": { "LCK": 3, "AGI": 2 }, "lore": "Luôn có cảm giác về những điều sắp xảy ra." },
+    { "id": "t_lck_3", "name": "Mệnh Lớn", "effect": { "LCK": 2, "maxHp": 10 }, "lore": "Nhiều lần thoát chết trong gang tấc." }
+  ],
+  "cursed": [
+    { "id": "t_curse_blind", "name": "Mù Lòa", "effect": { "AGI": -5, "CRIT_RATE": 30 }, "lore": "Mất đi thị giác, nhưng đổi lại là sự nhạy bén chết người.", "is_negative": true },
+    { "id": "t_curse_fragile", "name": "Cơ Thể Yếu Ớt", "effect": { "maxHp": -20, "INT": 10 }, "lore": "Đổi sinh mệnh lấy trí tuệ.", "is_negative": true },
+    { "id": "t_curse_unlucky", "name": "Vận Đen", "effect": { "LCK": -10, "STR": 10 }, "lore": "Bị nguyền rủa, nhưng sự phẫn nộ hóa thành sức mạnh.", "is_negative": true },
+    { "id": "t_curse_slow", "name": "Chậm Chạp", "effect": { "ATK_SPD": -20, "DEF": 15 }, "lore": "Chậm chạp như rùa, nhưng cứng như đá.", "is_negative": true }
+  ],
+  "hidden": [
+    { "id": "t_hidden_1", "name": "Huyết Mạch Thần Bí", "effect": {}, "lore": "Một dòng máu kỳ lạ chảy trong người...", "hidden_bonus": { "STR": 10, "INT": 10, "AGI": 10, "DEF": 10, "RES": 10, "LCK": 10 } },
+    { "id": "t_hidden_2", "name": "Ký Ức Tiền Kiếp", "effect": {}, "lore": "Những hình ảnh mờ nhạt về một cuộc đời khác...", "hidden_bonus": { "maxHp": 50, "maxMp": 50 } }
+  ]
+}

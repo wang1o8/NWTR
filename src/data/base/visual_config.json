@@ -1,0 +1,53 @@
+{
+  "icons": {
+    "weapons": {
+      "sword": "⚔️",
+      "bow": "🏹",
+      "staff": "🪄",
+      "gun": "🔫",
+      "blade": "🗡️",
+      "relic": "🔮"
+    },
+    "traits": {
+      "combat": "💪",
+      "magic": "🧠",
+      "luck": "🍀",
+      "cursed": "💀",
+      "world": "🌍",
+      "hidden": "❓"
+    },
+    "monsters": {
+      "beast": "🐺",
+      "undead": "💀",
+      "demon": "👁️",
+      "mech": "🤖",
+      "spirit": "🦊",
+      "mutant": "☢️"
+    },
+    "elements": {
+      "fire": "🔥",
+      "ice": "❄️",
+      "thunder": "⚡",
+      "shadow": "🌑",
+      "holy": "✨",
+      "void": "🌀"
+    },
+    "stats": {
+      "STR": "💪",
+      "CRIT": "🎯",
+      "ATK_SPD": "⚡",
+      "LIFESTEAL": "🩸",
+      "DEF": "🛡️",
+      "INT": "🔮"
+    }
+  },
+  "backgrounds": {
+    "dark_fantasy": "bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900",
+    "scifi": "bg-gradient-to-br from-slate-900 via-blue-950 to-cyan-950",
+    "eastern": "bg-gradient-to-br from-slate-900 via-red-950 to-orange-950",
+    "postapoc": "bg-gradient-to-br from-slate-900 via-orange-950 to-yellow-950"
+  },
+  "global": {
+    "bg_color": "bg-[#08080a]"
+  }
+}

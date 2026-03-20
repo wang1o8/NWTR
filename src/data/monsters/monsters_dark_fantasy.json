@@ -1,0 +1,9 @@
+{
+  "base_types": [
+    { "id": "skeleton", "name": "Khung Xương", "icon": "💀" },
+    { "id": "zombie", "name": "Xác Sống", "icon": "💀" },
+    { "id": "demon_hound", "name": "Chó Săn Địa Ngục", "icon": "🐺" }
+  ],
+  "world_adjective": "Hắc Ám",
+  "skills": ["Cắn Xé", "Nguyền Rủa", "Hút Máu"]
+}

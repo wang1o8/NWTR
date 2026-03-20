@@ -1,0 +1,9 @@
+{
+  "base_types": [
+    { "id": "rad_scorpion", "name": "Bọ Cạp Phóng Xạ", "icon": "☢️" },
+    { "id": "wasteland_raider", "name": "Tên Cướp Hoang Mạc", "icon": "🐺" },
+    { "id": "mutant_brute", "name": "Kẻ Đột Biến Khổng Lồ", "icon": "☢️" }
+  ],
+  "world_adjective": "Phế Tích",
+  "skills": ["Đập Phá", "Phun Độc", "Cắn Nát"]
+}

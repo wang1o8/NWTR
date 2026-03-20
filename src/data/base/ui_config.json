@@ -1,0 +1,33 @@
+{
+  "choices": {
+    "max_visible": 3,
+    "sort_priority": ["story", "combat", "explore", "leave"],
+    "icons": {
+      "combat": "⚔️",
+      "story": "💬",
+      "explore": "🔍",
+      "trade": "💰",
+      "affection": "❤️",
+      "leave": "🚪"
+    }
+  },
+  "inventory": {
+    "slots": [
+      "main_hand",
+      "off_hand",
+      "armor",
+      "ring_1",
+      "ring_2",
+      "amulet"
+    ],
+    "bag_columns": 4,
+    "two_handed_logic": "blocks_off_hand"
+  },
+  "animations": {
+    "hit_shake": {
+      "duration": "0.2s",
+      "intensity_multiplier": 0.5,
+      "critical_multiplier": 2.0
+    }
+  }
+}

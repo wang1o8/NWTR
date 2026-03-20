@@ -1,0 +1,76 @@
+{
+  "potion": {
+    "id": "potion",
+    "name": "Bình Máu Nứt",
+    "description": "Một bình thuốc cũ kỹ. Hồi 10 HP.",
+    "type": "consumable",
+    "effect": { "hp": 10 }
+  },
+  "withered_rose": {
+    "id": "withered_rose",
+    "name": "Bông Hồng Khô",
+    "type": "consumable",
+    "effect": { "hp": 5 },
+    "description": "Bông hoa không bao giờ tàn úa. Hồi 5 HP."
+  },
+  "time_dust": {
+    "id": "time_dust",
+    "name": "Bụi Thời Gian",
+    "type": "material",
+    "description": "Cát từ Đồng Hồ Cát Vĩnh Hằng. Chỉ tồn tại trong vòng lặp này."
+  },
+  "bronze_pendant": {
+    "id": "bronze_pendant",
+    "name": "Mặt Dây Chuyền Bằng Đồng",
+    "type": "equipment",
+    "effect": { "int": 1 },
+    "description": "Kỷ vật từ một thế giới đã tàn lụi (Thế giới của bạn). +1 INT."
+  },
+  "memory_fragment": {
+    "id": "memory_fragment",
+    "name": "Mảnh Ký Ức",
+    "type": "quest",
+    "description": "Một mảnh linh hồn bị đánh mất."
+  },
+  "scrap_metal": {
+    "id": "scrap_metal",
+    "name": "Mảnh Kim Loại",
+    "type": "material",
+    "description": "Một mảnh kim loại rỉ sét từ thế giới hậu tận thế."
+  },
+  "rusty_sword": {
+    "id": "rusty_sword",
+    "name": "Kiếm Rỉ Sét",
+    "type": "equipment",
+    "effect": { "str": 1 },
+    "description": "Một thanh kiếm cũ kỹ, nhưng vẫn còn sắc bén. +1 STR."
+  },
+  "magic_scroll": {
+    "id": "magic_scroll",
+    "name": "Cuộn Giấy Phép",
+    "type": "consumable",
+    "effect": { "mp": 10 },
+    "description": "Một cuộn giấy chứa phép thuật cổ xưa. Hồi 10 MP."
+  },
+  "lucky_coin": {
+    "id": "lucky_coin",
+    "name": "Đồng Xu May Mắn",
+    "type": "equipment",
+    "effect": { "lck": 2 },
+    "description": "Một đồng xu luôn lật mặt ngửa. +2 LCK."
+  },
+  "rations": {
+    "id": "rations",
+    "name": "Lương Khô",
+    "type": "consumable",
+    "effect": { "hp": 15 },
+    "description": "Thức ăn dự trữ cho những chuyến đi dài. Hồi 15 HP."
+  },
+  "bandage": {
+    "id": "bandage",
+    "name": "Băng Gạc",
+    "type": "consumable",
+    "effect": { "hp": 5 },
+    "description": "Băng gạc y tế cơ bản. Hồi 5 HP."
+  }
+}

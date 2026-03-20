@@ -1,0 +1,9 @@
+{
+  "base_types": [
+    { "id": "rogue_drone", "name": "Drone Nổi Loạn", "icon": "🤖" },
+    { "id": "cyborg_guard", "name": "Lính Gác Cyborg", "icon": "🤖" },
+    { "id": "mutant_rat", "name": "Chuột Đột Biến", "icon": "☢️" }
+  ],
+  "world_adjective": "Cơ Khí",
+  "skills": ["Bắn Laser", "Sốc Điện", "Tự Hủy"]
+}

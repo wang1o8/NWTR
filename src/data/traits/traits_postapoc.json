@@ -1,0 +1,6 @@
+{
+  "world": [
+    { "id": "t_w_pa_1", "name": "Kháng Phóng Xạ", "effect": { "RES": 5, "maxHp": 10 }, "lore": "Cơ thể đã thích nghi với môi trường khắc nghiệt." },
+    { "id": "t_w_pa_2", "name": "Bản Năng Sinh Tồn", "effect": { "LCK": 5, "AGI": 3 }, "lore": "Luôn biết cách tìm đường sống trong chỗ chết." }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "se_guardian_encounter",
+    "name": "Cuộc Gặp Gỡ Định Mệnh",
+    "min_world_visits": 1,
+    "min_flags": [],
+    "min_chapter": 1,
+    "cooldown_scenes": 10,
+    "text": "Một bóng hình khổng lồ bằng ánh sáng xuất hiện trước mặt bạn. 'Kẻ Lang Thang... Ngươi đang tìm kiếm điều gì trong những thế giới vỡ vụn này?'",
+    "choices": [
+      {
+        "text": "\"Tôi tìm kiếm sự thật.\"",
+        "sets": { "flags": ["met_guardian"], "stats": { "int": "+5" } },
+        "next": "resume"
+      },
+      {
+        "text": "\"Tôi chỉ muốn sống sót.\"",
+        "sets": { "flags": ["met_guardian"], "stats": { "hp": "+50" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "se_memory_fragment_1",
+    "name": "Mảnh Ký Ức Đứt Đoạn",
+    "min_world_visits": 2,
+    "min_flags": ["met_guardian"],
+    "min_chapter": 2,
+    "cooldown_scenes": 15,
+    "text": "Bạn nhặt được một mảnh vỡ phát sáng. Khi chạm vào, một đoạn ký ức ùa về: Một thành phố chìm trong biển lửa, và một giọng nói quen thuộc gọi tên bạn.",
+    "choices": [
+      {
+        "text": "Cố gắng nhớ lại",
+        "sets": { "flags": ["found_memory_1"], "stats": { "memoryFragments": "+1", "mp": "-10" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "se_memory_fragment_2",
+    "name": "Tiếng Vọng Từ Quá Khứ",
+    "min_world_visits": 3,
+    "min_flags": ["found_memory_1"],
+    "min_chapter": 3,
+    "cooldown_scenes": 20,
+    "text": "Một ảo ảnh hiện ra trước mắt bạn. Đó là hình bóng của chính bạn trong quá khứ, đang cầm một thanh kiếm gãy và quỳ gối trước một thế lực vô hình.",
+    "choices": [
+      {
+        "text": "Chạm vào ảo ảnh",
+        "sets": { "flags": ["found_memory_2"], "stats": { "memoryFragments": "+1", "str": "+5" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "se_true_ending_path",
+    "name": "Con Đường Chân Chính",
+    "min_world_visits": 3,
+    "min_flags": ["met_guardian", "found_memory_1", "found_memory_2"],
+    "min_chapter": 4,
+    "cooldown_scenes": 30,
+    "text": "Người Bảo Vệ Ánh Sáng xuất hiện trở lại. 'Ngươi đã thu thập đủ những mảnh vỡ. Đã đến lúc đối mặt với sự thật cuối cùng. Ngươi đã sẵn sàng chưa?'",
+    "choices": [
+      {
+        "text": "\"Tôi đã sẵn sàng.\"",
+        "next": "true_ending"
+      },
+      {
+        "text": "\"Chưa phải lúc này.\"",
+        "next": "resume"
+      }
+    ]
+  }
+]

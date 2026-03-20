@@ -1,0 +1,72 @@
+{
+  "scifi_start": {
+    "id": "scifi_start",
+    "world": "scifi",
+    "speaker": null,
+    "text": "Thế giới thứ hai. Ánh đèn neon phản chiếu trên những vũng mưa độc hại. Không khí có vị của đồng và ozone. Lại một thành phố đang hấp hối.",
+    "choices": [
+      { "text": "Bước vào ánh đèn neon.", "next": "scifi_city" },
+      { "text": "Tìm một quán bar.", "next": "scifi_bounty" }
+    ]
+  },
+  "scifi_city": {
+    "id": "scifi_city",
+    "world": "scifi",
+    "speaker": "android",
+    "text": "Một người máy hỏng hóc đang co giật trên vỉa hè. 'Đang quét... Lỗi. Bạn không tồn tại trong sổ đăng ký. Bạn là một bóng ma.'",
+    "choices": [
+      { "text": "\"Nhiều người cũng nói vậy.\"", "next": "scifi_drone" },
+      { "text": "Cố gắng sửa chữa nó.", "roll": { "stat": "int", "target": 15, "successScene": "scifi_android_fix", "failScene": "scifi_drone" } }
+    ]
+  },
+  "scifi_android_fix": {
+    "id": "scifi_android_fix",
+    "world": "scifi",
+    "speaker": "android",
+    "text": "Tôi nối lại vài sợi dây điện bị đứt. Nó kêu rè rè rồi hoạt động trở lại. 'Cảm ơn, bóng ma. Hãy cầm lấy thẻ truy cập này. Nó dẫn đến khu vực cấm.'",
+    "choices": [
+      { "text": "Lấy thẻ. (Nhận Vật Phẩm)", "sets": { "addItem": "key_card" }, "next": "scifi_drone" }
+    ]
+  },
+  "scifi_drone": {
+    "id": "scifi_drone",
+    "world": "scifi",
+    "speaker": null,
+    "text": "Trước khi tôi kịp rời khỏi con hẻm, một con Nhện Máy nổi loạn nhảy xuống từ thang thoát hiểm. Con mắt đỏ ngầu của nó khóa chặt lấy tôi. Đến lúc làm việc rồi.",
+    "battle": { 
+      "monsterId": "spider_drone",
+      "winScene": "eastern_start",
+      "loseScene": "game_over"
+    }
+  },
+  "scifi_bounty": {
+    "id": "scifi_bounty",
+    "world": "scifi",
+    "speaker": "bounty_hunter",
+    "text": "Một thợ săn tiền thưởng ngồi trong góc một quán bar tồi tàn. 'Trông cậu như thể vừa chứng kiến ngày tận thế vậy. Tôi đang săn lùng một sinh vật ngoài hành tinh đột biến. Nó đã giết phi hành đoàn của tôi. Giúp tôi chứ?'",
+    "choices": [
+      { "text": "\"Tôi không làm việc vì trả thù.\"", "next": "scifi_city" },
+      { "text": "\"Được thôi. Chỉ đường đi.\"", "next": "scifi_alien" }
+    ]
+  },
+  "scifi_alien": {
+    "id": "scifi_alien",
+    "world": "scifi",
+    "speaker": null,
+    "text": "Chúng tôi theo dõi nó đến cống ngầm. Con quái vật đột biến khổng lồ, gớm ghiếc và đang bị dồn vào đường cùng. Nó chỉ đang cố gắng sinh tồn, giống như phần còn lại của chúng ta. Nhưng đây là cuộc chiến một mất một còn.",
+    "battle": { 
+      "monsterId": "mutant_alien",
+      "winScene": "scifi_alien_aftermath",
+      "loseScene": "game_over"
+    }
+  },
+  "scifi_alien_aftermath": {
+    "id": "scifi_alien_aftermath",
+    "world": "scifi",
+    "speaker": "bounty_hunter",
+    "text": "Gã thợ săn nhổ nước bọt lên cái xác. 'Vì phi hành đoàn.' Tôi nhận ra một mảnh vỡ phát sáng găm trong da thịt con quái vật. Lại một mảnh quá khứ của tôi.",
+    "choices": [
+      { "text": "Lấy mảnh vỡ. (Nhận Mảnh Ký Ức)", "sets": { "stats": { "memoryFragments": "+1" } }, "next": "eastern_start" }
+    ]
+  }
+}

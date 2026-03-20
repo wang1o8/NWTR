@@ -1,0 +1,783 @@
+[
+  {
+    "id": "ce_merchant",
+    "name": "Thương Nhân Bí Ẩn",
+    "weight": 20,
+    "min_age": 2,
+    "text": "Một người đàn ông trùm kín mặt mũi ngồi bên đống lửa nhỏ. Hắn bày ra vài món đồ kỳ lạ trên một tấm vải sờn cũ. 'Kẻ lang thang, có muốn xem qua chút hàng hóa không?'",
+    "choices": [
+      {
+        "text": "Xem hàng hóa (Cần 50 Vàng)",
+        "requires": { "stats": { "gold": ">=50" } },
+        "next": "ce_merchant_buy"
+      },
+      {
+        "text": "Hỏi về tin tức xung quanh",
+        "next": "ce_merchant_rumor"
+      },
+      {
+        "text": "Cướp hàng hóa",
+        "next": "ce_merchant_combat"
+      },
+      {
+        "text": "Rời đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_buy",
+    "text": "Bạn trả 50 Vàng. Hắn đưa cho bạn một món vũ khí ngẫu nhiên.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-50" }, "generateWeapon": true, "flags": ["traded_with_mysterious_merchant"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_rumor",
+    "text": "Hắn cười khùng khục: 'Nơi này không an toàn đâu. Cẩn thận những cái bóng.' Hắn biến mất vào màn sương.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+1" }, "flags": ["heard_merchant_rumor"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_combat",
+    "text": "Bạn rút vũ khí ra. Hắn gầm lên và lao vào bạn!",
+    "battle": {
+      "monsterId": "mysterious_merchant",
+      "winScene": "ce_merchant_win",
+      "loseScene": "ce_merchant_lose"
+    }
+  },
+  {
+    "id": "ce_merchant_win",
+    "text": "Thương nhân gục ngã. Bạn lục lọi đồ đạc của hắn và tìm thấy một số vàng cùng một món đồ.",
+    "choices": [
+      {
+        "text": "Lấy chiến lợi phẩm",
+        "sets": { "stats": { "gold": "+100" }, "generateWeapon": true },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_lose",
+    "text": "Thương nhân đánh gục bạn, cướp đi một nửa số vàng của bạn rồi bỏ đi.",
+    "choices": [
+      {
+        "text": "Đứng dậy",
+        "sets": { "stats": { "gold": "-50", "hp": "-10" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger",
+    "name": "Người Lạ Bị Thương",
+    "weight": 25,
+    "min_age": 3,
+    "text": "Bạn thấy một người đang nằm gục bên đường, máu chảy rỉ rả từ vết thương sâu trên ngực. Họ thều thào xin giúp đỡ.",
+    "choices": [
+      {
+        "text": "Dùng thuốc chữa trị (Mất 20 MP)",
+        "requires": { "stats": { "mp": ">=20" } },
+        "next": "ce_injured_stranger_heal"
+      },
+      {
+        "text": "Lục lọi đồ đạc của họ",
+        "next": "ce_injured_stranger_rob"
+      },
+      {
+        "text": "Hỏi xem chuyện gì đã xảy ra",
+        "next": "ce_injured_stranger_ask"
+      },
+      {
+        "text": "Bỏ đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger_heal",
+    "text": "Bạn dùng phép thuật chữa lành vết thương cho họ. Người lạ tỉnh lại và cảm ơn bạn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "mp": "-20", "cha": "+2" }, "flags": ["helped_injured_stranger"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger_rob",
+    "text": "Bạn lấy đi túi tiền của họ. Họ nhìn bạn với ánh mắt căm phẫn trước khi lịm đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+30", "cha": "-5" }, "flags": ["robbed_injured_stranger"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger_ask",
+    "text": "Họ thều thào: 'Quái vật... chúng ở khắp nơi...' rồi lịm đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_abandoned_chest",
+    "name": "Rương Bị Bỏ Lại",
+    "weight": 30,
+    "min_age": 1,
+    "text": "Một chiếc rương gỗ cũ kỹ nằm giữa bụi rậm. Nó có vẻ đã ở đây rất lâu.",
+    "choices": [
+      {
+        "text": "Mở rương cẩn thận",
+        "next": "ce_abandoned_chest_open"
+      },
+      {
+        "text": "Dùng sức phá khóa",
+        "next": "ce_abandoned_chest_smash"
+      },
+      {
+        "text": "Bỏ qua",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_abandoned_chest_open",
+    "text": "Bạn mở rương một cách khéo léo. Bên trong là một ít vàng và một món đồ.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+20" }, "generateWeapon": true },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_abandoned_chest_smash",
+    "text": "Bạn phá nát chiếc rương. Một cái bẫy kích hoạt khiến bạn bị thương, nhưng bạn vẫn lấy được một ít vàng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "-15", "gold": "+15" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_dream",
+    "name": "Giấc Mơ Kỳ Lạ",
+    "weight": 15,
+    "min_age": 5,
+    "text": "Khi đang nghỉ ngơi, bạn chìm vào một giấc mơ kỳ lạ. Bạn thấy mình đang đứng trước một cánh cổng khổng lồ.",
+    "choices": [
+      {
+        "text": "Bước vào cánh cổng",
+        "next": "ce_strange_dream_enter"
+      },
+      {
+        "text": "Quay lưng bỏ đi",
+        "next": "ce_strange_dream_leave"
+      },
+      {
+        "text": "Cố gắng tỉnh dậy",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_dream_enter",
+    "text": "Bạn cảm thấy một nguồn năng lượng tràn vào cơ thể. Khi tỉnh dậy, bạn thấy mình mạnh mẽ hơn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+2", "mp": "+10" }, "flags": ["dreamt_of_gate"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_dream_leave",
+    "text": "Bạn cảm thấy một nỗi buồn man mác. Khi tỉnh dậy, tâm trí bạn trở nên thanh thản hơn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "res": "+2" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly",
+    "name": "Hiện Tượng Thời Tiết Bất Thường",
+    "weight": 20,
+    "min_age": 4,
+    "text": "Bầu trời bỗng nhiên chuyển sang màu tím kỳ lạ. Những tia sét đen ngòm đánh xuống mặt đất, chặn đứng lối đi của bạn.",
+    "choices": [
+      {
+        "text": "Cố gắng băng qua (Cần 15 AGI)",
+        "requires": { "stats": { "agi": ">=15" } },
+        "next": "ce_weather_anomaly_dash"
+      },
+      {
+        "text": "Tìm đường vòng",
+        "next": "ce_weather_anomaly_detour"
+      },
+      {
+        "text": "Đợi hiện tượng này đi qua",
+        "next": "ce_weather_anomaly_wait"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly_dash",
+    "text": "Bạn nhanh nhẹn né tránh những tia sét và băng qua một cách an toàn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "xp": "+50" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly_detour",
+    "text": "Bạn mất nhiều thời gian hơn để đi vòng qua, nhưng bạn tìm thấy một loại thảo mộc quý hiếm.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+20" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly_wait",
+    "text": "Bạn ngồi đợi cho đến khi bầu trời trở lại bình thường. Bạn cảm thấy mệt mỏi vì chờ đợi lâu.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "-5" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_old_letter",
+    "name": "Lá Thư Cũ",
+    "weight": 10,
+    "min_age": 2,
+    "text": "Bạn nhặt được một lá thư đã ố vàng, mực đã phai mờ theo thời gian.",
+    "choices": [
+      {
+        "text": "Cố gắng đọc nội dung",
+        "next": "ce_old_letter_read"
+      },
+      {
+        "text": "Giữ lại lá thư",
+        "next": "ce_old_letter_keep"
+      },
+      {
+        "text": "Vứt đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_old_letter_read",
+    "text": "Lá thư kể về một kho báu bị chôn giấu ở một thế giới xa xôi. Bạn cảm thấy tò mò.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+2" }, "flags": ["read_old_letter"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_old_letter_keep",
+    "text": "Bạn cất lá thư vào túi. Có lẽ nó sẽ có ích sau này.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "flags": ["has_old_letter"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler",
+    "name": "Người Bạn Đồng Hành",
+    "weight": 12,
+    "min_age": 6,
+    "text": "Một kẻ lữ hành khác tiến lại gần bạn. 'Này, đi một mình nguy hiểm lắm. Chúng ta đi cùng nhau chứ?'",
+    "choices": [
+      {
+        "text": "Đồng ý đi cùng",
+        "next": "ce_fellow_traveler_accept"
+      },
+      {
+        "text": "Từ chối lịch sự",
+        "next": "ce_fellow_traveler_decline"
+      },
+      {
+        "text": "Cảnh giác và xua đuổi",
+        "next": "ce_fellow_traveler_threaten"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler_accept",
+    "text": "Hai người cùng đi một đoạn đường. Họ chia sẻ cho bạn một ít lương thực trước khi rẽ sang hướng khác.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+30", "cha": "+2" }, "flags": ["met_traveler"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler_decline",
+    "text": "Họ gật đầu hiểu ý và bước đi. Bạn cảm thấy an tâm hơn khi đi một mình.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "res": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler_threaten",
+    "text": "Họ sợ hãi bỏ chạy. Bạn cảm thấy mình hơi quá đáng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "cha": "-2" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_ambush",
+    "name": "Bọn Cướp Phục Kích",
+    "weight": 18,
+    "min_age": 3,
+    "text": "Một nhóm cướp nhảy ra từ bụi rậm, vũ khí lăm lăm trên tay. 'Giao hết vàng ra đây!'",
+    "choices": [
+      {
+        "text": "Chiến đấu",
+        "next": "ce_bandit_combat"
+      },
+      {
+        "text": "Giao nộp vàng (Mất 50 Vàng)",
+        "requires": { "stats": { "gold": ">=50" } },
+        "next": "ce_bandit_pay"
+      },
+      {
+        "text": "Cố gắng bỏ chạy (Cần 18 AGI)",
+        "requires": { "stats": { "agi": ">=18" } },
+        "next": "ce_bandit_escape"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_combat",
+    "text": "Bạn sẵn sàng chiến đấu!",
+    "battle": {
+      "monsterId": "bandit_group",
+      "winScene": "ce_bandit_win",
+      "loseScene": "ce_bandit_lose"
+    }
+  },
+  {
+    "id": "ce_bandit_win",
+    "text": "Bạn đánh bại bọn cướp và lấy được vàng của chúng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+60", "xp": "+100" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_lose",
+    "text": "Bọn cướp đánh gục bạn và lấy đi toàn bộ số vàng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-100", "hp": "-20" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_pay",
+    "text": "Bạn giao nộp vàng. Bọn cướp cười nhạo và để bạn đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-50" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_escape",
+    "text": "Bạn nhanh chân chạy thoát khỏi bọn cướp.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "xp": "+30" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_discovery",
+    "name": "Đền Thờ Bị Lãng Quên",
+    "weight": 10,
+    "min_age": 8,
+    "text": "Bạn tìm thấy một ngôi đền nhỏ nằm sâu trong rừng. Một bức tượng đá cổ xưa tỏa ra ánh sáng dịu nhẹ.",
+    "choices": [
+      {
+        "text": "Cầu nguyện",
+        "next": "ce_shrine_pray"
+      },
+      {
+        "text": "Dâng hiến vật phẩm (Mất 100 Vàng)",
+        "requires": { "stats": { "gold": ">=100" } },
+        "next": "ce_shrine_offer"
+      },
+      {
+        "text": "Tìm kiếm xung quanh",
+        "next": "ce_shrine_search"
+      },
+      {
+        "text": "Rời đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_pray",
+    "text": "Bạn cảm thấy tâm hồn mình được thanh tịnh. Các vết thương nhẹ được chữa lành.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+50", "mp": "+20" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_offer",
+    "text": "Bức tượng tỏa sáng rực rỡ. Bạn nhận được một phước lành thần thánh.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-100", "lck": "+5" }, "flags": ["blessed_by_shrine"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_search",
+    "text": "Bạn tìm thấy một mảnh ký ức cũ nằm dưới chân bức tượng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "memoryFragments": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_lost_child",
+    "name": "Đứa Trẻ Đi Lạc",
+    "weight": 8,
+    "min_age": 10,
+    "text": "Một đứa bé đang ngồi khóc nức nở bên vệ đường. Nó có vẻ đã bị lạc khỏi gia đình.",
+    "choices": [
+      {
+        "text": "Giúp đứa bé tìm đường về nhà",
+        "next": "ce_lost_child_help"
+      },
+      {
+        "text": "Cho đứa bé một ít thức ăn",
+        "next": "ce_lost_child_food"
+      },
+      {
+        "text": "Bỏ đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_lost_child_help",
+    "text": "Bạn mất nhiều thời gian nhưng cuối cùng cũng đưa được đứa bé về với gia đình. Cha mẹ nó vô cùng biết ơn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "cha": "+5", "xp": "+150" }, "flags": ["helped_lost_child"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_lost_child_food",
+    "text": "Đứa bé nín khóc và cảm ơn bạn. Nó đưa cho bạn một chiếc vòng tay nhỏ.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+10", "cha": "+2" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_wanted_poster",
+    "name": "Lệnh Truy Nã Quen Thuộc",
+    "weight": 7,
+    "min_age": 12,
+    "text": "Bạn thấy một tờ lệnh truy nã dán trên thân cây. Hình vẽ trên đó trông rất giống một người bạn đã từng gặp.",
+    "choices": [
+      {
+        "text": "Gỡ tờ lệnh xuống và nghiên cứu",
+        "next": "ce_wanted_poster_study"
+      },
+      {
+        "text": "Hỏi người dân xung quanh",
+        "next": "ce_wanted_poster_ask"
+      },
+      {
+        "text": "Bỏ qua",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_wanted_poster_study",
+    "text": "Bạn nhận ra đây là một âm mưu đổ tội cho người vô tội. Bạn cảm thấy phẫn nộ.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+3" }, "flags": ["knows_about_conspiracy"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_wanted_poster_ask",
+    "text": "Người dân sợ hãi không dám trả lời. Bạn cảm thấy có điều gì đó mờ ám.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "res": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_black_market",
+    "name": "Đại Lý Chợ Đen",
+    "weight": 6,
+    "min_age": 15,
+    "text": "Một kẻ khả nghi tiếp cận bạn và thì thầm: 'Muốn hàng xịn không? Chỉ dành cho khách quen thôi.'",
+    "choices": [
+      {
+        "text": "Xem hàng cấm (Cần 200 Vàng)",
+        "requires": { "stats": { "gold": ">=200" } },
+        "next": "ce_black_market_buy"
+      },
+      {
+        "text": "Tố cáo hắn với lính gác",
+        "next": "ce_black_market_report"
+      },
+      {
+        "text": "Từ chối",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_black_market_buy",
+    "text": "Bạn mua được một món vũ khí cực kỳ mạnh mẽ nhưng có vẻ nó bị nguyền rủa.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-200" }, "generateWeapon": true, "flags": ["bought_black_market"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_black_market_report",
+    "text": "Lính gác bắt giữ hắn và thưởng cho bạn một ít vàng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+50", "cha": "+3" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_cursed_item",
+    "name": "Vật Phẩm Bị Nguyền Rủa",
+    "weight": 9,
+    "min_age": 7,
+    "text": "Bạn thấy một chiếc nhẫn đen tuyền tỏa ra luồng khí lạnh lẽo nằm trên mặt đất.",
+    "choices": [
+      {
+        "text": "Nhặt lên và đeo thử",
+        "next": "ce_cursed_item_wear"
+      },
+      {
+        "text": "Dùng phép thuật thanh tẩy",
+        "requires": { "stats": { "int": ">=20" } },
+        "next": "ce_cursed_item_purify"
+      },
+      {
+        "text": "Tránh xa nó",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_cursed_item_wear",
+    "text": "Chiếc nhẫn thắt chặt vào ngón tay bạn. Bạn cảm thấy mạnh mẽ hơn nhưng cơ thể đau đớn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "str": "+10", "maxHp": "-20" }, "flags": ["cursed_by_ring"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_cursed_item_purify",
+    "text": "Bạn thanh tẩy được lời nguyền và nhận được một viên ngọc quý.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+5", "gold": "+100" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_portal",
+    "name": "Cổng Không Gian Kỳ Lạ",
+    "weight": 5,
+    "min_age": 20,
+    "text": "Một vết nứt không gian đang nhấp nháy liên tục trước mặt bạn. Nó dường như dẫn đến một nơi không xác định.",
+    "choices": [
+      {
+        "text": "Bước vào cổng",
+        "next": "ce_strange_portal_enter"
+      },
+      {
+        "text": "Nghiên cứu cấu trúc cổng",
+        "next": "ce_strange_portal_study"
+      },
+      {
+        "text": "Rời đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_portal_enter",
+    "text": "Bạn bị hút vào cổng và rơi xuống một thế giới ngẫu nhiên.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "flags": ["used_strange_portal"] },
+        "next": "random_world_jump"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_portal_study",
+    "text": "Bạn ghi chép lại cấu trúc của cổng không gian, thu được kiến thức quý giá.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+3", "xp": "+100" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes",
+    "name": "Người Quen Cũ?",
+    "weight": 4,
+    "min_age": 15,
+    "text": "Một ông lão nhìn chằm chằm vào bạn. 'Ngươi... ta đã thấy ngươi ở thế giới trước. Ngươi vẫn chưa bỏ cuộc sao?'",
+    "choices": [
+      {
+        "text": "Hỏi ông ta biết gì",
+        "next": "ce_npc_recognizes_ask"
+      },
+      {
+        "text": "Phủ nhận",
+        "next": "ce_npc_recognizes_deny"
+      },
+      {
+        "text": "Tấn công ông ta",
+        "next": "ce_npc_recognizes_attack"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes_ask",
+    "text": "Ông lão thở dài: 'Vòng lặp này... nó không bao giờ kết thúc. Hãy giữ lấy cái này.' Ông đưa cho bạn một mảnh ký ức.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "memoryFragments": "+1" }, "flags": ["met_old_man_loop"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes_deny",
+    "text": "'Có lẽ ta nhầm người.' Ông lão lắc đầu và bước đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes_attack",
+    "text": "Ông lão biến mất vào hư không trước khi đòn tấn công của bạn chạm tới. 'Ngươi vẫn bạo lực như xưa.'",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "cha": "-5" } },
+        "next": "resume"
+      }
+    ]
+  }
+]

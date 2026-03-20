@@ -1,0 +1,37 @@
+{
+  "tutorial": {
+    "id": "tutorial",
+    "name": "Hư Không",
+    "description": "Một nơi nằm giữa các thế giới.",
+    "color": "#1a1a2e",
+    "image": "https://picsum.photos/seed/void_world/1024/768?blur=2"
+  },
+  "fantasy": {
+    "id": "fantasy",
+    "name": "Kỳ Ảo Tăm Tối",
+    "description": "Một vương quốc của ma thuật hắc ám và những lâu đài đổ nát.",
+    "color": "#1a2e1a",
+    "image": "https://picsum.photos/seed/dark_fantasy_forest/1024/768"
+  },
+  "scifi": {
+    "id": "scifi",
+    "name": "Khoa Học Viễn Tưởng",
+    "description": "Một thế giới cyberpunk lạc hậu và những trạm không gian bị bỏ hoang.",
+    "color": "#1a1a4a",
+    "image": "https://picsum.photos/seed/cyberpunk_city/1024/768"
+  },
+  "eastern": {
+    "id": "eastern",
+    "name": "Thần Thoại Phương Đông",
+    "description": "Những cung điện cổ kính và những ngôi đền trên núi sương mù.",
+    "color": "#4a1a1a",
+    "image": "https://picsum.photos/seed/eastern_temple/1024/768"
+  },
+  "postapoc": {
+    "id": "postapoc",
+    "name": "Hậu Tận Thế",
+    "description": "Những sa mạc hoang vu và những thành phố ngập nước, hoang tàn.",
+    "color": "#4a3a1a",
+    "image": "https://picsum.photos/seed/wasteland/1024/768"
+  }
+}

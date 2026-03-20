@@ -1,0 +1,41 @@
+{
+  "equipment_drop_rates": [
+    {
+      "min_scenes": 0,
+      "max_scenes": 50,
+      "base_rates": {
+        "common": 0.7,
+        "uncommon": 0.2,
+        "rare": 0.08,
+        "epic": 0.015,
+        "legendary": 0.005
+      }
+    },
+    {
+      "min_scenes": 51,
+      "max_scenes": 150,
+      "base_rates": {
+        "common": 0.5,
+        "uncommon": 0.3,
+        "rare": 0.15,
+        "epic": 0.04,
+        "legendary": 0.01
+      }
+    },
+    {
+      "min_scenes": 151,
+      "max_scenes": 9999,
+      "base_rates": {
+        "common": 0.3,
+        "uncommon": 0.3,
+        "rare": 0.25,
+        "epic": 0.1,
+        "legendary": 0.05
+      }
+    }
+  ],
+  "luck_bonus": {
+    "rarity_multiplier_per_point": 0.02,
+    "max_multiplier": 2.0
+  }
+}

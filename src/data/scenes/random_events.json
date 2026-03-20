@@ -1,0 +1,143 @@
+{
+  "re_merchant": {
+    "id": "re_merchant",
+    "world": "fantasy",
+    "speaker": "merchant",
+    "text": "Một bóng người bước ra từ màn sương. Một thương nhân. Hoặc một kẻ nhặt mót. Khó mà phân biệt được trong những ngày này. 'Tôi có những thứ giúp cậu tiếp tục thở. Với một cái giá.'",
+    "choices": [
+      {
+        "text": "Mua bình máu (10 Vàng)",
+        "requires": { "stats": { "gold": ">=10" } },
+        "sets": { "stats": { "gold": "-10" }, "addItem": "potion" },
+        "next": "RESUME_JOURNEY"
+      },
+      {
+        "text": "Mua vũ khí bí ẩn (50 Vàng)",
+        "requires": { "stats": { "gold": ">=50" } },
+        "sets": { "stats": { "gold": "-50" }, "generateWeapon": true },
+        "next": "RESUME_JOURNEY"
+      },
+      {
+        "text": "\"Tôi sẽ tự lo liệu.\"",
+        "next": "RESUME_JOURNEY"
+      }
+    ]
+  },
+  "re_trap": {
+    "id": "re_trap",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Một tiếng 'cạch' vang lên dưới đế giày. Một cái bẫy cũ, do ai đó đã chết từ lâu để lại. Dù sao thì vẫn còn nguy hiểm.",
+    "choices": [
+      {
+        "text": "Lăn người né tránh.",
+        "roll": { "stat": "dex", "target": 12, "successScene": "re_trap_success", "failScene": "re_trap_fail" }
+      }
+    ]
+  },
+  "re_trap_success": {
+    "id": "re_trap_success",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Tôi lăn ra ngoài ngay khi những chiếc gai rỉ sét cắm phập vào nhau. Lại một ngày nữa, lại một lần suýt chết.",
+    "choices": [
+      { "text": "Phủi bụi và đi tiếp.", "next": "RESUME_JOURNEY" }
+    ]
+  },
+  "re_trap_fail": {
+    "id": "re_trap_fail",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Quá chậm. Những chiếc gai xé toạc chân tôi. Tôi cắn răng kìm tiếng chửi rủa. Nỗi đau chỉ là lời nhắc nhở rằng tôi vẫn còn sống.",
+    "choices": [
+      { "text": "Băng bó và đi tiếp. (Mất 5 HP)", "sets": { "stats": { "hp": "-5" } }, "next": "RESUME_JOURNEY" }
+    ]
+  },
+  "re_chest": {
+    "id": "re_chest",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Một chiếc rương khóa kín nằm lăn lóc trên đất. Có lẽ thuộc về kẻ nào đó nghĩ rằng họ có thể mang nó theo xuống mồ.",
+    "choices": [
+      {
+        "text": "Dùng dụng cụ mở khóa.",
+        "requires": { "flags": ["has_lockpick"] },
+        "sets": { "stats": { "gold": "+50" } },
+        "next": "re_chest_open"
+      },
+      {
+        "text": "Đập vỡ ổ khóa.",
+        "roll": { "stat": "str", "target": 15, "successScene": "re_chest_open", "failScene": "re_chest_fail" }
+      },
+      {
+        "text": "Bỏ đi. Chắc chắn là có lời nguyền.",
+        "next": "RESUME_JOURNEY"
+      }
+    ]
+  },
+  "re_chest_open": {
+    "id": "re_chest_open",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Ổ khóa vỡ vụn. Bên trong là một nắm tiền xu và một món vũ khí. Không tệ cho một thế giới đã chết.",
+    "choices": [
+      { "text": "Lấy chiến lợi phẩm.", "sets": { "stats": { "gold": "+50" }, "generateWeapon": true }, "next": "RESUME_JOURNEY" }
+    ]
+  },
+  "re_chest_fail": {
+    "id": "re_chest_fail",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Ổ khóa rỉ sét cứng ngắc. Tôi chỉ làm bầm tím tay mình. Thật xui xẻo.",
+    "choices": [
+      { "text": "Bỏ đi.", "next": "RESUME_JOURNEY" }
+    ]
+  },
+  "re_ambush": {
+    "id": "re_ambush",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Một tiếng gầm gừ trầm thấp vang lên từ trong bóng tối. Lẽ ra tôi nên chú ý hơn. Một con quái thú lao tới.",
+    "battle": { 
+      "monsterId": "wolf",
+      "winScene": "RESUME_JOURNEY",
+      "loseScene": "game_over"
+    }
+  },
+  "re_npc_help": {
+    "id": "re_npc_help",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Một tiếng kêu cứu vang lên giữa đống đổ nát. Ai đó đang bị kẹt dưới một thanh xà gãy. Lẽ ra tôi nên bỏ đi. Tôi thực sự nên làm vậy.",
+    "choices": [
+      {
+        "text": "Giúp họ. (Tăng CHA)",
+        "sets": { "stats": { "cha": "+1" } },
+        "next": "re_npc_help_success"
+      },
+      {
+        "text": "Lấy túi đồ của họ rồi rời đi. (Nhận 20 Vàng)",
+        "sets": { "stats": { "gold": "+20" } },
+        "next": "RESUME_JOURNEY"
+      }
+    ]
+  },
+  "re_npc_help_success": {
+    "id": "re_npc_help_success",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Tôi nâng thanh xà lên. Họ cảm ơn tôi, nước mắt lưng tròng. Tôi chỉ gật đầu và bước đi trước khi họ kịp yêu cầu thêm điều gì.",
+    "choices": [
+      { "text": "Tiếp tục đi.", "next": "RESUME_JOURNEY" }
+    ]
+  },
+  "re_storm": {
+    "id": "re_storm",
+    "world": "fantasy",
+    "speaker": null,
+    "text": "Bầu trời chuyển sang màu tím đen. Mưa axit bắt đầu rơi, rít lên khi chạm đất. Không có chỗ trú ẩn nào.",
+    "choices": [
+      { "text": "Kéo cổ áo lên và bước qua. (Mất 2 HP)", "sets": { "stats": { "hp": "-2" } }, "next": "RESUME_JOURNEY" }
+    ]
+  }
+}

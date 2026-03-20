@@ -1,0 +1,5 @@
+{
+  "world_prefix": "Phế Tích",
+  "element": "fire",
+  "specific_types": ["gun", "blade", "relic"]
+}
