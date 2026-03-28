@@ -1,0 +1,121 @@
+{
+  "tutorial": [
+    {
+      "id": "guide",
+      "name": "Người Dẫn Đường",
+      "type": "quest_giver",
+      "role": "Người canh giữ hư vô",
+      "personality": "Bí ẩn, thông thái",
+      "color": "#aaaaaa",
+      "image": "https://picsum.photos/seed/guide_character/150/150",
+      "affection": 0,
+      "unlocked": true,
+      "description": "Một thực thể không hình dạng rõ ràng, giúp đỡ các lữ khách lạc lối.",
+      "preferences": {
+        "loved": ["memory_fragment", "soul_essence"],
+        "liked": ["ancient_tome"],
+        "hated": ["industrial_waste", "broken_chip"]
+      }
+    }
+  ],
+  "dark_fantasy": [
+    {
+      "id": "linh",
+      "name": "Linh",
+      "type": "companion",
+      "role": "Cô gái bán hoa",
+      "personality": "Ấm áp bề ngoài, tuyệt vọng âm thầm",
+      "icon": "🌸",
+      "color": "#f9a8d4",
+      "image": "https://picsum.photos/seed/linh_flower/150/150",
+      "affection": 5,
+      "unlocked": true,
+      "description": "Cô đếm mọi thứ: bước chân, lời nói, nhịp tim. Một thói quen sinh ra từ sự lặp lại vô tận.",
+      "preferences": {
+        "loved": ["white_flower", "old_diary", "memory_fragment"],
+        "liked": ["blue_flower", "honey_tea"],
+        "hated": ["rust_metal", "broken_clock"]
+      }
+    },
+    {
+      "id": "vael",
+      "name": "Vael",
+      "type": "quest_giver",
+      "role": "Nhà sử học thị trấn",
+      "personality": "Bí ẩn, hài hước khô khan",
+      "icon": "🕯️",
+      "color": "#94a3b8",
+      "image": "https://picsum.photos/seed/vael_hist/150/150",
+      "affection": 0,
+      "unlocked": true,
+      "description": "Người giữ những cuốn sách về lịch sử của những sự kiện chưa xảy ra.",
+      "preferences": {
+        "loved": ["ancient_tome", "unwritten_history", "ink_well"],
+        "liked": ["old_coin"],
+        "hated": ["loud_noise", "burning_book"]
+      }
+    },
+    {
+      "id": "seraphine",
+      "name": "Nữ Hoàng Seraphine",
+      "type": "boss",
+      "role": "Người Bảo Vệ Thế Giới",
+      "personality": "Quý phái, kiệt sức",
+      "icon": "👑",
+      "color": "#e2c97e",
+      "image": "https://picsum.photos/seed/seraphine_queen/150/150",
+      "affection": 0,
+      "unlocked": false,
+      "description": "Người cai trị gánh chịu tội lỗi của hàng trăm năm lặp lại.",
+      "preferences": {
+        "loved": ["royal_insignia", "forgiveness_letter"],
+        "liked": ["garden_seeds"],
+        "hated": ["weapons", "war_banners"]
+      }
+    },
+    {
+      "id": "maren",
+      "name": "Maren",
+      "type": "companion",
+      "role": "Hiệp sĩ hoàng cung",
+      "personality": "Trung loyal, tự hủy",
+      "icon": "⚔️",
+      "color": "#ef4444",
+      "image": "https://picsum.photos/seed/maren_knight/150/150",
+      "affection": 0,
+      "unlocked": false,
+      "description": "Một chiến binh mòn mỏi vì phải chứng kiến Ngày Thứ Bảy lặp lại mãi mãi.",
+      "preferences": {
+        "loved": ["sharpening_stone", "bravery_medal"],
+        "liked": ["strong_ale"],
+        "hated": ["cowardice", "broken_shield"]
+      }
+    }
+  ],
+  "scifi": [
+    {
+      "id": "unit73",
+      "name": "Unit-73",
+      "type": "companion",
+      "role": "Android Hỗ trợ",
+      "personality": "Logic tuyệt đối",
+      "color": "#235af5",
+      "image": "https://picsum.photos/seed/unit73_robot/150/150",
+      "affection": 0,
+      "unlocked": true,
+      "preferences": {
+        "loved": ["advanced_chip", "energy_cell"],
+        "liked": ["metal_scrap"],
+        "hated": ["organic_food"]
+      }
+    }
+  ],
+  "global": [
+    {
+      "id": "player",
+      "name": "Lữ Khách",
+      "color": "#4ade80",
+      "image": null
+    }
+  ]
+}

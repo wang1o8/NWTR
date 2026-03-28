@@ -1,0 +1,188 @@
+{
+  "eastern_start": {
+    "id": "eastern_start",
+    "world": "eastern",
+    "speaker": null,
+    "text": "Thế giới thứ ba. Những ngọn núi mờ sương trông như một bức tranh thủy mặc. Gần như là yên bình. Gần như vậy. Sự tĩnh lặng này quá nặng nề.",
+    "choices": [
+      { "text": "Leo lên ngôi đền.", "next": "eastern_temple" },
+      { "text": "Đi dọc theo dòng sông.", "next": "eastern_river" }
+    ]
+  },
+  "eastern_temple": {
+    "id": "eastern_temple",
+    "world": "eastern",
+    "speaker": "monk",
+    "text": "Một nhà sư già đang quét dọn sân. Ông ta không ngẩng lên nhìn. 'Thí chủ mang một gánh nặng quá lớn. Quá khứ là một bóng ma chỉ ám ảnh những ai để cho nó làm vậy.'",
+    "choices": [
+      { "text": "\"Những bóng ma của tôi rất chân thực.\"", "next": "eastern_temple_talk" },
+      { "text": "Mặc kệ ông ta quét dọn.", "next": "eastern_river" }
+    ]
+  },
+  "eastern_temple_talk": {
+    "id": "eastern_temple_talk",
+    "world": "eastern",
+    "speaker": "monk",
+    "text": "Ông ta dừng chổi. 'Vậy thì có lẽ thí chủ nên hỏi Hồ Ly Tinh bên bờ sông. Cô ta thu thập những thứ bị đánh mất. Kể cả ký ức.'",
+    "choices": [
+      { "text": "\"Cảm ơn vì lời khuyên.\"", "next": "eastern_river" }
+    ]
+  },
+  "eastern_river": {
+    "id": "eastern_river",
+    "world": "eastern",
+    "speaker": "fox_spirit",
+    "text": "Một người phụ nữ với chín cái đuôi mờ ảo ngồi bên bờ nước. 'Ngươi có mùi của tro tàn và sự hối tiếc. Muốn chơi một trò chơi không? Thắng, ta sẽ trả lại một phần những gì ngươi đã mất. Thua, ngươi phải giao sinh lực cho ta.'",
+    "choices": [
+      { "text": "\"Tôi không còn nhiều sinh lực để cho đâu.\"", "roll": { "stat": "int", "target": 14, "successScene": "eastern_game_win", "failScene": "eastern_game_lose" } },
+      { "text": "\"Không hứng thú.\"", "next": "eastern_demon" }
+    ]
+  },
+  "eastern_game_win": {
+    "id": "eastern_game_win",
+    "world": "eastern",
+    "speaker": "fox_spirit",
+    "text": "Cô ta bĩu môi, đưa ra một mảnh vỡ phát sáng. 'Ngươi thật nhàm chán. Nhưng thỏa thuận là thỏa thuận.' Tôi chạm vào mảnh vỡ. Một khuôn mặt xẹt qua. Một người tôi từng yêu? Nó biến mất quá nhanh.",
+    "choices": [
+      { "text": "Lấy mảnh vỡ. (Nhận Mảnh Ký Ức, +1 Hảo Cảm Hồ Ly)", "sets": { "stats": { "memoryFragments": "+1", "affection_fox": "+1" } }, "next": "eastern_demon" }
+    ]
+  },
+  "eastern_game_lose": {
+    "id": "eastern_game_lose",
+    "world": "eastern",
+    "speaker": "fox_spirit",
+    "text": "Cô ta cười lớn, âm thanh như tiếng chuông reo. 'Quá chậm.' Tôi cảm thấy một luồng khí lạnh lan tỏa trong ngực khi cô ta hút lấy sinh khí của tôi.",
+    "choices": [
+      { "text": "Chịu đựng nỗi đau. (Mất HP)", "sets": { "stats": { "hp": "-5" } }, "next": "eastern_demon" }
+    ]
+  },
+  "eastern_demon": {
+    "id": "eastern_demon",
+    "world": "eastern",
+    "speaker": null,
+    "text": "Dòng sông sục sôi. Một con quỷ chìm trong ngọn lửa xanh trồi lên từ đáy sâu. Nó gào thét, một âm thanh của sự đau đớn tột cùng. Nó không muốn chiến đấu. Nó chỉ muốn nỗi đau dừng lại. Tôi có thể đồng cảm với điều đó.",
+    "battle": { 
+      "monsterId": "blue_demon",
+      "winScene": "postapoc_start",
+      "loseScene": "game_over"
+    }
+  },
+  "eastern_event_martial_tourney": {
+    "id": "eastern_event_martial_tourney",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Bạn bắt gặp một võ đài sương mù nơi các võ sư đang giao đấu. Một người thách thức bạn. 'Người lạ, hãy cho ta xem võ công của ngươi!'",
+    "choices": [
+      { "text": "Thượng đài (STR >= 14)", "requires": { "stats": { "str": ">=14" } }, "sets": { "stats": { "xp": "+100" } }, "next": "resume" },
+      { "text": "Đứng xem học hỏi", "sets": { "stats": { "wis": "+1" } }, "next": "resume" }
+    ]
+  },
+  "eastern_event_enlightenment": {
+    "id": "eastern_event_enlightenment",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Dưới gốc cây bồ đề, bạn cảm thấy tâm trí mình tĩnh lặng lạ thường. Dòng thời gian dường như trôi chậm lại.",
+    "choices": [
+      { "text": "Ngồi thiền định", "sets": { "stats": { "sanity": "+20", "mp": "+50", "hp": "+20" } }, "next": "resume" }
+    ]
+  },
+  "eastern_event_spirit_encounter": {
+    "id": "eastern_event_spirit_encounter",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Một linh hồn lang thang cầu xin bạn giúp đỡ tìm lại kỷ vật gia truyền đã mất.",
+    "choices": [
+      { "text": "Giúp đỡ (Tốn 1 mảnh ký ức)", "requires": { "stats": { "memoryFragments": ">=1" } }, "sets": { "stats": { "memoryFragments": "-1", "rep": "+10" }, "addItem": "jade_pendant" }, "next": "resume" },
+      { "text": "Từ chối khéo léo", "next": "resume" }
+    ]
+  },
+  "eastern_event_dojo_training": {
+    "id": "eastern_event_dojo_training",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Một đạo đường vắng vẻ mở cửa. Võ sư trưởng gật đầu với bạn: 'Hãy cùng rèn luyện thân thể.'",
+    "choices": [
+      { "text": "Tập luyện gắt gao (-20 HP, +50 XP, +1 STR)", "sets": { "stats": { "hp": "-20", "xp": "+50", "str": "+1" } }, "next": "resume" },
+      { "text": "Tập luyện cơ bản (+20 XP)", "sets": { "stats": { "xp": "+20" } }, "next": "resume" }
+    ]
+  },
+  "eastern_event_tea_ceremony": {
+    "id": "eastern_event_tea_ceremony",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Một ẩn sĩ mời bạn thưởng thức trà hội. Mùi hương thanh tịnh lan tỏa.",
+    "choices": [
+      { "text": "Uống trà", "sets": { "stats": { "hp": "max", "mp": "max", "sanity": "+30" } }, "next": "resume" }
+    ]
+  },
+  "eastern_event_ninja_ambush": {
+    "id": "eastern_event_ninja_ambush",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Bóng đen lướt qua những ngọn trúc. Không khí lạnh toát. Phi tiêu phóng tới từ mọi hướng!",
+    "choices": [
+      { "text": "Bắt lấy phi tiêu (DEX >= 16)", "requires": { "stats": { "dex": ">=16" } }, "sets": { "stats": { "xp": "+50" } }, "next": "resume" },
+      { "text": "Chịu đòn (-15 HP)", "sets": { "stats": { "hp": "-15" } }, "next": "resume" }
+    ]
+  },
+  "eastern_event_bamboo_cutter": {
+    "id": "eastern_event_bamboo_cutter",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Một người tiều phu già đang chẻ trúc phát hiện một ống trúc phát sáng kỳ lạ bên trong tàng cây.",
+    "choices": [
+      { "text": "Mua lại từ ông ấy (30 Vàng)", "requires": { "stats": { "gold": ">=30" } }, "sets": { "stats": { "gold": "-30" }, "addItem": "health_potion" }, "next": "resume" },
+      { "text": "Mặc kệ", "next": "resume" }
+    ]
+  },
+  "eastern_event_koi_pond": {
+    "id": "eastern_event_koi_pond",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Một hồ cá Koi đầy màu sắc. Nhìn sâu vào hồ cá, bạn nhận ra những con cá dường như đang xếp thành một chữ Hán cổ.",
+    "choices": [
+      { "text": "Tập trung giải mã (INT >= 13)", "requires": { "stats": { "int": ">=13" } }, "sets": { "stats": { "wis": "+1" } }, "next": "resume" },
+      { "text": "Ném đồng xu cầu nguyện (-1 Vàng)", "requires": { "stats": { "gold": ">=1" } }, "sets": { "stats": { "gold": "-1", "rep": "+5" } }, "next": "resume" }
+    ]
+  },
+  "eastern_event_ronin": {
+    "id": "eastern_event_ronin",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 7,
+    "text": "Một Ronin đang cần mài xước thanh katana của mình. Hắn có vẻ rất thiếu thốn và thèm rựou sâm.",
+    "choices": [
+      { "text": "Cho hắn tiền (20 Vàng)", "requires": { "stats": { "gold": ">=20" } }, "sets": { "stats": { "gold": "-20" }, "addItem": "iron_sword" }, "next": "resume" },
+      { "text": "Choảng hắn để cướp đồ", "roll": { "stat": "str", "target": 15, "successScene": "eastern_event_ronin_win", "failScene": "eastern_event_ronin_lose" } }
+    ]
+  },
+  "eastern_event_ronin_win": {
+    "id": "eastern_event_ronin_win",
+    "text": "Bạn hạ gục gã Ronin dặt dẹo dễ dàng.",
+    "choices": [ { "text": "Tiếp tục (Nhận Đồ)", "sets": { "generateWeapon": true, "stats": { "rep": "-10" } }, "next": "resume" } ]
+  },
+  "eastern_event_ronin_lose": {
+    "id": "eastern_event_ronin_lose",
+    "text": "Gã lảo đảo nhưng vung kiếm cực gắt, bạn ăn một chém dài.",
+    "choices": [ { "text": "Tiếp tục (-20 HP)", "sets": { "stats": { "hp": "-20" } }, "next": "resume" } ]
+  },
+  "eastern_event_yokai_festival": {
+    "id": "eastern_event_yokai_festival",
+    "world": "eastern",
+    "priority": "world_specific",
+    "weight": 5,
+    "text": "Bạn đi lạc vào Lễ hội Bách Quỷ Dạ Hành. Đeo tạm một mặt nạ để hòa mình vào, bạn có cơ hội tham gia các trò chơi ma quái.",
+    "choices": [
+      { "text": "Chơi ném vòng yêu quái (-10 Vàng)", "requires": { "stats": { "gold": ">=10" } }, "sets": { "stats": { "gold": "-10", "sanity": "-5" }, "generateWeapon": true }, "next": "resume" },
+      { "text": "Lặng lẽ rời đi", "next": "resume" }
+    ]
+  }
+}

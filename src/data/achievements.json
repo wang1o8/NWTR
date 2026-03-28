@@ -1,0 +1,454 @@
+{
+  "achievements": [
+    {
+      "id": "ach_win_10",
+      "name": "Chiến Binh Sơ Cấp",
+      "condition": "Win 10 battles",
+      "category": "combat",
+      "reward": {
+        "gold": 100
+      }
+    },
+    {
+      "id": "ach_win_100",
+      "name": "Cựu Binh Hạn Nặng",
+      "condition": "Win 100 battles",
+      "category": "combat",
+      "reward": {
+        "item": "postapoc_machete"
+      }
+    },
+    {
+      "id": "ach_flawless",
+      "name": "Hoàn Hảo",
+      "condition": "Win without taking damage",
+      "category": "combat",
+      "reward": {
+        "item": "buff_str"
+      }
+    },
+    {
+      "id": "ach_boss_1",
+      "name": "Bóng Ma Sụp Đổ",
+      "condition": "Defeat Loop Phantom",
+      "category": "combat",
+      "reward": {
+        "item": "mat_time_dust"
+      }
+    },
+    {
+      "id": "ach_boss_kaelen",
+      "name": "Kỵ Sĩ Gục Ngã",
+      "condition": "Defeat Kaelen",
+      "category": "combat",
+      "reward": {
+        "item": "mat_dragon_scale"
+      }
+    },
+    {
+      "id": "ach_boss_shogun",
+      "name": "Quỷ Diện Tướng Quân",
+      "condition": "Defeat Demon Shogun",
+      "category": "combat",
+      "reward": {
+        "item": "spec_resurrect"
+      }
+    },
+    {
+      "id": "ach_boss_cortex",
+      "name": "Sập Nguồn",
+      "condition": "Defeat Cortex AI",
+      "category": "combat",
+      "reward": {
+        "item": "mat_quantum_cpu"
+      }
+    },
+    {
+      "id": "ach_boss_behemoth",
+      "name": "Kẻ Khổng Lồ Ngã Xuống",
+      "condition": "Defeat The Behemoth",
+      "category": "combat",
+      "reward": {
+        "item": "mat_mutant_flesh"
+      }
+    },
+    {
+      "id": "ach_crit_50",
+      "name": "Thiện Xạ",
+      "condition": "Land 50 critical hits",
+      "category": "combat",
+      "reward": {
+        "gold": 500
+      }
+    },
+    {
+      "id": "ach_die_1",
+      "name": "Cái Chết Đầu Tiên",
+      "condition": "Die for the first time",
+      "category": "combat",
+      "reward": {
+        "item": "pot_revive"
+      }
+    },
+    {
+      "id": "ach_explore_10",
+      "name": "Kẻ Lưu Đày",
+      "condition": "Visit 10 physical locations",
+      "category": "exploration",
+      "reward": {
+        "gold": 50
+      }
+    },
+    {
+      "id": "ach_explore_50",
+      "name": "Nhà Thám Hiểm",
+      "condition": "Find 50 treasures",
+      "category": "exploration",
+      "reward": {
+        "item": "spec_town_portal"
+      }
+    },
+    {
+      "id": "ach_visit_fantasy",
+      "name": "Thế Giới Phép Thuật",
+      "condition": "Visit Fantasy World",
+      "category": "exploration",
+      "reward": {
+        "gold": 100
+      }
+    },
+    {
+      "id": "ach_visit_scifi",
+      "name": "Tương Lai Vô Vọng",
+      "condition": "Visit Sci-Fi World",
+      "category": "exploration",
+      "reward": {
+        "gold": 100
+      }
+    },
+    {
+      "id": "ach_visit_eastern",
+      "name": "Phương Đông Huyền Bí",
+      "condition": "Visit Eastern World",
+      "category": "exploration",
+      "reward": {
+        "gold": 100
+      }
+    },
+    {
+      "id": "ach_visit_dark",
+      "name": "Vực Thẳm Đen Tối",
+      "condition": "Visit Dark Fantasy World",
+      "category": "exploration",
+      "reward": {
+        "gold": 100
+      }
+    },
+    {
+      "id": "ach_visit_postapoc",
+      "name": "Tàn Tích Hạt Nhân",
+      "condition": "Visit Post-Apoc World",
+      "category": "exploration",
+      "reward": {
+        "gold": 100
+      }
+    },
+    {
+      "id": "ach_all_worlds",
+      "name": "Người Du Hành Đa Vũ Trụ",
+      "condition": "Visit all 5 worlds",
+      "category": "exploration",
+      "reward": {
+        "item": "pot_elixir"
+      }
+    },
+    {
+      "id": "ach_trap_10",
+      "name": "Tai Nạn Nghề Nghiệp",
+      "condition": "Fall into 10 traps",
+      "category": "exploration",
+      "reward": {
+        "item": "util_bandage"
+      }
+    },
+    {
+      "id": "ach_trap_disarm",
+      "name": "Mắt Tinh Tay Nhanh",
+      "condition": "Disarm 5 traps",
+      "category": "exploration",
+      "reward": {
+        "item": "spec_trap_kit"
+      }
+    },
+    {
+      "id": "ach_rep_10",
+      "name": "Người Tốt",
+      "condition": "Reach 10 Reputation",
+      "category": "social",
+      "reward": {
+        "gold": 200
+      }
+    },
+    {
+      "id": "ach_rep_70",
+      "name": "Anh Hùng",
+      "condition": "Reach 70 Reputation",
+      "category": "social",
+      "reward": {
+        "item": "food_healing_tea"
+      }
+    },
+    {
+      "id": "ach_rep_neg",
+      "name": "Kẻ Ác",
+      "condition": "Reach -20 Reputation",
+      "category": "social",
+      "reward": {
+        "item": "spec_acid_flask"
+      }
+    },
+    {
+      "id": "ach_merchant_loyalty",
+      "name": "Khách VIP",
+      "condition": "Buy 10 times from Merchant",
+      "category": "social",
+      "reward": {
+        "gold": 500
+      }
+    },
+    {
+      "id": "ach_charity",
+      "name": "Từ Thiện",
+      "condition": "Help 20 strangers",
+      "category": "social",
+      "reward": {
+        "item": "spec_holy_water"
+      }
+    },
+    {
+      "id": "ach_max_aff_1",
+      "name": "Trái Tim Đồng Điệu",
+      "condition": "Max Affection (1 NPC)",
+      "category": "social",
+      "reward": {
+        "item": "util_tent"
+      }
+    },
+    {
+      "id": "ach_max_aff_5",
+      "name": "Chúa Tể Tình Trường",
+      "condition": "Max Affection (5 NPCs)",
+      "category": "social",
+      "reward": {
+        "item": "food_exotic_fruit"
+      }
+    },
+    {
+      "id": "ach_betray_1",
+      "name": "Kẻ Lừa Tráo",
+      "condition": "Rob someone who needs help",
+      "category": "social",
+      "reward": {
+        "gold": 100
+      }
+    },
+    {
+      "id": "ach_betray_10",
+      "name": "Kẻ Sát Nhân Máu Lạnh",
+      "condition": "Betray 10 times",
+      "category": "social",
+      "reward": {
+        "item": "dark_blood_whip"
+      }
+    },
+    {
+      "id": "ach_peace",
+      "name": "Nhà Ngoại Giao",
+      "condition": "Negotiate peace with a boss",
+      "category": "social",
+      "reward": {
+        "item": "buff_courage"
+      }
+    },
+    {
+      "id": "ach_level_5",
+      "name": "Trưởng Thành",
+      "condition": "Reach Level 5",
+      "category": "progression",
+      "reward": {
+        "gold": 200
+      }
+    },
+    {
+      "id": "ach_level_20",
+      "name": "Lão Tướng",
+      "condition": "Reach Level 20",
+      "category": "progression",
+      "reward": {
+        "item": "buff_clarity"
+      }
+    },
+    {
+      "id": "ach_level_50",
+      "name": "Kẻ Xuyên Tranh",
+      "condition": "Reach Level 50",
+      "category": "progression",
+      "reward": {
+        "item": "pot_elixir"
+      }
+    },
+    {
+      "id": "ach_ng_plus",
+      "name": "Vòng Lặp Vô Tận",
+      "condition": "Start NG+",
+      "category": "progression",
+      "reward": {
+        "gold": 1000
+      }
+    },
+    {
+      "id": "ach_ng_plus_5",
+      "name": "Chúa Tể Thời Gian",
+      "condition": "Reach NG+ 5",
+      "category": "progression",
+      "reward": {
+        "item": "mat_void_shard"
+      }
+    },
+    {
+      "id": "ach_end_normal",
+      "name": "Kết Cục: Sống Sót",
+      "condition": "Unlock Normal Ending",
+      "category": "progression",
+      "reward": {
+        "item": "fantasy_broadsword"
+      }
+    },
+    {
+      "id": "ach_end_true",
+      "name": "Kết Cục: Huyền Thoại",
+      "condition": "Unlock True Ending",
+      "category": "progression",
+      "reward": {
+        "item": "spec_town_portal"
+      }
+    },
+    {
+      "id": "ach_end_dark",
+      "name": "Kết Cục: Tăm Tối",
+      "condition": "Unlock Dark Ending",
+      "category": "progression",
+      "reward": {
+        "item": "dark_executioner_axe"
+      }
+    },
+    {
+      "id": "ach_end_sacrifice",
+      "name": "Kết Cục: Hy Sinh",
+      "condition": "Unlock Sacrifice Ending",
+      "category": "progression",
+      "reward": {
+        "item": "buff_courage"
+      }
+    },
+    {
+      "id": "ach_craft_1",
+      "name": "Thợ Rèn Tập Sự",
+      "condition": "Craft your first item",
+      "category": "progression",
+      "reward": {
+        "item": "mat_iron_ore"
+      }
+    },
+    {
+      "id": "ach_gold_1000",
+      "name": "Trọc Phú",
+      "condition": "Accumulate 1000 gold",
+      "category": "misc",
+      "reward": {
+        "item": "food_bread"
+      }
+    },
+    {
+      "id": "ach_gold_10k",
+      "name": "Thái Sơn Của Cải",
+      "condition": "Accumulate 10000 gold",
+      "category": "misc",
+      "reward": {
+        "item": "mat_gold_nugget"
+      }
+    },
+    {
+      "id": "ach_sanity_low",
+      "name": "Sát Mép Mất Trí",
+      "condition": "Survive a battle with <5 sanity",
+      "category": "misc",
+      "reward": {
+        "item": "pot_mana"
+      }
+    },
+    {
+      "id": "ach_overweight",
+      "name": "Vác Cả Thế Giới",
+      "condition": "Reach carry weight capacity",
+      "category": "misc",
+      "reward": {
+        "item": "buff_str"
+      }
+    },
+    {
+      "id": "ach_sell_10",
+      "name": "Con Buôn",
+      "condition": "Sell 10 items",
+      "category": "misc",
+      "reward": {
+        "gold": 300
+      }
+    },
+    {
+      "id": "ach_disassemble_10",
+      "name": "Bẻ Nát Mọi Thứ",
+      "condition": "Disassemble 10 items",
+      "category": "misc",
+      "reward": {
+        "item": "mat_scrap_metal"
+      }
+    },
+    {
+      "id": "ach_collect_mat",
+      "name": "Nhà Sưu Tầm Phế Liệu",
+      "condition": "Own 50 crafting materials",
+      "category": "misc",
+      "reward": {
+        "item": "util_repair_kit"
+      }
+    },
+    {
+      "id": "ach_speedrun",
+      "name": "Tốc Hành",
+      "condition": "Finish game in under 100 scenes",
+      "category": "misc",
+      "reward": {
+        "item": "buff_dex"
+      }
+    },
+    {
+      "id": "ach_no_heal",
+      "name": "Kẻ Bất Biến",
+      "condition": "Finish game without healing potions",
+      "category": "misc",
+      "reward": {
+        "item": "pot_elixir"
+      }
+    },
+    {
+      "id": "ach_collect_10_special",
+      "name": "Chuyên Gia Đồ Cổ",
+      "condition": "Collect 10 Special World Items",
+      "category": "misc",
+      "reward": {
+        "item": "mat_fairy_dust"
+      }
+    }
+  ]
+}

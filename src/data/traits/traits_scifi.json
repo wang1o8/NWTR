@@ -1,0 +1,6 @@
+{
+  "world": [
+    { "id": "t_w_sf_1", "name": "Cấy Ghép Cơ Khí", "effect": { "DEF": 5, "STR": 2 }, "lore": "Một phần cơ thể đã được thay thế bằng máy móc." },
+    { "id": "t_w_sf_2", "name": "Giao Diện Thần Kinh", "effect": { "INT": 5, "ATK_SPD": 10 }, "lore": "Kết nối trực tiếp với mạng lưới dữ liệu." }
+  ]
+}

@@ -1,0 +1,203 @@
+[
+  {
+    "id": "se_guardian_encounter",
+    "name": "Cuộc Gặp Gỡ Định Mệnh",
+    "min_world_visits": 1,
+    "min_flags": [],
+    "min_chapter": 1,
+    "cooldown_scenes": 10,
+    "text": "Một bóng hình khổng lồ bằng ánh sáng xuất hiện trước mặt bạn. 'Kẻ Lang Thang... Ngươi đang tìm kiếm điều gì trong những thế giới vỡ vụn này?'",
+    "choices": [
+      {
+        "text": "\"Tôi tìm kiếm sự thật.\"",
+        "sets": { "flags": ["met_guardian"], "stats": { "int": "+5" } },
+        "next": "resume"
+      },
+      {
+        "text": "\"Tôi chỉ muốn sống sót.\"",
+        "sets": { "flags": ["met_guardian"], "stats": { "hp": "+50" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "se_memory_fragment_1",
+    "name": "Mảnh Ký Ức Đứt Đoạn",
+    "min_world_visits": 2,
+    "min_flags": ["met_guardian"],
+    "min_chapter": 2,
+    "cooldown_scenes": 15,
+    "text": "Bạn nhặt được một mảnh vỡ phát sáng. Khi chạm vào, một đoạn ký ức ùa về: Một thành phố chìm trong biển lửa, và một giọng nói quen thuộc gọi tên bạn.",
+    "choices": [
+      {
+        "text": "Cố gắng nhớ lại",
+        "sets": { "flags": ["found_memory_1"], "stats": { "memoryFragments": "+1", "mp": "-10" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "se_memory_fragment_2",
+    "name": "Tiếng Vọng Từ Quá Khứ",
+    "min_world_visits": 3,
+    "min_flags": ["found_memory_1"],
+    "min_chapter": 3,
+    "cooldown_scenes": 20,
+    "text": "Một ảo ảnh hiện ra trước mắt bạn. Đó là hình bóng của chính bạn trong quá khứ, đang cầm một thanh kiếm gãy và quỳ gối trước một thế lực vô hình.",
+    "choices": [
+      {
+        "text": "Chạm vào ảo ảnh",
+        "sets": { "flags": ["found_memory_2"], "stats": { "memoryFragments": "+1", "str": "+5" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "se_true_ending_path",
+    "name": "Con Đường Chân Chính",
+    "min_world_visits": 3,
+    "min_flags": ["met_guardian", "found_memory_1", "found_memory_2"],
+    "min_chapter": 4,
+    "cooldown_scenes": 30,
+    "text": "Người Bảo Vệ Ánh Sáng xuất hiện trở lại. 'Ngươi đã thu thập đủ những mảnh vỡ. Đã đến lúc đối mặt với sự thật cuối cùng. Ngươi đã sẵn sàng chưa?'",
+    "choices": [
+      {
+        "text": "\"Tôi đã sẵn sàng.\"",
+        "next": "true_ending"
+      },
+      {
+        "text": "\"Chưa phải lúc này.\"",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "se_fantasy_dragon_hoard",
+    "name": "Kho Báu Cầm Tù",
+    "world": "fantasy",
+    "min_world_visits": 1,
+    "min_flags": ["has_item_dragon_scale"],
+    "requires_flags": [],
+    "requires": { "item": "dragon_scale" },
+    "cooldown_scenes": 999,
+    "text": "Vảy rồng trong túi bạn phát sáng, dẫn đường đến một hang động ẩn. Bên trong là kho chứa vàng bạc của con rồng cổ đại.",
+    "choices": [
+      { "text": "Lấy một ít rồi đi", "sets": { "stats": { "gold": "+500", "xp": "+200" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_fantasy_elara_secret",
+    "name": "Nhật Ký Của Nữ Hoàng",
+    "world": "fantasy",
+    "min_world_visits": 1,
+    "min_flags": ["allied_with_elara"],
+    "cooldown_scenes": 999,
+    "text": "Phù thủy Elara tin tưởng giao cho bạn cuốn nhật ký cổ. Trong đó ghi chép về nguồn gốc của Tro Xám.",
+    "choices": [
+      { "text": "Đọc nhật ký", "sets": { "stats": { "int": "+5", "wis": "+5", "sanity": "-10" }, "flags": ["read_elara_diary"] }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_scifi_cortex_core",
+    "name": "Lõi AI Cortex",
+    "world": "scifi",
+    "min_world_visits": 1,
+    "requires": { "item": "ai_drive" },
+    "cooldown_scenes": 999,
+    "text": "Bạn cắm ổ cứng chứa AI Cortex vào trạm máy chủ trung tâm. Cortex vươn vòi mã độc ra khắp thành phố.",
+    "choices": [
+      { "text": "Nhận phần thưởng từ Cortex", "sets": { "addItem": "plasma_rifle", "stats": { "int": "+10", "rep": "-50" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_scifi_alien_ship",
+    "name": "Phi Thuyền Ngoài Hành Tinh",
+    "world": "scifi",
+    "min_world_visits": 1,
+    "min_flags": ["alien_knowledge"],
+    "cooldown_scenes": 999,
+    "text": "Kiến thức ngoại sao giúp bạn kích hoạt một phi thuyền ẩn dưới lòng đất. Bảng điều khiển khởi động.",
+    "choices": [
+      { "text": "Chiết xuất công nghệ", "sets": { "generateWeapon": true, "stats": { "xp": "+500" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_eastern_fox_shrine",
+    "name": "Đền Thờ Hồ Ly",
+    "world": "eastern",
+    "min_world_visits": 1,
+    "requires": { "stats": { "affection_fox": ">=2" } },
+    "cooldown_scenes": 999,
+    "text": "Hồ Ly Tinh dẫn bạn đến một ngôi đền ẩn sau thác nước. Cô ta khẽ vuốt ve khuôn mặt bạn. 'Phần thưởng cho kẻ thú vị.'",
+    "choices": [
+      { "text": "Nhận phước lành Hồ Ly", "sets": { "stats": { "cha": "+10", "max_hp": "+20" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_eastern_legendary_sword",
+    "name": "Thanh Kiếm Huyền Thoại",
+    "world": "eastern",
+    "min_world_visits": 1,
+    "requires": { "item": "jade_pendant" },
+    "cooldown_scenes": 999,
+    "text": "Mặt dây chuyền ngọc bích cộng hưởng với bệ đá giữa hồ nước. Một thanh Katana tuyệt đẹp trồi lên.",
+    "choices": [
+      { "text": "Rút kiếm", "sets": { "addItem": "masamune", "stats": { "str": "+5", "dex": "+5" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_postapoc_bunker_vault",
+    "name": "Hầm Chứa Sâu Thẳm",
+    "world": "postapoc",
+    "min_world_visits": 1,
+    "cooldown_scenes": 999,
+    "text": "Bạn phá vỡ được lớp cửa thép kiên cố nhất của boong-ke. Bên trong là một khu vườn sinh thái còn nguyên vẹn.",
+    "choices": [
+      { "text": "Nghỉ ngơi tại vườn", "sets": { "stats": { "hp": "max", "mp": "max", "sanity": "+50", "con": "+5" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_postapoc_oasis_truth",
+    "name": "Sự Thật Về Ốc Đảo",
+    "world": "postapoc",
+    "min_world_visits": 1,
+    "requires": { "stats": { "wis": ">=20" } },
+    "cooldown_scenes": 999,
+    "text": "Với trí tuệ siêu phàm, bạn nhìn thấu ảo ảnh sa mạc và bước vào một cơ sở lọc nước ngầm khổng lồ tàn dư của thế giới cũ.",
+    "choices": [
+      { "text": "Khởi động máy lọc", "sets": { "stats": { "rep": "+100", "xp": "+1000" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_dark_fantasy_vampire_lord",
+    "name": "Chúa Tể Hút Máu",
+    "world": "dark_fantasy",
+    "min_world_visits": 1,
+    "cooldown_scenes": 999,
+    "text": "Một tòa lâu đài u ám mọc lên từ hư vô. Chúa tể rùng rợn cười lớn: 'Máu của nhà ngươi có vị của vô số thế giới!'",
+    "battle": {
+      "monsterId": "vampire_lord",
+      "winScene": "se_dark_fantasy_vampire_win",
+      "loseScene": "game_over"
+    }
+  },
+  {
+    "id": "se_dark_fantasy_vampire_win",
+    "text": "Hắn tan thành tro bụi, để lại một chiếc nhẫn hút máu kỳ dị.",
+    "choices": [
+      { "text": "Đeo nhẫn", "sets": { "addItem": "vampire_ring" }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "se_dark_fantasy_holy_grail",
+    "name": "Chén Thánh Rỉ Sét",
+    "world": "dark_fantasy",
+    "min_world_visits": 1,
+    "requires": { "item": "holy_symbol" },
+    "cooldown_scenes": 999,
+    "text": "Biểu tượng thánh dẫn lối bạn vào hầm mộ sâu nhất, nơi lưu giữ Chén Thánh tỏa ánh sáng vàng yếu ớt.",
+    "choices": [
+      { "text": "Uống nước từ chén", "sets": { "stats": { "max_hp": "+50", "hp": "+50", "sanity": "+100" } }, "next": "resume" }
+    ]
+  }
+]

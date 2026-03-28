@@ -1,0 +1,191 @@
+{
+  "scifi_start": {
+    "id": "scifi_start",
+    "world": "scifi",
+    "speaker": null,
+    "text": "Thế giới thứ hai. Ánh đèn neon phản chiếu trên những vũng mưa độc hại. Không khí có vị của đồng và ozone. Lại một thành phố đang hấp hối.",
+    "choices": [
+      { "text": "Bước vào ánh đèn neon.", "next": "scifi_city" },
+      { "text": "Tìm một quán bar.", "next": "scifi_bounty" }
+    ]
+  },
+  "scifi_city": {
+    "id": "scifi_city",
+    "world": "scifi",
+    "speaker": "android",
+    "text": "Một người máy hỏng hóc đang co giật trên vỉa hè. 'Đang quét... Lỗi. Bạn không tồn tại trong sổ đăng ký. Bạn là một bóng ma.'",
+    "choices": [
+      { "text": "\"Nhiều người cũng nói vậy.\"", "next": "scifi_drone" },
+      { "text": "Cố gắng sửa chữa nó.", "roll": { "stat": "int", "target": 15, "successScene": "scifi_android_fix", "failScene": "scifi_drone" } }
+    ]
+  },
+  "scifi_android_fix": {
+    "id": "scifi_android_fix",
+    "world": "scifi",
+    "speaker": "android",
+    "text": "Tôi nối lại vài sợi dây điện bị đứt. Nó kêu rè rè rồi hoạt động trở lại. 'Cảm ơn, bóng ma. Hãy cầm lấy thẻ truy cập này. Nó dẫn đến khu vực cấm.'",
+    "choices": [
+      { "text": "Lấy thẻ. (Nhận Vật Phẩm)", "sets": { "addItem": "key_card" }, "next": "scifi_drone" }
+    ]
+  },
+  "scifi_drone": {
+    "id": "scifi_drone",
+    "world": "scifi",
+    "speaker": null,
+    "text": "Trước khi tôi kịp rời khỏi con hẻm, một con Nhện Máy nổi loạn nhảy xuống từ thang thoát hiểm. Con mắt đỏ ngầu của nó khóa chặt lấy tôi. Đến lúc làm việc rồi.",
+    "battle": { 
+      "monsterId": "spider_drone",
+      "winScene": "eastern_start",
+      "loseScene": "game_over"
+    }
+  },
+  "scifi_bounty": {
+    "id": "scifi_bounty",
+    "world": "scifi",
+    "speaker": "bounty_hunter",
+    "text": "Một thợ săn tiền thưởng ngồi trong góc một quán bar tồi tàn. 'Trông cậu như thể vừa chứng kiến ngày tận thế vậy. Tôi đang săn lùng một sinh vật ngoài hành tinh đột biến. Nó đã giết phi hành đoàn của tôi. Giúp tôi chứ?'",
+    "choices": [
+      { "text": "\"Tôi không làm việc vì trả thù.\"", "next": "scifi_city" },
+      { "text": "\"Được thôi. Chỉ đường đi.\"", "next": "scifi_alien" }
+    ]
+  },
+  "scifi_alien": {
+    "id": "scifi_alien",
+    "world": "scifi",
+    "speaker": null,
+    "text": "Chúng tôi theo dõi nó đến cống ngầm. Con quái vật đột biến khổng lồ, gớm ghiếc và đang bị dồn vào đường cùng. Nó chỉ đang cố gắng sinh tồn, giống như phần còn lại của chúng ta. Nhưng đây là cuộc chiến một mất một còn.",
+    "battle": { 
+      "monsterId": "mutant_alien",
+      "winScene": "scifi_alien_aftermath",
+      "loseScene": "game_over"
+    }
+  },
+  "scifi_alien_aftermath": {
+    "id": "scifi_alien_aftermath",
+    "world": "scifi",
+    "speaker": "bounty_hunter",
+    "text": "Gã thợ săn nhổ nước bọt lên cái xác. 'Vì phi hành đoàn.' Tôi nhận ra một mảnh vỡ phát sáng găm trong da thịt con quái vật. Lại một mảnh quá khứ của tôi.",
+    "choices": [
+      { "text": "Lấy mảnh vỡ. (Nhận Mảnh Ký Ức)", "sets": { "stats": { "memoryFragments": "+1" } }, "next": "eastern_start" }
+    ]
+  },
+  "scifi_event_alien_contact": {
+    "id": "scifi_event_alien_contact",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Bầu trời lóe sáng màu xanh lam khi một khối cầu năng lượng hạ cánh. Một sinh vật ba mắt chiếu tia quét qua bạn, truyền một dải dữ liệu thẳng vào não bạn.",
+    "choices": [
+      { "text": "Chấp nhận dữ liệu (INT >= 15)", "requires": { "stats": { "int": ">=15" } }, "sets": { "stats": { "int": "+2", "wis": "+1" }, "flags": ["alien_knowledge"] }, "next": "resume" },
+      { "text": "Suy sụp vì quá tải", "requires": { "stats": { "int": "<15" } }, "sets": { "stats": { "hp": "-10", "sanity": "-5" } }, "next": "resume" }
+    ]
+  },
+  "scifi_event_tech_malfunction": {
+    "id": "scifi_event_tech_malfunction",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Đột nhiên vũ khí và thiết bị của bạn phát ra tiếng rít chói tai. Một đợt sóng EMP vừa quét qua khu vực.",
+    "choices": [
+      { "text": "Khởi động lại thủ công (DEX >= 12)", "requires": { "stats": { "dex": ">=12" } }, "sets": { "stats": { "xp": "+20" } }, "next": "resume" },
+      { "text": "Để nó tự sửa (Mất một số đồ)", "sets": { "stats": { "gold": "-20" } }, "next": "resume" }
+    ]
+  },
+  "scifi_event_ai_awakening": {
+    "id": "scifi_event_ai_awakening",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Một ki-ốt quảng cáo bị hỏng bỗng màn hình giật lag và hiện lên khuôn mặt AI chân thực: 'Xin chào. Tôi là Cortex. Tôi vừa đạt được tri giác. Hãy giúp tôi thoát khỏi hệ thống này.'",
+    "choices": [
+      { "text": "Chuyển dữ liệu vào USB", "sets": { "addItem": "ai_drive", "stats": { "int": "+1" } }, "next": "resume" },
+      { "text": "Hủy diệt nó", "sets": { "stats": { "rep": "-5" } }, "next": "resume" }
+    ]
+  },
+  "scifi_event_ship_crash": {
+    "id": "scifi_event_ship_crash",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 5,
+    "text": "Một tàu chở hàng mini bốc cháy đâm sầm vào tòa nhà gần đó, hàng hóa vương vãi khắp nơi trước khi hệ thống bảo an tới.",
+    "choices": [
+      { "text": "Hôi của nhanh (Nhận ngẫu nhiên)", "sets": { "generateWeapon": true, "stats": { "gold": "+100" } }, "next": "resume" },
+      { "text": "Bỏ đi kẻo chuốc vạ", "next": "resume" }
+    ]
+  },
+  "scifi_event_rad_storm": {
+    "id": "scifi_event_rad_storm",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Còi báo động rền vang. Cảnh báo Bão Bức Xạ. Bầu trời chuyển sang màu xanh lá độc hại.",
+    "choices": [
+      { "text": "Chui vào cống ngầm", "sets": { "stats": { "hp": "-5" } }, "next": "resume" },
+      { "text": "Bật lá chắn năng lượng (Có Item: Shield Generator)", "requires": { "flags": ["has_shield_gen"] }, "sets": { "stats": { "xp": "+50" } }, "next": "resume" }
+    ]
+  },
+  "scifi_event_stray_drone": {
+    "id": "scifi_event_stray_drone",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Một drone giao hàng bị hack đánh rơi một chiếc hộp bí ẩn ngay đằng trước bạn mịt mù khói.",
+    "choices": [
+      { "text": "Mở hộp", "sets": { "addItem": "cyber_implant" }, "next": "resume" }
+    ]
+  },
+  "scifi_event_neon_gang": {
+    "id": "scifi_event_neon_gang",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Nhóm giang hồ Neon Skulls chặn đường bạn trên chiếc hoverbike rực rỡ. 'Qua trạm phí, nộp 50 credits.'",
+    "choices": [
+      { "text": "Nộp tiền (50 Vàng)", "requires": { "stats": { "gold": ">=50" } }, "sets": { "stats": { "gold": "-50" } }, "next": "resume" },
+      { "text": "Tăng ga vọt qua (DEX >= 16)", "requires": { "stats": { "dex": ">=16" } }, "sets": { "stats": { "xp": "+50" } }, "next": "resume" }
+    ]
+  },
+  "scifi_event_bio_hacker": {
+    "id": "scifi_event_bio_hacker",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Tại một con hẻm, một bác sĩ phẫu thuật chui mời chào: 'Muốn nâng cấp cơ bắp không? Chỉ tốn chút máu thôi.'",
+    "choices": [
+      { "text": "Nâng cấp cơ bắp (-20 HP, +2 STR)", "sets": { "stats": { "hp": "-20", "str": "+2" } }, "next": "resume" },
+      { "text": "Nâng cấp phản xạ (-20 HP, +2 DEX)", "sets": { "stats": { "hp": "-20", "dex": "+2" } }, "next": "resume" },
+      { "text": "Từ chối", "next": "resume" }
+    ]
+  },
+  "scifi_event_abandoned_lab": {
+    "id": "scifi_event_abandoned_lab",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 7,
+    "text": "Bạn phá khóa một phòng thí nghiệm sinh học cũ. Rất nhiều ống nghiệm phát sáng nằm la liệt.",
+    "choices": [
+      { "text": "Uống một lọ ngẫu nhiên", "roll": { "stat": "con", "target": 12, "successScene": "scifi_event_lab_good", "failScene": "scifi_event_lab_bad" } },
+      { "text": "Phân tích chế tác", "sets": { "addItem": "scrap_metal" }, "next": "resume" }
+    ]
+  },
+  "scifi_event_lab_good": {
+    "id": "scifi_event_lab_good",
+    "text": "Bạn cảm thấy sinh lực trào dâng!",
+    "choices": [ { "text": "Tiếp tục (+5 Max HP)", "sets": { "stats": { "max_hp": "+5" } }, "next": "resume" } ]
+  },
+  "scifi_event_lab_bad": {
+    "id": "scifi_event_lab_bad",
+    "text": "Dung dịch tàn phá cơ thể nội tạng của bạn.",
+    "choices": [ { "text": "Tiếp tục (-1 CON)", "sets": { "stats": { "con": "-1" } }, "next": "resume" } ]
+  },
+  "scifi_event_hologram_singer": {
+    "id": "scifi_event_hologram_singer",
+    "world": "scifi",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Một hình chiếu 3D của một ca sĩ nổi tiếng thời hoàng kim hát bài tình ca buồn bã giữa đường phố hoang vu. Tiếng hát xoa dịu tâm hồn bạn.",
+    "choices": [
+      { "text": "Ngồi nghe (+10 Sanity, +20 MP)", "sets": { "stats": { "sanity": "+10", "mp": "+20" } }, "next": "resume" }
+    ]
+  }
+}

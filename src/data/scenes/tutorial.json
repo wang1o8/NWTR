@@ -1,0 +1,223 @@
+{
+  "intro_001": {
+    "id": "intro_001",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Xung quanh bạn là một khoảng không trắng xóa vô tận. Không tiếng động, không trọng lực. Bạn cảm giác như mình đang lơ lửng giữa sự tồn tại và hư vô.",
+    "choices": [
+      {
+        "text": "Nhìn sâu vào hư vô...",
+        "sets": { "stats": { "soul": "+1" }, "flags": ["intro_void_vision"] },
+        "next": "intro_002"
+      },
+      {
+        "text": "Cố gắng nhớ lại tên mình là ai.",
+        "sets": { "stats": { "sanity": "+1" }, "flags": ["intro_self_reflection"] },
+        "next": "intro_002"
+      }
+    ]
+  },
+  "intro_002": {
+    "id": "intro_002",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Một hình bóng mờ ảo xuất hiện trước mắt bạn. Nó không có khuôn mặt, chỉ là một khối năng lượng ổn định. \n\n'Chào mừng, Kẻ lữ hành lạc lối. Đa vũ trụ đang sụp đổ, và bạn là kẻ duy nhất còn giữ được linh hồn nguyên vẹn... ít nhất là lúc này.'",
+    "choices": [
+      {
+        "text": "Hỏi: 'Tôi đang ở đâu?'",
+        "next": "intro_003"
+      },
+      {
+        "text": "Tìm kiếm xung quanh xem có vũ khí nào không.",
+        "sets": { "flags": ["searching_starter_weapon"] },
+        "next": "intro_weapon_search"
+      }
+    ]
+  },
+  "intro_weapon_search": {
+    "id": "intro_weapon_search",
+    "world": "tutorial",
+    "speaker": "guide",
+    "text": "'Bạn tìm kiếm công cụ để bảo vệ mình? Khá khôn ngoan.' Thực thể búng tay, một vũ khí xuất hiện từ hư vô và rơi vào tay bạn.",
+    "choices": [
+      {
+        "text": "Nhặt lấy vũ khí và chuẩn bị hành trình.",
+        "sets": { "flags": ["received_intro_weapon"], "generateWeapon": true },
+        "next": "intro_003"
+      }
+    ]
+  },
+  "intro_003": {
+    "id": "intro_003",
+    "world": "tutorial",
+    "speaker": "guide",
+    "text": "'Nơi này không thuộc về thế giới nào. Nó là điểm giao thoa của những thực tại đã mất. Trước khi đi xa hơn, hãy cho ta biết danh tính của bạn.'",
+    "choices": [
+      {
+        "text": "Nói tên của bạn...",
+        "next": "tutorial_003"
+      }
+    ]
+  },
+  "tutorial_001": {
+    "id": "tutorial_001",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Bóng tối... \n\nNó không lạnh lẽo như bạn nghĩ. Nó êm đềm, như một cái kén bao bọc lấy những gì còn sót lại của linh hồn bạn. \n\nBạn không nhớ mình là ai. Bạn không nhớ mình đến từ đâu. Chỉ biết rằng, thế giới của bạn... đã không còn nữa.",
+    "choices": [
+      {
+        "text": "Mở mắt ra...",
+        "next": "tutorial_002"
+      }
+    ]
+  },
+  "tutorial_002": {
+    "id": "tutorial_002",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Ồ, tỉnh rồi sao? Ta cứ ngỡ hư vô đã nuốt chửng ngươi luôn rồi chứ. Ngươi trông có vẻ... lạc lõng. Ngươi có còn nhớ mình gọi là gì không?",
+    "choices": [
+      {
+        "text": "Tôi... tôi nghĩ mình nhớ.",
+        "next": "tutorial_003"
+      },
+      {
+        "text": "Tên? Nó có quan trọng không?",
+        "next": "tutorial_003"
+      }
+    ]
+  },
+  "tutorial_003": {
+    "id": "tutorial_003",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Ở đây, cái tên là thứ duy nhất giữ cho ngươi không tan biến hoàn toàn. Hãy nói cho ta biết, ngươi là ai?",
+    "choices": []
+  },
+  "tutorial_004": {
+    "id": "tutorial_004",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Chào mừng, {playerName}. Ngươi hiện đang ở Điểm Giao Thoa (The Nexus). Đây là nơi những mảnh vỡ của các thế giới đã mất trôi dạt về. Nhiệm vụ của ngươi? Sống sót. Và có lẽ... tìm ra lý do tại sao ngươi lại ở đây.",
+    "choices": [
+      {
+        "text": "Tôi phải làm gì tiếp theo?",
+        "next": "tutorial_trait_explanation"
+      }
+    ]
+  },
+  "tutorial_trait_explanation": {
+    "id": "tutorial_trait_explanation",
+    "world": "tutorial",
+    "speaker": "guide",
+    "text": "Thế giới này định hình những kẻ sống sót theo bước chân của họ. Những đặc trưng này gọi là 'Traits' - chúng ảnh hưởng đến cách bạn tương tác với thực tại.\n\nTraits không chỉ là chỉ số, chúng là cánh cửa mở ra những khả năng mà người thường không thể thấy.",
+    "choices": [
+      {
+        "text": "Tôi hiểu rồi.",
+        "next": "tutorial_005"
+      }
+    ]
+  },
+  "tutorial_005": {
+    "id": "tutorial_005",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Trước khi ngươi bước vào các cánh cổng, ngươi cần biết cách tự bảo vệ mình. Nhìn kìa, một Bóng Ma Hư Vô (Shadow Wisp) đang tiến lại gần. Đừng để nó chạm vào linh hồn ngươi!",
+    "choices": [
+      {
+        "text": "Cảm nhận sự bất ổn... (Cần Sinh Dưới Hư Không)",
+        "requires": { "traits": ["born_under_void"] },
+        "next": "tutorial_void_sense"
+      },
+      {
+        "text": "Sẵn sàng chiến đấu!",
+        "next": "tutorial_battle"
+      }
+    ]
+  },
+  "tutorial_void_sense": {
+    "id": "tutorial_void_sense",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Cảm giác lạnh buốt chạy qua lưng bạn. Đây là... tiếng kêu của hư không. Chỉ những kẻ sinh dưới vũ trụ đa thế mới nghe thấy.",
+    "choices": [
+      {
+        "text": "Lắng nghe tiếng gọi...",
+        "requires": { "traits": ["born_under_void"] },
+        "sets": { "stats": { "soul": "+2" }, "flags": ["heard_void_call"] },
+        "next": "tutorial_void_understanding"
+      },
+      {
+        "text": "Bỏ qua, tập trung vào trận đấu",
+        "next": "tutorial_battle"
+      }
+    ]
+  },
+  "tutorial_void_understanding": {
+    "id": "tutorial_void_understanding",
+    "world": "tutorial",
+    "speaker": "guide",
+    "text": "Ồ, ngươi nghe thấy tiếng gọi sâu thẳm ấy rồi sao? Chỉ những linh hồn được sinh ra tại điểm giao thoa của thế giới mới có khả năng ấy. Ngươi có lẽ... không phải từ một thế giới duy nhất.",
+    "choices": [
+      {
+        "text": "Tôi là ai thật sự?",
+        "sets": { "flags": ["discovered_void_origin"] },
+        "next": "tutorial_battle"
+      }
+    ]
+  },
+  "tutorial_battle": {
+    "id": "tutorial_battle",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Một thực thể đen kịt, không hình dạng rõ ràng lao về phía bạn. Bản năng chiến đấu trong bạn trỗi dậy.",
+    "battle": {
+      "monsterId": "shadow_wisp_tutorial",
+      "winScene": "tutorial_win",
+      "loseScene": "tutorial_lose_graceful"
+    }
+  },
+  "tutorial_win": {
+    "id": "tutorial_win",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Khá lắm! Ngươi vẫn còn giữ được chút kỹ năng từ kiếp trước đấy. Cánh cổng đã sẵn sàng. Ngươi sẽ chọn thế giới nào để bắt đầu cuộc hành trình không lối thoát này?",
+    "choices": [
+      {
+        "text": "Bước vào cánh cổng ngẫu nhiên...",
+        "next": "tutorial_world_transfer"
+      }
+    ]
+  },
+  "tutorial_lose_graceful": {
+    "id": "tutorial_lose_graceful",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": "guide",
+    "text": "Ngươi gục ngã... nhưng ở đây, cái chết chỉ là một sự khởi đầu khác. Ta sẽ đưa ngươi đến một nơi an toàn hơn để hồi phục. Đừng để ta thất vọng lần nữa.",
+    "choices": [
+      {
+        "text": "Tỉnh dậy ở một nơi xa lạ...",
+        "next": "tutorial_world_transfer"
+      }
+    ]
+  },
+  "tutorial_world_transfer": {
+    "id": "tutorial_world_transfer",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Không gian xung quanh bạn vặn xoắn. Ánh sáng chói lòa bao phủ tầm mắt...",
+    "autoNext": "RANDOM_WORLD_TRIGGER"
+  }
+}

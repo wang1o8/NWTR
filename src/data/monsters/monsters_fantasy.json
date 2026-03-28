@@ -1,0 +1,531 @@
+{
+  "fan_slime": {
+    "id": "fan_slime",
+    "name": "Green Slime",
+    "world": "fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 25,
+      "max_hp": 25,
+      "minDmg": 2,
+      "maxDmg": 5,
+      "exp": 10
+    },
+    "traits": [
+      "absorb_physical"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "mana_crystal",
+          "chance": 0.1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_slime_monster/200/200"
+  },
+  "fan_goblin": {
+    "id": "fan_goblin",
+    "name": "Goblin Scavenger",
+    "world": "fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 30,
+      "max_hp": 30,
+      "minDmg": 3,
+      "maxDmg": 6,
+      "exp": 15
+    },
+    "traits": [
+      "cowardly"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "leather_scrap",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_goblin_monster/200/200"
+  },
+  "fan_bat": {
+    "id": "fan_bat",
+    "name": "Cave Bat",
+    "world": "fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 20,
+      "max_hp": 20,
+      "minDmg": 2,
+      "maxDmg": 4,
+      "exp": 12
+    },
+    "traits": [
+      "flying",
+      "weak_magic"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/fan_bat_monster/200/200"
+  },
+  "fan_rat": {
+    "id": "fan_rat",
+    "name": "Giant Rat",
+    "world": "fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 25,
+      "max_hp": 25,
+      "minDmg": 3,
+      "maxDmg": 5,
+      "exp": 12
+    },
+    "traits": [
+      "disease"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/fan_rat_monster/200/200"
+  },
+  "fan_skeleton": {
+    "id": "fan_skeleton",
+    "name": "Skeleton Warrior",
+    "world": "fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 35,
+      "max_hp": 35,
+      "minDmg": 4,
+      "maxDmg": 7,
+      "exp": 18
+    },
+    "traits": [
+      "undead",
+      "weak_holy"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "bone",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_skeleton_monster/200/200"
+  },
+  "fan_orc": {
+    "id": "fan_orc",
+    "name": "Orc Grunt",
+    "world": "fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 60,
+      "max_hp": 60,
+      "minDmg": 6,
+      "maxDmg": 10,
+      "exp": 35
+    },
+    "traits": [
+      "aggressive",
+      "berserker"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "iron_ore",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_orc_monster/200/200"
+  },
+  "fan_spider": {
+    "id": "fan_spider",
+    "name": "Giant Spider",
+    "world": "fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 52,
+      "max_hp": 52,
+      "minDmg": 5,
+      "maxDmg": 8,
+      "exp": 30
+    },
+    "traits": [
+      "poison",
+      "web_trap"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "spider_silk",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_spider_monster/200/200"
+  },
+  "fan_zombie": {
+    "id": "fan_zombie",
+    "name": "Rotting Zombie",
+    "world": "fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 70,
+      "max_hp": 70,
+      "minDmg": 4,
+      "maxDmg": 8,
+      "exp": 32
+    },
+    "traits": [
+      "undead",
+      "regenerate",
+      "weak_holy"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/fan_zombie_monster/200/200"
+  },
+  "fan_mage_goblin": {
+    "id": "fan_mage_goblin",
+    "name": "Goblin Shaman",
+    "world": "fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 45,
+      "max_hp": 45,
+      "minDmg": 8,
+      "maxDmg": 12,
+      "exp": 38
+    },
+    "traits": [
+      "magic_dmg",
+      "intelligent"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "mana_crystal",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_mage_goblin_monster/200/200"
+  },
+  "fan_wolf": {
+    "id": "fan_wolf",
+    "name": "Dire Wolf",
+    "world": "fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 47,
+      "max_hp": 47,
+      "minDmg": 6,
+      "maxDmg": 9,
+      "exp": 28
+    },
+    "traits": [
+      "fast",
+      "pack_hunter"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "wolf_pelt",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_wolf_monster/200/200"
+  },
+  "fan_zealot": {
+    "id": "fan_zealot",
+    "name": "Fire Zealot",
+    "world": "fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 95,
+      "max_hp": 95,
+      "minDmg": 10,
+      "maxDmg": 15,
+      "exp": 65
+    },
+    "traits": [
+      "elemental_fire",
+      "immune_fire",
+      "weak_ice"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "fire_core",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_zealot_monster/200/200"
+  },
+  "fan_wyvern": {
+    "id": "fan_wyvern",
+    "name": "Lesser Wyvern",
+    "world": "fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 115,
+      "max_hp": 115,
+      "minDmg": 12,
+      "maxDmg": 18,
+      "exp": 80
+    },
+    "traits": [
+      "flying",
+      "breath_attack"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "dragon_scale",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_wyvern_monster/200/200"
+  },
+  "fan_cursed_knight": {
+    "id": "fan_cursed_knight",
+    "name": "Cursed Knight",
+    "world": "fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 135,
+      "max_hp": 135,
+      "minDmg": 10,
+      "maxDmg": 14,
+      "exp": 75
+    },
+    "traits": [
+      "high_def",
+      "cursed"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "cursed_ash",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_cursed_knight_monster/200/200"
+  },
+  "fan_golem": {
+    "id": "fan_golem",
+    "name": "Stone Golem",
+    "world": "fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 165,
+      "max_hp": 165,
+      "minDmg": 8,
+      "maxDmg": 12,
+      "exp": 70
+    },
+    "traits": [
+      "slow",
+      "high_def",
+      "immune_crit"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "iron_ore",
+          "chance": 0.8
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_golem_monster/200/200"
+  },
+  "fan_vampire": {
+    "id": "fan_vampire",
+    "name": "Vampire Spawn",
+    "world": "fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 100,
+      "max_hp": 100,
+      "minDmg": 12,
+      "maxDmg": 16,
+      "exp": 85
+    },
+    "traits": [
+      "undead",
+      "lifesteal",
+      "weak_holy"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "vampire_blood",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_vampire_monster/200/200"
+  },
+  "fan_boss_kaelen": {
+    "id": "fan_boss_kaelen",
+    "name": "Kaelen, The Ash Knight",
+    "world": "fantasy",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 325,
+      "max_hp": 325,
+      "minDmg": 20,
+      "maxDmg": 30,
+      "exp": 500
+    },
+    "traits": [
+      "boss",
+      "fire_aura",
+      "immune_fire"
+    ],
+    "specialEffect": "fire_aura",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "legendary_sword_shard",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_boss_kaelen_monster/200/200"
+  },
+  "fan_boss_phantom": {
+    "id": "fan_boss_phantom",
+    "name": "Loop Phantom",
+    "world": "fantasy",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 265,
+      "max_hp": 265,
+      "minDmg": 18,
+      "maxDmg": 28,
+      "exp": 450
+    },
+    "traits": [
+      "boss",
+      "time_rewind",
+      "immune_stun"
+    ],
+    "specialEffect": "rewind_time",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "time_dust",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_boss_phantom_monster/200/200"
+  },
+  "fan_boss_void": {
+    "id": "fan_boss_void",
+    "name": "The Void Entity",
+    "world": "fantasy",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 425,
+      "max_hp": 425,
+      "minDmg": 25,
+      "maxDmg": 35,
+      "exp": 800
+    },
+    "traits": [
+      "boss",
+      "immunity_phases",
+      "void_damage"
+    ],
+    "specialEffect": "void_shift",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "void_crystal",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/fan_boss_void_monster/200/200"
+  }
+}

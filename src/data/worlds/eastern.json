@@ -1,0 +1,7 @@
+{
+  "id": "eastern",
+  "name": "Eastern Mythology",
+  "bg": "bg-gradient-to-br from-slate-900 via-red-950 to-orange-950",
+  "music_key": "theme_eastern",
+  "special_mechanic": "karma_balance"
+}

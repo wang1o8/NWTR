@@ -1,0 +1,23 @@
+{
+  "common": { "spawnRate": 0.30, "cooldownScenes": 5, "maxPerRun": null },
+  "rare": { "spawnRate": 0.10, "cooldownScenes": 10, "maxPerRun": null },
+  "special": { "spawnRate": 1.0, "cooldownScenes": 0, "maxPerRun": 1 },
+  "worldSeedEffect": { "highSeed": 1.3, "lowSeed": 0.7 },
+  "eventOverrides": {
+    "ce_merchant": { "spawnRate": 0.25, "cooldownScenes": 15 },
+    "ce_bandit_ambush": { "spawnRate": 0.20, "cooldownScenes": 10 },
+    "ce_trap": { "spawnRate": 0.20, "cooldownScenes": 8 },
+    "ce_skill_teacher": { "spawnRate": 0.08, "cooldownScenes": 20, "maxPerRun": 5 },
+    "ce_skill_book": { "spawnRate": 0.05, "cooldownScenes": 25, "maxPerRun": 3 },
+    "ce_injured_stranger": { "spawnRate": 0.15, "cooldownScenes": 0, "maxPerRun": 1 },
+    "ce_abandoned_chest": { "spawnRate": 0.30, "cooldownScenes": 8 },
+    "ce_strange_dream": { "spawnRate": 0.10, "cooldownScenes": 20 },
+    "ce_weather_anomaly": { "spawnRate": 0.20, "cooldownScenes": 12 },
+    "ce_fellow_traveler": { "spawnRate": 0.10, "cooldownScenes": 15 },
+    "ce_lost_child": { "spawnRate": 0.08, "cooldownScenes": 0, "maxPerRun": 1 },
+    "ce_shrine_discovery": { "spawnRate": 0.06, "cooldownScenes": 0, "maxPerRun": 1 },
+    "ce_old_letter": { "spawnRate": 0.08, "cooldownScenes": 20 },
+    "ce_cursed_item": { "spawnRate": 0.07, "cooldownScenes": 15 },
+    "ce_strange_portal": { "spawnRate": 0.04, "cooldownScenes": 30 }
+  }
+}

@@ -1,0 +1,616 @@
+{
+  "df_skeleton": {
+    "id": "df_skeleton",
+    "name": "Skeletal Peasant",
+    "world": "dark_fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 25,
+      "max_hp": 25,
+      "minDmg": 3,
+      "maxDmg": 6,
+      "exp": 12
+    },
+    "traits": [
+      "undead",
+      "weak_holy"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "bone",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_skeleton_monster/200/200"
+  },
+  "df_zombie": {
+    "id": "df_zombie",
+    "name": "Plagued Walker",
+    "world": "dark_fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 35,
+      "max_hp": 35,
+      "minDmg": 2,
+      "maxDmg": 5,
+      "exp": 14
+    },
+    "traits": [
+      "undead",
+      "disease",
+      "slow"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/df_zombie_monster/200/200"
+  },
+  "df_bat": {
+    "id": "df_bat",
+    "name": "Vampire Bat",
+    "world": "dark_fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 20,
+      "max_hp": 20,
+      "minDmg": 3,
+      "maxDmg": 7,
+      "exp": 15
+    },
+    "traits": [
+      "flying",
+      "lifesteal",
+      "weak_fire"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/df_bat_monster/200/200"
+  },
+  "df_cultist": {
+    "id": "df_cultist",
+    "name": "Mad Cultist",
+    "world": "dark_fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 30,
+      "max_hp": 30,
+      "minDmg": 4,
+      "maxDmg": 8,
+      "exp": 18
+    },
+    "traits": [
+      "aggressive",
+      "dark_dmg"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "cultist_robe",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_cultist_monster/200/200"
+  },
+  "df_hound": {
+    "id": "df_hound",
+    "name": "Hell Hound",
+    "world": "dark_fantasy",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 37,
+      "max_hp": 37,
+      "minDmg": 5,
+      "maxDmg": 9,
+      "exp": 20
+    },
+    "traits": [
+      "fast",
+      "fire_dmg",
+      "weak_holy"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "hell_ember",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_hound_monster/200/200"
+  },
+  "df_gargoyle": {
+    "id": "df_gargoyle",
+    "name": "Stone Gargoyle",
+    "world": "dark_fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 90,
+      "max_hp": 90,
+      "minDmg": 6,
+      "maxDmg": 10,
+      "exp": 40
+    },
+    "traits": [
+      "high_def",
+      "flying",
+      "immune_bleed"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "stone_heart",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_gargoyle_monster/200/200"
+  },
+  "df_witch": {
+    "id": "df_witch",
+    "name": "Swamp Witch",
+    "world": "dark_fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 60,
+      "max_hp": 60,
+      "minDmg": 8,
+      "maxDmg": 14,
+      "exp": 45
+    },
+    "traits": [
+      "magic_dmg",
+      "curse",
+      "intelligent"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "witch_eye",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_witch_monster/200/200"
+  },
+  "df_ghoul": {
+    "id": "df_ghoul",
+    "name": "Grave Ghoul",
+    "world": "dark_fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 70,
+      "max_hp": 70,
+      "minDmg": 7,
+      "maxDmg": 12,
+      "exp": 38
+    },
+    "traits": [
+      "undead",
+      "paralyze_bite",
+      "regenerate"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "ghoul_flesh",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_ghoul_monster/200/200"
+  },
+  "df_knight": {
+    "id": "df_knight",
+    "name": "Fallen Knight",
+    "world": "dark_fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 100,
+      "max_hp": 100,
+      "minDmg": 10,
+      "maxDmg": 15,
+      "exp": 50
+    },
+    "traits": [
+      "undead",
+      "high_dmg",
+      "defensive"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "tarnished_mail",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_knight_monster/200/200"
+  },
+  "df_shade": {
+    "id": "df_shade",
+    "name": "Lingering Shade",
+    "world": "dark_fantasy",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 45,
+      "max_hp": 45,
+      "minDmg": 12,
+      "maxDmg": 18,
+      "exp": 42
+    },
+    "traits": [
+      "ethereal",
+      "immune_physical",
+      "drain_mp"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "ectoplasm",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_shade_monster/200/200"
+  },
+  "df_vampire": {
+    "id": "df_vampire",
+    "name": "Vampire Noble",
+    "world": "dark_fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 135,
+      "max_hp": 135,
+      "minDmg": 15,
+      "maxDmg": 25,
+      "exp": 90
+    },
+    "traits": [
+      "undead",
+      "lifesteal",
+      "charm_magic"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "vampire_dust",
+          "chance": 0.6
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_vampire_monster/200/200"
+  },
+  "df_demon": {
+    "id": "df_demon",
+    "name": "Lesser Demon",
+    "world": "dark_fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 165,
+      "max_hp": 165,
+      "minDmg": 18,
+      "maxDmg": 28,
+      "exp": 95
+    },
+    "traits": [
+      "fire_dmg",
+      "immune_fire",
+      "weak_holy"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "demon_horn",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_demon_monster/200/200"
+  },
+  "df_necromancer": {
+    "id": "df_necromancer",
+    "name": "Necromancer",
+    "world": "dark_fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 100,
+      "max_hp": 100,
+      "minDmg": 20,
+      "maxDmg": 30,
+      "exp": 100
+    },
+    "traits": [
+      "summon_undead",
+      "dark_magic",
+      "intelligent"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "dark_tome",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_necromancer_monster/200/200"
+  },
+  "df_abomination": {
+    "id": "df_abomination",
+    "name": "Flesh Abomination",
+    "world": "dark_fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 275,
+      "max_hp": 275,
+      "minDmg": 12,
+      "maxDmg": 20,
+      "exp": 110
+    },
+    "traits": [
+      "slow",
+      "regenerate",
+      "poison_cloud",
+      "undead"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "abomination_meat",
+          "chance": 0.8
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_abomination_monster/200/200"
+  },
+  "df_reaper": {
+    "id": "df_reaper",
+    "name": "Grim Reaper",
+    "world": "dark_fantasy",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 110,
+      "max_hp": 110,
+      "minDmg": 25,
+      "maxDmg": 35,
+      "exp": 105
+    },
+    "traits": [
+      "ethereal",
+      "execute",
+      "immune_magic"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "reaper_scythe_shard",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_reaper_monster/200/200"
+  },
+  "df_boss_gael": {
+    "id": "df_boss_gael",
+    "name": "Gael the Mad",
+    "world": "dark_fantasy",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 475,
+      "max_hp": 475,
+      "minDmg": 30,
+      "maxDmg": 45,
+      "exp": 750
+    },
+    "traits": [
+      "boss",
+      "berserker",
+      "massive_dmg",
+      "unflinching"
+    ],
+    "specialEffect": "berserk",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "mad_soul",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_boss_gael_monster/200/200"
+  },
+  "df_boss_vampire": {
+    "id": "df_boss_vampire",
+    "name": "Lord Vladis",
+    "world": "dark_fantasy",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 425,
+      "max_hp": 425,
+      "minDmg": 25,
+      "maxDmg": 40,
+      "exp": 700
+    },
+    "traits": [
+      "boss",
+      "lifesteal",
+      "bat_swarm",
+      "blood_magic"
+    ],
+    "specialEffect": "blood_siphon",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "vladis_ring",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_boss_vampire_monster/200/200"
+  },
+  "df_boss_leoric": {
+    "id": "df_boss_leoric",
+    "name": "King Leoric",
+    "world": "dark_fantasy",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 600,
+      "max_hp": 600,
+      "minDmg": 20,
+      "maxDmg": 35,
+      "exp": 850
+    },
+    "traits": [
+      "boss",
+      "summon_skeletons",
+      "undead",
+      "curse_aura"
+    ],
+    "specialEffect": "curse_aura",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "crown_of_bones",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/df_boss_leoric_monster/200/200"
+  },
+  "df_boss_seraphine": {
+    "id": "df_boss_seraphine",
+    "name": "Nữ Hoàng Seraphine",
+    "world": "dark_fantasy",
+    "tier": 5,
+    "type": "boss",
+    "stats": {
+      "hp": 9999,
+      "max_hp": 9999,
+      "minDmg": 50,
+      "maxDmg": 100,
+      "exp": 5000
+    },
+    "traits": [
+      "boss",
+      "invulnerable",
+      "royal_aura",
+      "time_manipulation"
+    ],
+    "specialEffect": "time_reset",
+    "loot": {
+      "goldMin": 500,
+      "goldMax": 1000,
+      "items": [
+        {
+          "id": "royal_crown",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/seraphine_boss/400/400"
+  },
+  "df_boss_maren": {
+    "id": "df_boss_maren",
+    "name": "Hiệp Sĩ Maren",
+    "world": "dark_fantasy",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 800,
+      "max_hp": 800,
+      "minDmg": 30,
+      "maxDmg": 50,
+      "exp": 1200
+    },
+    "traits": [
+      "boss",
+      "parry",
+      "heavy_armor",
+      "loyalty_bind"
+    ],
+    "specialEffect": "shield_bash",
+    "loot": {
+      "goldMin": 100,
+      "goldMax": 300,
+      "items": [
+        {
+          "id": "maren_sword",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/maren_boss/400/400"
+  }
+}

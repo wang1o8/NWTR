@@ -1,0 +1,1533 @@
+{
+  "weapons": [
+    {
+      "id": "fantasy_iron_sword",
+      "name": "Kiếm Sắt",
+      "icon": "⚔️",
+      "world": "fantasy",
+      "tier": 1,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 3,
+      "diceSize": 6,
+      "bonus": {
+        "str": 1
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 80,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_dagger",
+      "name": "Dao Găm",
+      "icon": "🗡️",
+      "world": "fantasy",
+      "tier": 1,
+      "type": "blade",
+      "scaling": "DEX",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 2
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 60,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_wooden_staff",
+      "name": "Trượng Gỗ",
+      "icon": "🪄",
+      "world": "fantasy",
+      "tier": 1,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "int": 1
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 70,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_steel_sword",
+      "name": "Kiếm Thép",
+      "icon": "⚔️",
+      "world": "fantasy",
+      "tier": 2,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 6,
+      "diceSize": 8,
+      "bonus": {
+        "str": 2
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 250,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_warhammer",
+      "name": "Búa Chiến",
+      "icon": "🔨",
+      "world": "fantasy",
+      "tier": 2,
+      "type": "relic",
+      "scaling": "STR",
+      "damage": 8,
+      "diceSize": 8,
+      "bonus": {
+        "str": 3,
+        "dex": -1
+      },
+      "element": null,
+      "specialEffect": "stun",
+      "price": 350,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_magic_staff",
+      "name": "Trượng Pháp Thuật",
+      "icon": "🪄",
+      "world": "fantasy",
+      "tier": 2,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 5,
+      "diceSize": 8,
+      "bonus": {
+        "int": 3
+      },
+      "element": "holy",
+      "specialEffect": null,
+      "price": 300,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_longbow",
+      "name": "Trường Cung",
+      "icon": "🏹",
+      "world": "fantasy",
+      "tier": 2,
+      "type": "bow",
+      "scaling": "DEX",
+      "damage": 5,
+      "diceSize": 8,
+      "bonus": {
+        "dex": 2
+      },
+      "element": null,
+      "specialEffect": "bleed",
+      "price": 280,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_mithril_blade",
+      "name": "Kiếm Mithril",
+      "icon": "⚔️",
+      "world": "fantasy",
+      "tier": 3,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 12,
+      "diceSize": 10,
+      "bonus": {
+        "str": 4
+      },
+      "element": "holy",
+      "specialEffect": "lifesteal",
+      "price": 800,
+      "obtain": "craft"
+    },
+    {
+      "id": "fantasy_arcane_staff",
+      "name": "Trượng Huyền Thuật",
+      "icon": "🪄",
+      "world": "fantasy",
+      "tier": 3,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 10,
+      "diceSize": 10,
+      "bonus": {
+        "int": 5
+      },
+      "element": "holy",
+      "specialEffect": null,
+      "price": 900,
+      "obtain": "craft"
+    },
+    {
+      "id": "fantasy_dragon_bow",
+      "name": "Cung Rồng",
+      "icon": "🏹",
+      "world": "fantasy",
+      "tier": 3,
+      "type": "bow",
+      "scaling": "DEX",
+      "damage": 11,
+      "diceSize": 12,
+      "bonus": {
+        "dex": 4,
+        "str": 1
+      },
+      "element": "fire",
+      "specialEffect": "burn",
+      "price": 850,
+      "obtain": "craft"
+    },
+    {
+      "id": "fantasy_dragonslayer",
+      "name": "Thanh Kiếm Diệt Long",
+      "icon": "🗡️",
+      "world": "fantasy",
+      "tier": 4,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 18,
+      "diceSize": 12,
+      "bonus": {
+        "str": 7,
+        "con": 3
+      },
+      "element": "fire",
+      "specialEffect": "execute",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "dragon_quest"
+    },
+    {
+      "id": "fantasy_holy_avenger",
+      "name": "Thánh Kiếm Trừng Phạt",
+      "icon": "⚔️",
+      "world": "fantasy",
+      "tier": 4,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 16,
+      "diceSize": 12,
+      "bonus": {
+        "str": 5,
+        "wis": 5
+      },
+      "element": "holy",
+      "specialEffect": "lifesteal",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "paladin_quest"
+    },
+    {
+      "id": "scifi_laser_pistol",
+      "name": "Súng Laser",
+      "icon": "🔫",
+      "world": "scifi",
+      "tier": 1,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 3,
+      "diceSize": 6,
+      "bonus": {
+        "int": 1
+      },
+      "element": "thunder",
+      "specialEffect": null,
+      "price": 90,
+      "obtain": "shop"
+    },
+    {
+      "id": "scifi_shock_baton",
+      "name": "Dùi Cui Điện",
+      "icon": "⚡",
+      "world": "scifi",
+      "tier": 1,
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "str": 1,
+        "dex": 1
+      },
+      "element": "thunder",
+      "specialEffect": null,
+      "price": 75,
+      "obtain": "shop"
+    },
+    {
+      "id": "scifi_scanner",
+      "name": "Máy Quét Xung",
+      "icon": "📡",
+      "world": "scifi",
+      "tier": 1,
+      "type": "relic",
+      "scaling": "INT",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "int": 2
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 85,
+      "obtain": "shop"
+    },
+    {
+      "id": "scifi_plasma_rifle",
+      "name": "Súng Trường Plasma",
+      "icon": "🔫",
+      "world": "scifi",
+      "tier": 2,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 7,
+      "diceSize": 8,
+      "bonus": {
+        "int": 3
+      },
+      "element": "fire",
+      "specialEffect": "overload",
+      "price": 400,
+      "obtain": "shop"
+    },
+    {
+      "id": "scifi_energy_blade",
+      "name": "Kiếm Năng Lượng",
+      "icon": "🗡️",
+      "world": "scifi",
+      "tier": 2,
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 6,
+      "diceSize": 8,
+      "bonus": {
+        "str": 2,
+        "dex": 1
+      },
+      "element": "thunder",
+      "specialEffect": null,
+      "price": 350,
+      "obtain": "shop"
+    },
+    {
+      "id": "scifi_pulse_cannon",
+      "name": "Pháo Xung",
+      "icon": "💥",
+      "world": "scifi",
+      "tier": 2,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 8,
+      "diceSize": 10,
+      "bonus": {
+        "int": 2
+      },
+      "element": "thunder",
+      "specialEffect": "stun",
+      "price": 450,
+      "obtain": "craft"
+    },
+    {
+      "id": "scifi_ion_cannon",
+      "name": "Pháo Ion",
+      "icon": "⚡",
+      "world": "scifi",
+      "tier": 3,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 12,
+      "diceSize": 10,
+      "bonus": {
+        "int": 5
+      },
+      "element": "thunder",
+      "specialEffect": "chain",
+      "price": 900,
+      "obtain": "craft"
+    },
+    {
+      "id": "scifi_quantum_blade",
+      "name": "Kiếm Lượng Tử",
+      "icon": "🗡️",
+      "world": "scifi",
+      "tier": 3,
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 11,
+      "diceSize": 10,
+      "bonus": {
+        "str": 4,
+        "dex": 2
+      },
+      "element": null,
+      "specialEffect": "soulbreak",
+      "price": 850,
+      "obtain": "craft"
+    },
+    {
+      "id": "scifi_neural_disruptor",
+      "name": "Súng Phá Thần Kinh",
+      "icon": "🧠",
+      "world": "scifi",
+      "tier": 3,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 10,
+      "diceSize": 12,
+      "bonus": {
+        "int": 4,
+        "wis": 1
+      },
+      "element": null,
+      "specialEffect": "silence",
+      "price": 950,
+      "obtain": "craft"
+    },
+    {
+      "id": "scifi_singularity_gun",
+      "name": "Súng Kỳ Dị Điểm",
+      "icon": "🌀",
+      "world": "scifi",
+      "tier": 4,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 20,
+      "diceSize": 12,
+      "bonus": {
+        "int": 8,
+        "wis": 2
+      },
+      "element": "void",
+      "specialEffect": "void",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "singularity_quest"
+    },
+    {
+      "id": "scifi_chronos_staff",
+      "name": "Quyền Trượng Chronos",
+      "icon": "⏳",
+      "world": "scifi",
+      "tier": 4,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 15,
+      "diceSize": 12,
+      "bonus": {
+        "int": 5,
+        "dex": 5
+      },
+      "element": null,
+      "specialEffect": "haste",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "time_quest"
+    },
+    {
+      "id": "eastern_bamboo_staff",
+      "name": "Trượng Tre",
+      "icon": "🎋",
+      "world": "eastern",
+      "tier": 1,
+      "type": "staff",
+      "scaling": "STR",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "str": 1,
+        "wis": 1
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 50,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_tanto",
+      "name": "Tanto",
+      "icon": "🗡️",
+      "world": "eastern",
+      "tier": 1,
+      "type": "blade",
+      "scaling": "DEX",
+      "damage": 3,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 2
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 65,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_shuriken",
+      "name": "Phi Tiêu",
+      "icon": "✴️",
+      "world": "eastern",
+      "tier": 1,
+      "type": "relic",
+      "scaling": "DEX",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 1
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 40,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_katana",
+      "name": "Katana",
+      "icon": "⚔️",
+      "world": "eastern",
+      "tier": 2,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 7,
+      "diceSize": 8,
+      "bonus": {
+        "str": 2,
+        "dex": 1
+      },
+      "element": null,
+      "specialEffect": "bleed",
+      "price": 300,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_naginata",
+      "name": "Naginata",
+      "icon": "🔱",
+      "world": "eastern",
+      "tier": 2,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 6,
+      "diceSize": 10,
+      "bonus": {
+        "str": 3
+      },
+      "element": null,
+      "specialEffect": "chain",
+      "price": 350,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_jade_staff",
+      "name": "Trượng Ngọc",
+      "icon": "🪄",
+      "world": "eastern",
+      "tier": 2,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 5,
+      "diceSize": 8,
+      "bonus": {
+        "int": 2,
+        "wis": 2
+      },
+      "element": "holy",
+      "specialEffect": null,
+      "price": 320,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_void_katana",
+      "name": "Katana Hư Không",
+      "icon": "🌑",
+      "world": "eastern",
+      "tier": 3,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 12,
+      "diceSize": 10,
+      "bonus": {
+        "str": 3,
+        "dex": 3
+      },
+      "element": "void",
+      "specialEffect": "void",
+      "price": 900,
+      "obtain": "craft"
+    },
+    {
+      "id": "eastern_dragon_spear",
+      "name": "Thương Hồn Long",
+      "icon": "🐉",
+      "world": "eastern",
+      "tier": 3,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 14,
+      "diceSize": 12,
+      "bonus": {
+        "str": 5
+      },
+      "element": "fire",
+      "specialEffect": "chain",
+      "price": 950,
+      "obtain": "craft"
+    },
+    {
+      "id": "eastern_storm_fan",
+      "name": "Quạt Bão Phong",
+      "icon": "🌀",
+      "world": "eastern",
+      "tier": 3,
+      "type": "relic",
+      "scaling": "INT",
+      "damage": 10,
+      "diceSize": 10,
+      "bonus": {
+        "int": 4,
+        "dex": 2
+      },
+      "element": "thunder",
+      "specialEffect": "stun",
+      "price": 880,
+      "obtain": "craft"
+    },
+    {
+      "id": "eastern_muramasa",
+      "name": "Muramasa",
+      "icon": "⚔️",
+      "world": "eastern",
+      "tier": 4,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 18,
+      "diceSize": 12,
+      "bonus": {
+        "str": 8,
+        "dex": 3
+      },
+      "element": "shadow",
+      "specialEffect": "curse_edge",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "muramasa_quest",
+      "penalty": {
+        "sanity": -10
+      }
+    },
+    {
+      "id": "eastern_jade_emperor",
+      "name": "Trượng Ngọc Hoàng",
+      "icon": "👑",
+      "world": "eastern",
+      "tier": 4,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 16,
+      "diceSize": 12,
+      "bonus": {
+        "int": 7,
+        "wis": 4
+      },
+      "element": "holy",
+      "specialEffect": "echo",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "emperor_quest"
+    },
+    {
+      "id": "dark_bone_dagger",
+      "name": "Dao Xương",
+      "icon": "🦴",
+      "world": "dark_fantasy",
+      "tier": 1,
+      "type": "blade",
+      "scaling": "DEX",
+      "damage": 3,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 1
+      },
+      "element": "shadow",
+      "specialEffect": null,
+      "price": 55,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_plague_staff",
+      "name": "Trượng Dịch Bệnh",
+      "icon": "☠️",
+      "world": "dark_fantasy",
+      "tier": 1,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "int": 2
+      },
+      "element": "shadow",
+      "specialEffect": "poison",
+      "price": 70,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_rusty_chain",
+      "name": "Xích Rỉ Sét",
+      "icon": "⛓️",
+      "world": "dark_fantasy",
+      "tier": 1,
+      "type": "relic",
+      "scaling": "STR",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "str": 1
+      },
+      "element": null,
+      "specialEffect": "bleed",
+      "price": 45,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_cursed_blade",
+      "name": "Kiếm Nguyền Rủa",
+      "icon": "🗡️",
+      "world": "dark_fantasy",
+      "tier": 2,
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 8,
+      "diceSize": 8,
+      "bonus": {
+        "str": 3
+      },
+      "element": "shadow",
+      "specialEffect": "curse_edge",
+      "price": 300,
+      "obtain": "shop",
+      "penalty": {
+        "cha": -2
+      }
+    },
+    {
+      "id": "dark_shadow_scythe",
+      "name": "Lưỡi Hái Bóng Tối",
+      "icon": "⚔️",
+      "world": "dark_fantasy",
+      "tier": 2,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 7,
+      "diceSize": 10,
+      "bonus": {
+        "str": 2,
+        "dex": 1
+      },
+      "element": "shadow",
+      "specialEffect": "lifesteal",
+      "price": 380,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_death_staff",
+      "name": "Trượng Tử Thần",
+      "icon": "💀",
+      "world": "dark_fantasy",
+      "tier": 2,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 6,
+      "diceSize": 8,
+      "bonus": {
+        "int": 3
+      },
+      "element": "shadow",
+      "specialEffect": "drain",
+      "price": 350,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_soul_reaper",
+      "name": "Lưỡi Hái Đoạt Hồn",
+      "icon": "💀",
+      "world": "dark_fantasy",
+      "tier": 3,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 15,
+      "diceSize": 10,
+      "bonus": {
+        "str": 5
+      },
+      "element": "shadow",
+      "specialEffect": "lifesteal",
+      "price": 900,
+      "obtain": "craft",
+      "penalty": {
+        "sanity": -5
+      }
+    },
+    {
+      "id": "dark_nightmare_blade",
+      "name": "Kiếm Ác Mộng",
+      "icon": "🌑",
+      "world": "dark_fantasy",
+      "tier": 3,
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 13,
+      "diceSize": 12,
+      "bonus": {
+        "str": 4,
+        "dex": 2
+      },
+      "element": "shadow",
+      "specialEffect": "curse_edge",
+      "price": 950,
+      "obtain": "craft",
+      "penalty": {
+        "cha": -3
+      }
+    },
+    {
+      "id": "dark_void_staff",
+      "name": "Trượng Hư Vô",
+      "icon": "🔮",
+      "world": "dark_fantasy",
+      "tier": 3,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 12,
+      "diceSize": 10,
+      "bonus": {
+        "int": 5
+      },
+      "element": "void",
+      "specialEffect": "void",
+      "price": 920,
+      "obtain": "craft"
+    },
+    {
+      "id": "dark_world_ender",
+      "name": "Kẻ Hủy Diệt Thế Giới",
+      "icon": "🌋",
+      "world": "dark_fantasy",
+      "tier": 4,
+      "type": "relic",
+      "scaling": "hybrid",
+      "damage": 22,
+      "diceSize": 12,
+      "bonus": {
+        "str": 5,
+        "int": 5
+      },
+      "element": "void",
+      "specialEffect": "soul_link",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "void_quest",
+      "penalty": {
+        "sanity": -15
+      }
+    },
+    {
+      "id": "dark_lich_scepter",
+      "name": "Quyền Trượng Quỷ Vương",
+      "icon": "👑",
+      "world": "dark_fantasy",
+      "tier": 4,
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 18,
+      "diceSize": 12,
+      "bonus": {
+        "int": 8,
+        "wis": 3
+      },
+      "element": "shadow",
+      "specialEffect": "drain",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "lich_quest"
+    },
+    {
+      "id": "postapoc_pipe_wrench",
+      "name": "Cờ Lê Ống",
+      "icon": "🔧",
+      "world": "postapoc",
+      "tier": 1,
+      "type": "relic",
+      "scaling": "STR",
+      "damage": 3,
+      "diceSize": 6,
+      "bonus": {
+        "str": 1
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 40,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_makeshift_bow",
+      "name": "Cung Tự Chế",
+      "icon": "🏹",
+      "world": "postapoc",
+      "tier": 1,
+      "type": "bow",
+      "scaling": "DEX",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 1
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 50,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_shiv",
+      "name": "Dao Tự Chế",
+      "icon": "🗡️",
+      "world": "postapoc",
+      "tier": 1,
+      "type": "blade",
+      "scaling": "DEX",
+      "damage": 2,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 2
+      },
+      "element": null,
+      "specialEffect": "bleed",
+      "price": 35,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_combat_rifle",
+      "name": "Súng Trường Chiến Đấu",
+      "icon": "🔫",
+      "world": "postapoc",
+      "tier": 2,
+      "type": "gun",
+      "scaling": "STR",
+      "damage": 7,
+      "diceSize": 8,
+      "bonus": {
+        "str": 2
+      },
+      "element": null,
+      "specialEffect": null,
+      "price": 350,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_shotgun",
+      "name": "Súng Hoa Cải",
+      "icon": "🔫",
+      "world": "postapoc",
+      "tier": 2,
+      "type": "gun",
+      "scaling": "STR",
+      "damage": 9,
+      "diceSize": 10,
+      "bonus": {
+        "str": 3,
+        "dex": -1
+      },
+      "element": null,
+      "specialEffect": "stun",
+      "price": 400,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_shock_rod",
+      "name": "Gậy Xung Điện",
+      "icon": "⚡",
+      "world": "postapoc",
+      "tier": 2,
+      "type": "blade",
+      "scaling": "INT",
+      "damage": 5,
+      "diceSize": 8,
+      "bonus": {
+        "int": 2,
+        "dex": 1
+      },
+      "element": "thunder",
+      "specialEffect": "stun",
+      "price": 300,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_scrap_cannon",
+      "name": "Pháo Phế Liệu",
+      "icon": "💥",
+      "world": "postapoc",
+      "tier": 3,
+      "type": "gun",
+      "scaling": "STR",
+      "damage": 14,
+      "diceSize": 12,
+      "bonus": {
+        "str": 5
+      },
+      "element": null,
+      "specialEffect": "shatter",
+      "price": 950,
+      "obtain": "craft"
+    },
+    {
+      "id": "postapoc_radiation_bow",
+      "name": "Cung Phóng Xạ",
+      "icon": "☢️",
+      "world": "postapoc",
+      "tier": 3,
+      "type": "bow",
+      "scaling": "INT",
+      "damage": 10,
+      "diceSize": 10,
+      "bonus": {
+        "int": 3,
+        "dex": 2
+      },
+      "element": null,
+      "specialEffect": "poison",
+      "price": 800,
+      "obtain": "craft"
+    },
+    {
+      "id": "postapoc_emp_launcher",
+      "name": "Súng EMP",
+      "icon": "📡",
+      "world": "postapoc",
+      "tier": 3,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 11,
+      "diceSize": 10,
+      "bonus": {
+        "int": 4
+      },
+      "element": "thunder",
+      "specialEffect": "silence",
+      "price": 900,
+      "obtain": "craft"
+    },
+    {
+      "id": "postapoc_nuke_launcher",
+      "name": "Bệ Phóng Hạt Nhân",
+      "icon": "☢️",
+      "world": "postapoc",
+      "tier": 4,
+      "type": "gun",
+      "scaling": "STR",
+      "damage": 25,
+      "diceSize": 12,
+      "bonus": {
+        "str": 10
+      },
+      "element": "fire",
+      "specialEffect": "overload",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "nuke_quest",
+      "penalty": {
+        "sanity": -20
+      }
+    },
+    {
+      "id": "postapoc_titan_fist",
+      "name": "Nắm Đấm Titan",
+      "icon": "🤖",
+      "world": "postapoc",
+      "tier": 4,
+      "type": "relic",
+      "scaling": "STR",
+      "damage": 18,
+      "diceSize": 12,
+      "bonus": {
+        "str": 7,
+        "con": 4
+      },
+      "element": null,
+      "specialEffect": "stun",
+      "price": 0,
+      "obtain": "quest",
+      "questId": "titan_quest"
+    },
+    {
+      "id": "fantasy_broadsword",
+      "name": "Trọng Kiếm",
+      "icon": "⚔️",
+      "world": "fantasy",
+      "tier": 2,
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 8,
+      "diceSize": 10,
+      "bonus": {
+        "str": 3
+      },
+      "element": null,
+      "specialEffect": "cleave",
+      "price": 300,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_scythe",
+      "name": "Lưỡi Hái Tử Thần",
+      "icon": "🌾",
+      "world": "fantasy",
+      "tier": 3,
+      "type": "polearm",
+      "scaling": "DEX",
+      "damage": 10,
+      "diceSize": 10,
+      "bonus": {
+        "dex": 4
+      },
+      "element": "dark",
+      "specialEffect": "bleed",
+      "price": 600,
+      "obtain": "craft"
+    },
+    {
+      "id": "fantasy_healing_staff",
+      "name": "Trượng Sinh Mệnh",
+      "icon": "🪄",
+      "world": "fantasy",
+      "tier": 2,
+      "type": "staff",
+      "scaling": "WIS",
+      "damage": 4,
+      "diceSize": 6,
+      "bonus": {
+        "wis": 4
+      },
+      "element": "holy",
+      "specialEffect": "heal_self",
+      "price": 400,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_battleaxe",
+      "name": "Rìu Chiến Bão Tố",
+      "icon": "🪓",
+      "world": "fantasy",
+      "tier": 3,
+      "type": "axe",
+      "scaling": "STR",
+      "damage": 14,
+      "diceSize": 8,
+      "bonus": {
+        "str": 5
+      },
+      "element": "thunder",
+      "specialEffect": "stun",
+      "price": 650,
+      "obtain": "craft"
+    },
+    {
+      "id": "fantasy_crossbow",
+      "name": "Nỏ Gỗ Cứng",
+      "icon": "🏹",
+      "world": "fantasy",
+      "tier": 1,
+      "type": "bow",
+      "scaling": "DEX",
+      "damage": 5,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 1
+      },
+      "element": null,
+      "specialEffect": "pierce",
+      "price": 120,
+      "obtain": "shop"
+    },
+    {
+      "id": "fantasy_mystic_bow",
+      "name": "Cung Thần Bí",
+      "icon": "🏹",
+      "world": "fantasy",
+      "tier": 3,
+      "type": "bow",
+      "scaling": "INT",
+      "damage": 9,
+      "diceSize": 10,
+      "bonus": {
+        "int": 3
+      },
+      "element": "magic",
+      "specialEffect": "homing",
+      "price": 500,
+      "obtain": "craft"
+    },
+    {
+      "id": "scifi_arc_thrower",
+      "name": "Phóng Điện Từ",
+      "icon": "⚡",
+      "world": "scifi",
+      "tier": 2,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 6,
+      "diceSize": 10,
+      "bonus": {
+        "int": 3
+      },
+      "element": "thunder",
+      "specialEffect": "chain",
+      "price": 450,
+      "obtain": "shop"
+    },
+    {
+      "id": "scifi_gravity_hammer",
+      "name": "Búa Ròng Rọc G",
+      "icon": "🔨",
+      "world": "scifi",
+      "tier": 3,
+      "type": "hammer",
+      "scaling": "STR",
+      "damage": 15,
+      "diceSize": 10,
+      "bonus": {
+        "str": 5
+      },
+      "element": "force",
+      "specialEffect": "crush",
+      "price": 800,
+      "obtain": "craft"
+    },
+    {
+      "id": "scifi_laser_sniper",
+      "name": "Súng Tỉa Laser",
+      "icon": "🔫",
+      "world": "scifi",
+      "tier": 3,
+      "type": "gun",
+      "scaling": "DEX",
+      "damage": 20,
+      "diceSize": 12,
+      "bonus": {
+        "dex": 6
+      },
+      "element": "fire",
+      "specialEffect": "pierce",
+      "price": 1000,
+      "obtain": "craft"
+    },
+    {
+      "id": "scifi_stun_baton",
+      "name": "Gậy Tê Liệt",
+      "icon": "🌩️",
+      "world": "scifi",
+      "tier": 1,
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 4,
+      "diceSize": 6,
+      "bonus": {
+        "str": 2
+      },
+      "element": "thunder",
+      "specialEffect": "stun",
+      "price": 100,
+      "obtain": "shop"
+    },
+    {
+      "id": "scifi_sonic_blaster",
+      "name": "Súng Sóng Âm",
+      "icon": "🔊",
+      "world": "scifi",
+      "tier": 2,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 5,
+      "diceSize": 8,
+      "bonus": {
+        "int": 2
+      },
+      "element": "sonic",
+      "specialEffect": "confuse",
+      "price": 380,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_kanabo",
+      "name": "Kanabo (Chùy Gai)",
+      "icon": "🍢",
+      "world": "eastern",
+      "tier": 2,
+      "type": "hammer",
+      "scaling": "STR",
+      "damage": 10,
+      "diceSize": 8,
+      "bonus": {
+        "str": 4
+      },
+      "element": null,
+      "specialEffect": "crush",
+      "price": 350,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_yari",
+      "name": "Giáo Yari",
+      "icon": "🔱",
+      "world": "eastern",
+      "tier": 1,
+      "type": "polearm",
+      "scaling": "DEX",
+      "damage": 6,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 3
+      },
+      "element": null,
+      "specialEffect": "reach",
+      "price": 200,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_kusarigama",
+      "name": "Kusarigama",
+      "icon": "🔗",
+      "world": "eastern",
+      "tier": 3,
+      "type": "blade",
+      "scaling": "DEX",
+      "damage": 11,
+      "diceSize": 8,
+      "bonus": {
+        "dex": 5
+      },
+      "element": null,
+      "specialEffect": "disarm",
+      "price": 700,
+      "obtain": "craft"
+    },
+    {
+      "id": "eastern_paper_fan",
+      "name": "Quạt Giấy Thép",
+      "icon": "🪭",
+      "world": "eastern",
+      "tier": 2,
+      "type": "relic",
+      "scaling": "INT",
+      "damage": 5,
+      "diceSize": 8,
+      "bonus": {
+        "int": 3
+      },
+      "element": "wind",
+      "specialEffect": "blowback",
+      "price": 300,
+      "obtain": "shop"
+    },
+    {
+      "id": "eastern_nunchaku",
+      "name": "Côn Nhị Khúc",
+      "icon": "⛓️",
+      "world": "eastern",
+      "tier": 2,
+      "type": "blunt",
+      "scaling": "DEX",
+      "damage": 7,
+      "diceSize": 6,
+      "bonus": {
+        "dex": 4
+      },
+      "element": null,
+      "specialEffect": "multi_hit",
+      "price": 280,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_blood_whip",
+      "name": "Roi Máu",
+      "icon": "🩸",
+      "world": "dark_fantasy",
+      "tier": 2,
+      "type": "whip",
+      "scaling": "DEX",
+      "damage": 6,
+      "diceSize": 8,
+      "bonus": {
+        "dex": 2
+      },
+      "element": "blood",
+      "specialEffect": "lifesteal",
+      "price": 350,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_bone_hammer",
+      "name": "Búa Xương Cốt",
+      "icon": "💀",
+      "world": "dark_fantasy",
+      "tier": 3,
+      "type": "hammer",
+      "scaling": "STR",
+      "damage": 14,
+      "diceSize": 10,
+      "bonus": {
+        "str": 5
+      },
+      "element": "dark",
+      "specialEffect": "fear",
+      "price": 750,
+      "obtain": "craft"
+    },
+    {
+      "id": "dark_vampire_fangs",
+      "name": "Nanh Ma Cà Rồng",
+      "icon": "🧛",
+      "world": "dark_fantasy",
+      "tier": 3,
+      "type": "unarmed",
+      "scaling": "DEX",
+      "damage": 10,
+      "diceSize": 8,
+      "bonus": {
+        "dex": 5
+      },
+      "element": "dark",
+      "specialEffect": "lifesteal",
+      "price": 850,
+      "obtain": "craft"
+    },
+    {
+      "id": "dark_executioner_axe",
+      "name": "Rìu Tử Hình",
+      "icon": "🪓",
+      "world": "dark_fantasy",
+      "tier": 2,
+      "type": "axe",
+      "scaling": "STR",
+      "damage": 12,
+      "diceSize": 8,
+      "bonus": {
+        "str": 4
+      },
+      "element": null,
+      "specialEffect": "execute",
+      "price": 400,
+      "obtain": "shop"
+    },
+    {
+      "id": "dark_tome_of_ruins",
+      "name": "Sách Cổ Tàn Tích",
+      "icon": "📖",
+      "world": "dark_fantasy",
+      "tier": 3,
+      "type": "relic",
+      "scaling": "INT",
+      "damage": 15,
+      "diceSize": 10,
+      "bonus": {
+        "int": 6
+      },
+      "element": "void",
+      "specialEffect": "doom",
+      "price": 900,
+      "obtain": "craft"
+    },
+    {
+      "id": "postapoc_machete",
+      "name": "Mã Tấu Rỉ",
+      "icon": "🔪",
+      "world": "postapoc",
+      "tier": 1,
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 5,
+      "diceSize": 6,
+      "bonus": {
+        "str": 2
+      },
+      "element": null,
+      "specialEffect": "bleed",
+      "price": 150,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_chain_whip",
+      "name": "Roi Xích Sắt",
+      "icon": "🔗",
+      "world": "postapoc",
+      "tier": 2,
+      "type": "whip",
+      "scaling": "DEX",
+      "damage": 7,
+      "diceSize": 8,
+      "bonus": {
+        "dex": 3
+      },
+      "element": null,
+      "specialEffect": "disarm",
+      "price": 300,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_flamethrower",
+      "name": "Súng Phun Lửa",
+      "icon": "🔥",
+      "world": "postapoc",
+      "tier": 3,
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 14,
+      "diceSize": 10,
+      "bonus": {
+        "int": 4
+      },
+      "element": "fire",
+      "specialEffect": "burn",
+      "price": 850,
+      "obtain": "craft"
+    },
+    {
+      "id": "postapoc_nail_bat",
+      "name": "Gậy Bóng Chày Đóng Đinh",
+      "icon": "⚾",
+      "world": "postapoc",
+      "tier": 1,
+      "type": "blunt",
+      "scaling": "STR",
+      "damage": 6,
+      "diceSize": 6,
+      "bonus": {
+        "str": 3
+      },
+      "element": null,
+      "specialEffect": "bleed",
+      "price": 100,
+      "obtain": "shop"
+    },
+    {
+      "id": "postapoc_bazooka",
+      "name": "Ống Phóng Rốc-Két",
+      "icon": "🚀",
+      "world": "postapoc",
+      "tier": 3,
+      "type": "gun",
+      "scaling": "STR",
+      "damage": 25,
+      "diceSize": 12,
+      "bonus": {
+        "str": 5
+      },
+      "element": "fire",
+      "specialEffect": "explosion",
+      "price": 950,
+      "obtain": "craft"
+    }
+  ]
+}

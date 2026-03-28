@@ -1,0 +1,110 @@
+[
+  {
+    "id": "born_under_void",
+    "name": "Sinh Dưới Hư Không",
+    "description": "Ngươi ra đời trong khoảnh khắc giữa hai thế giới. Không thuộc về nơi nào.",
+    "stat_effects": { "soul": 2, "cha": -1 },
+    "special_rule": "Có thể cảm nhận sự bất ổn của thế giới trước 1 cảnh."
+  },
+  {
+    "id": "cynical_mind",
+    "name": "Tâm Trí Hoài Nghi",
+    "description": "Thế giới này đã dạy ngươi rằng không ai có thể tin tưởng được.",
+    "stat_effects": { "wis": 2, "cha": -2 },
+    "special_rule": "Kháng các hiệu ứng thao túng tâm lý."
+  },
+  {
+    "id": "blood_of_27",
+    "name": "Huyết Mạch 27",
+    "description": "Một con số kỳ lạ khắc sâu vào linh hồn ngươi. Nó mang lại sức mạnh nhưng cũng đầy rẫy tai ương.",
+    "stat_effects": { "str": 27, "con": -5, "lck": -3 },
+    "special_rule": "Sức mạnh bộc phát khi đối đầu với thực thể hư không."
+  },
+  {
+    "id": "melancholic_soul",
+    "name": "Linh Hồn U Sầu",
+    "description": "Nỗi buồn là người bạn duy nhất luôn ở bên cạnh ngươi.",
+    "stat_effects": { "wis": 3, "str": -1 },
+    "special_rule": "Tăng khả năng hồi phục Sanity khi ở một mình."
+  },
+  {
+    "id": "broken_vessel",
+    "name": "Bình Chứa Rạn Nứt",
+    "description": "Cơ thể ngươi không thể giữ được năng lượng quá lâu.",
+    "stat_effects": { "con": -3, "int": -3, "wis": -3 },
+    "special_rule": "Tốc độ tiêu hao SOUL tăng 20%.",
+    "is_negative": true
+  },
+  {
+    "id": "void_walker",
+    "name": "Kẻ Bước Trên Hư Không",
+    "description": "Đôi chân ngươi đã quen với sự trống rỗng giữa các thế giới.",
+    "stat_effects": { "dex": 2, "soul": 1 },
+    "special_rule": "Giảm 50% sát thương khi di chuyển giữa các thế giới."
+  },
+  {
+    "id": "stoic_observer",
+    "name": "Kẻ Quan Sát Khắc Kỷ",
+    "description": "Ngươi nhìn thế giới sụp đổ mà không hề chớp mắt.",
+    "stat_effects": { "wis": 2, "con": 1, "cha": -1 },
+    "special_rule": "Giảm Sanity loss từ các cảnh chết chóc 30%."
+  },
+  {
+    "id": "cursed_luck",
+    "name": "Vận May Bị Nguyền Rủa",
+    "description": "Ngươi luôn tìm thấy vàng trong đống xác chết.",
+    "stat_effects": { "lck": 5, "rep": -10 },
+    "special_rule": "Tăng tỷ lệ rơi đồ hiếm nhưng NPC luôn xa lánh."
+  },
+  {
+    "id": "fragile_genius",
+    "name": "Thiên Tài Mong Manh",
+    "description": "Trí tuệ của ngươi vượt xa người thường, nhưng cơ thể thì không.",
+    "stat_effects": { "int": 4, "con": -2 },
+    "special_rule": "Học kỹ năng nhanh hơn 25%."
+  },
+  {
+    "id": "shadow_touched",
+    "name": "Chạm Vào Bóng Tối",
+    "description": "Bóng tối đã trở thành một phần của da thịt ngươi.",
+    "stat_effects": { "dex": 3, "wis": -2 },
+    "special_rule": "Tăng 20% sát thương khi chiến đấu trong bóng tối."
+  },
+  {
+    "id": "unlucky_wanderer",
+    "name": "Lữ Khách Vô Vận",
+    "description": "Xui xẻo bám đuổi ngươi như một bóng ma.",
+    "stat_effects": { "lck": -5 },
+    "special_rule": "Tỷ lệ gặp sự kiện ngẫu nhiên tiêu cực tăng gấp đôi.",
+    "is_negative": true
+  },
+  {
+    "id": "iron_will",
+    "name": "Ý Chí Sắt Đá",
+    "description": "Không gì có thể bẻ gãy được tinh thần của ngươi.",
+    "stat_effects": { "wis": 4, "int": -1 },
+    "special_rule": "Không thể bị rơi vào trạng thái Điên Loạn (Madness)."
+  },
+  {
+    "id": "fading_memory",
+    "name": "Ký Ức Phai Nhạt",
+    "description": "Ngươi đang quên dần bản thân mình là ai.",
+    "stat_effects": { "int": -2, "wis": -2 },
+    "special_rule": "Khó khăn hơn trong việc mở khóa các mảnh ký ức.",
+    "is_negative": true
+  },
+  {
+    "id": "void_resonance",
+    "name": "Cộng Hưởng Hư Không",
+    "description": "Linh hồn ngươi rung động cùng nhịp với sự sụp đổ của thực tại.",
+    "stat_effects": { "soul": 3, "con": -1 },
+    "special_rule": "Kỹ năng xuyên thế giới mạnh hơn 50%."
+  },
+  {
+    "id": "cynical_diplomat",
+    "name": "Nhà Ngoại Giao Cay Độc",
+    "description": "Lời nói của ngươi sắc lẹm và đầy sự thật đau lòng.",
+    "stat_effects": { "cha": 3, "wis": -1 },
+    "special_rule": "Dễ dàng thuyết phục người khác bằng cách đánh vào nỗi sợ của họ."
+  }
+]

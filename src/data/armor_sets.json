@@ -1,0 +1,829 @@
+{
+  "sets": [
+    {
+      "id": "fantasy_knight",
+      "name": "Bộ Kỵ Sĩ",
+      "world": "fantasy",
+      "tier": 1,
+      "focus": "STR/DEF",
+      "setBonus": {
+        "def": 3,
+        "str": 2
+      },
+      "pieces": [
+        {
+          "id": "fantasy_knight_head",
+          "name": "Mũ Giáp Kỵ Sĩ",
+          "icon": "🪖",
+          "slot": "head",
+          "def": 2,
+          "bonus": {
+            "str": 1
+          },
+          "price": 120
+        },
+        {
+          "id": "fantasy_knight_chest",
+          "name": "Giáp Ngực Kỵ Sĩ",
+          "icon": "🛡️",
+          "slot": "chest",
+          "def": 3,
+          "bonus": {
+            "str": 2
+          },
+          "price": 200
+        },
+        {
+          "id": "fantasy_knight_legs",
+          "name": "Xà Cạp Kỵ Sĩ",
+          "icon": "🦿",
+          "slot": "legs",
+          "def": 2,
+          "bonus": {
+            "str": 1
+          },
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "fantasy_wizard",
+      "name": "Bộ Pháp Sư",
+      "world": "fantasy",
+      "tier": 1,
+      "focus": "INT/MP",
+      "setBonus": {
+        "def": 2,
+        "int": 4
+      },
+      "pieces": [
+        {
+          "id": "fantasy_wizard_head",
+          "name": "Mũ Pháp Sư",
+          "icon": "🧙",
+          "slot": "head",
+          "def": 1,
+          "bonus": {
+            "int": 2
+          },
+          "price": 100
+        },
+        {
+          "id": "fantasy_wizard_chest",
+          "name": "Áo Choàng Pháp Sư",
+          "icon": "🧥",
+          "slot": "chest",
+          "def": 2,
+          "bonus": {
+            "int": 3
+          },
+          "price": 180
+        },
+        {
+          "id": "fantasy_wizard_legs",
+          "name": "Quần Pháp Sư",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 1,
+          "bonus": {
+            "int": 2
+          },
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "fantasy_paladin",
+      "name": "Bộ Thánh Kỵ Sĩ",
+      "world": "fantasy",
+      "tier": 3,
+      "focus": "STR/WIS",
+      "setBonus": {
+        "def": 5,
+        "str": 3,
+        "wis": 3
+      },
+      "pieces": [
+        {
+          "id": "fantasy_paladin_head",
+          "name": "Vương Miện Thánh",
+          "icon": "👑",
+          "slot": "head",
+          "def": 3,
+          "bonus": {
+            "str": 2,
+            "wis": 1
+          },
+          "price": 600
+        },
+        {
+          "id": "fantasy_paladin_chest",
+          "name": "Giáp Thánh",
+          "icon": "🛡️",
+          "slot": "chest",
+          "def": 5,
+          "bonus": {
+            "str": 3,
+            "wis": 2
+          },
+          "price": 900
+        },
+        {
+          "id": "fantasy_paladin_legs",
+          "name": "Xà Cạp Thánh",
+          "icon": "🦿",
+          "slot": "legs",
+          "def": 3,
+          "bonus": {
+            "str": 1,
+            "wis": 2
+          },
+          "price": 650
+        }
+      ]
+    },
+    {
+      "id": "scifi_nano",
+      "name": "Bộ Nano",
+      "world": "scifi",
+      "tier": 2,
+      "focus": "DEX/INT",
+      "setBonus": {
+        "def": 4,
+        "dex": 3
+      },
+      "pieces": [
+        {
+          "id": "scifi_nano_head",
+          "name": "Kính Nano",
+          "icon": "🥽",
+          "slot": "head",
+          "def": 2,
+          "bonus": {
+            "dex": 1,
+            "int": 1
+          },
+          "price": 250
+        },
+        {
+          "id": "scifi_nano_chest",
+          "name": "Áo Giáp Nano",
+          "icon": "🦺",
+          "slot": "chest",
+          "def": 3,
+          "bonus": {
+            "dex": 2,
+            "int": 1
+          },
+          "price": 400
+        },
+        {
+          "id": "scifi_nano_legs",
+          "name": "Quần Nano",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 2,
+          "bonus": {
+            "dex": 1,
+            "int": 1
+          },
+          "price": 280
+        }
+      ]
+    },
+    {
+      "id": "scifi_mech",
+      "name": "Bộ Cơ Giới Nặng",
+      "world": "scifi",
+      "tier": 2,
+      "focus": "STR/CON",
+      "setBonus": {
+        "def": 6,
+        "con": 4
+      },
+      "penalty": {
+        "dex": -2
+      },
+      "pieces": [
+        {
+          "id": "scifi_mech_head",
+          "name": "Mũ Cơ Giới",
+          "icon": "🤖",
+          "slot": "head",
+          "def": 3,
+          "bonus": {
+            "con": 2
+          },
+          "price": 300
+        },
+        {
+          "id": "scifi_mech_chest",
+          "name": "Giáp Cơ Giới",
+          "icon": "🦾",
+          "slot": "chest",
+          "def": 5,
+          "bonus": {
+            "con": 3,
+            "str": 1
+          },
+          "price": 500
+        },
+        {
+          "id": "scifi_mech_legs",
+          "name": "Đùi Cơ Giới",
+          "icon": "🦿",
+          "slot": "legs",
+          "def": 3,
+          "bonus": {
+            "con": 2
+          },
+          "price": 320
+        }
+      ]
+    },
+    {
+      "id": "eastern_samurai",
+      "name": "Bộ Samurai",
+      "world": "eastern",
+      "tier": 2,
+      "focus": "STR/DEX",
+      "setBonus": {
+        "def": 4,
+        "str": 2,
+        "dex": 2
+      },
+      "pieces": [
+        {
+          "id": "eastern_samurai_head",
+          "name": "Mũ Kabuto",
+          "icon": "⛑️",
+          "slot": "head",
+          "def": 2,
+          "bonus": {
+            "str": 1,
+            "dex": 1
+          },
+          "price": 220
+        },
+        {
+          "id": "eastern_samurai_chest",
+          "name": "Giáp Dō",
+          "icon": "🎽",
+          "slot": "chest",
+          "def": 3,
+          "bonus": {
+            "str": 2,
+            "dex": 1
+          },
+          "price": 380
+        },
+        {
+          "id": "eastern_samurai_legs",
+          "name": "Xà Cạp Suneate",
+          "icon": "🦿",
+          "slot": "legs",
+          "def": 2,
+          "bonus": {
+            "str": 1,
+            "dex": 1
+          },
+          "price": 250
+        }
+      ]
+    },
+    {
+      "id": "eastern_monk",
+      "name": "Bộ Tăng Lữ",
+      "world": "eastern",
+      "tier": 1,
+      "focus": "WIS/INT",
+      "setBonus": {
+        "def": 2,
+        "wis": 3,
+        "int": 2
+      },
+      "pieces": [
+        {
+          "id": "eastern_monk_head",
+          "name": "Khăn Thiền",
+          "icon": "🧘",
+          "slot": "head",
+          "def": 1,
+          "bonus": {
+            "wis": 1,
+            "int": 1
+          },
+          "price": 80
+        },
+        {
+          "id": "eastern_monk_chest",
+          "name": "Áo Choàng Thiền",
+          "icon": "🥋",
+          "slot": "chest",
+          "def": 1,
+          "bonus": {
+            "wis": 2,
+            "int": 2
+          },
+          "price": 150
+        },
+        {
+          "id": "eastern_monk_legs",
+          "name": "Quần Thiền",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 1,
+          "bonus": {
+            "wis": 1,
+            "int": 1
+          },
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "dark_deathknight",
+      "name": "Bộ Kỵ Sĩ Chết",
+      "world": "dark_fantasy",
+      "tier": 3,
+      "focus": "STR/CON",
+      "setBonus": {
+        "def": 7,
+        "str": 3
+      },
+      "penalty": {
+        "sanity": -10
+      },
+      "pieces": [
+        {
+          "id": "dark_dk_head",
+          "name": "Mũ Giáp Tử Thần",
+          "icon": "💀",
+          "slot": "head",
+          "def": 4,
+          "bonus": {
+            "str": 2,
+            "con": 1
+          },
+          "price": 700
+        },
+        {
+          "id": "dark_dk_chest",
+          "name": "Giáp Ngực Tử Thần",
+          "icon": "🛡️",
+          "slot": "chest",
+          "def": 5,
+          "bonus": {
+            "str": 3,
+            "con": 2
+          },
+          "price": 1000
+        },
+        {
+          "id": "dark_dk_legs",
+          "name": "Xà Cạp Tử Thần",
+          "icon": "🦿",
+          "slot": "legs",
+          "def": 3,
+          "bonus": {
+            "str": 1,
+            "con": 1
+          },
+          "price": 750
+        }
+      ]
+    },
+    {
+      "id": "dark_shadow",
+      "name": "Bộ Dệt Bóng",
+      "world": "dark_fantasy",
+      "tier": 2,
+      "focus": "DEX/INT",
+      "setBonus": {
+        "def": 3,
+        "dex": 3,
+        "int": 2
+      },
+      "pieces": [
+        {
+          "id": "dark_shadow_head",
+          "name": "Mặt Nạ Bóng Tối",
+          "icon": "🎭",
+          "slot": "head",
+          "def": 1,
+          "bonus": {
+            "dex": 2
+          },
+          "price": 250
+        },
+        {
+          "id": "dark_shadow_chest",
+          "name": "Áo Choàng Bóng Tối",
+          "icon": "🧥",
+          "slot": "chest",
+          "def": 2,
+          "bonus": {
+            "dex": 2,
+            "int": 2
+          },
+          "price": 400
+        },
+        {
+          "id": "dark_shadow_legs",
+          "name": "Quần Bóng Tối",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 1,
+          "bonus": {
+            "dex": 1,
+            "int": 1
+          },
+          "price": 280
+        }
+      ]
+    },
+    {
+      "id": "postapoc_scrap",
+      "name": "Bộ Giáp Phế Liệu",
+      "world": "postapoc",
+      "tier": 1,
+      "focus": "CON/DEF",
+      "setBonus": {
+        "def": 5,
+        "con": 2
+      },
+      "pieces": [
+        {
+          "id": "postapoc_scrap_head",
+          "name": "Mũ Sắt Vụn",
+          "icon": "⛑️",
+          "slot": "head",
+          "def": 2,
+          "bonus": {
+            "con": 1
+          },
+          "price": 80
+        },
+        {
+          "id": "postapoc_scrap_chest",
+          "name": "Giáp Sắt Vụn",
+          "icon": "🦺",
+          "slot": "chest",
+          "def": 3,
+          "bonus": {
+            "con": 2
+          },
+          "price": 150
+        },
+        {
+          "id": "postapoc_scrap_legs",
+          "name": "Xà Cạp Sắt Vụn",
+          "icon": "🦿",
+          "slot": "legs",
+          "def": 2,
+          "bonus": {
+            "con": 1
+          },
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "postapoc_hazmat",
+      "name": "Bộ Phòng Hóa",
+      "world": "postapoc",
+      "tier": 2,
+      "focus": "WIS/RES",
+      "setBonus": {
+        "def": 3,
+        "wis": 3
+      },
+      "specialBonus": "poison_immune",
+      "pieces": [
+        {
+          "id": "postapoc_hazmat_head",
+          "name": "Mặt Nạ Phòng Hóa",
+          "icon": "😷",
+          "slot": "head",
+          "def": 1,
+          "bonus": {
+            "wis": 2
+          },
+          "price": 200
+        },
+        {
+          "id": "postapoc_hazmat_chest",
+          "name": "Áo Phòng Hóa",
+          "icon": "🧥",
+          "slot": "chest",
+          "def": 2,
+          "bonus": {
+            "wis": 2,
+            "con": 1
+          },
+          "price": 350
+        },
+        {
+          "id": "postapoc_hazmat_legs",
+          "name": "Quần Phòng Hóa",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 1,
+          "bonus": {
+            "wis": 1
+          },
+          "price": 220
+        }
+      ]
+    },
+    {
+      "id": "universal_wanderer",
+      "name": "Bộ Lữ Khách",
+      "world": "universal",
+      "tier": 3,
+      "focus": "Balanced",
+      "setBonus": {
+        "def": 4,
+        "str": 1,
+        "dex": 1,
+        "int": 1,
+        "con": 1,
+        "wis": 1,
+        "cha": 1
+      },
+      "pieces": [
+        {
+          "id": "wanderer_head",
+          "name": "Mũ Lữ Khách",
+          "icon": "🎩",
+          "slot": "head",
+          "def": 2,
+          "bonus": {
+            "str": 1,
+            "wis": 1
+          },
+          "price": 500
+        },
+        {
+          "id": "wanderer_chest",
+          "name": "Áo Choàng Lữ Khách",
+          "icon": "🧥",
+          "slot": "chest",
+          "def": 3,
+          "bonus": {
+            "con": 1,
+            "cha": 1
+          },
+          "price": 700
+        },
+        {
+          "id": "wanderer_legs",
+          "name": "Ủng Lữ Khách",
+          "icon": "👢",
+          "slot": "legs",
+          "def": 2,
+          "bonus": {
+            "dex": 1,
+            "int": 1
+          },
+          "price": 550
+        }
+      ]
+    },
+    {
+      "id": "fantasy_ranger",
+      "name": "Bộ Cung Thủ",
+      "world": "fantasy",
+      "tier": 2,
+      "focus": "DEX/AGI",
+      "setBonus": {
+        "def": 3,
+        "dex": 4
+      },
+      "pieces": [
+        {
+          "id": "fantasy_ranger_head",
+          "name": "Mũ Trùm Rừng Sâu",
+          "icon": "🥷",
+          "slot": "head",
+          "def": 1,
+          "bonus": {
+            "dex": 2
+          },
+          "price": 180
+        },
+        {
+          "id": "fantasy_ranger_chest",
+          "name": "Áo Giáp Da Rừng",
+          "icon": "🦺",
+          "slot": "chest",
+          "def": 2,
+          "bonus": {
+            "dex": 2,
+            "str": 1
+          },
+          "price": 300
+        },
+        {
+          "id": "fantasy_ranger_legs",
+          "name": "Quần Da Nhanh Nhẹn",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 1,
+          "bonus": {
+            "dex": 1
+          },
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "scifi_hacker",
+      "name": "Bộ Hacker Không Gian",
+      "world": "scifi",
+      "tier": 1,
+      "focus": "INT/DEX",
+      "setBonus": {
+        "def": 2,
+        "int": 3,
+        "dex": 1
+      },
+      "pieces": [
+        {
+          "id": "scifi_hacker_head",
+          "name": "Mũ Tai Nghe HUD",
+          "icon": "🎧",
+          "slot": "head",
+          "def": 1,
+          "bonus": {
+            "int": 2
+          },
+          "price": 120
+        },
+        {
+          "id": "scifi_hacker_chest",
+          "name": "Áo Khoác Cách Điện",
+          "icon": "🧥",
+          "slot": "chest",
+          "def": 2,
+          "bonus": {
+            "int": 1,
+            "dex": 1
+          },
+          "price": 200
+        },
+        {
+          "id": "scifi_hacker_legs",
+          "name": "Quần Cargo Công Nghệ",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 1,
+          "bonus": {
+            "dex": 1
+          },
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "eastern_ninja",
+      "name": "Bộ Nhẫn Giả",
+      "world": "eastern",
+      "tier": 3,
+      "focus": "DEX/Speed",
+      "setBonus": {
+        "def": 4,
+        "dex": 5
+      },
+      "pieces": [
+        {
+          "id": "eastern_ninja_head",
+          "name": "Mặt Nạ Hắc Ám",
+          "icon": "🥷",
+          "slot": "head",
+          "def": 2,
+          "bonus": {
+            "dex": 3
+          },
+          "price": 400
+        },
+        {
+          "id": "eastern_ninja_chest",
+          "name": "Áo Dạ Hành",
+          "icon": "👘",
+          "slot": "chest",
+          "def": 3,
+          "bonus": {
+            "dex": 3
+          },
+          "price": 600
+        },
+        {
+          "id": "eastern_ninja_legs",
+          "name": "Giày Tabi Thoăn Thoắt",
+          "icon": "🥾",
+          "slot": "legs",
+          "def": 2,
+          "bonus": {
+            "dex": 2
+          },
+          "price": 450
+        }
+      ]
+    },
+    {
+      "id": "dark_cultist",
+      "name": "Bộ Dị Giáo",
+      "world": "dark_fantasy",
+      "tier": 1,
+      "focus": "INT/Sanity",
+      "setBonus": {
+        "def": 2,
+        "int": 3,
+        "sanity": 10
+      },
+      "pieces": [
+        {
+          "id": "dark_cultist_head",
+          "name": "Mũ Trùm Lễ Tế",
+          "icon": "🥷",
+          "slot": "head",
+          "def": 1,
+          "bonus": {
+            "int": 1
+          },
+          "price": 100
+        },
+        {
+          "id": "dark_cultist_chest",
+          "name": "Áo Choàng Khát Máu",
+          "icon": "🧛",
+          "slot": "chest",
+          "def": 2,
+          "bonus": {
+            "int": 2
+          },
+          "price": 180
+        },
+        {
+          "id": "dark_cultist_legs",
+          "name": "Chân Váy Dị Giáo",
+          "icon": "👗",
+          "slot": "legs",
+          "def": 1,
+          "bonus": {
+            "int": 1
+          },
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "postapoc_raider",
+      "name": "Bộ Toán Cướp",
+      "world": "postapoc",
+      "tier": 2,
+      "focus": "STR/AGI",
+      "setBonus": {
+        "def": 4,
+        "str": 3,
+        "dex": 1
+      },
+      "pieces": [
+        {
+          "id": "postapoc_raider_head",
+          "name": "Mặt Nạ Đai Gai",
+          "icon": "🦹",
+          "slot": "head",
+          "def": 2,
+          "bonus": {
+            "str": 1
+          },
+          "price": 200
+        },
+        {
+          "id": "postapoc_raider_chest",
+          "name": "Giáp Lốp Xe",
+          "icon": "🦺",
+          "slot": "chest",
+          "def": 3,
+          "bonus": {
+            "str": 2
+          },
+          "price": 350
+        },
+        {
+          "id": "postapoc_raider_legs",
+          "name": "Quần Rằn Ri Rách",
+          "icon": "👖",
+          "slot": "legs",
+          "def": 2,
+          "bonus": {
+            "str": 1
+          },
+          "price": 250
+        }
+      ]
+    }
+  ]
+}

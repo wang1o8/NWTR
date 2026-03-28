@@ -1,0 +1,23 @@
+{
+  "fantasy": [
+    { "id": "fantasy_town", "name": "Thị Trấn Sương Mù", "type": "town", "x": 25, "y": 65, "scene": "fantasy_town", "description": "Một thị trấn u ám với những cư dân lạ lùng.", "level": 1 },
+    { "id": "fantasy_forest", "name": "Rừng Tro Tàn", "type": "dungeon", "x": 45, "y": 35, "scene": "fantasy_forest", "description": "Nơi Kỵ Sĩ Tro Tàn canh giữ vòng lặp.", "level": 5 },
+    { "id": "fantasy_church", "name": "Nhà Thờ Đổ Nát", "type": "dungeon", "x": 75, "y": 55, "scene": "fantasy_church", "description": "Nơi Tu Sĩ Mù Vicar thuyết giáo.", "level": 3 },
+    { "id": "fantasy_castle", "name": "Lâu Đài Cốt", "type": "boss", "x": 85, "y": 20, "scene": "fantasy_castle", "description": "Nơi chứa Lõi Thời Gian.", "level": 10 }
+  ],
+  "scifi": [
+    { "id": "neon_city", "name": "Thành Phố Neon", "type": "town", "x": 30, "y": 50, "scene": "scifi_hub", "description": "Trung tâm của sự trụy lạc và công nghệ.", "level": 10 },
+    { "id": "satellite_ruin", "name": "Vệ Tinh Bỏ Hoang", "type": "dungeon", "x": 70, "y": 25, "scene": "scifi_satellite", "description": "Vật thể trôi dạt trong không gian.", "level": 15 },
+    { "id": "tech_pyramid", "name": "Kim Tự Tháp Công Nghệ", "type": "boss", "x": 60, "y": 75, "description": "Phòng thí nghiệm của Giáo Sư AI.", "level": 20 }
+  ],
+  "eastern": [
+    { "id": "mist_temple", "name": "Đền Sương Mù", "type": "town", "x": 50, "y": 50, "scene": "eastern_hub", "description": "Nơi bình yên hiếm hoi.", "level": 20 },
+    { "id": "shadow_cave", "name": "Động Bóng Tối", "type": "dungeon", "x": 20, "y": 70, "scene": "eastern_cave", "description": "Nơi trú ngụ của Hắc Long.", "level": 25 },
+    { "id": "silk_palace", "name": "Cung Điện Lụa", "type": "boss", "x": 80, "y": 30, "description": "Dinh thự của Cừu Non.", "level": 30 }
+  ],
+  "postapoc": [
+    { "id": "scrap_town", "name": "Thị Trấn Phế Liệu", "type": "town", "x": 40, "y": 60, "scene": "postapoc_hub", "description": "Nơi sống sót cuối cùng.", "level": 30 },
+    { "id": "water_ruin", "name": "Thành Phố Ngập Nước", "type": "dungeon", "x": 65, "y": 40, "scene": "postapoc_ruins", "description": "Tàn tích của thế giới cũ.", "level": 35 },
+    { "id": "sand_fortress", "name": "Pháo Đài Cát", "type": "boss", "x": 25, "y": 25, "description": "Căn cứ của Kẻ Khát Máu.", "level": 40 }
+  ]
+}

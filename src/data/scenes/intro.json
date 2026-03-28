@@ -1,0 +1,64 @@
+{
+  "intro_001": {
+    "id": "intro_001",
+    "world": "tutorial",
+    "background": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa",
+    "speaker": null,
+    "text": "Xung quanh bạn là một khoảng không trắng xóa vô tận. Không tiếng động, không trọng lực. Bạn cảm giác như mình đang lơ lửng giữa sự tồn tại và hư vô.",
+    "choices": [
+      {
+        "text": "Nhìn sâu vào hư vô...",
+        "sets": { "stats": { "soul": "+1" }, "flags": ["intro_void_vision"] },
+        "next": "intro_002"
+      },
+      {
+        "text": "Cố gắng nhớ lại tên mình là ai.",
+        "sets": { "stats": { "sanity": "+1" }, "flags": ["intro_self_reflection"] },
+        "next": "intro_002"
+      }
+    ]
+  },
+  "intro_002": {
+    "id": "intro_002",
+    "world": "tutorial",
+    "background": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa",
+    "speaker": "guide",
+    "text": "Một hình bóng mờ ảo xuất hiện trước mắt bạn. Nó không có khuôn mặt, chỉ là một khối năng lượng ổn định. \n\n'Chào mừng, Kẻ lữ hành lạc lối. Đa vũ trụ đang sụp đổ, và bạn là kẻ duy nhất còn giữ được linh hồn nguyên vẹn... ít nhất là lúc này.'",
+    "choices": [
+      {
+        "text": "Hỏi: 'Tôi đang ở đâu?'",
+        "next": "intro_003"
+      },
+      {
+        "text": "Tìm kiếm xung quanh xem có vũ khí nào không.",
+        "sets": { "flags": ["searching_starter_weapon"] },
+        "next": "intro_weapon_search"
+      }
+    ]
+  },
+  "intro_weapon_search": {
+    "id": "intro_weapon_search",
+    "world": "tutorial",
+    "speaker": "guide",
+    "text": "'Bạn tìm kiếm công cụ để bảo vệ mình? Khá khôn ngoan.' Thực thể búng tay, một vũ khí xuất hiện từ hư vô và rơi vào tay bạn.",
+    "choices": [
+      {
+        "text": "Nhặt lấy vũ khí và chuẩn bị hành trình.",
+        "sets": { "flags": ["received_intro_weapon"], "generateWeapon": true },
+        "next": "intro_003"
+      }
+    ]
+  },
+  "intro_003": {
+    "id": "intro_003",
+    "world": "tutorial",
+    "speaker": "guide",
+    "text": "'Nơi này không thuộc về thế giới nào. Nó là điểm giao thoa của những thực tại đã mất. Trước khi đi xa hơn, hãy cho ta biết danh tính của bạn.'",
+    "choices": [
+      {
+        "text": "Nói tên của bạn...",
+        "next": "tutorial_003"
+      }
+    ]
+  }
+}

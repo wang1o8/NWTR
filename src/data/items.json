@@ -1,0 +1,1363 @@
+{
+  "consumable": [
+    {
+      "id": "pot_small",
+      "name": "Small Potion",
+      "effect": "heal",
+      "value": 20,
+      "weight": 0.5,
+      "price": 20,
+      "lore": "Restore 20 HP. Standard issue."
+    },
+    {
+      "id": "pot_med",
+      "name": "Medium Potion",
+      "effect": "heal",
+      "value": 50,
+      "weight": 1,
+      "price": 50,
+      "lore": "Restore 50 HP. Distilled essence."
+    },
+    {
+      "id": "pot_large",
+      "name": "Large Potion",
+      "effect": "heal",
+      "value": 100,
+      "weight": 1.5,
+      "price": 100,
+      "lore": "Restore 100 HP. Rare quality."
+    },
+    {
+      "id": "pot_revive",
+      "name": "Revival Potion",
+      "effect": "revive",
+      "value": 0.5,
+      "weight": 1,
+      "price": 250,
+      "lore": "Restore to 50% HP if KO'd."
+    },
+    {
+      "id": "buff_str",
+      "name": "Strength Elixir",
+      "effect": "buff_str",
+      "value": 5,
+      "duration": 5,
+      "weight": 0.5,
+      "price": 80,
+      "lore": "+5 STR for 5 scenes."
+    },
+    {
+      "id": "buff_dex",
+      "name": "Speed Potion",
+      "effect": "buff_dex",
+      "value": 5,
+      "duration": 5,
+      "weight": 0.5,
+      "price": 80,
+      "lore": "+5 DEX for 5 scenes."
+    },
+    {
+      "id": "pot_mana",
+      "name": "Mana Potion",
+      "effect": "restore_mp",
+      "value": 50,
+      "weight": 0.5,
+      "price": 40,
+      "lore": "Restore 50 MP instantly."
+    },
+    {
+      "id": "buff_clarity",
+      "name": "Clarity Potion",
+      "effect": "buff_int",
+      "value": 1,
+      "duration": 5,
+      "weight": 0.5,
+      "price": 60,
+      "lore": "+1 INT, reduce sanity loss."
+    },
+    {
+      "id": "buff_courage",
+      "name": "Courage Draught",
+      "effect": "buff_cha",
+      "value": 1,
+      "duration": 5,
+      "weight": 0.5,
+      "price": 60,
+      "lore": "+1 CHA, reduce fear."
+    },
+    {
+      "id": "spec_antidote",
+      "name": "Antidote",
+      "effect": "cure_poison",
+      "weight": 0.2,
+      "price": 30,
+      "lore": "Remove poison status."
+    },
+    {
+      "id": "spec_curse_break",
+      "name": "Curse Break",
+      "effect": "cure_curse",
+      "weight": 0.2,
+      "price": 150,
+      "lore": "Remove curse status."
+    },
+    {
+      "id": "spec_resurrect",
+      "name": "Resurrection Scroll",
+      "effect": "revive_full",
+      "weight": 0.1,
+      "price": 500,
+      "lore": "Bring back to life fully in battle."
+    },
+    {
+      "id": "spec_town_portal",
+      "name": "Town Portal",
+      "effect": "teleport_town",
+      "weight": 0.1,
+      "price": 200,
+      "lore": "Teleport to town (once per world)."
+    },
+    {
+      "id": "spec_trap_kit",
+      "name": "Trap Detection Kit",
+      "effect": "detect_trap",
+      "duration": 10,
+      "weight": 2,
+      "price": 120,
+      "lore": "Auto-detect traps for 10 scenes."
+    },
+    {
+      "id": "food_bread",
+      "name": "Bread",
+      "effect": "heal",
+      "value": 10,
+      "weight": 0.5,
+      "price": 10,
+      "lore": "Restore 10 HP. Cheap and filling."
+    },
+    {
+      "id": "food_meat",
+      "name": "Cooked Meat",
+      "effect": "heal",
+      "value": 20,
+      "weight": 1,
+      "price": 25,
+      "lore": "Restore 20 HP. Hearty meal."
+    },
+    {
+      "id": "food_exotic_fruit",
+      "name": "Exotic Fruit",
+      "effect": "buff_cha",
+      "value": 1,
+      "duration": 3,
+      "weight": 0.2,
+      "price": 50,
+      "lore": "+1 CHA temporarily."
+    },
+    {
+      "id": "food_healing_tea",
+      "name": "Healing Tea",
+      "effect": "heal",
+      "value": 30,
+      "weight": 0.5,
+      "price": 40,
+      "lore": "Restore 30 HP, reduce fatigue."
+    },
+    {
+      "id": "food_rations",
+      "name": "Survival Rations",
+      "effect": "heal",
+      "value": 15,
+      "weight": 0.5,
+      "price": 15,
+      "lore": "Restore 15 HP. Lasts forever."
+    },
+    {
+      "id": "food_stew",
+      "name": "Hot Stew",
+      "effect": "heal",
+      "value": 40,
+      "weight": 1.5,
+      "price": 45,
+      "lore": "Restore 40 HP."
+    },
+    {
+      "id": "util_bandage",
+      "name": "Bandage",
+      "effect": "cure_bleed",
+      "weight": 0.2,
+      "price": 15,
+      "lore": "Stops bleeding."
+    },
+    {
+      "id": "util_smokebomb",
+      "name": "Smoke Bomb",
+      "effect": "escape",
+      "weight": 0.5,
+      "price": 50,
+      "lore": "Guarantees escape from standard battles."
+    },
+    {
+      "id": "util_torch",
+      "name": "Torch",
+      "effect": "light",
+      "duration": 10,
+      "weight": 1,
+      "price": 10,
+      "lore": "Illuminates dark areas."
+    },
+    {
+      "id": "util_lockpick",
+      "name": "Lockpick",
+      "effect": "unlock",
+      "weight": 0.1,
+      "price": 20,
+      "lore": "Opens standard locks."
+    },
+    {
+      "id": "util_tent",
+      "name": "Camping Tent",
+      "effect": "full_rest",
+      "weight": 5,
+      "price": 150,
+      "lore": "Full party heal outside combat."
+    },
+    {
+      "id": "util_repair_kit",
+      "name": "Repair Kit",
+      "effect": "repair",
+      "weight": 2,
+      "price": 100,
+      "lore": "Restores equipment durability."
+    },
+    {
+      "id": "spec_holy_water",
+      "name": "Holy Water",
+      "effect": "damage_undead",
+      "value": 50,
+      "weight": 0.5,
+      "price": 80,
+      "lore": "Deals 50 Holy damage to Undead."
+    },
+    {
+      "id": "spec_firebomb",
+      "name": "Firebomb",
+      "effect": "damage_fire",
+      "value": 40,
+      "weight": 1,
+      "price": 60,
+      "lore": "Deals 40 area Fire damage."
+    },
+    {
+      "id": "spec_acid_flask",
+      "name": "Acid Flask",
+      "effect": "debuff_def",
+      "value": 5,
+      "duration": 3,
+      "weight": 1,
+      "price": 75,
+      "lore": "Reduces enemy DEF for 3 turns."
+    },
+    {
+      "id": "pot_elixir",
+      "name": "Grand Elixir",
+      "effect": "full_restore",
+      "weight": 1,
+      "price": 300,
+      "lore": "Restores all HP and MP."
+    }
+  ],
+  "material": [
+    {
+      "id": "mat_iron_ore",
+      "name": "Iron Ore",
+      "type": "metal",
+      "rarity": "common",
+      "price": 10,
+      "lore": "Common metal from mining."
+    },
+    {
+      "id": "mat_steel_ingot",
+      "name": "Steel Ingot",
+      "type": "metal",
+      "rarity": "uncommon",
+      "price": 30,
+      "lore": "Refined metal for strong weapons."
+    },
+    {
+      "id": "mat_mithril_ingot",
+      "name": "Mithril Ingot",
+      "type": "metal",
+      "rarity": "rare",
+      "price": 150,
+      "lore": "Lightweight, magical metal."
+    },
+    {
+      "id": "mat_copper",
+      "name": "Copper",
+      "type": "metal",
+      "rarity": "uncommon",
+      "price": 20,
+      "lore": "Electrical focus material."
+    },
+    {
+      "id": "mat_alien_alloy",
+      "name": "Alien Alloy",
+      "type": "metal",
+      "rarity": "rare",
+      "price": 200,
+      "lore": "Sci-fi specific metal of unknown origin."
+    },
+    {
+      "id": "mat_gold_nugget",
+      "name": "Gold Nugget",
+      "type": "metal",
+      "rarity": "rare",
+      "price": 100,
+      "lore": "Highly valuable."
+    },
+    {
+      "id": "mat_scrap_metal",
+      "name": "Scrap Metal",
+      "type": "metal",
+      "rarity": "common",
+      "price": 5,
+      "lore": "Salvaged junk."
+    },
+    {
+      "id": "mat_titanium",
+      "name": "Titanium",
+      "type": "metal",
+      "rarity": "epic",
+      "price": 300,
+      "lore": "Incredibly durable."
+    },
+    {
+      "id": "mat_leather",
+      "name": "Leather",
+      "type": "organic",
+      "rarity": "common",
+      "price": 8,
+      "lore": "From beasts."
+    },
+    {
+      "id": "mat_silk",
+      "name": "Spider Silk",
+      "type": "organic",
+      "rarity": "uncommon",
+      "price": 25,
+      "lore": "Strong, lightweight thread."
+    },
+    {
+      "id": "mat_chitin",
+      "name": "Chitin",
+      "type": "organic",
+      "rarity": "uncommon",
+      "price": 25,
+      "lore": "Hard insect shell."
+    },
+    {
+      "id": "mat_bone",
+      "name": "Bone",
+      "type": "organic",
+      "rarity": "common",
+      "price": 5,
+      "lore": "From undead or beasts."
+    },
+    {
+      "id": "mat_plant_fiber",
+      "name": "Plant Fiber",
+      "type": "organic",
+      "rarity": "common",
+      "price": 3,
+      "lore": "From gathering plants."
+    },
+    {
+      "id": "mat_dragon_scale",
+      "name": "Dragon Scale",
+      "type": "organic",
+      "rarity": "epic",
+      "price": 400,
+      "lore": "Nearly impenetrable."
+    },
+    {
+      "id": "mat_mutant_flesh",
+      "name": "Mutant Flesh",
+      "type": "organic",
+      "rarity": "uncommon",
+      "price": 15,
+      "lore": "Irradiated meat."
+    },
+    {
+      "id": "mat_wood",
+      "name": "Hardwood",
+      "type": "organic",
+      "rarity": "common",
+      "price": 5,
+      "lore": "Sturdy timber."
+    },
+    {
+      "id": "mat_mana_crystal",
+      "name": "Mana Crystal",
+      "type": "magical",
+      "rarity": "rare",
+      "price": 100,
+      "lore": "Condensed magical energy."
+    },
+    {
+      "id": "mat_holy_essence",
+      "name": "Holy Essence",
+      "type": "magical",
+      "rarity": "rare",
+      "price": 120,
+      "lore": "Radiates pure light."
+    },
+    {
+      "id": "mat_dark_essence",
+      "name": "Dark Essence",
+      "type": "magical",
+      "rarity": "rare",
+      "price": 120,
+      "lore": "Absorbs surrounding light."
+    },
+    {
+      "id": "mat_time_dust",
+      "name": "Time Dust",
+      "type": "magical",
+      "rarity": "epic",
+      "price": 500,
+      "lore": "Sands that manipulate time."
+    },
+    {
+      "id": "mat_soul_stone",
+      "name": "Soul Stone",
+      "type": "magical",
+      "rarity": "legendary",
+      "price": 1000,
+      "lore": "Contains a trapped soul."
+    },
+    {
+      "id": "mat_fairy_dust",
+      "name": "Fairy Dust",
+      "type": "magical",
+      "rarity": "uncommon",
+      "price": 40,
+      "lore": "Sparkling powder."
+    },
+    {
+      "id": "mat_elemental_core",
+      "name": "Elemental Core",
+      "type": "magical",
+      "rarity": "rare",
+      "price": 150,
+      "lore": "Heart of an elemental."
+    },
+    {
+      "id": "mat_void_shard",
+      "name": "Void Shard",
+      "type": "magical",
+      "rarity": "legendary",
+      "price": 800,
+      "lore": "A piece of absolute nothingness."
+    },
+    {
+      "id": "mat_circuits",
+      "name": "Circuit Board",
+      "type": "tech",
+      "rarity": "common",
+      "price": 15,
+      "lore": "Basic electronic component."
+    },
+    {
+      "id": "mat_energy_core",
+      "name": "Energy Core",
+      "type": "tech",
+      "rarity": "rare",
+      "price": 150,
+      "lore": "High capacity power source."
+    },
+    {
+      "id": "mat_quantum_cpu",
+      "name": "Quantum Processor",
+      "type": "tech",
+      "rarity": "epic",
+      "price": 400,
+      "lore": "Advanced computing unit."
+    },
+    {
+      "id": "mat_alien_tech",
+      "name": "Alien Tech Piece",
+      "type": "tech",
+      "rarity": "epic",
+      "price": 350,
+      "lore": "Incomprehensible mechanism."
+    },
+    {
+      "id": "mat_wire",
+      "name": "Copper Wire",
+      "type": "tech",
+      "rarity": "common",
+      "price": 5,
+      "lore": "Conducts electricity."
+    },
+    {
+      "id": "mat_sensor",
+      "name": "Optical Sensor",
+      "type": "tech",
+      "rarity": "uncommon",
+      "price": 30,
+      "lore": "A robot's eye."
+    },
+    {
+      "id": "mat_plasma_cell",
+      "name": "Plasma Cell",
+      "type": "tech",
+      "rarity": "rare",
+      "price": 100,
+      "lore": "Superheated plasma container."
+    },
+    {
+      "id": "mat_nanobots",
+      "name": "Vial of Nanobots",
+      "type": "tech",
+      "rarity": "epic",
+      "price": 500,
+      "lore": "Self-replicating machines."
+    }
+  ],
+  "quest": [
+    {
+      "id": "qi_goblin_ear",
+      "name": "Goblin Ear",
+      "type": "collection",
+      "lore": "Collect 5 to craft a grimoire.",
+      "requirement": 5
+    },
+    {
+      "id": "qi_dragon_scale_quest",
+      "name": "Quest: Dragon Scale",
+      "type": "collection",
+      "lore": "Collect 10 to forge a legendary sword.",
+      "requirement": 10
+    },
+    {
+      "id": "qi_spirit_stone",
+      "name": "Spirit Stone",
+      "type": "collection",
+      "lore": "Collect 3 to create a talisman.",
+      "requirement": 3
+    },
+    {
+      "id": "qi_wolf_pelt",
+      "name": "Dire Wolf Pelt",
+      "type": "collection",
+      "lore": "Collect 8 for the village tailor.",
+      "requirement": 8
+    },
+    {
+      "id": "qi_mutant_gland",
+      "name": "Mutant Gland",
+      "type": "collection",
+      "lore": "Collect 5 for the Wasteland Doctor.",
+      "requirement": 5
+    },
+    {
+      "id": "qi_sealed_letter",
+      "name": "Sealed Letter",
+      "type": "delivery",
+      "lore": "Deliver this to the Royal Guard Captain."
+    },
+    {
+      "id": "qi_ancient_map",
+      "name": "Ancient Map",
+      "type": "delivery",
+      "lore": "Find the location marked 'X'."
+    },
+    {
+      "id": "qi_rusty_key",
+      "name": "Rusty Key",
+      "type": "delivery",
+      "lore": "Looks like it opens the old crypt door."
+    },
+    {
+      "id": "qi_sacred_artifact",
+      "name": "Sacred Artifact",
+      "type": "delivery",
+      "lore": "Return it to the Mountain Temple."
+    },
+    {
+      "id": "qi_cure_serum",
+      "name": "Cure Serum",
+      "type": "delivery",
+      "lore": "Deliver quickly to the infected colony."
+    },
+    {
+      "id": "qi_boss_trophy_1",
+      "name": "Ash Knight's Helm",
+      "type": "proof",
+      "lore": "Proof you defeated Kaelen."
+    },
+    {
+      "id": "qi_achievement_token",
+      "name": "Achievement Token",
+      "type": "proof",
+      "lore": "Given by the Arena Master for flawless victory."
+    },
+    {
+      "id": "qi_blessing_scroll",
+      "name": "Blessing Scroll",
+      "type": "proof",
+      "lore": "Received from the High Priestess."
+    },
+    {
+      "id": "qi_cortex_memory",
+      "name": "Cortex Core Memory",
+      "type": "proof",
+      "lore": "Proof you shut down the Rogue AI."
+    },
+    {
+      "id": "qi_demon_horn",
+      "name": "Shogun's Horn",
+      "type": "proof",
+      "lore": "Proof the Demon Shogun is vanquished."
+    },
+    {
+      "id": "qi_locket",
+      "name": "Faded Locket",
+      "type": "story",
+      "lore": "Contains a picture of someone familiar."
+    },
+    {
+      "id": "qi_broken_compass",
+      "name": "Broken Compass",
+      "type": "story",
+      "lore": "It always points towards the Void."
+    },
+    {
+      "id": "qi_strange_coin",
+      "name": "Strange Coin",
+      "type": "story",
+      "lore": "A coin with a faceless king."
+    },
+    {
+      "id": "qi_black_box",
+      "name": "Ship Flight Recorder",
+      "type": "story",
+      "lore": "Holds the last logs of the crashed ship."
+    },
+    {
+      "id": "qi_tea_leaves",
+      "name": "Rare Tea Leaves",
+      "type": "quest",
+      "lore": "Needed for the Master's ceremony."
+    },
+    {
+      "id": "qi_music_tape",
+      "name": "Old Cassette",
+      "type": "quest",
+      "lore": "Contains pre-war music for the Ghoul."
+    }
+  ],
+  "special": [
+    {
+      "id": "spec_f_ancientsword",
+      "name": "Ancient Swordhilt",
+      "effect": "lore_unlock",
+      "lore": "A broken legendary weapon.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_dragonegg",
+      "name": "Dragon Egg",
+      "effect": "pet_unlock",
+      "lore": "It feels warm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_spellbook",
+      "name": "Archmage Spellbook",
+      "effect": "learn_spell",
+      "lore": "Learn an ultimate spell.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_holygrail",
+      "name": "Holy Grail",
+      "effect": "heal_all",
+      "lore": "A legendary healing artifact.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_0",
+      "name": "Fantasy Relic 1",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_1",
+      "name": "Fantasy Relic 2",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_2",
+      "name": "Fantasy Relic 3",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_3",
+      "name": "Fantasy Relic 4",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_4",
+      "name": "Fantasy Relic 5",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_5",
+      "name": "Fantasy Relic 6",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_6",
+      "name": "Fantasy Relic 7",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_7",
+      "name": "Fantasy Relic 8",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_8",
+      "name": "Fantasy Relic 9",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_9",
+      "name": "Fantasy Relic 10",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_10",
+      "name": "Fantasy Relic 11",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_11",
+      "name": "Fantasy Relic 12",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_12",
+      "name": "Fantasy Relic 13",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_13",
+      "name": "Fantasy Relic 14",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_14",
+      "name": "Fantasy Relic 15",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_f_15",
+      "name": "Fantasy Relic 16",
+      "effect": "none",
+      "lore": "A mysterious artifact of the fantasy realm.",
+      "world": "fantasy"
+    },
+    {
+      "id": "spec_s_aichip",
+      "name": "AI Control Chip",
+      "effect": "hack_bots",
+      "lore": "Gain control over basic robots.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_warpcore",
+      "name": "Miniature Warp Core",
+      "effect": "teleport",
+      "lore": "Allows instant travel.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_cloningpod",
+      "name": "Portable Cloning Pod",
+      "effect": "extra_life",
+      "lore": "A backup body ready to wake.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_quantumkey",
+      "name": "Quantum Key",
+      "effect": "unlock_all",
+      "lore": "Opens any electronic lockdown.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_0",
+      "name": "Sci-Fi Gadget 1",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_1",
+      "name": "Sci-Fi Gadget 2",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_2",
+      "name": "Sci-Fi Gadget 3",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_3",
+      "name": "Sci-Fi Gadget 4",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_4",
+      "name": "Sci-Fi Gadget 5",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_5",
+      "name": "Sci-Fi Gadget 6",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_6",
+      "name": "Sci-Fi Gadget 7",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_7",
+      "name": "Sci-Fi Gadget 8",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_8",
+      "name": "Sci-Fi Gadget 9",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_9",
+      "name": "Sci-Fi Gadget 10",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_10",
+      "name": "Sci-Fi Gadget 11",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_11",
+      "name": "Sci-Fi Gadget 12",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_12",
+      "name": "Sci-Fi Gadget 13",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_13",
+      "name": "Sci-Fi Gadget 14",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_14",
+      "name": "Sci-Fi Gadget 15",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_s_15",
+      "name": "Sci-Fi Gadget 16",
+      "effect": "none",
+      "lore": "Advanced technology from the stars.",
+      "world": "scifi"
+    },
+    {
+      "id": "spec_e_chicrystal",
+      "name": "Chi Crystal",
+      "effect": "restore_chi",
+      "lore": "Meditate to fully restore HP/MP.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_scroll",
+      "name": "Enlightenment Scroll",
+      "effect": "buff_wis_perm",
+      "lore": "Permanent +1 WIS when read.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_journal",
+      "name": "Master's Journal",
+      "effect": "learn_skill",
+      "lore": "Contains ultimate martial techniques.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_relic",
+      "name": "Sacred Relic",
+      "effect": "ward_evil",
+      "lore": "Repels dark spirits continuously.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_0",
+      "name": "Eastern Artifact 1",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_1",
+      "name": "Eastern Artifact 2",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_2",
+      "name": "Eastern Artifact 3",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_3",
+      "name": "Eastern Artifact 4",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_4",
+      "name": "Eastern Artifact 5",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_5",
+      "name": "Eastern Artifact 6",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_6",
+      "name": "Eastern Artifact 7",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_7",
+      "name": "Eastern Artifact 8",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_8",
+      "name": "Eastern Artifact 9",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_9",
+      "name": "Eastern Artifact 10",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_10",
+      "name": "Eastern Artifact 11",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_11",
+      "name": "Eastern Artifact 12",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_12",
+      "name": "Eastern Artifact 13",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_13",
+      "name": "Eastern Artifact 14",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_14",
+      "name": "Eastern Artifact 15",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_e_15",
+      "name": "Eastern Artifact 16",
+      "effect": "none",
+      "lore": "An ancient piece of eastern history.",
+      "world": "eastern"
+    },
+    {
+      "id": "spec_d_amulet",
+      "name": "Cursed Amulet",
+      "effect": "dark_power",
+      "lore": "Immense power at the cost of your soul.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_soulgem",
+      "name": "Empty Soul Gem",
+      "effect": "capture_soul",
+      "lore": "Used to bind a dying enemy's essence.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_contract",
+      "name": "Demon Contract",
+      "effect": "pact",
+      "lore": "Sign away your humanity for strength.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_scythe_blade",
+      "name": "Reaper's Blade",
+      "effect": "lore_unlock",
+      "lore": "Half of the Death Scythe.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_0",
+      "name": "Dark Relic 1",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_1",
+      "name": "Dark Relic 2",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_2",
+      "name": "Dark Relic 3",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_3",
+      "name": "Dark Relic 4",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_4",
+      "name": "Dark Relic 5",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_5",
+      "name": "Dark Relic 6",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_6",
+      "name": "Dark Relic 7",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_7",
+      "name": "Dark Relic 8",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_8",
+      "name": "Dark Relic 9",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_9",
+      "name": "Dark Relic 10",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_10",
+      "name": "Dark Relic 11",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_11",
+      "name": "Dark Relic 12",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_12",
+      "name": "Dark Relic 13",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_13",
+      "name": "Dark Relic 14",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_14",
+      "name": "Dark Relic 15",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_d_15",
+      "name": "Dark Relic 16",
+      "effect": "none",
+      "lore": "An item radiating pure malice.",
+      "world": "dark_fantasy"
+    },
+    {
+      "id": "spec_p_serum",
+      "name": "Mutation Serum",
+      "effect": "mutate",
+      "lore": "Permanently gain a random mutation ability.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_radsuit",
+      "name": "Hazmat Suit",
+      "effect": "rad_immune",
+      "lore": "Full immunity to radiation zones.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_controller",
+      "name": "Robot Controller",
+      "effect": "hack_bots",
+      "lore": "Command pre-war security machines.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_prewar",
+      "name": "Pre-war Terminal",
+      "effect": "lore_unlock",
+      "lore": "Contains ancient knowledge of the world before.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_0",
+      "name": "Wasteland Salvage 1",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_1",
+      "name": "Wasteland Salvage 2",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_2",
+      "name": "Wasteland Salvage 3",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_3",
+      "name": "Wasteland Salvage 4",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_4",
+      "name": "Wasteland Salvage 5",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_5",
+      "name": "Wasteland Salvage 6",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_6",
+      "name": "Wasteland Salvage 7",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_7",
+      "name": "Wasteland Salvage 8",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_8",
+      "name": "Wasteland Salvage 9",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_9",
+      "name": "Wasteland Salvage 10",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_10",
+      "name": "Wasteland Salvage 11",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_11",
+      "name": "Wasteland Salvage 12",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_12",
+      "name": "Wasteland Salvage 13",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_13",
+      "name": "Wasteland Salvage 14",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_14",
+      "name": "Wasteland Salvage 15",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    },
+    {
+      "id": "spec_p_15",
+      "name": "Wasteland Salvage 16",
+      "effect": "none",
+      "lore": "Pre-war technology recovered from the ashes.",
+      "world": "postapoc"
+    }
+  ]
+}

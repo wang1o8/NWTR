@@ -1,0 +1,42 @@
+{
+  "tutorial": {
+    "id": "tutorial",
+    "name": "Hư Không",
+    "description": "Một nơi nằm giữa các thế giới.",
+    "color": "#1a1a2e",
+    "image": "https://picsum.photos/seed/void_world/1024/768?blur=2",
+    "stat_ranges": { "STR": [1, 10], "DEX": [1, 10], "INT": [1, 10], "CON": [5, 12] }
+  },
+  "dark_fantasy": {
+    "id": "dark_fantasy",
+    "name": "Ngày Thứ Bảy Vĩnh Cửu",
+    "description": "Một vương quốc trung cổ bị kẹt trong vòng lặp 7 ngày suốt 300 năm. Nơi sự thật tan biến trong sương mù của thời gian.",
+    "color": "#121a2a",
+    "image": "https://picsum.photos/seed/eternal_7th_day/1024/768?blur=1",
+    "stat_ranges": { "STR": [5, 15], "DEX": [5, 15], "INT": [10, 20], "CON": [8, 18] }
+  },
+  "scifi": {
+    "id": "scifi",
+    "name": "Khoa Học Viễn Tưởng",
+    "description": "Một thế giới cyberpunk lạc hậu và những trạm không gian bị bỏ hoang.",
+    "color": "#1a1a4a",
+    "image": "https://picsum.photos/seed/cyberpunk_city/1024/768",
+    "stat_ranges": { "STR": [8, 16], "DEX": [15, 25], "INT": [20, 35], "CON": [8, 15] }
+  },
+  "eastern": {
+    "id": "eastern",
+    "name": "Thần Thoại Phương Đông",
+    "description": "Những cung điện cổ kính và những ngôi đền trên núi sương mù.",
+    "color": "#4a1a1a",
+    "image": "https://picsum.photos/seed/eastern_temple/1024/768",
+    "stat_ranges": { "STR": [15, 30], "DEX": [15, 30], "INT": [10, 20], "CON": [15, 25] }
+  },
+  "postapoc": {
+    "id": "postapoc",
+    "name": "Hậu Tận Thế",
+    "description": "Những sa mạc hoang vu và những thành phố ngập nước, hoang tàn.",
+    "color": "#4a3a1a",
+    "image": "https://picsum.photos/seed/wasteland/1024/768",
+    "stat_ranges": { "STR": [20, 35], "DEX": [10, 20], "INT": [5, 15], "CON": [25, 45] }
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "sci_drone": {
+    "id": "sci_drone",
+    "name": "Scout Drone",
+    "world": "scifi",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 25,
+      "max_hp": 25,
+      "minDmg": 3,
+      "maxDmg": 5,
+      "exp": 12
+    },
+    "traits": [
+      "flying",
+      "weak_thunder"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "scrap_metal",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_drone_monster/200/200"
+  },
+  "sci_crawler": {
+    "id": "sci_crawler",
+    "name": "Vent Crawler",
+    "world": "scifi",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 20,
+      "max_hp": 20,
+      "minDmg": 2,
+      "maxDmg": 6,
+      "exp": 10
+    },
+    "traits": [
+      "fast",
+      "ambush"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/sci_crawler_monster/200/200"
+  },
+  "sci_mutant_rat": {
+    "id": "sci_mutant_rat",
+    "name": "Rad-Rat",
+    "world": "scifi",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 30,
+      "max_hp": 30,
+      "minDmg": 4,
+      "maxDmg": 7,
+      "exp": 15
+    },
+    "traits": [
+      "irradiated",
+      "poison"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/sci_mutant_rat_monster/200/200"
+  },
+  "sci_secbot": {
+    "id": "sci_secbot",
+    "name": "Security Bot",
+    "world": "scifi",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 40,
+      "max_hp": 40,
+      "minDmg": 5,
+      "maxDmg": 8,
+      "exp": 18
+    },
+    "traits": [
+      "mechanical",
+      "defensive"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "circuit_board",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_secbot_monster/200/200"
+  },
+  "sci_slug": {
+    "id": "sci_slug",
+    "name": "Acid Slug",
+    "world": "scifi",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 35,
+      "max_hp": 35,
+      "minDmg": 2,
+      "maxDmg": 9,
+      "exp": 14
+    },
+    "traits": [
+      "acid_blood",
+      "slow"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "acid_gland",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_slug_monster/200/200"
+  },
+  "sci_spider_bot": {
+    "id": "sci_spider_bot",
+    "name": "Spider Drone",
+    "world": "scifi",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 52,
+      "max_hp": 52,
+      "minDmg": 6,
+      "maxDmg": 10,
+      "exp": 30
+    },
+    "traits": [
+      "mechanical",
+      "web_trap",
+      "fast"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "circuit_board",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_spider_bot_monster/200/200"
+  },
+  "sci_cyborg": {
+    "id": "sci_cyborg",
+    "name": "Cyborg Grunt",
+    "world": "scifi",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 70,
+      "max_hp": 70,
+      "minDmg": 7,
+      "maxDmg": 12,
+      "exp": 35
+    },
+    "traits": [
+      "half_machine",
+      "aggressive"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "scrap_metal",
+          "chance": 0.6
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_cyborg_monster/200/200"
+  },
+  "sci_mutant": {
+    "id": "sci_mutant",
+    "name": "Lab Mutant",
+    "world": "scifi",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 80,
+      "max_hp": 80,
+      "minDmg": 8,
+      "maxDmg": 14,
+      "exp": 40
+    },
+    "traits": [
+      "regenerate",
+      "berserker"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "mutant_blood",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_mutant_monster/200/200"
+  },
+  "sci_turret": {
+    "id": "sci_turret",
+    "name": "Auto-Turret",
+    "world": "scifi",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 55,
+      "max_hp": 55,
+      "minDmg": 10,
+      "maxDmg": 15,
+      "exp": 35
+    },
+    "traits": [
+      "immobile",
+      "high_dmg",
+      "weak_thunder"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "energy_cell",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_turret_monster/200/200"
+  },
+  "sci_hologram": {
+    "id": "sci_hologram",
+    "name": "Glitching Holo",
+    "world": "scifi",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 45,
+      "max_hp": 45,
+      "minDmg": 5,
+      "maxDmg": 12,
+      "exp": 32
+    },
+    "traits": [
+      "ethereal",
+      "immune_physical",
+      "weak_magic"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "holo_emitter",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_hologram_monster/200/200"
+  },
+  "sci_sentinel": {
+    "id": "sci_sentinel",
+    "name": "Sentinel Mech",
+    "world": "scifi",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 135,
+      "max_hp": 135,
+      "minDmg": 12,
+      "maxDmg": 18,
+      "exp": 75
+    },
+    "traits": [
+      "mechanical",
+      "high_def",
+      "shielded"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "energy_cell",
+          "chance": 0.8
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_sentinel_monster/200/200"
+  },
+  "sci_heavy_cyborg": {
+    "id": "sci_heavy_cyborg",
+    "name": "Cyborg Enforcer",
+    "world": "scifi",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 155,
+      "max_hp": 155,
+      "minDmg": 15,
+      "maxDmg": 20,
+      "exp": 85
+    },
+    "traits": [
+      "half_machine",
+      "stun_attack"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "cyber_core",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_heavy_cyborg_monster/200/200"
+  },
+  "sci_alien": {
+    "id": "sci_alien",
+    "name": "Xeno Hunter",
+    "world": "scifi",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 110,
+      "max_hp": 110,
+      "minDmg": 14,
+      "maxDmg": 22,
+      "exp": 80
+    },
+    "traits": [
+      "stealth",
+      "acid_spit",
+      "fast"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "alien_scale",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_alien_monster/200/200"
+  },
+  "sci_plasma_drone": {
+    "id": "sci_plasma_drone",
+    "name": "Plasma Drone",
+    "world": "scifi",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 90,
+      "max_hp": 90,
+      "minDmg": 18,
+      "maxDmg": 25,
+      "exp": 70
+    },
+    "traits": [
+      "flying",
+      "elemental_fire",
+      "weak_thunder"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "plasma_core",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_plasma_drone_monster/200/200"
+  },
+  "sci_psionic": {
+    "id": "sci_psionic",
+    "name": "Psionic Subject",
+    "world": "scifi",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 80,
+      "max_hp": 80,
+      "minDmg": 20,
+      "maxDmg": 30,
+      "exp": 90
+    },
+    "traits": [
+      "mind_control",
+      "intelligent",
+      "glass_cannon"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "neural_chip",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_psionic_monster/200/200"
+  },
+  "sci_boss_cortex": {
+    "id": "sci_boss_cortex",
+    "name": "Cortex AI Core",
+    "world": "scifi",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 375,
+      "max_hp": 375,
+      "minDmg": 22,
+      "maxDmg": 32,
+      "exp": 600
+    },
+    "traits": [
+      "boss",
+      "summon_drones",
+      "shield_phases"
+    ],
+    "specialEffect": "summon",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "cortex_drive",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_boss_cortex_monster/200/200"
+  },
+  "sci_boss_xeno_queen": {
+    "id": "sci_boss_xeno_queen",
+    "name": "Xeno Queen",
+    "world": "scifi",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 425,
+      "max_hp": 425,
+      "minDmg": 25,
+      "maxDmg": 38,
+      "exp": 650
+    },
+    "traits": [
+      "boss",
+      "acid_blood",
+      "summon_crawlers"
+    ],
+    "specialEffect": "acid_splash",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "queen_gland",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_boss_xeno_queen_monster/200/200"
+  },
+  "sci_boss_titan": {
+    "id": "sci_boss_titan",
+    "name": "Titan Mech",
+    "world": "scifi",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 550,
+      "max_hp": 550,
+      "minDmg": 30,
+      "maxDmg": 45,
+      "exp": 800
+    },
+    "traits": [
+      "boss",
+      "massive_dmg",
+      "slow",
+      "immune_stun"
+    ],
+    "specialEffect": "missile_barrage",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "titan_core",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/sci_boss_titan_monster/200/200"
+  }
+}

@@ -1,0 +1,315 @@
+[
+  {
+    "id": "ba_dao",
+    "name": "Bá Đạo",
+    "description": "Sức mạnh áp đảo khi sử dụng vũ khí lớn.",
+    "method": "equipment",
+    "requires": { "weapon_type": "two_handed" },
+    "stat_effects": { "phys_dmg_mult": 0.2, "dodge_mult": -0.15 }
+  },
+  {
+    "id": "sat_thu_bong_dem",
+    "name": "Sát Thủ Bóng Đêm",
+    "description": "Sự khéo léo tăng vọt khi sử dụng đoản kiếm.",
+    "method": "equipment",
+    "requires": { "weapon_type": "dagger" },
+    "stat_effects": { "crit_chance_mult": 0.15, "dex": 2 }
+  },
+  {
+    "id": "phap_su_co_doc",
+    "name": "Pháp Sư Cô Độc",
+    "description": "Ma pháp mạnh mẽ hơn khi không có đồng đội.",
+    "method": "equipment",
+    "requires": { "item_rarity": "LEGENDARY" },
+    "stat_effects": { "mag_dmg_mult": 0.25, "cha": -2 }
+  },
+  {
+    "id": "khien_than",
+    "name": "Khiên Thần",
+    "description": "Phòng thủ tuyệt đối khi cầm khiên nặng.",
+    "method": "equipment",
+    "requires": { "weapon_type": "shield" },
+    "stat_effects": { "phys_resist_mult": 0.2, "dex": -2 }
+  },
+  {
+    "id": "xa_thu_tram_lang",
+    "name": "Xạ Thủ Trầm Lặng",
+    "description": "Tập trung cao độ khi sử dụng cung.",
+    "method": "equipment",
+    "requires": { "weapon_type": "bow" },
+    "stat_effects": { "crit_dmg_mult": 0.3, "wis": 1 }
+  },
+  {
+    "id": "ke_thua_ke_diet_vong",
+    "name": "Kẻ Thừa Kế Diệt Vong",
+    "description": "Sức mạnh từ những món đồ bị nguyền rủa.",
+    "method": "equipment",
+    "requires": { "item_id": "cursed_blade_01" },
+    "stat_effects": { "str": 5, "sanity": -10 }
+  },
+  {
+    "id": "linh_hon_the_the",
+    "name": "Linh Hồn Thay Thế",
+    "description": "Sử dụng SOUL để bảo vệ bản thân.",
+    "method": "equipment",
+    "requires": { "item_rarity": "MYTHIC" },
+    "stat_effects": { "soul": 2, "maxHp": 20 }
+  },
+  {
+    "id": "buoc_chan_nhe_nhang",
+    "name": "Bước Chân Nhẹ Nhàng",
+    "description": "Tăng tốc độ khi mặc giáp nhẹ.",
+    "method": "equipment",
+    "requires": { "armor_type": "light" },
+    "stat_effects": { "dex": 3, "dodge_mult": 0.1 }
+  },
+  {
+    "id": "suc_manh_nguyen_thuy",
+    "name": "Sức Mạnh Nguyên Thủy",
+    "description": "Chiến đấu bằng tay không mang lại bản năng hoang dã.",
+    "method": "equipment",
+    "requires": { "weapon_type": "unarmed" },
+    "stat_effects": { "str": 4, "dex": 2 }
+  },
+  {
+    "id": "tri_tue_co_dai",
+    "name": "Trí Tuệ Cổ Đại",
+    "description": "Kiến thức từ những cuốn sách cổ.",
+    "method": "equipment",
+    "requires": { "item_type": "book" },
+    "stat_effects": { "int": 3, "wis": 2 }
+  },
+  {
+    "id": "ganh_nang",
+    "name": "Gánh Nặng",
+    "description": "Sự hy sinh của người khác đè nặng lên vai ngươi.",
+    "method": "event",
+    "requires": { "flags": ["witnessed_guardian_death"] },
+    "stat_effects": { "wis": 2, "sanity_loss_mult": -0.3 }
+  },
+  {
+    "id": "ke_song_sot",
+    "name": "Kẻ Sống Sót",
+    "description": "Ngươi đã bò ra từ đống xác chết.",
+    "method": "event",
+    "requires": { "flags": ["survived_ambush"] },
+    "stat_effects": { "con": 2, "lck": 1 }
+  },
+  {
+    "id": "anh_mat_hu_khong",
+    "name": "Ánh Mắt Hư Không",
+    "description": "Ngươi đã nhìn vào vực thẳm và nó đã nhìn lại ngươi.",
+    "method": "event",
+    "requires": { "flags": ["met_the_void_entity"] },
+    "stat_effects": { "int": 3, "sanity": -5 }
+  },
+  {
+    "id": "loi_hua_tan_vo",
+    "name": "Lời Hứa Tan Vỡ",
+    "description": "Sự phản bội đã làm trái tim ngươi chai sạn.",
+    "method": "event",
+    "requires": { "flags": ["betrayed_by_ally"] },
+    "stat_effects": { "wis": 2, "cha": -3 }
+  },
+  {
+    "id": "nguoi_du_hanh_thoi_gian",
+    "name": "Người Du Hành Thời Gian",
+    "description": "Ngươi đã thấy các thế giới sinh ra và chết đi.",
+    "method": "event",
+    "requires": { "flags": ["unlocked_time_fragment"] },
+    "stat_effects": { "soul": 3, "int": 1 }
+  },
+  {
+    "id": "trai_tim_sat",
+    "name": "Trái Tim Sắt",
+    "description": "Cảm xúc không còn là rào cản.",
+    "method": "event",
+    "requires": { "flags": ["killed_innocent"] },
+    "stat_effects": { "str": 3, "cha": -4 }
+  },
+  {
+    "id": "ke_tim_kiem_ky_uc",
+    "name": "Kẻ Tìm Kiếm Ký Ức",
+    "description": "Mỗi mảnh ký ức là một phần sức mạnh.",
+    "method": "event",
+    "requires": { "flags": ["collected_5_fragments"] },
+    "stat_effects": { "int": 2, "wis": 2 }
+  },
+  {
+    "id": "dau_an_than_thanh",
+    "name": "Dấu Ấn Thần Thánh",
+    "description": "Một vị thần vô danh đã chú ý đến ngươi.",
+    "method": "event",
+    "requires": { "flags": ["blessed_by_unknown"] },
+    "stat_effects": { "lck": 3, "soul": 1 }
+  },
+  {
+    "id": "ke_pha_vo_vong_lap",
+    "name": "Kẻ Phá Vỡ Vòng Lặp",
+    "description": "Ngươi từ chối số phận đã định sẵn.",
+    "method": "event",
+    "requires": { "flags": ["broke_the_loop"] },
+    "stat_effects": { "str": 2, "int": 2, "dex": 2 }
+  },
+  {
+    "id": "linh_hon_bat_diet",
+    "name": "Linh Hồn Bất Diệt",
+    "description": "Cái chết chỉ là một sự bắt đầu mới.",
+    "method": "event",
+    "requires": { "flags": ["died_and_returned"] },
+    "stat_effects": { "con": 3, "soul": 2 }
+  },
+  {
+    "id": "co_bap_than",
+    "name": "Cơ Bắp Thần",
+    "description": "Sức mạnh thể chất vượt trội.",
+    "method": "stat",
+    "requires": { "str": 15 },
+    "stat_effects": { "carry_weight_flat": 10 },
+    "special_rule": "Luôn vượt qua các kiểm tra đe dọa."
+  },
+  {
+    "id": "phan_xa_chop_nhoang",
+    "name": "Phản Xạ Chớp Nhoáng",
+    "description": "Thế giới dường như chậm lại trong mắt ngươi.",
+    "method": "stat",
+    "requires": { "dex": 15 },
+    "stat_effects": { "initiative_flat": 5 },
+    "special_rule": "Luôn được đi trước trong lượt đầu tiên."
+  },
+  {
+    "id": "co_the_kim_cuong",
+    "name": "Cơ Thể Kim Cương",
+    "description": "Cực kỳ bền bỉ trước mọi tác động.",
+    "method": "stat",
+    "requires": { "con": 15 },
+    "stat_effects": { "phys_resist_mult": 0.15 },
+    "special_rule": "Miễn nhiễm với các loại độc thông thường."
+  },
+  {
+    "id": "bo_oc_sieu_viet",
+    "name": "Bộ Óc Siêu Việt",
+    "description": "Khả năng tính toán và phân tích thượng thừa.",
+    "method": "stat",
+    "requires": { "int": 15 },
+    "stat_effects": { "mag_dmg_mult": 0.15 },
+    "special_rule": "Luôn nhận ra các cạm bẫy ma pháp."
+  },
+  {
+    "id": "giac_quan_thu_sau",
+    "name": "Giác Quan Thứ Sáu",
+    "description": "Cảm nhận được những điều vô hình.",
+    "method": "stat",
+    "requires": { "wis": 15 },
+    "stat_effects": { "mag_resist_mult": 0.15 },
+    "special_rule": "Nhìn thấu các ảo giác cấp thấp."
+  },
+  {
+    "id": "bac_thay_thuyet_phuc",
+    "name": "Bậc Thầy Thuyết Phục",
+    "description": "Mọi lời nói của ngươi đều có sức nặng ngàn cân.",
+    "method": "stat",
+    "requires": { "cha": 15 },
+    "stat_effects": { "affection_gain_mult": 0.2 },
+    "special_rule": "Mở khóa các lựa chọn đối thoại đặc biệt."
+  },
+  {
+    "id": "ke_thach_thuc_van_menh",
+    "name": "Kẻ Thách Thức Vận Mệnh",
+    "description": "Ngươi tự tạo ra may mắn cho riêng mình.",
+    "method": "stat",
+    "requires": { "lck": 8 },
+    "stat_effects": { "crit_chance_mult": 0.1 },
+    "special_rule": "Có thể đổ lại xúc xắc 1 lần mỗi cảnh."
+  },
+  {
+    "id": "linh_hon_vung_vang",
+    "name": "Linh Hồn Vững Vàng",
+    "description": "Linh hồn ngươi gắn chặt với thực tại này.",
+    "method": "stat",
+    "requires": { "soul": 8 },
+    "stat_effects": { "mag_dmg_mult": 0.1 },
+    "special_rule": "Kháng lại việc chuyển thế giới ngẫu nhiên."
+  },
+  {
+    "id": "troi_day_tu_vuc_tham",
+    "name": "Trỗi Dậy Từ Vực Thẳm",
+    "description": "Ngươi đã điên loạn và tìm thấy đường về.",
+    "method": "stat",
+    "requires": { "sanity": 1 },
+    "stat_effects": { "wis": 5, "int": 2 },
+    "special_rule": "Vĩnh viễn tăng 20% kháng Sanity loss."
+  },
+  {
+    "id": "than_hinh_hoan_my",
+    "name": "Thân Hình Hoàn Mỹ",
+    "description": "Sự kết hợp hoàn hảo giữa sức mạnh và tốc độ.",
+    "method": "stat",
+    "requires": { "str": 12, "dex": 12 },
+    "stat_effects": { "phys_dmg_mult": 0.1, "dodge_mult": 0.05 }
+  },
+  {
+    "id": "lien_ket_tam_linh_elara",
+    "name": "Liên Kết Tâm Linh (Elara)",
+    "description": "Tâm trí ngươi hòa quyện cùng Elara.",
+    "method": "affection",
+    "requires": { "character_id": "elara", "affection": 75 },
+    "stat_effects": { "int": 3, "mag_dmg_mult": 0.1 }
+  },
+  {
+    "id": "su_bao_ve_cua_elara",
+    "name": "Sự Bảo Vệ Của Elara",
+    "description": "Elara luôn dõi theo và bảo vệ linh hồn ngươi.",
+    "method": "affection",
+    "requires": { "character_id": "elara", "affection": 40 },
+    "stat_effects": { "wis": 2, "mag_resist_mult": 0.05 }
+  },
+  {
+    "id": "ban_nang_tho_san_kael",
+    "name": "Bản Năng Thợ Săn (Kael)",
+    "description": "Kael đã dạy ngươi cách sinh tồn trong bóng tối.",
+    "method": "affection",
+    "requires": { "character_id": "kael", "affection": 75 },
+    "stat_effects": { "dex": 3, "crit_chance_mult": 0.1 }
+  },
+  {
+    "id": "long_tin_cua_kael",
+    "name": "Lòng Tin Của Kael",
+    "description": "Một thợ săn đơn độc đã chấp nhận ngươi.",
+    "method": "affection",
+    "requires": { "character_id": "kael", "affection": 40 },
+    "stat_effects": { "str": 2, "phys_dmg_mult": 0.05 }
+  },
+  {
+    "id": "suc_manh_dong_doi_mira",
+    "name": "Sức Mạnh Đồng Đội (Mira)",
+    "description": "Sự nhiệt huyết của Mira tiếp thêm sức mạnh cho ngươi.",
+    "method": "affection",
+    "requires": { "character_id": "mira", "affection": 75 },
+    "stat_effects": { "str": 3, "con": 2 }
+  },
+  {
+    "id": "nu_cuoi_cua_mira",
+    "name": "Nụ Cười Của Mira",
+    "description": "Niềm vui của cô ấy là liều thuốc cho tâm hồn ngươi.",
+    "method": "affection",
+    "requires": { "character_id": "mira", "affection": 40 },
+    "stat_effects": { "sanity": 5, "cha": 1 }
+  },
+  {
+    "id": "tri_tue_cam_lang_vahn",
+    "name": "Trí Tuệ Câm Lặng (Vahn)",
+    "description": "Vahn chia sẻ những kiến thức cấm kỵ cùng ngươi.",
+    "method": "affection",
+    "requires": { "character_id": "vahn", "affection": 75 },
+    "stat_effects": { "int": 5, "wis": -2 }
+  },
+  {
+    "id": "su_ton_trong_cua_vahn",
+    "name": "Sự Tôn Trọng Của Vahn",
+    "description": "Kẻ cô độc nhất đã nhìn nhận năng lực của ngươi.",
+    "method": "affection",
+    "requires": { "character_id": "vahn", "affection": 40 },
+    "stat_effects": { "int": 2, "mag_dmg_mult": 0.05 }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "id": "dark_fantasy",
+  "name": "Dark Fantasy",
+  "bg": "bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900",
+  "music_key": "theme_dark_fantasy",
+  "special_mechanic": "sanity_drain"
+}

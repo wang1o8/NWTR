@@ -1,0 +1,7 @@
+{
+  "id": "postapoc",
+  "name": "Post-Apocalypse",
+  "bg": "bg-gradient-to-br from-slate-900 via-orange-950 to-yellow-950",
+  "music_key": "theme_postapoc",
+  "special_mechanic": "radiation_exposure"
+}

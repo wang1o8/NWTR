@@ -1,0 +1,295 @@
+{
+  "stats": {
+    "HP": "Máu (Max HP = CON * 5 + 20)",
+    "MP": "Năng Lượng (Max MP = INT * 3 + 10)",
+    "STR": "Sức mạnh vật lý",
+    "INT": "Sức mạnh ma thuật",
+    "DEX": "Chính xác, Chí mạng, Né tránh, Sáng kiến",
+    "CON": "Thể lực, Kháng vật lý",
+    "WIS": "Tâm trí, Kháng ma thuật",
+    "CHA": "Giao tiếp, Tài vận"
+  },
+  "weapons": [
+    {
+      "id": "soul_reaper",
+      "name": "Lưỡi Hái Đoạt Hồn",
+      "world": "fantasy",
+      "type": "scythe",
+      "scaling": "STR",
+      "damage": 15,
+      "diceSize": 10,
+      "specialEffect": "Hút Máu (20%)",
+      "proficiencyBonus": "STR +2",
+      "obtain": "Sự kiện: Đánh bại Kỵ Sĩ Tro Tàn"
+    },
+    {
+      "id": "vicar_staff",
+      "name": "Quyền Trượng Giáo Sĩ",
+      "world": "fantasy",
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 10,
+      "diceSize": 6,
+      "specialEffect": "Hồi Phục (8% HP/lượt)",
+      "proficiencyBonus": "INT +2",
+      "obtain": "Cửa hàng: Fantasy Hub"
+    },
+    {
+      "id": "cursed_blade",
+      "name": "Thanh Kiếm Bị Nguyền Rủa",
+      "world": "fantasy",
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 20,
+      "diceSize": 8,
+      "specialEffect": "Lưỡi Kiếm Nguyền Rủa (Hiệu ứng xấu ngẫu nhiên)",
+      "proficiencyBonus": "STR +3",
+      "obtain": "Bí mật: Nhà Thờ Đổ Nát"
+    },
+    {
+      "id": "plasma_rifle",
+      "name": "Súng Trường Plasma",
+      "world": "scifi",
+      "type": "gun",
+      "scaling": "INT",
+      "damage": 25,
+      "diceSize": 12,
+      "specialEffect": "Quá Tải (X2 Sát thương, 10% Sát thương dội lại)",
+      "proficiencyBonus": "INT +3",
+      "obtain": "Cửa hàng: Sci-Fi Hub"
+    },
+    {
+      "id": "mono_blade",
+      "name": "Kiếm Đơn Phân Tử",
+      "world": "scifi",
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 18,
+      "diceSize": 8,
+      "specialEffect": "Phá Hồn (Bỏ qua DEF)",
+      "proficiencyBonus": "STR +2",
+      "obtain": "Rơi từ: Drone Nhện"
+    },
+    {
+      "id": "neural_whip",
+      "name": "Roi Thần Kinh",
+      "world": "scifi",
+      "type": "whip",
+      "scaling": "INT",
+      "damage": 12,
+      "diceSize": 6,
+      "specialEffect": "Hút (Đánh cắp 1 Buff)",
+      "proficiencyBonus": "INT +2",
+      "obtain": "Sự kiện: Sci-Fi Bounty"
+    },
+    {
+      "id": "dragon_spear",
+      "name": "Thương Hồn Long",
+      "world": "eastern",
+      "type": "spear",
+      "scaling": "STR",
+      "damage": 22,
+      "diceSize": 12,
+      "specialEffect": "Dây Chuyền (Đánh thêm 1 kẻ địch)",
+      "proficiencyBonus": "STR +3",
+      "obtain": "Rơi từ: Quỷ Xanh"
+    },
+    {
+      "id": "jade_flute",
+      "name": "Sáo Ngọc Linh",
+      "world": "eastern",
+      "type": "relic",
+      "scaling": "INT",
+      "damage": 8,
+      "diceSize": 4,
+      "specialEffect": "Tiếng Vang (40% Lặp lại đòn đánh)",
+      "proficiencyBonus": "INT +2",
+      "obtain": "Cửa hàng: Eastern Hub"
+    },
+    {
+      "id": "void_katana",
+      "name": "Katana Hư Không",
+      "world": "eastern",
+      "type": "blade",
+      "scaling": "hybrid",
+      "damage": 20,
+      "diceSize": 8,
+      "specialEffect": "Hư Không (Bỏ qua RES)",
+      "proficiencyBonus": "STR/INT +1",
+      "obtain": "Bí mật: Rừng Tre"
+    },
+    {
+      "id": "scrap_cannon",
+      "name": "Pháo Phế Liệu",
+      "world": "postapoc",
+      "type": "gun",
+      "scaling": "STR",
+      "damage": 30,
+      "diceSize": 12,
+      "specialEffect": "Phá Nát (Xóa Buff)",
+      "proficiencyBonus": "STR +4",
+      "obtain": "Cửa hàng: Post-Apoc Hub"
+    },
+    {
+      "id": "rusty_machete",
+      "name": "Mã Tấu Rỉ Sét",
+      "world": "postapoc",
+      "type": "blade",
+      "scaling": "STR",
+      "damage": 12,
+      "diceSize": 6,
+      "specialEffect": "Chảy Máu (Mất 5% HP)",
+      "proficiencyBonus": "STR +2",
+      "obtain": "Rơi từ: Kẻ Cướp"
+    },
+    {
+      "id": "radiation_bow",
+      "name": "Cung Phóng Xạ",
+      "world": "postapoc",
+      "type": "bow",
+      "scaling": "INT",
+      "damage": 15,
+      "diceSize": 8,
+      "specialEffect": "Độc (Mất 3% HP)",
+      "proficiencyBonus": "INT +2",
+      "obtain": "Bí mật: Tàn Tích Vùng Đất Hoang"
+    },
+    {
+      "id": "excalibur_proto",
+      "name": "Nguyên Mẫu Excalibur",
+      "world": "rare",
+      "type": "sword",
+      "scaling": "STR",
+      "damage": 40,
+      "diceSize": 12,
+      "specialEffect": "Hành Quyết (Giết nếu HP < 15%)",
+      "proficiencyBonus": "STR +5",
+      "obtain": "Bí mật: Hư Không"
+    },
+    {
+      "id": "chronos_staff",
+      "name": "Quyền Trượng Chronos",
+      "world": "rare",
+      "type": "staff",
+      "scaling": "INT",
+      "damage": 35,
+      "diceSize": 10,
+      "specialEffect": "Tăng Tốc (Hành động 2 lần)",
+      "proficiencyBonus": "INT +5",
+      "obtain": "Bí mật: Lõi Vòng Lặp Thời Gian"
+    },
+    {
+      "id": "world_ender",
+      "name": "Kẻ Hủy Diệt Thế Giới",
+      "world": "rare",
+      "type": "relic",
+      "scaling": "hybrid",
+      "damage": 50,
+      "diceSize": 12,
+      "specialEffect": "Liên Kết Hồn (Chia sẻ 30% Sát thương)",
+      "proficiencyBonus": "STR/INT +3",
+      "obtain": "Kết thúc: Con Đường Chân Chính"
+    }
+  ],
+  "skills": {
+    "player": [
+      { "id": "heavy_strike", "name": "Đòn Đánh Nặng", "type": "physical", "mpCost": 10, "formula": "STR * 3 - DEF", "effect": "Choáng (20%)", "cooldown": 1 },
+      { "id": "whirlwind", "name": "Gió Lốc", "type": "physical", "mpCost": 15, "formula": "STR * 2", "effect": "Dây Chuyền (Đánh nhiều mục tiêu)", "cooldown": 2 },
+      { "id": "pierce", "name": "Xuyên Giáp", "type": "physical", "mpCost": 12, "formula": "STR * 2.5", "effect": "Phá Hồn (Bỏ qua DEF)", "cooldown": 2 },
+      { "id": "counter", "name": "Thế Phản Công", "type": "physical", "mpCost": 8, "formula": "0", "effect": "Phản lại 50% Sát thương", "cooldown": 3 },
+      { "id": "execute", "name": "Hành Quyết Cuối Cùng", "type": "physical", "mpCost": 25, "formula": "STR * 5", "effect": "Hành Quyết (<15% HP)", "cooldown": 5 },
+      { "id": "fireball", "name": "Quả Cầu Lửa", "type": "magical", "mpCost": 12, "formula": "INT * 2.5", "effect": "Thiêu Đốt (3 lượt)", "cooldown": 1 },
+      { "id": "ice_spike", "name": "Gai Băng", "type": "magical", "mpCost": 12, "formula": "INT * 2.5", "effect": "Đóng Băng (1 lượt)", "cooldown": 1 },
+      { "id": "thunder_bolt", "name": "Sét Đánh", "type": "magical", "mpCost": 15, "formula": "INT * 3", "effect": "Tê Liệt (Sét+Ướt)", "cooldown": 2 },
+      { "id": "shadow_grasp", "name": "Bàn Tay Bóng Tối", "type": "magical", "mpCost": 18, "formula": "INT * 2", "effect": "Nguyền Rủa (3 lượt)", "cooldown": 3 },
+      { "id": "holy_light", "name": "Ánh Sáng Thánh", "type": "magical", "mpCost": 20, "formula": "INT * 3.5", "effect": "Sát thương thêm lên Undead", "cooldown": 4 },
+      { "id": "heal", "name": "Hồi Phục Nhẹ", "type": "support", "mpCost": 15, "formula": "INT * 2", "effect": "Hồi Phục (3 lượt)", "cooldown": 2 },
+      { "id": "barrier", "name": "Lá Chắn Mana", "type": "support", "mpCost": 20, "formula": "0", "effect": "Lá Chắn (Phẳng 30)", "cooldown": 4 },
+      { "id": "haste", "name": "Bước Chân Nhanh", "type": "support", "mpCost": 25, "formula": "0", "effect": "Tăng Tốc (2 lượt)", "cooldown": 5 },
+      { "id": "void_nova", "name": "Hư Không Tân Tinh", "type": "ultimate", "mpCost": 50, "formula": "(STR + INT) * 4", "effect": "Hư Không (Bỏ qua RES)", "cooldown": 8 },
+      { "id": "loop_reset", "name": "Tái Thiết Lập Vòng Lặp", "type": "ultimate", "mpCost": 60, "formula": "0", "effect": "Hồi 100% HP/MP", "cooldown": 10 }
+    ],
+    "enemy": [
+      { "id": "monster_bite", "name": "Cú Cắn Tàn Độc", "type": "physical", "effect": "Chảy Máu" },
+      { "id": "monster_roar", "name": "Tiếng Gầm Đáng Sợ", "type": "debuff", "effect": "Kinh Hoàng" },
+      { "id": "monster_spit", "name": "Phun Axit", "type": "magical", "effect": "Suy Yếu" },
+      { "id": "monster_drain", "name": "Hút Sự Sống", "type": "magical", "effect": "Hút Linh Hồn" },
+      { "id": "monster_stun", "name": "Quét Đuôi", "type": "physical", "effect": "Choáng" },
+      { "id": "monster_blind", "name": "Đám Mây Mực", "type": "debuff", "effect": "Mù" },
+      { "id": "monster_silence", "name": "Trường Tĩnh Điện", "type": "debuff", "effect": "Câm Lặng" },
+      { "id": "monster_hex", "name": "Lời Nguyền Phù Thủy", "type": "magical", "effect": "Ám Toán" },
+      { "id": "monster_curse", "name": "Ánh Nhìn Chết Chóc", "type": "magical", "effect": "Nguyền Rủa" },
+      { "id": "monster_poison", "name": "Ngòi Độc", "type": "physical", "effect": "Độc" }
+    ]
+  },
+  "buffs": [
+    { "id": "rage", "name": "Cuồng Nộ", "statChanges": { "STR": 1.3, "DEF": 0.85 }, "duration": 3, "stackRules": "Tối đa 1", "apply": "Kỹ năng: Cuồng Nộ", "remove": "Giải trừ" },
+    { "id": "focus", "name": "Tập Trung", "statChanges": { "crit": 1.0 }, "duration": 1, "stackRules": "Tiêu hao khi đánh trúng", "apply": "Kỹ năng: Tập Trung", "remove": "Tấn công" },
+    { "id": "shield", "name": "Lá Chắn", "statChanges": { "shield": 30 }, "duration": 5, "stackRules": "Giảm sát thương phẳng", "apply": "Kỹ năng: Lá Chắn", "remove": "Sát thương" },
+    { "id": "haste", "name": "Tăng Tốc", "statChanges": { "actions": 2 }, "duration": 2, "stackRules": "Tối đa 1", "apply": "Kỹ năng: Bước Chân Nhanh", "remove": "Thời gian" },
+    { "id": "regen", "name": "Hồi Phục", "statChanges": { "hpRegen": 0.08 }, "duration": 3, "stackRules": "Tối đa 1", "apply": "Kỹ năng: Hồi Phục", "remove": "Thời gian" },
+    { "id": "barrier", "name": "Rào Chắn", "statChanges": { "RES": 1.5 }, "duration": 2, "stackRules": "Tối đa 1", "apply": "Kỹ năng: Rào Chắn", "remove": "Thời gian" },
+    { "id": "empower", "name": "Cường Hóa", "statChanges": { "INT": 1.4 }, "duration": 2, "stackRules": "Tối đa 1", "apply": "Kỹ năng: Cường Hóa", "remove": "Thời gian" },
+    { "id": "evasion", "name": "Né Tránh", "statChanges": { "dodge": 0.6 }, "duration": 2, "stackRules": "Tối đa 1", "apply": "Kỹ năng: Né Tránh", "remove": "Thời gian" },
+    { "id": "berserk", "name": "Cuồng Chiến", "statChanges": { "STR": 1.6, "canDefend": false }, "duration": 3, "stackRules": "Tối đa 1", "apply": "Kỹ năng: Cuồng Chiến", "remove": "Thời gian" },
+    { "id": "soul_link", "name": "Liên Kết Hồn", "statChanges": { "damageShare": 0.3 }, "duration": 3, "stackRules": "Tối đa 1", "apply": "Vũ khí: Kẻ Hủy Diệt Thế Giới", "remove": "Thời gian" }
+  ],
+  "debuffs": [
+    { "id": "bleed", "name": "Chảy Máu", "effect": "Mất 5% HP tối đa mỗi lượt", "type": "physical", "duration": 3, "stackRules": "Tối đa 3", "counter": "Băng Gạc" },
+    { "id": "burn", "name": "Thiêu Đốt", "effect": "Mất 4% HP + -20% DEF", "type": "magical", "duration": 3, "stackRules": "Tối đa 1", "counter": "Nước" },
+    { "id": "freeze", "name": "Đóng Băng", "effect": "Bỏ qua lượt + đòn đánh tiếp theo là chí mạng", "type": "magical", "duration": 1, "stackRules": "Tối đa 1", "counter": "Lửa" },
+    { "id": "stun", "name": "Choáng", "effect": "Bỏ qua lượt", "type": "physical", "duration": 1, "stackRules": "Tối đa 1", "counter": "Chờ đợi" },
+    { "id": "poison", "name": "Độc", "effect": "Mất 3% HP mỗi lượt", "type": "physical", "duration": 5, "stackRules": "Tối đa 3", "counter": "Thuốc Giải" },
+    { "id": "curse", "name": "Nguyền Rủa", "effect": "-30% LCK + sự kiện xấu ngẫu nhiên", "type": "magical", "duration": 5, "stackRules": "Tối đa 1", "counter": "Nước Thánh" },
+    { "id": "blind", "name": "Mù", "effect": "55% tỉ lệ trượt", "type": "physical", "duration": 2, "stackRules": "Tối đa 1", "counter": "Thuốc Nhỏ Mắt" },
+    { "id": "silence", "name": "Câm Lặng", "effect": "Không thể dùng kỹ năng", "type": "magical", "duration": 2, "stackRules": "Tối đa 1", "counter": "Tiếng Vang" },
+    { "id": "weaken", "name": "Suy Yếu", "effect": "-35% STR và INT", "type": "physical", "duration": 3, "stackRules": "Tối đa 1", "counter": "Thuốc Sức Mạnh" },
+    { "id": "terror", "name": "Kinh Hoàng", "effect": "Chỉ có thể phòng thủ hoặc bỏ chạy", "type": "magical", "duration": 2, "stackRules": "Tối đa 1", "counter": "Dũng Cảm" },
+    { "id": "hex", "name": "Ám Toán", "effect": "Giảm 50% một chỉ số ngẫu nhiên", "type": "magical", "duration": 3, "stackRules": "Tối đa 1", "counter": "Thanh Tẩy" },
+    { "id": "soul_drain", "name": "Hút Linh Hồn", "effect": "Kẻ tấn công hồi 25% sát thương gây ra", "type": "magical", "duration": 3, "stackRules": "Tối đa 1", "counter": "Khiên Hồn" }
+  ],
+  "enemy_mechanics": {
+    "enrage": "Kích hoạt khi HP < 30%: +50% ATK + mở khóa kỹ năng mới",
+    "shield_phase": "Miễn nhiễm sát thương vật lý, 2 lượt",
+    "pack_leader": "Kẻ địch xung quanh +20% tất cả chỉ số",
+    "resurrection": "Hồi sinh một lần với 1 HP (Chỉ Boss)",
+    "phase_shift": "Thay đổi điểm yếu/kháng phép giữa trận (Chỉ Boss)"
+  },
+  "special_effects": {
+    "soulbreak": "Bỏ qua hoàn toàn DEF",
+    "lifesteal": "Hồi 20% sát thương gây ra",
+    "chain": "Đòn đánh nảy sang 1 kẻ địch khác",
+    "execute": "Giết ngay lập tức nếu HP kẻ địch < 15%",
+    "overload": "X2 sát thương, người dùng chịu 10% sát thương dội lại",
+    "shatter": "Xóa buff của kẻ địch khi đánh trúng",
+    "echo": "40% tỉ lệ lặp lại đòn đánh",
+    "drain": "Đánh cắp 1 buff từ kẻ địch",
+    "void": "Sát thương bỏ qua RES",
+    "curse_edge": "Áp dụng hiệu ứng xấu ngẫu nhiên khi đánh trúng"
+  },
+  "elemental_system": {
+    "elements": ["Lửa", "Băng", "Sét", "Bóng Tối", "Thánh", "Hư Không"],
+    "interactions": [
+      { "combo": "Lửa + Đóng Băng", "result": "Phá Vỡ (Sát thương thêm)" },
+      { "combo": "Sét + Ướt", "result": "Tê Liệt (Choáng)" },
+      { "combo": "Bóng Tối + Nguyền Rủa", "result": "Diệt Vong (Đếm ngược cái chết)" }
+    ],
+    "multipliers": {
+      "weakness": 1.5,
+      "resistance": 0.5,
+      "immunity": 0
+    }
+  },
+  "world_mechanics": {
+    "fantasy": "Hiệu ứng Nguyền Rủa kéo dài hơn, nguyên tố Thánh gây thêm sát thương lên Undead",
+    "scifi": "Hiệu ứng Quá Tải mạnh hơn, kỹ năng EMP = Câm Lặng diện rộng",
+    "eastern": "Kỹ năng dựa trên Linh Hồn mạnh hơn, nguyên tố Hư Không = bỏ qua mọi kháng phép",
+    "postapoc": "Độc cộng dồn cao hơn, vũ khí phế liệu có thể gãy giữa trận"
+  },
+  "balance_notes": [
+    "STR/INT scaling should be adjusted based on player progression to avoid one-shotting bosses.",
+    "MP management is critical; support skills should have higher MP costs to prevent spamming.",
+    "Bosses should have multiple actions per turn to counter player Haste.",
+    "Elemental weaknesses are the primary way to deal significant damage in late-game."
+  ]
+}

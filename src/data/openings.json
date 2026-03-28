@@ -1,0 +1,52 @@
+{
+  "wanderer": {
+    "id": "wanderer",
+    "name": "Kẻ Lữ Hành Cô Độc",
+    "description": "Tỉnh dậy trong rừng sâu với ký ức trống rỗng. Bạn tìm kiếm câu trả lời cho sự tồn tại của mình.",
+    "startScene": "tutorial_001",
+    "stats": { "str": 10, "dex": 10, "int": 10, "con": 10, "wis": 10, "cha": 10 },
+    "items": ["basic_sword", "small_potion"],
+    "traits": ["adaptive"],
+    "gold": 100
+  },
+  "mercenary": {
+    "id": "mercenary",
+    "name": "Lính Thuê Kiêu Hãnh",
+    "description": "Một chiến binh dày dạn kinh nghiệm, được thuê để giải quyết những rắc rối bằng thanh kiếm của mình.",
+    "startScene": "tutorial_001",
+    "stats": { "str": 14, "dex": 12, "int": 8, "con": 12, "wis": 8, "cha": 10 },
+    "items": ["soldering_sword", "leather_armor"],
+    "traits": ["battle_hardened"],
+    "gold": 500
+  },
+  "scholar": {
+    "id": "scholar",
+    "name": "Học Giả Uyên Bác",
+    "description": "Một người tìm kiếm tri thức cổ xưa, tin rằng phép thuật và trí tuệ là chìa khóa để cứu rỗi thế giới.",
+    "startScene": "tutorial_001",
+    "stats": { "str": 7, "dex": 9, "int": 15, "con": 8, "wis": 15, "cha": 12 },
+    "items": ["magic_staff", "focus_crystal"],
+    "traits": ["analytical"],
+    "gold": 200
+  },
+  "outcast": {
+    "id": "outcast",
+    "name": "Kẻ Bị Ruồng Bỏ",
+    "description": "Bị xua đuổi khỏi xã hội, bạn đã học cách sinh tồn trong sự khắc nghiệt của thiên nhiên.",
+    "startScene": "tutorial_001",
+    "stats": { "str": 11, "dex": 11, "int": 10, "con": 14, "wis": 10, "cha": 6 },
+    "items": ["makeshift_knife", "survival_kit"],
+    "traits": ["survivor"],
+    "gold": 50
+  },
+  "chosen": {
+    "id": "chosen",
+    "name": "Người Được Chọn",
+    "description": "Một lời tiên tri cổ xưa nói về sự xuất hiện của bạn. Bạn mang trên mình vận mệnh của cả thế giới.",
+    "startScene": "tutorial_001",
+    "stats": { "str": 11, "dex": 11, "int": 11, "con": 11, "wis": 11, "cha": 11 },
+    "items": ["sacred_pendant", "blessed_blade"],
+    "traits": ["blessed"],
+    "gold": 150
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "world_prefix": "Plasma",
+  "element": "thunder",
+  "specific_types": ["gun", "blade"]
+}

@@ -1,0 +1,141 @@
+{
+  "rarities": [
+    { "id": "COMMON", "name": "Thường", "chance": 0.50, "maxStats": 2, "specialEffectChance": 0.0, "color": "#94a3b8", "bg": "from-slate-800/20", "dots": "●○○○○○" },
+    { "id": "UNCOMMON", "name": "Hiếm", "chance": 0.25, "maxStats": 3, "specialEffectChance": 0.10, "color": "#3b82f6", "bg": "from-blue-700/20", "dots": "●●○○○○" },
+    { "id": "RARE", "name": "Tinh Anh", "chance": 0.15, "maxStats": 4, "specialEffectChance": 0.25, "color": "#a855f7", "bg": "from-purple-700/20", "dots": "●●●○○○" },
+    { "id": "EPIC", "name": "Sử Thi", "chance": 0.07, "maxStats": 5, "specialEffectChance": 0.50, "color": "#f59e0b", "bg": "from-orange-700/20", "dots": "●●●●○○" },
+    { "id": "LEGENDARY", "name": "Huyền Thoại", "chance": 0.025, "maxStats": 6, "specialEffectChance": 0.80, "color": "#ef4444", "bg": "from-red-700/20", "dots": "●●●●●○" },
+    { "id": "MYTHIC", "name": "Thần Thoại", "chance": 0.005, "maxStats": 8, "specialEffectChance": 1.0, "color": "#facc15", "bg": "from-yellow-500/30", "dots": "●●●●●●" }
+  ],
+  "specialRules": {
+    "number_27": {
+      "chance": 0.03,
+      "value": 27,
+      "lore_hint": "Con số này mang ý nghĩa gì đó...",
+      "secret_trigger_count": 3
+    },
+    "negative_chance": 0.15,
+    "luck_scaling": {
+      "points_per_tier_up": 5,
+      "chance_increase_per_point": 0.01
+    }
+  },
+  "visual": {
+    "icons": {
+      "weapons": {
+        "sword": "⚔️",
+        "bow": "🏹",
+        "staff": "🪄",
+        "gun": "🔫",
+        "blade": "🗡️",
+        "relic": "🔮"
+      },
+      "traits": {
+        "combat": "💪",
+        "magic": "🧠",
+        "luck": "🍀",
+        "cursed": "💀",
+        "world": "🌍",
+        "hidden": "❓"
+      },
+      "monsters": {
+        "beast": "🐺",
+        "undead": "💀",
+        "demon": "👁️",
+        "mech": "🤖",
+        "spirit": "🦊",
+        "mutant": "☢️"
+      },
+      "elements": {
+        "fire": "🔥",
+        "ice": "❄️",
+        "thunder": "⚡",
+        "shadow": "🌑",
+        "holy": "✨",
+        "void": "🌀"
+      },
+      "stats": {
+        "STR": "💪",
+        "CRIT": "🎯",
+        "ATK_SPD": "⚡",
+        "LIFESTEAL": "🩸",
+        "DEF": "🛡️",
+        "INT": "🔮"
+      }
+    },
+    "backgrounds": {
+      "dark_fantasy": "bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900",
+      "scifi": "bg-gradient-to-br from-slate-900 via-blue-950 to-cyan-950",
+      "eastern": "bg-gradient-to-br from-slate-900 via-red-950 to-orange-950",
+      "postapoc": "bg-gradient-to-br from-slate-900 via-orange-950 to-yellow-950"
+    },
+    "global": {
+      "bg_color": "bg-[#08080a]"
+    }
+  },
+  "stats": {
+    "core_attributes": ["STR", "DEX", "CON", "INT", "WIS", "CHA"],
+    "secondary_stats": ["LCK", "REP", "SOUL"],
+    "derived_formulas": {
+      "maxHp": "CON * 5 + 20",
+      "maxMp": "INT * 3 + 10",
+      "maxSanity": "WIS * 2 + 10",
+      "initiative": "DEX / 2",
+      "carryWeight": "STR * 3 + 10",
+      "critChance": "DEX / 100",
+      "dodge": "DEX / 200",
+      "magicResist": "WIS / 3",
+      "physicalResist": "CON / 4"
+    },
+    "scaling": {
+      "STR": { "physAtk": 0.5, "slots": 0.333 },
+      "DEX": { "dodge": 0.5, "initiative": 0.333 },
+      "CON": { "hp": 5, "regen": 0.333 },
+      "INT": { "magAtk": 0.5, "mp": 0.333 },
+      "WIS": { "sanity": 1, "magResist": 0.333 },
+      "CHA": { "priceDiscount": 0.0066, "affectionBonus": 0.5 }
+    },
+    "sanity_thresholds": [
+      { "min": 70, "max": 100, "label": "Bình thường", "effect": "Không có hiệu ứng tiêu cực." },
+      { "min": 40, "max": 69, "label": "Hoang tưởng", "effect": "Lời thoại trở nên hoài nghi và cay độc hơn." },
+      { "min": 20, "max": 39, "label": "Rối loạn", "effect": "Tăng tần suất sự kiện tiêu cực, một số lựa chọn biến mất." },
+      { "min": 1, "max": 19, "label": "Ảo giác", "effect": "Kích hoạt các cảnh ảo giác, kẻ thù có thể không có thật." },
+      { "min": 0, "max": 0, "label": "Điên loạn", "effect": "Mất kiểm soát trong 3 cảnh, hồi phục ở mức 10%." }
+    ],
+    "reputation_thresholds": {
+      "high": 70,
+      "low": 30
+    }
+  },
+  "difficulty": {
+    "monster_scaling": {
+      "hp_per_scene": 2.5,
+      "atk_per_scene": 0.8,
+      "def_per_scene": 0.4,
+      "exp_per_scene": 1.5,
+      "gold_per_scene": 1.2
+    },
+    "elite_events": {
+      "trigger_threshold": {
+        "power_ratio": 1.5,
+        "min_scenes": 20
+      },
+      "types": [
+        { "id": "world_boss_early", "name": "Thế Giới Chủ Xuất Hiện Sớm", "effect": "blocks_loot_paths" },
+        { "id": "curse_event", "name": "Lời Nguyền Của Thế Giới", "effect": "stat_debuff" },
+        { "id": "ambush", "name": "Phục Kích Bất Ngờ", "effect": "forced_combat" }
+      ]
+    }
+  },
+  "dropRates": {
+    "equipment_drop_rates": [
+      { "min_scenes": 0, "max_scenes": 50, "base_rates": { "common": 0.7, "uncommon": 0.2, "rare": 0.08, "epic": 0.015, "legendary": 0.005 } },
+      { "min_scenes": 51, "max_scenes": 150, "base_rates": { "common": 0.5, "uncommon": 0.3, "rare": 0.15, "epic": 0.04, "legendary": 0.01 } },
+      { "min_scenes": 151, "max_scenes": 9999, "base_rates": { "common": 0.3, "uncommon": 0.3, "rare": 0.25, "epic": 0.1, "legendary": 0.05 } }
+    ],
+    "luck_bonus": {
+      "rarity_multiplier_per_point": 0.02,
+      "max_multiplier": 2.0
+    }
+  }
+}

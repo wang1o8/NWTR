@@ -1,0 +1,13 @@
+{
+  "number_27": {
+    "chance": 0.03,
+    "value": 27,
+    "lore_hint": "Con số này mang ý nghĩa gì đó...",
+    "secret_trigger_count": 3
+  },
+  "negative_chance": 0.15,
+  "luck_scaling": {
+    "points_per_tier_up": 5,
+    "chance_increase_per_point": 0.01
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "endings": [
+    {
+      "id": "sacrifice",
+      "title": "SỰ HY SINH CAO CẢ",
+      "description": "Bạn đã chọn hy sinh bản thân để cứu rỗi nhân loại. Tên của bạn sẽ được khắc ghi mãi mãi.",
+      "requirements": { "reputation": 60, "min_affection": -100 },
+      "image": "https://picsum.photos/seed/ending_sacrifice/800/400",
+      "color": "#fbbf24"
+    },
+    {
+      "id": "void",
+      "title": "TIẾNG GỌI HƯ VÔ",
+      "description": "Hư vô đã nuốt chửng mọi thứ. Bạn trở thành một phần của bóng tối vĩnh hằng.",
+      "requirements": { "reputation": -30, "min_affection": -100 },
+      "image": "https://picsum.photos/seed/ending_void/800/400",
+      "color": "#6366f1"
+    },
+    {
+      "id": "uniter",
+      "title": "BẬC THẦY KẾT NỐI",
+      "description": "Dưới sự dẫn dắt của bạn, tất cả các thế giới đã hòa làm một trong thanh bình.",
+      "requirements": { "reputation": 80, "min_affection": 80 },
+      "image": "https://picsum.photos/seed/ending_uniter/800/400",
+      "color": "#4ade80"
+    },
+    {
+      "id": "usurper",
+      "title": "KẺ CHIẾM QUYỀN",
+      "description": "Bạn đã lật đổ các vị thần và nắm giữ vận mệnh trong tay mình bằng vũ lực.",
+      "requirements": { "stats": { "str": 30 }, "reputation": -50 },
+      "image": "https://picsum.photos/seed/ending_usurper/800/400",
+      "color": "#ef4444"
+    },
+    {
+      "id": "shadow_ruler",
+      "title": "BÓNG MA QUYỀN LỰC",
+      "description": "Bạn không tiêu diệt bóng tối, mà trở thành kẻ điều khiển nó từ phía sau.",
+      "requirements": { "reputation": -20, "stats": { "int": 25 } },
+      "image": "https://picsum.photos/seed/ending_shadow/800/400",
+      "color": "#4b5563"
+    },
+    {
+      "id": "wanderer_infinite",
+      "title": "KẺ LỮ HÀNH VĨNH CỬU",
+      "description": "Bạn từ chối mọi cái kết và tiếp tục hành trình của mình qua vô số thế giới khác.",
+      "requirements": { "reputation": 0, "min_affection": -100 },
+      "image": "https://picsum.photos/seed/ending_wanderer/800/400",
+      "color": "#9ca3af"
+    }
+  ]
+}

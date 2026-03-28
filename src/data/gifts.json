@@ -1,0 +1,15 @@
+{
+  "gift_categories": {
+    "books": ["ancient_tome", "old_journal", "advanced_manual"],
+    "gems": ["mana_crystal", "shiny_gem", "soul_essence"],
+    "tech": ["advanced_chip", "energy_cell", "processor_core"],
+    "combat": ["gold_bar", "rare_coin", "sharpening_stone"],
+    "romance": ["blue_flower", "red_flower", "delicate_jewelry"]
+  },
+  "gift_values": {
+    "loved": 5,
+    "liked": 3,
+    "neutral": 1,
+    "hated": -5
+  }
+}

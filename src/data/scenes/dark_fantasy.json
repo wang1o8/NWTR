@@ -1,0 +1,745 @@
+{
+  "df_001": {
+    "id": "df_001",
+    "world": "dark_fantasy",
+    "sequence": 1,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Bạn bước qua làn sương mù dày đặc và thấy mình đang đứng ở cổng thị trấn Ashenveil. Hôm nay là ngày chợ, không khí nhộn nhịp một cách kỳ lạ.",
+    "internal_monologue": "Déjà vu. Dù ta chưa từng đến đây trước đây, mọi thứ cảm giác thật... đồng bộ. Quá hoàn hảo.",
+    "autoNext": "df_002"
+  },
+  "df_002": {
+    "id": "df_002",
+    "world": "dark_fantasy",
+    "sequence": 2,
+    "background": "town_day",
+    "speaker": "Linh",
+    "speaker_color": "#f9a8d4",
+    "text": "Cho hành trình của anh, lữ khách. Trông anh có vẻ lạc lối.",
+    "choices": [
+      {
+        "text": "Nhận hoa",
+        "icon": "🌸",
+        "sets": { "affection": { "linh": 5 }, "flags": ["has_white_flower"] },
+        "addItem": "white_flower",
+        "next": "df_003"
+      },
+      {
+        "text": "Sao cô biết tôi đang đi đường?",
+        "icon": "💬",
+        "next": "df_002_response"
+      },
+      {
+        "text": "Từ chối và bước đi",
+        "icon": "🚶",
+        "sets": { "flags": ["bo_qua_linh"] },
+        "next": "df_003"
+      }
+    ]
+  },
+  "df_002_response": {
+    "id": "df_002_response",
+    "world": "dark_fantasy",
+    "speaker": "Linh",
+    "speaker_color": "#f9a8d4",
+    "text": "Tôi... tôi không biết sao tôi lại nói vậy. Có lẽ chỉ là cảm giác thôi.",
+    "autoNext": "df_003"
+  },
+  "df_003": {
+    "id": "df_003",
+    "world": "dark_fantasy",
+    "sequence": 3,
+    "background": "town_day",
+    "speaker": "Vael",
+    "speaker_color": "#94a3b8",
+    "text": "Lần đầu đến đây sao, lữ khách?",
+    "internal_monologue": "Ông lão đang đọc một cuốn sách có tựa đề: 'Lịch Sử Ashenveil, Năm 301-350'.",
+    "choices": [
+      {
+        "text": "Hỏi về cuốn sách",
+        "icon": "💬",
+        "next": "df_003_a"
+      },
+      {
+        "text": "Phớt lờ ông",
+        "icon": "🚶",
+        "next": "df_003_b"
+      },
+      {
+        "text": "Lén nhìn các trang (DEX >= 8)",
+        "icon": "🔍",
+        "requires": { "stats": { "dex": ">=8" } },
+        "sets": { "flags": ["da_thay_sach_vael"] },
+        "next": "df_003_c"
+      }
+    ]
+  },
+  "df_003_a": {
+    "id": "df_003_a",
+    "world": "dark_fantasy",
+    "speaker": "Vael",
+    "text": "Chỉ là một chút sở thích cá nhân. Những suy đoán về tương lai thôi.",
+    "autoNext": "df_004"
+  },
+  "df_003_b": {
+    "id": "df_003_b",
+    "world": "dark_fantasy",
+    "speaker": "Vael",
+    "text": "Đừng vội vàng quá. Ở Ashenveil, thời gian trôi qua chậm lắm.",
+    "autoNext": "df_004"
+  },
+  "df_003_c": {
+    "id": "df_003_c",
+    "world": "dark_fantasy",
+    "speaker": null,
+    "text": "Bạn liếc nhìn và thấy những ngày tháng... chưa hề xảy ra. Một cuốn lịch sử của tương lai?",
+    "autoNext": "df_004"
+  },
+  "df_004": {
+    "id": "df_004",
+    "world": "dark_fantasy",
+    "sequence": 4,
+    "background": "town_day",
+    "speaker": "Người rao tin",
+    "text": "Hỡi thần dân Ashenveil! Hôm nay là Ngày Thứ Nhất của Tuần Lễ Hồi Sinh. Như thường lệ. Như mãi mãi.",
+    "internal_monologue": "Mọi người mỉm cười một cách thuần thục. Quá thuần thục.",
+    "choices": [
+      {
+        "text": "Theo bà lão đang thì thầm",
+        "icon": "🔍",
+        "next": "df_005a"
+      },
+      {
+        "text": "Hỏi về 'Tuần Lễ Hồi Sinh'",
+        "icon": "💬",
+        "next": "df_005b"
+      },
+      {
+        "text": "Tìm chỗ ngủ",
+        "icon": "🛌",
+        "next": "df_006"
+      }
+    ]
+  },
+  "df_005a": {
+    "id": "df_005a",
+    "world": "dark_fantasy",
+    "background": "house_interior",
+    "speaker": null,
+    "text": "Bà lão vào nhà và thêm một vạch nữa vào bức tường vốn đã phủ kín hàng nghìn vạch đếm. Bà không hề nhận ra sự hiện diện của bạn.",
+    "sets_flags": ["da_thay_vach_dem"],
+    "autoNext": "df_006"
+  },
+  "df_005b": {
+    "id": "df_005b",
+    "world": "dark_fantasy",
+    "speaker": "Người rao tin",
+    "text": "Đó là truyền thống 'mãi mãi' của chúng tôi. Tôi không nhớ có thời gian nào trước đó cả.",
+    "sets_flags": ["dat_cau_hoi_truyen_thong"],
+    "autoNext": "df_006"
+  },
+  "df_006": {
+    "id": "df_006",
+    "world": "dark_fantasy",
+    "sequence": 5,
+    "background": "town_night",
+    "speaker": "Linh",
+    "speaker_color": "#f9a8d4",
+    "text": "Ngày Thứ Hai. Bạn thức dậy sau một giấc mơ mờ nhạt... Linh đang đứng đợi bên ngoài. 'Tôi có giấc mơ kỳ lạ nhất. Tôi mơ mình đã rất già.'",
+    "choices": [
+      {
+        "text": "Điều gì xảy ra trong mơ?",
+        "sets": { "affection": { "linh": 10 } },
+        "next": "df_006_a"
+      },
+      {
+        "text": "Mơ chỉ là mơ thôi.",
+        "next": "df_007"
+      },
+      {
+        "text": "Tôi cũng mơ gì đó.",
+        "sets": { "affection": { "linh": 15 } },
+        "next": "df_006_b"
+      }
+    ]
+  },
+  "df_006_a": {
+    "id": "df_006_a",
+    "world": "dark_fantasy",
+    "speaker": "Linh",
+    "text": "Tôi thấy mình đứng giữa một cánh đồng hoa tàn héo... đếm những nhịp tim cuối cùng. Thật đáng sợ.",
+    "autoNext": "df_007"
+  },
+  "df_006_b": {
+    "id": "df_006_b",
+    "world": "dark_fantasy",
+    "speaker": "Linh",
+    "text": "Thật sao? Vậy là không chỉ mình tôi... Cảm ơn anh đã chia sẻ.",
+    "autoNext": "df_007"
+  },
+  "df_007": {
+    "id": "df_007",
+    "world": "dark_fantasy",
+    "sequence": 6,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Bạn đi ngang qua xưởng thợ rèn. Erik đánh rơi đồ nghề đúng chỗ đó, cùng một câu chửi thề như hôm qua.",
+    "choices": [
+      {
+        "text": "Chỉ ra cho Erik",
+        "icon": "💬",
+        "next": "df_007_a"
+      },
+      {
+        "text": "Im lặng quan sát",
+        "icon": "🔍",
+        "next": "df_007_b"
+      }
+    ],
+    "sets_flags": ["nhan_ra_khuon_mau_vong_lap_1"]
+  },
+  "df_007_a": {
+    "id": "df_007_a",
+    "world": "dark_fantasy",
+    "speaker": "Erik",
+    "text": "Anh nói gì cơ? Trùng hợp thôi mà... chắc vậy.",
+    "autoNext": "df_008"
+  },
+  "df_007_b": {
+    "id": "df_007_b",
+    "world": "dark_fantasy",
+    "speaker": null,
+    "text": "Bạn im lặng. Cảm giác lạnh lẽo chạy dọc sống lưng khi mọi thứ lặp lại chính xác.",
+    "autoNext": "df_008"
+  },
+  "df_008": {
+    "id": "df_008",
+    "world": "dark_fantasy",
+    "sequence": 7,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Ngày Thứ Ba. Cửa hàng Vael mở, nhưng ông không có ở đó. Đây là cơ hội để khám phá.",
+    "choices": [
+      {
+        "text": "Khám phá kệ sách bí mật (WIS >= 10)",
+        "requires": { "stats": { "wis": ">=10" } },
+        "next": "df_008_search"
+      },
+      {
+        "text": "Rời đi",
+        "next": "df_009"
+      }
+    ]
+  },
+  "df_008_search": {
+    "id": "df_008_search",
+    "world": "dark_fantasy",
+    "speaker": null,
+    "text": "Bạn tìm thấy những cuốn nhật ký ghi chép 300 năm lịch sử... tất cả đều lặp lại.",
+    "choices": [
+      {
+        "text": "Lấy một cuốn nhật ký",
+        "sets": { "flags": ["lay_nhat_ky_vael"] },
+        "addItem": "old_diary",
+        "next": "df_009"
+      },
+      {
+        "text": "Để lại tất cả",
+        "sets": { "flags": ["da_doc_nhat_ky_vael"] },
+        "next": "df_009"
+      }
+    ]
+  },
+  "df_009": {
+    "id": "df_009",
+    "world": "dark_fantasy",
+    "sequence": 8,
+    "background": "town_day",
+    "speaker": "Maren",
+    "speaker_color": "#ef4444",
+    "text": "Anh mới đến. Chỉ đi ngang qua, hay đang tìm kiếm thứ gì đó?",
+    "choices": [
+      {
+        "text": "Chỉ đi ngang qua",
+        "next": "df_009_a"
+      },
+      {
+        "text": "Có vấn đề gì không?",
+        "next": "df_009_b"
+      }
+    ],
+    "sets": { "affection": { "maren": 10 } }
+  },
+  "df_009_a": {
+    "id": "df_009_a",
+    "world": "dark_fantasy",
+    "speaker": "Maren",
+    "text": "Không ai thực sự 'đi ngang qua' Ashenveil cả. Hãy nhớ lấy.",
+    "autoNext": "df_010"
+  },
+  "df_009_b": {
+    "id": "df_009_b",
+    "world": "dark_fantasy",
+    "speaker": "Maren",
+    "text": "Chưa đâu. Nhưng Ashenveil không thích những kẻ đặt quá nhiều câu hỏi.",
+    "autoNext": "df_010"
+  },
+  "df_010": {
+    "id": "df_010",
+    "world": "dark_fantasy",
+    "sequence": 9,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Ngày Thứ Tư. Những vết nứt bắt đầu xuất hiện. Erik đánh rơi đồ nghề vào lúc khác. Linh cắm hoa theo kiểu mới.",
+    "internal_monologue": "Vòng lặp đang thay đổi. Hoặc ta đang làm xáo trộn nó.",
+    "sets_flags": ["nhan_thay_bat_on_vong_lap"],
+    "autoNext": "df_011"
+  },
+  "df_011": {
+    "id": "df_011",
+    "world": "dark_fantasy",
+    "sequence": 10,
+    "background": "town_day",
+    "speaker": "Vael",
+    "text": "Anh cảm nhận được nó rồi, phải không? Sự lặp lại vô tận này.",
+    "choices": [
+      {
+        "text": "Ai tạo ra nó?",
+        "next": "df_011_a"
+      },
+      {
+        "text": "Làm sao phá vỡ nó?",
+        "next": "df_011_b"
+      }
+    ]
+  },
+  "df_011_a": {
+    "id": "df_011_a",
+    "world": "dark_fantasy",
+    "speaker": "Vael",
+    "text": "Có lẽ là ai đó với ý định tốt. Nhưng ý định tốt thường dẫn đến những ngục tù hoàn hảo nhất.",
+    "autoNext": "df_012"
+  },
+  "df_011_b": {
+    "id": "df_011_b",
+    "world": "dark_fantasy",
+    "speaker": "Vael",
+    "text": "Phá vỡ nó? Anh đang giả định rằng thế giới bên ngoài kia tốt đẹp hơn nơi này.",
+    "autoNext": "df_012"
+  },
+  "df_012": {
+    "id": "df_012",
+    "world": "dark_fantasy",
+    "sequence": 11,
+    "background": "town_day",
+    "speaker": "Vael",
+    "text": "Chào mừng đến với Hồi 2 của tấn thảm kịch này. Hãy cẩn thận với những gì anh tìm thấy.",
+    "sets_flags": ["lop_1_hoan_thanh", "biet_vong_lap_ton_tai"],
+    "autoNext": "df_013"
+  },
+  "df_013": {
+    "id": "df_013",
+    "world": "dark_fantasy",
+    "sequence": 12,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Ngày Thứ Năm. Bạn thấy Linh đang đếm bước chân. 4.219 bước từ quầy hoa đến giếng.",
+    "choices": [
+      {
+        "text": "Đếm cùng cô",
+        "sets": { "affection": { "linh": 20 } },
+        "next": "df_013_a"
+      },
+      {
+        "text": "Kể cho cô về vòng lặp",
+        "requires": { "affection": { "linh": ">=30" } },
+        "next": "df_013_b"
+      }
+    ]
+  },
+  "df_013_a": {
+    "id": "df_013_a",
+    "world": "dark_fantasy",
+    "speaker": "Linh",
+    "text": "4.219... Cảm ơn anh. Việc có ai đó đếm cùng khiến gánh nặng này nhẹ nhàng hơn một chút.",
+    "autoNext": "df_014"
+  },
+  "df_013_b": {
+    "id": "df_013_b",
+    "world": "dark_fantasy",
+    "speaker": "Linh",
+    "text": "Tôi... tôi đã nghi ngờ từ lâu. Những giấc mơ đó, chúng quá thật để chỉ là mơ.",
+    "autoNext": "df_014"
+  },
+  "df_014": {
+    "id": "df_014",
+    "world": "dark_fantasy",
+    "sequence": 13,
+    "background": "town_day",
+    "speaker": "Maren",
+    "text": "Nữ Hoàng Seraphine yêu cầu được diện kiến anh. Đây không phải là một lời mời.",
+    "autoNext": "df_015"
+  },
+  "df_015": {
+    "id": "df_015",
+    "world": "dark_fantasy",
+    "sequence": 14,
+    "background": "garden",
+    "speaker": "Seraphine",
+    "speaker_color": "#e2c97e",
+    "text": "Ta thích những nơi phát triển. Dù phát triển theo cùng một cách mỗi lần. Anh đến từ đâu, lữ khách?",
+    "choices": [
+      {
+        "text": "Nó đã mất rồi",
+        "next": "df_015_a"
+      },
+      {
+        "text": "Tôi không nhớ nó",
+        "next": "df_015_b"
+      }
+    ],
+    "sets": { "affection": { "seraphine": 10 }, "flags": ["gap_nu_hoang"] }
+  },
+  "df_015_a": {
+    "id": "df_015_a",
+    "world": "dark_fantasy",
+    "speaker": "Seraphine",
+    "text": "Ta hiểu cảm giác đó. Mất mát là thứ duy nhất thực sự tồn tại ở đây.",
+    "autoNext": "df_016"
+  },
+  "df_015_b": {
+    "id": "df_015_b",
+    "world": "dark_fantasy",
+    "speaker": "Seraphine",
+    "text": "Quên lãng đôi khi là một phước lành. Nhưng ở Ashenveil, quên lãng là một lời nguyền lặp lại.",
+    "autoNext": "df_016"
+  },
+  "df_016": {
+    "id": "df_016",
+    "world": "dark_fantasy",
+    "sequence": 15,
+    "background": "palace",
+    "speaker": "Maren",
+    "text": "Đêm Ngày Thứ Năm. Bạn tìm thấy Maren đang mài kiếm một mình. 'Anh đã làm điều đó bao nhiêu lần rồi?' Bạn hỏi. Cô dừng lại. 'Anh cũng thấy nó, phải không?'",
+    "choices": [
+      {
+        "text": "Sao cô không dừng nó lại?",
+        "next": "df_016_a"
+      },
+      {
+        "text": "Điều gì xảy ra vào Ngày 7?",
+        "next": "df_016_b"
+      }
+    ],
+    "sets": { "flags": ["maren_biet_su_that"], "affection": { "maren": 25 } }
+  },
+  "df_016_a": {
+    "id": "df_016_a",
+    "world": "dark_fantasy",
+    "speaker": "Maren",
+    "text": "Nữ hoàng yêu cầu tôi không làm vậy. Và tôi... tôi không biết mình sẽ là ai nếu không có nhiệm vụ này.",
+    "autoNext": "df_017_branch"
+  },
+  "df_016_b": {
+    "id": "df_016_b",
+    "world": "dark_fantasy",
+    "speaker": "Maren",
+    "text": "Không có gì anh cần phải nhìn thấy cả. Hãy tin tôi, lữ khách. Cứ để nó lặp lại như mọi khi.",
+    "autoNext": "df_017_branch"
+  },
+  "df_017_branch": {
+    "id": "df_017_branch",
+    "world": "dark_fantasy",
+    "sequence": 16,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Ngày Thứ Sáu. Thời gian đang cạn dần. Bạn cần chọn hướng đi để tìm kiếm sự thật.",
+    "choices": [
+      {
+        "text": "Theo Linh (Affection Linh >= 30)",
+        "requires": { "affection": { "linh": ">=30" } },
+        "next": "df_017a"
+      },
+      {
+        "text": "Điều tra cùng Vael (Biết vòng lặp)",
+        "requires": { "flags": ["biet_vong_loop_ton_tai"] },
+        "next": "df_017b"
+      },
+      {
+        "text": "Áp lực Maren (STR >= 12)",
+        "requires": { "stats": { "str": ">=12" } },
+        "next": "df_017c"
+      }
+    ]
+  },
+  "df_017a": {
+    "id": "df_017a",
+    "world": "dark_fantasy",
+    "background": "house_interior",
+    "speaker": "Linh",
+    "text": "Linh đưa bạn về nhà và cho bạn xem một cuốn nhật ký mơ cũ kỹ. 'Tôi nghĩ... tôi đã viết cái này rất lâu rồi.'",
+    "sets_flags": ["tim_thay_nhat_ky_linh", "lop_2_tuyen_affection"],
+    "autoNext": "df_031"
+  },
+  "df_017b": {
+    "id": "df_017b",
+    "world": "dark_fantasy",
+    "background": "archive",
+    "speaker": "Vael",
+    "text": "Vael đưa bạn đến phòng lưu trữ bị niêm phong. 'Họ chết. Mỗi chu kỳ. Cùng người. Cùng cách. Và rồi họ thức dậy và không nhớ gì.'",
+    "sets_flags": ["tim_thay_ho_so_tu_vong", "lop_2_tuyen_dieu_tra"],
+    "autoNext": "df_031"
+  },
+  "df_017c": {
+    "id": "df_017c",
+    "world": "dark_fantasy",
+    "background": "void",
+    "speaker": "Maren",
+    "text": "Maren đưa bạn đến một mộ tập thể không tên phía sau hoàng cung. 'Ngày 7. Tất cả đều chết. Trận chiến của nữ hoàng. Bà đã cố gắng hoàn tác nó kể từ đó.'",
+    "sets_flags": ["tim_thay_mo_tap_the", "lop_2_tuyen_maren"],
+    "autoNext": "df_031"
+  },
+  "df_031": {
+    "id": "df_031",
+    "world": "dark_fantasy",
+    "sequence": 17,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Bây giờ bạn đã biết sự thật đau lòng: Thế giới này che giấu cái chết tập thể. Nhưng ai thực sự điều hành nó?",
+    "autoNext": "df_032"
+  },
+  "df_032": {
+    "id": "df_032",
+    "world": "dark_fantasy",
+    "sequence": 18,
+    "background": "palace",
+    "speaker": "Seraphine",
+    "text": "Cuộc gặp thứ hai với Seraphine. Bà xác nhận: người dân thực sự chết vào Ngày 7. Nhưng bà không ngăn nó. 'Hỏi ta lại khi anh hiểu mình sẵn sàng mất đi điều gì.'",
+    "choices": [
+      {
+        "text": "Ép bà",
+        "sets": { "affection": { "seraphine": -10 } },
+        "next": "df_033"
+      },
+      {
+        "text": "Chấp nhận câu trả lời",
+        "sets": { "affection": { "seraphine": 10 } },
+        "next": "df_033"
+      },
+      {
+        "text": "Ta cũng đã mất thứ gì đó",
+        "sets": { "affection": { "seraphine": 20 }, "flags": ["nu_hoang_ha_phong"] },
+        "next": "df_033"
+      }
+    ]
+  },
+  "df_033": {
+    "id": "df_033",
+    "world": "dark_fantasy",
+    "background": "town_night",
+    "speaker": "Linh",
+    "text": "Đêm khuya. Linh tìm gặp bạn với cuốn nhật ký. 'Tôi nghĩ... anh đã ở đây trước đây. Một vài mục trong này không phải do tôi viết.'",
+    "requires": { "affection": { "linh": ">=50" } },
+    "sets_flags": ["bi_an_nhat_ky_linh"],
+    "autoNext": "df_034"
+  },
+  "df_034": {
+    "id": "df_034",
+    "world": "dark_fantasy",
+    "background": "palace",
+    "speaker": "Maren",
+    "text": "Maren thú nhận cô đã chết vào Ngày 7 nhiều lần. 'Có nơi nào khác ngoài cái này không?' Cô hỏi với ánh mắt đầy hy vọng.",
+    "requires": { "affection": { "maren": ">=40" } },
+    "choices": [
+      {
+        "text": "Có những thế giới khác",
+        "sets": { "flags": ["maren_muon_roi_di"] },
+        "next": "df_035"
+      },
+      {
+        "text": "Ta không biết",
+        "sets": { "affection": { "maren": 5 } },
+        "next": "df_035"
+      }
+    ]
+  },
+  "df_035": {
+    "id": "df_035",
+    "world": "dark_fantasy",
+    "background": "garden",
+    "speaker": "Seraphine",
+    "text": "Bạn thấy Nữ Hoàng Seraphine đang tự tay nhổ cỏ trong vườn. 'Ở vòng đầu tiên ta có người làm vườn. Đến vòng thứ một trăm ta ngừng gọi họ.'",
+    "requires": { "flags": ["nu_hoang_ha_phong"] },
+    "choices": [
+      {
+        "text": "Bà không thể hoàn tác nó",
+        "sets": { "affection": { "seraphine": 15 }, "flags": ["noi_su_that_voi_nu_hoang"] },
+        "next": "df_036"
+      },
+      {
+        "text": "Chỉ giúp bà nhổ cỏ",
+        "sets": { "affection": { "seraphine": 20 }, "flags": ["im_lang_dong_hanh"] },
+        "next": "df_036"
+      }
+    ]
+  },
+  "df_036": {
+    "id": "df_036",
+    "world": "dark_fantasy",
+    "sequence": 19,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Ngày Thứ Sáu Đêm. Vòng lặp đang mất ổn định. Bà lão đếm biến mất, để lại một hình tròn kỳ lạ trên bức tường.",
+    "sets_flags": ["dau_hieu_vong_lap_vo"],
+    "autoNext": "df_037"
+  },
+  "df_037": {
+    "id": "df_037",
+    "world": "dark_fantasy",
+    "background": "town_day",
+    "speaker": "Vael",
+    "text": "Vael thú nhận sự thật kinh hoàng: Ông chính là nguồn gốc của dịch bệnh. Nữ hoàng đã lặp lại thế giới để giữ ông còn sống và phong ấn mầm mống đó.",
+    "sets_flags": ["lop_3_hoan_thanh", "vael_la_nguon_benh"],
+    "autoNext": "df_040"
+  },
+  "df_040": {
+    "id": "df_040",
+    "world": "dark_fantasy",
+    "sequence": 20,
+    "background": "town_night",
+    "speaker": "Linh",
+    "text": "Hoàng hôn Ngày 6. Linh ngồi bên bạn. 'Tôi đã đếm 50 năm rồi. Bây giờ tôi chỉ thấy mệt.' Cô nhìn về phía Ngày Thứ Bảy sắp đến.",
+    "requires": { "affection": { "linh": ">=65" } },
+    "sets_flags": ["o_lai_ben_linh"],
+    "autoNext": "df_042"
+  },
+  "df_042": {
+    "id": "df_042",
+    "world": "dark_fantasy",
+    "sequence": 21,
+    "background": "town_night",
+    "speaker": null,
+    "text": "Đêm trước Ngày Thứ Bảy. Mọi thứ im lặng đến đáng sợ. Câu hỏi không phải là bạn có thể phá vỡ vòng lặp, mà là bạn có NÊN phá vỡ nó không.",
+    "autoNext": "df_043"
+  },
+  "df_043": {
+    "id": "df_043",
+    "world": "dark_fantasy",
+    "sequence": 22,
+    "background": "town_day",
+    "speaker": null,
+    "text": "Bình minh Ngày Thứ Bảy. Mọi người thức dậy chậm chạp, như thể gánh nặng của 300 năm đang đè nặng lên vai họ. Bạn chỉ còn vài giờ trước hoàng hôn.",
+    "choices": [
+      {
+        "text": "Đến gặp Linh",
+        "next": "df_044a"
+      },
+      {
+        "text": "Đến gặp Vael",
+        "next": "df_044b"
+      },
+      {
+        "text": "Đến gặp Maren",
+        "next": "df_044c"
+      },
+      {
+        "text": "Đến Hoàng Cung",
+        "next": "df_044d"
+      }
+    ]
+  },
+  "df_044a": {
+    "id": "df_044a",
+    "world": "dark_fantasy",
+    "speaker": "Linh",
+    "text": "Linh ngồi lặng lẽ bên những bông hoa. 'Tôi muốn nhớ lần này. Cụ thể. Tôi muốn nhớ anh.'",
+    "sets_flags": ["linh_tu_quyet_dinh"],
+    "autoNext": "df_055"
+  },
+  "df_044b": {
+    "id": "df_044b",
+    "world": "dark_fantasy",
+    "speaker": "Vael",
+    "text": "Vael đã sẵn sàng hi sinh. 'Không có kết cục nào không có cái giá, lữ khách.'",
+    "sets_flags": ["dong_y_vael_hy_sinh"],
+    "autoNext": "df_055"
+  },
+  "df_044c": {
+    "id": "df_044c",
+    "world": "dark_fantasy",
+    "speaker": "Maren",
+    "text": "Maren không còn mài kiếm. 'Tôi muốn thoát khỏi đây. Nhưng tôi không thể bỏ lại họ.'",
+    "sets_flags": ["maren_o_lai_vi_ho"],
+    "autoNext": "df_055"
+  },
+  "df_044d": {
+    "id": "df_044d",
+    "world": "dark_fantasy",
+    "speaker": "Seraphine",
+    "text": "Seraphine đề xuất xóa ký ức của tất cả mọi người để bắt đầu lại thật sự. Một sự rũ bỏ đau thương nhưng tàn nhẫn.",
+    "sets_flags": ["chap_thuan_quen_lua_chon"],
+    "autoNext": "df_055"
+  },
+  "df_055": {
+    "id": "df_055",
+    "world": "dark_fantasy",
+    "sequence": 23,
+    "background": "town_night",
+    "speaker": null,
+    "text": "Hoàng hôn đã đến. Bầu trời rực đỏ như máu. Lựa chọn cuối cùng của bạn sẽ định đoạt số phận của Ashenveil.",
+    "choices": [
+      {
+        "text": "Phong ấn Vael (Cần Vật Phẩm Thế Giới Khác)",
+        "requires": { "flags": ["tim_thay_giai_phap_vael"] },
+        "next": "df_056_good"
+      },
+      {
+        "text": "Để Linh quyết định (Affection >= 80)",
+        "requires": { "affection": { "linh": ">=80" } },
+        "next": "df_056_bittersweet"
+      },
+      {
+        "text": "Tự mình hi sinh (-20 Max HP)",
+        "sets": { "stats": { "max_hp": "-20" }, "traits": ["Vet Seo Vong Lap"] },
+        "next": "df_056_sacrifice"
+      },
+      {
+        "text": "Không làm gì (Vòng lặp tiếp tục)",
+        "next": "df_056_loop"
+      }
+    ]
+  },
+  "df_056_good": {
+    "id": "df_056_good",
+    "world": "dark_fantasy",
+    "background": "town_day",
+    "text": "Bình minh của ngày thật đầu tiên sau 300 năm. Vael được phong ấn, dịch bệnh đã lùi xa. Mọi người thức dậy trong một thế giới mới.",
+    "ending_id": "dark_fantasy_true_ending",
+    "sets_flags": ["hoan_thanh_dark_fantasy_ket_tot"]
+  },
+  "df_056_bittersweet": {
+    "id": "df_056_bittersweet",
+    "world": "dark_fantasy",
+    "background": "town_day",
+    "text": "Linh đã chọn hi sinh ký ức của mình để cứu thị trấn. Cô nhìn bạn như một người lạ, nhưng thế giới đã được tự do.",
+    "ending_id": "dark_fantasy_bittersweet_ending",
+    "sets_flags": ["hoan_thanh_dark_fantasy_ket_bi"]
+  },
+  "df_056_sacrifice": {
+    "id": "df_056_sacrifice",
+    "world": "dark_fantasy",
+    "background": "void",
+    "text": "Bạn dùng chính linh hồn mình để ổn định thực tại. Vòng lặp vỡ tan, nhưng bạn mang trên mình một vết sẹo vĩnh viễn.",
+    "ending_id": "dark_fantasy_sacrifice_ending",
+    "sets_flags": ["hoan_thanh_dark_fantasy"]
+  },
+  "df_056_loop": {
+    "id": "df_056_loop",
+    "world": "dark_fantasy",
+    "background": "town_day",
+    "text": "Bình minh Ngày 1. Mọi thứ lặp lại như cũ. Vael nhìn bạn với ánh mắt u sầu. 'Hẹn gặp lại ở vòng tiếp theo.'",
+    "ending_id": "dark_fantasy_loop_ending",
+    "sets_flags": ["chung_kien_vong_lap_tiep_tuc"]
+  }
+}

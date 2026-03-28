@@ -1,0 +1,1414 @@
+[
+  {
+    "id": "ce_merchant",
+    "name": "Thương Nhân Bí Ẩn",
+    "weight": 20,
+    "min_age": 2,
+    "max_occurrences": null,
+    "cooldown_scenes": 15,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Một người đàn ông trùm kín mặt mũi ngồi bên đống lửa nhỏ. Hắn bày ra vài món đồ kỳ lạ trên một tấm vải sờn cũ. 'Kẻ lang thang, có muốn xem qua chút hàng hóa không?'",
+    "worldVariants": {
+      "fantasy": { "text": "Một thương nhân trùm kín mặt ngồi bên đống lửa. Hắn bày ra vài món đồ kỳ lạ. 'Kẻ lang thang, có muốn xem qua chút hàng hóa không?'" },
+      "scifi": { "text": "Một gã buôn công nghệ kích hoạt màn hình hologram. 'Hàng hiếm đây. Chip, linh kiện, vũ khí năng lượng. Giá hữu nghị.'" },
+      "eastern": { "text": "Một lão nhân quẩy gánh hàng bước tới. 'Thí chủ, lão có vài bảo bối quý giá từ các vùng đất xa xôi.'" },
+      "dark_fantasy": { "text": "Một bóng đen thì thầm từ trong ngõ tối. 'Muốn hàng cấm không? Sức mạnh luôn có giá...'" },
+      "postapoc": { "text": "Một gã đeo mặt nạ phòng độc vẫy tay từ chiếc xe tải rỉ sét. 'Đồ tốt đây, đổi chác không?'" }
+    },
+    "merchantConfig": {
+      "pricingFormula": "basePrice * (1 - min(CHA * 0.01, 0.20)) * repModifier",
+      "repModifiers": { "high": 0.80, "medium": 0.90, "negative": 1.30, "default": 1.00 },
+      "inventorySource": "equipment_catalog + accessories filtered by world and tier <= player level"
+    },
+    "choices": [
+      {
+        "text": "Xem hàng hóa (Cần 50 Vàng)",
+        "requires": { "stats": { "gold": ">=50" } },
+        "next": "ce_merchant_buy"
+      },
+      {
+        "text": "Hỏi về tin tức xung quanh",
+        "next": "ce_merchant_rumor"
+      },
+      {
+        "text": "Cướp hàng hóa",
+        "next": "ce_merchant_combat"
+      },
+      {
+        "text": "Rời đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_buy",
+    "text": "Bạn trả 50 Vàng. Hắn đưa cho bạn một món vũ khí ngẫu nhiên.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-50" }, "generateWeapon": true, "flags": ["traded_with_mysterious_merchant"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_rumor",
+    "text": "Hắn cười khùng khục: 'Nơi này không an toàn đâu. Cẩn thận những cái bóng.' Hắn biến mất vào màn sương.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+1" }, "flags": ["heard_merchant_rumor"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_combat",
+    "text": "Bạn rút vũ khí ra. Hắn gầm lên và lao vào bạn!",
+    "battle": {
+      "monsterId": "mysterious_merchant",
+      "winScene": "ce_merchant_win",
+      "loseScene": "ce_merchant_lose"
+    }
+  },
+  {
+    "id": "ce_merchant_win",
+    "text": "Thương nhân gục ngã. Bạn lục lọi đồ đạc của hắn và tìm thấy một số vàng cùng một món đồ.",
+    "choices": [
+      {
+        "text": "Lấy chiến lợi phẩm",
+        "sets": { "stats": { "gold": "+100" }, "generateWeapon": true },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_merchant_lose",
+    "text": "Thương nhân đánh gục bạn, cướp đi một nửa số vàng của bạn rồi bỏ đi.",
+    "choices": [
+      {
+        "text": "Đứng dậy",
+        "sets": { "stats": { "gold": "-50", "hp": "-10" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger",
+    "name": "Người Lạ Bị Thương",
+    "weight": 25,
+    "min_age": 3,
+    "max_occurrences": 1,
+    "cooldown_scenes": 0,
+    "repeatable": false,
+    "priority": "unique",
+    "text": "Bạn thấy một người đang nằm gục bên đường, máu chảy rỉ rả từ vết thương sâu trên ngực. Họ thều thào xin giúp đỡ.",
+    "choices": [
+      {
+        "text": "Dùng thuốc chữa trị (Mất 20 MP)",
+        "requires": { "stats": { "mp": ">=20" } },
+        "next": "ce_injured_stranger_heal"
+      },
+      {
+        "text": "Lục lọi đồ đạc của họ",
+        "next": "ce_injured_stranger_rob"
+      },
+      {
+        "text": "Hỏi xem chuyện gì đã xảy ra",
+        "next": "ce_injured_stranger_ask"
+      },
+      {
+        "text": "Bỏ đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger_heal",
+    "text": "Bạn dùng phép thuật chữa lành vết thương cho họ. Người lạ tỉnh lại và cảm ơn bạn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "mp": "-20", "cha": "+2" }, "flags": ["helped_injured_stranger"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger_rob",
+    "text": "Bạn lấy đi túi tiền của họ. Họ nhìn bạn với ánh mắt căm phẫn trước khi lịm đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+30", "cha": "-5" }, "flags": ["robbed_injured_stranger"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_injured_stranger_ask",
+    "text": "Họ thều thào: 'Quái vật... chúng ở khắp nơi...' rồi lịm đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_abandoned_chest",
+    "name": "Rương Bị Bỏ Lại",
+    "weight": 30,
+    "min_age": 1,
+    "max_occurrences": null,
+    "cooldown_scenes": 8,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Một chiếc rương gỗ cũ kỹ nằm giữa bụi rậm. Nó có vẻ đã ở đây rất lâu.",
+    "choices": [
+      {
+        "text": "Mở rương cẩn thận",
+        "next": "ce_abandoned_chest_open"
+      },
+      {
+        "text": "Dùng sức phá khóa",
+        "next": "ce_abandoned_chest_smash"
+      },
+      {
+        "text": "Bỏ qua",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_abandoned_chest_open",
+    "text": "Bạn mở rương một cách khéo léo. Bên trong là một ít vàng và một món đồ.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+20" }, "generateWeapon": true },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_abandoned_chest_smash",
+    "text": "Bạn phá nát chiếc rương. Một cái bẫy kích hoạt khiến bạn bị thương, nhưng bạn vẫn lấy được một ít vàng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "-15", "gold": "+15" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_dream",
+    "name": "Giấc Mơ Kỳ Lạ",
+    "weight": 15,
+    "min_age": 5,
+    "max_occurrences": null,
+    "cooldown_scenes": 20,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Khi đang nghỉ ngơi, bạn chìm vào một giấc mơ kỳ lạ. Bạn thấy mình đang đứng trước một cánh cổng khổng lồ.",
+    "choices": [
+      {
+        "text": "Bước vào cánh cổng",
+        "next": "ce_strange_dream_enter"
+      },
+      {
+        "text": "Quay lưng bỏ đi",
+        "next": "ce_strange_dream_leave"
+      },
+      {
+        "text": "Cố gắng tỉnh dậy",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_dream_enter",
+    "text": "Bạn cảm thấy một nguồn năng lượng tràn vào cơ thể. Khi tỉnh dậy, bạn thấy mình mạnh mẽ hơn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+2", "mp": "+10" }, "flags": ["dreamt_of_gate"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_dream_leave",
+    "text": "Bạn cảm thấy một nỗi buồn man mác. Khi tỉnh dậy, tâm trí bạn trở nên thanh thản hơn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "res": "+2" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly",
+    "name": "Hiện Tượng Thời Tiết Bất Thường",
+    "weight": 20,
+    "min_age": 4,
+    "max_occurrences": null,
+    "cooldown_scenes": 12,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Bầu trời bỗng nhiên chuyển sang màu tím kỳ lạ. Những tia sét đen ngòm đánh xuống mặt đất, chặn đứng lối đi của bạn.",
+    "choices": [
+      {
+        "text": "Cố gắng băng qua (Cần 15 AGI)",
+        "requires": { "stats": { "agi": ">=15" } },
+        "next": "ce_weather_anomaly_dash"
+      },
+      {
+        "text": "Tìm đường vòng",
+        "next": "ce_weather_anomaly_detour"
+      },
+      {
+        "text": "Đợi hiện tượng này đi qua",
+        "next": "ce_weather_anomaly_wait"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly_dash",
+    "text": "Bạn nhanh nhẹn né tránh những tia sét và băng qua một cách an toàn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "xp": "+50" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly_detour",
+    "text": "Bạn mất nhiều thời gian hơn để đi vòng qua, nhưng bạn tìm thấy một loại thảo mộc quý hiếm.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+20" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_weather_anomaly_wait",
+    "text": "Bạn ngồi đợi cho đến khi bầu trời trở lại bình thường. Bạn cảm thấy mệt mỏi vì chờ đợi lâu.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "-5" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_old_letter",
+    "name": "Lá Thư Cũ",
+    "weight": 10,
+    "min_age": 2,
+    "text": "Bạn nhặt được một lá thư đã ố vàng, mực đã phai mờ theo thời gian.",
+    "choices": [
+      {
+        "text": "Cố gắng đọc nội dung",
+        "next": "ce_old_letter_read"
+      },
+      {
+        "text": "Giữ lại lá thư",
+        "next": "ce_old_letter_keep"
+      },
+      {
+        "text": "Vứt đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_old_letter_read",
+    "text": "Lá thư kể về một kho báu bị chôn giấu ở một thế giới xa xôi. Bạn cảm thấy tò mò.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+2" }, "flags": ["read_old_letter"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_old_letter_keep",
+    "text": "Bạn cất lá thư vào túi. Có lẽ nó sẽ có ích sau này.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "flags": ["has_old_letter"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler",
+    "name": "Người Bạn Đồng Hành",
+    "weight": 12,
+    "min_age": 6,
+    "text": "Một kẻ lữ hành khác tiến lại gần bạn. 'Này, đi một mình nguy hiểm lắm. Chúng ta đi cùng nhau chứ?'",
+    "choices": [
+      {
+        "text": "Đồng ý đi cùng",
+        "next": "ce_fellow_traveler_accept"
+      },
+      {
+        "text": "Từ chối lịch sự",
+        "next": "ce_fellow_traveler_decline"
+      },
+      {
+        "text": "Cảnh giác và xua đuổi",
+        "next": "ce_fellow_traveler_threaten"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler_accept",
+    "text": "Hai người cùng đi một đoạn đường. Họ chia sẻ cho bạn một ít lương thực trước khi rẽ sang hướng khác.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+30", "cha": "+2" }, "flags": ["met_traveler"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler_decline",
+    "text": "Họ gật đầu hiểu ý và bước đi. Bạn cảm thấy an tâm hơn khi đi một mình.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "res": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_fellow_traveler_threaten",
+    "text": "Họ sợ hãi bỏ chạy. Bạn cảm thấy mình hơi quá đáng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "cha": "-2" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_ambush",
+    "name": "Bọn Cướp Phục Kích",
+    "weight": 18,
+    "min_age": 3,
+    "max_occurrences": null,
+    "cooldown_scenes": 10,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Một nhóm cướp nhảy ra từ bụi rậm, vũ khí lăm lăm trên tay. 'Giao hết vàng ra đây!'",
+    "worldVariants": {
+      "fantasy": { "text": "Một nhóm cướp nhảy ra từ bụi rậm, vũ khí lăm lăm. 'Giao hết vàng ra đây!'" },
+      "scifi": { "text": "Một nhóm cướp biển không gian bao vây bạn, súng laser chĩa thẳng. 'Đưa hết đồ công nghệ ra!'" },
+      "eastern": { "text": "Ba samurai lưu vong rút kiếm chặn đường. 'Để lại vàng rồi đi. Không cần phải đổ máu.'" },
+      "dark_fantasy": { "text": "Những bóng ma hiện ra từ sương mù, tiếng cười ghê rợn vang vọng. 'Linh hồn ngươi... sẽ là của ta.'" },
+      "postapoc": { "text": "Một nhóm raiders bước ra từ đống đổ nát, vũ khí tự chế lăm lăm. 'Muốn sống thì đưa đồ ra đây!'" }
+    },
+    "choices": [
+      {
+        "text": "Chiến đấu",
+        "next": "ce_bandit_combat"
+      },
+      {
+        "text": "Giao nộp vàng (Mất 50 Vàng)",
+        "requires": { "stats": { "gold": ">=50" } },
+        "next": "ce_bandit_pay"
+      },
+      {
+        "text": "Cố gắng bỏ chạy (Cần 18 AGI)",
+        "requires": { "stats": { "agi": ">=18" } },
+        "next": "ce_bandit_escape"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_combat",
+    "text": "Bạn sẵn sàng chiến đấu!",
+    "battle": {
+      "monsterId": "bandit_group",
+      "winScene": "ce_bandit_win",
+      "loseScene": "ce_bandit_lose"
+    }
+  },
+  {
+    "id": "ce_bandit_win",
+    "text": "Bạn đánh bại bọn cướp và lấy được vàng của chúng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+60", "xp": "+100" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_lose",
+    "text": "Bọn cướp đánh gục bạn và lấy đi toàn bộ số vàng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-100", "hp": "-20" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_pay",
+    "text": "Bạn giao nộp vàng. Bọn cướp cười nhạo và để bạn đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-50" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_bandit_escape",
+    "text": "Bạn nhanh chân chạy thoát khỏi bọn cướp.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "xp": "+30" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_discovery",
+    "name": "Đền Thờ Bị Lãng Quên",
+    "weight": 10,
+    "min_age": 8,
+    "max_occurrences": 1,
+    "cooldown_scenes": 0,
+    "repeatable": false,
+    "priority": "unique",
+    "text": "Bạn tìm thấy một ngôi đền nhỏ nằm sâu trong rừng. Một bức tượng đá cổ xưa tỏa ra ánh sáng dịu nhẹ.",
+    "choices": [
+      {
+        "text": "Cầu nguyện",
+        "next": "ce_shrine_pray"
+      },
+      {
+        "text": "Dâng hiến vật phẩm (Mất 100 Vàng)",
+        "requires": { "stats": { "gold": ">=100" } },
+        "next": "ce_shrine_offer"
+      },
+      {
+        "text": "Tìm kiếm xung quanh",
+        "next": "ce_shrine_search"
+      },
+      {
+        "text": "Rời đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_pray",
+    "text": "Bạn cảm thấy tâm hồn mình được thanh tịnh. Các vết thương nhẹ được chữa lành.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+50", "mp": "+20" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_offer",
+    "text": "Bức tượng tỏa sáng rực rỡ. Bạn nhận được một phước lành thần thánh.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-100", "lck": "+5" }, "flags": ["blessed_by_shrine"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_shrine_search",
+    "text": "Bạn tìm thấy một mảnh ký ức cũ nằm dưới chân bức tượng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "memoryFragments": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_lost_child",
+    "name": "Đứa Trẻ Đi Lạc",
+    "weight": 8,
+    "min_age": 10,
+    "text": "Một đứa bé đang ngồi khóc nức nở bên vệ đường. Nó có vẻ đã bị lạc khỏi gia đình.",
+    "choices": [
+      {
+        "text": "Giúp đứa bé tìm đường về nhà",
+        "next": "ce_lost_child_help"
+      },
+      {
+        "text": "Cho đứa bé một ít thức ăn",
+        "next": "ce_lost_child_food"
+      },
+      {
+        "text": "Bỏ đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_lost_child_help",
+    "text": "Bạn mất nhiều thời gian nhưng cuối cùng cũng đưa được đứa bé về với gia đình. Cha mẹ nó vô cùng biết ơn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "cha": "+5", "xp": "+150" }, "flags": ["helped_lost_child"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_lost_child_food",
+    "text": "Đứa bé nín khóc và cảm ơn bạn. Nó đưa cho bạn một chiếc vòng tay nhỏ.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "hp": "+10", "cha": "+2" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_wanted_poster",
+    "name": "Lệnh Truy Nã Quen Thuộc",
+    "weight": 7,
+    "min_age": 12,
+    "text": "Bạn thấy một tờ lệnh truy nã dán trên thân cây. Hình vẽ trên đó trông rất giống một người bạn đã từng gặp.",
+    "choices": [
+      {
+        "text": "Gỡ tờ lệnh xuống và nghiên cứu",
+        "next": "ce_wanted_poster_study"
+      },
+      {
+        "text": "Hỏi người dân xung quanh",
+        "next": "ce_wanted_poster_ask"
+      },
+      {
+        "text": "Bỏ qua",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_wanted_poster_study",
+    "text": "Bạn nhận ra đây là một âm mưu đổ tội cho người vô tội. Bạn cảm thấy phẫn nộ.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+3" }, "flags": ["knows_about_conspiracy"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_wanted_poster_ask",
+    "text": "Người dân sợ hãi không dám trả lời. Bạn cảm thấy có điều gì đó mờ ám.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "res": "+1" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_black_market",
+    "name": "Đại Lý Chợ Đen",
+    "weight": 6,
+    "min_age": 15,
+    "text": "Một kẻ khả nghi tiếp cận bạn và thì thầm: 'Muốn hàng xịn không? Chỉ dành cho khách quen thôi.'",
+    "choices": [
+      {
+        "text": "Xem hàng cấm (Cần 200 Vàng)",
+        "requires": { "stats": { "gold": ">=200" } },
+        "next": "ce_black_market_buy"
+      },
+      {
+        "text": "Tố cáo hắn với lính gác",
+        "next": "ce_black_market_report"
+      },
+      {
+        "text": "Từ chối",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_black_market_buy",
+    "text": "Bạn mua được một món vũ khí cực kỳ mạnh mẽ nhưng có vẻ nó bị nguyền rủa.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "-200" }, "generateWeapon": true, "flags": ["bought_black_market"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_black_market_report",
+    "text": "Lính gác bắt giữ hắn và thưởng cho bạn một ít vàng.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "gold": "+50", "cha": "+3" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_cursed_item",
+    "name": "Vật Phẩm Bị Nguyền Rủa",
+    "weight": 9,
+    "min_age": 7,
+    "text": "Bạn thấy một chiếc nhẫn đen tuyền tỏa ra luồng khí lạnh lẽo nằm trên mặt đất.",
+    "choices": [
+      {
+        "text": "Nhặt lên và đeo thử",
+        "next": "ce_cursed_item_wear"
+      },
+      {
+        "text": "Dùng phép thuật thanh tẩy",
+        "requires": { "stats": { "int": ">=20" } },
+        "next": "ce_cursed_item_purify"
+      },
+      {
+        "text": "Tránh xa nó",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_cursed_item_wear",
+    "text": "Chiếc nhẫn thắt chặt vào ngón tay bạn. Bạn cảm thấy mạnh mẽ hơn nhưng cơ thể đau đớn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "str": "+10", "maxHp": "-20" }, "flags": ["cursed_by_ring"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_cursed_item_purify",
+    "text": "Bạn thanh tẩy được lời nguyền và nhận được một viên ngọc quý.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+5", "gold": "+100" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_portal",
+    "name": "Cổng Không Gian Kỳ Lạ",
+    "weight": 5,
+    "min_age": 20,
+    "text": "Một vết nứt không gian đang nhấp nháy liên tục trước mặt bạn. Nó dường như dẫn đến một nơi không xác định.",
+    "choices": [
+      {
+        "text": "Bước vào cổng",
+        "next": "ce_strange_portal_enter"
+      },
+      {
+        "text": "Nghiên cứu cấu trúc cổng",
+        "next": "ce_strange_portal_study"
+      },
+      {
+        "text": "Rời đi",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_portal_enter",
+    "text": "Bạn bị hút vào cổng và rơi xuống một thế giới ngẫu nhiên.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "flags": ["used_strange_portal"] },
+        "next": "random_world_jump"
+      }
+    ]
+  },
+  {
+    "id": "ce_strange_portal_study",
+    "text": "Bạn ghi chép lại cấu trúc của cổng không gian, thu được kiến thức quý giá.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "int": "+3", "xp": "+100" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes",
+    "name": "Người Quen Cũ?",
+    "weight": 4,
+    "min_age": 15,
+    "text": "Một ông lão nhìn chằm chằm vào bạn. 'Ngươi... ta đã thấy ngươi ở thế giới trước. Ngươi vẫn chưa bỏ cuộc sao?'",
+    "choices": [
+      {
+        "text": "Hỏi ông ta biết gì",
+        "next": "ce_npc_recognizes_ask"
+      },
+      {
+        "text": "Phủ nhận",
+        "next": "ce_npc_recognizes_deny"
+      },
+      {
+        "text": "Tấn công ông ta",
+        "next": "ce_npc_recognizes_attack"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes_ask",
+    "text": "Ông lão thở dài: 'Vòng lặp này... nó không bao giờ kết thúc. Hãy giữ lấy cái này.' Ông đưa cho bạn một mảnh ký ức.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "memoryFragments": "+1" }, "flags": ["met_old_man_loop"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes_deny",
+    "text": "'Có lẽ ta nhầm người.' Ông lão lắc đầu và bước đi.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_npc_recognizes_attack",
+    "text": "Ông lão biến mất vào hư không trước khi đòn tấn công của bạn chạm tới. 'Ngươi vẫn bạo lực như xưa.'",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "stats": { "cha": "-5" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_trap",
+    "name": "Bẫy Ẩn",
+    "weight": 20,
+    "min_age": 2,
+    "max_occurrences": null,
+    "cooldown_scenes": 8,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Bạn nghe thấy tiếng 'cạch' nhỏ dưới chân. Một cơ chế nào đó vừa được kích hoạt...",
+    "worldVariants": {
+      "fantasy": { "text": "Một tiếng 'cạch' vang lên dưới chân. Bẫy cơ học cổ, bụi bám đầy nhưng vẫn nguy hiểm." },
+      "scifi": { "text": "Cảm biến laser nhấp nháy đỏ. Hệ thống phòng thủ tự động đã phát hiện bạn." },
+      "eastern": { "text": "Một sợi dây tơ mỏng manh căng ngang đường. Bẫy của ninja, tinh vi và chết chóc." },
+      "dark_fantasy": { "text": "Những ký tự nguyền rủa trên sàn bừng sáng. Bẫy ma thuật đen." },
+      "postapoc": { "text": "Tiếng cọt kẹt của dây thép. Bẫy mìn tự chế, thô sơ nhưng chết người." }
+    },
+    "trapTypes": [
+      {"id":"trap_dart","name":"Bẫy Phi Tiêu","dc":10,"damage":5,"extraEffect":null,"detectStat":"wis","detectDC":10,"disarmStat":"dex","disarmDC":8},
+      {"id":"trap_spike","name":"Bẫy Gai Nhọn","dc":12,"damage":10,"extraEffect":null,"detectStat":"wis","detectDC":12,"disarmStat":"dex","disarmDC":10},
+      {"id":"trap_poison","name":"Bẫy Khí Độc","dc":14,"damage":8,"extraEffect":{"type":"debuff","stats":{"str":-1,"dex":-1,"int":-1,"con":-1,"wis":-1,"cha":-1},"duration":3},"detectStat":"wis","detectDC":14,"disarmStat":"int","disarmDC":12},
+      {"id":"trap_rune","name":"Bẫy Pháp Thuật","dc":15,"damage":15,"extraEffect":{"type":"silence","duration":1},"detectStat":"int","detectDC":15,"disarmStat":"int","disarmDC":14},
+      {"id":"trap_crushing","name":"Bẫy Nghiền","dc":16,"damage":20,"extraEffect":{"type":"debuff","stats":{"str":-2},"duration":3},"detectStat":"wis","detectDC":14,"disarmStat":"str","disarmDC":16},
+      {"id":"trap_freeze","name":"Bẫy Đóng Băng","dc":14,"damage":5,"extraEffect":{"type":"stun","duration":1},"detectStat":"wis","detectDC":12,"disarmStat":"int","disarmDC":12},
+      {"id":"trap_fire","name":"Bẫy Lửa","dc":15,"damage":15,"extraEffect":{"type":"burn","hpPerTurn":-3,"duration":3},"detectStat":"wis","detectDC":14,"disarmStat":"dex","disarmDC":14},
+      {"id":"trap_net","name":"Bẫy Lưới","dc":10,"damage":0,"extraEffect":{"type":"no_flee","duration":1},"detectStat":"wis","detectDC":10,"disarmStat":"dex","disarmDC":10},
+      {"id":"trap_pit","name":"Bẫy Hố","dc":13,"damage":12,"extraEffect":null,"detectStat":"wis","detectDC":12,"disarmStat":"dex","disarmDC":12},
+      {"id":"trap_alarm","name":"Bẫy Chuông","dc":8,"damage":0,"extraEffect":{"type":"trigger_ambush"},"detectStat":"wis","detectDC":8,"disarmStat":"dex","disarmDC":8},
+      {"id":"trap_acid","name":"Bẫy Axit","dc":16,"damage":18,"extraEffect":{"type":"debuff","stats":{"con":-2},"duration":3},"detectStat":"wis","detectDC":16,"disarmStat":"int","disarmDC":14},
+      {"id":"trap_sleep","name":"Bẫy Khí Ngủ","dc":14,"damage":0,"extraEffect":{"type":"stun","duration":2},"detectStat":"wis","detectDC":14,"disarmStat":"con","disarmDC":14},
+      {"id":"trap_blade","name":"Bẫy Lưỡi Dao","dc":15,"damage":15,"extraEffect":{"type":"bleed","hpPerTurn":-2,"duration":3},"detectStat":"wis","detectDC":14,"disarmStat":"dex","disarmDC":14},
+      {"id":"trap_curse","name":"Bẫy Nguyền Rủa","dc":18,"damage":0,"extraEffect":{"type":"debuff","stats":{"str":-3,"dex":-3,"int":-3,"con":-3,"wis":-3,"cha":-3},"duration":5},"detectStat":"wis","detectDC":18,"disarmStat":"int","disarmDC":16},
+      {"id":"trap_void","name":"Bẫy Hư Không","dc":20,"damage":25,"extraEffect":{"type":"debuff","stats":{"sanity":-5}},"detectStat":"wis","detectDC":20,"disarmStat":"int","disarmDC":18}
+    ],
+    "choices": [
+      {
+        "text": "Phát hiện bẫy (WIS check)",
+        "roll": { "stat": "wis", "target": "trapDC", "successScene": "ce_trap_detected", "failScene": "ce_trap_triggered" }
+      },
+      {
+        "text": "Cố gắng tháo gỡ (DEX check)",
+        "roll": { "stat": "dex", "target": "trapDC", "successScene": "ce_trap_disarmed", "failScene": "ce_trap_triggered" }
+      },
+      {
+        "text": "Chạy qua nhanh",
+        "next": "ce_trap_triggered"
+      }
+    ]
+  },
+  {
+    "id": "ce_trap_detected",
+    "text": "Bạn phát hiện bẫy kịp thời và tránh né an toàn. Kinh nghiệm quý giá!",
+    "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "xp": "+30" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_disarmed",
+    "text": "Bạn khéo léo tháo gỡ bẫy. Bên trong có vài vật phẩm hữu ích.",
+    "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "xp": "+50", "gold": "+20" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_triggered",
+    "text": "Bẫy kích hoạt! Bạn chịu thiệt hại.",
+    "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-15" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_skill_teacher",
+    "name": "Sư Phụ Bí Ẩn",
+    "weight": 8,
+    "min_age": 5,
+    "max_occurrences": 5,
+    "cooldown_scenes": 20,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Một bậc thầy chiến đấu đang luyện tập một mình. Họ nhìn bạn và gật đầu. 'Ta có thể dạy ngươi một chiêu thức.'",
+    "worldVariants": {
+      "fantasy": { "text": "Một hiệp sĩ già cặm cụi mài kiếm. 'Ta thấy ngươi có năng khiếu. Muốn học một chiêu không?'", "skills": ["power_strike","heal"] },
+      "scifi": { "text": "Một kỹ sư cũ đang sửa chữa drone. 'Muốn học cách dùng plasma không? Miễn phí đấy.'", "skills": ["plasma_shot","shield_overcharge"] },
+      "eastern": { "text": "Một lão sư ngồi thiền dưới gốc tùng. 'Muốn tu luyện chăng, thí chủ?'", "skills": ["inner_focus","shadow_step"] },
+      "dark_fantasy": { "text": "Một hồn ma chiến binh hiện ra. 'Ta sẽ truyền lại sức mạnh... nếu ngươi đủ can đảm.'", "skills": ["soul_drain","dark_pact"] },
+      "postapoc": { "text": "Một cựu binh già đang tháo lắp súng. 'Này nhóc, muốn học mấy chiêu sinh tồn không?'", "skills": ["jury_rig","adrenaline"] }
+    },
+    "skillDefinitions": {
+      "power_strike": {"name":"Cú Đánh Mạnh","cost":2,"statReq":{"str":12},"effect":"1.5x weapon damage","world":"fantasy"},
+      "heal": {"name":"Chữa Lành","cost":4,"statReq":{"wis":10},"effect":"Restore 20 HP","world":"fantasy"},
+      "plasma_shot": {"name":"Phát Bắn Plasma","cost":3,"statReq":{"int":12},"effect":"1.5x ranged damage","world":"scifi"},
+      "shield_overcharge": {"name":"Quá Tải Khiên","cost":4,"statReq":{"int":14},"effect":"+50% DEF 2 turns","world":"scifi"},
+      "inner_focus": {"name":"Nội Công","cost":3,"statReq":{"wis":12},"effect":"Restore 15 HP + 10 MP","world":"eastern"},
+      "shadow_step": {"name":"Bóng Ảnh","cost":2,"statReq":{"dex":14},"effect":"Auto-dodge next attack","world":"eastern"},
+      "soul_drain": {"name":"Hút Hồn","cost":5,"statReq":{"int":14},"effect":"Damage + heal 50% dealt","world":"dark_fantasy"},
+      "dark_pact": {"name":"Khế Ước Bóng Tối","cost":3,"statReq":{"wis":10},"effect":"+50% damage, -10 HP","world":"dark_fantasy"},
+      "jury_rig": {"name":"Sửa Chữa Tạm","cost":2,"statReq":{"int":10},"effect":"Repair weapon +3 damage","world":"postapoc"},
+      "adrenaline": {"name":"Adrenaline","cost":4,"statReq":{"con":12},"effect":"+5 STR, +5 DEX, 2 turns","world":"postapoc"}
+    },
+    "choices": [
+      {
+        "text": "Xin được truyền dạy",
+        "next": "ce_skill_teacher_learn"
+      },
+      {
+        "text": "Từ chối lịch sự",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_skill_teacher_learn",
+    "text": "Bậc thầy truyền dạy cho bạn một kỹ năng mới. Bạn cảm thấy mạnh mẽ hơn.",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "learnWorldSkill": true, "stats": { "xp": "+100" }, "flags": ["learned_from_master"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_skill_book",
+    "name": "Cuốn Sách Cổ",
+    "weight": 5,
+    "min_age": 8,
+    "max_occurrences": 3,
+    "cooldown_scenes": 25,
+    "repeatable": true,
+    "priority": "normal",
+    "text": "Bạn tìm thấy một cuốn sách cổ phát sáng kỳ lạ. Bên trong chứa đựng kiến thức về một kỹ năng đã thất truyền.",
+    "worldVariants": {
+      "fantasy": { "text": "Một cuốn grimoire phủ đầy bụi nằm trong đống đổ nát. Khi mở ra, những chữ rune phát sáng." },
+      "scifi": { "text": "Một bộ nhớ AI cổ chứa dữ liệu chiến đấu. 'Tải xuống hoàn tất.'" },
+      "eastern": { "text": "Một cuộn thư cổ viết bằng mực vàng. Bên trong là bí kíp võ công thất truyền." },
+      "dark_fantasy": { "text": "Một cuốn sách da người. Trang đầu viết: 'Kẻ đọc sẽ nhận sức mạnh... và lời nguyền.'" },
+      "postapoc": { "text": "Một chiếc USB cũ với nhãn 'COMBAT MANUAL v3.2'. Dữ liệu vẫn còn nguyên vẹn." }
+    },
+    "choices": [
+      {
+        "text": "Đọc cuốn sách (Cần INT >= 12)",
+        "requires": { "stats": { "int": ">=12" } },
+        "next": "ce_skill_book_read"
+      },
+      {
+        "text": "Cất đi để đọc sau",
+        "sets": { "addItem": "magic_scroll" },
+        "next": "resume"
+      },
+      {
+        "text": "Bỏ qua",
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_skill_book_read",
+    "text": "Kiến thức từ cuốn sách tràn vào tâm trí bạn. Bạn học được một kỹ năng mới!",
+    "choices": [
+      {
+        "text": "Tiếp tục",
+        "sets": { "learnWorldSkill": true, "stats": { "xp": "+150", "int": "+1" }, "flags": ["learned_from_book"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_chain_stranger_reward",
+    "name": "Người Lạ Trở Lại",
+    "weight": 0,
+    "min_age": 10,
+    "max_occurrences": 1,
+    "cooldown_scenes": 0,
+    "repeatable": false,
+    "priority": "chain",
+    "requires_flags": ["helped_injured_stranger"],
+    "text": "Người mà bạn đã cứu trước đây bất ngờ xuất hiện. 'Ân nhân! Tôi đã tìm bạn mãi. Hãy nhận món quà nhỏ này.'",
+    "choices": [
+      {
+        "text": "Nhận quà",
+        "sets": { "generateWeapon": true, "stats": { "gold": "+50", "cha": "+3" }, "flags": ["stranger_rewarded"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_chain_stranger_revenge",
+    "name": "Kẻ Thù Cũ",
+    "weight": 0,
+    "min_age": 10,
+    "max_occurrences": 1,
+    "cooldown_scenes": 0,
+    "repeatable": false,
+    "priority": "chain",
+    "requires_flags": ["robbed_injured_stranger"],
+    "text": "Người mà bạn đã cướp đồ trước đây chặn đường bạn, mắt đỏ ngầu. 'Ngươi tưởng ta sẽ quên sao?!'",
+    "battle": {
+      "monsterId": "vengeful_stranger",
+      "winScene": "ce_chain_revenge_win",
+      "loseScene": "ce_chain_revenge_lose"
+    }
+  },
+  {
+    "id": "ce_chain_revenge_win",
+    "text": "Bạn đánh bại kẻ báo thù. Họ bỏ chạy, nhưng bạn biết rằng hành động cũ luôn có hậu quả.",
+    "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "xp": "+80" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_chain_revenge_lose",
+    "text": "Kẻ báo thù đánh gục bạn và lấy lại gấp đôi những gì bạn đã cướp.",
+    "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "gold": "-60", "hp": "-20" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_chain_merchant_loyal",
+    "name": "Khách Hàng Thân Thiết",
+    "weight": 0,
+    "min_age": 15,
+    "max_occurrences": 1,
+    "cooldown_scenes": 0,
+    "repeatable": false,
+    "priority": "chain",
+    "requires_flags": ["traded_with_mysterious_merchant"],
+    "requires_flag_count": { "flag": "traded_with_mysterious_merchant", "min": 3 },
+    "text": "Thương nhân quen thuộc xuất hiện và cười. 'Khách hàng thân thiết! Ta có hàng đặc biệt chỉ dành cho ngươi.'",
+    "choices": [
+      {
+        "text": "Xem hàng độc quyền (Giảm 30% giá)",
+        "sets": { "flags": ["merchant_loyal_customer"], "generateWeapon": true, "stats": { "gold": "-30" } },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_chain_bandit_boss",
+    "name": "Thủ Lĩnh Bọn Cướp",
+    "weight": 0,
+    "min_age": 20,
+    "max_occurrences": 1,
+    "cooldown_scenes": 0,
+    "repeatable": false,
+    "priority": "chain",
+    "requires_flags": ["defeated_3_bandits"],
+    "text": "Tiếng thì thầm lan truyền: thủ lĩnh bọn cướp đã đặt tiền thưởng lên đầu bạn. Một bóng người bước ra từ bóng tối.",
+    "battle": {
+      "monsterId": "bandit_boss",
+      "winScene": "ce_chain_bandit_boss_win",
+      "loseScene": "ce_bandit_lose"
+    }
+  },
+  {
+    "id": "ce_chain_bandit_boss_win",
+    "text": "Thủ lĩnh bọn cướp gục ngã. Bạn tìm thấy một kho báu nhỏ và một vũ khí quý.",
+    "choices": [{ "text": "Tiếp tục", "sets": { "generateWeapon": true, "stats": { "gold": "+200", "xp": "+300" }, "flags": ["defeated_bandit_boss"] }, "next": "resume" }]
+  },
+  {
+    "id": "ce_chain_shrine_weapon",
+    "name": "Phước Lành Thánh Kiếm",
+    "weight": 0,
+    "min_age": 25,
+    "max_occurrences": 1,
+    "cooldown_scenes": 0,
+    "repeatable": false,
+    "priority": "chain",
+    "requires_flags": ["blessed_by_shrine"],
+    "text": "Ánh sáng ấm áp bao trùm bạn. Đền thờ phản hồi lời cầu nguyện trước đây. Một vũ khí thánh hiện ra từ bàn thờ.",
+    "choices": [
+      {
+        "text": "Nhận Thánh Kiếm",
+        "sets": { "generateWeapon": true, "flags": ["received_holy_weapon"] },
+        "next": "resume"
+      }
+    ]
+  },
+  {
+    "id": "ce_trap_collapsing_floor",
+    "name": "Sàn Nhà Sụp Đổ",
+    "weight": 10,
+    "min_age": 12,
+    "text": "Từng phiến gạch dưới chân bạn bỗng nhiên biến mất, để lại một khoảng không thăm thẳm!",
+    "choices": [
+      { "text": "Nhảy qua các phiến gạch còn lại (Cần 20 AGI)", "requires": { "stats": { "agi": ">=20" } }, "next": "ce_trap_collapsing_floor_pass" },
+      { "text": "Dùng dây móc bám vào trần (Cần 18 DEX)", "requires": { "stats": { "dex": ">=18" } }, "next": "ce_trap_collapsing_floor_pass" },
+      { "text": "Rơi tự do", "next": "ce_trap_falling_rocks_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_collapsing_floor_pass", "text": "Bạn lướt đi nhẹ nhàng như một bóng ma qua vực thẳm.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "agi": "+1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_electric_field",
+    "name": "Điện Trường Quá Tải",
+    "weight": 8,
+    "min_age": 15,
+    "text": "Không khí bỗng nhiên nổ lách tách. Một rào chắn plasma xanh rực hiện ra chặn đứng lối đi!",
+    "choices": [
+      { "text": "Dùng thiết bị cách điện (Cần 24 INT)", "requires": { "stats": { "int": ">=24" } }, "next": "ce_trap_electric_field_pass" },
+      { "text": "Chạy xuyên qua thật nhanh", "next": "ce_trap_electric_field_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_electric_field_pass", "text": "Bạn vô hiệu hóa dòng điện một cách an toàn.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "int": "+1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_electric_field_fail", "text": "Dòng điện 10.000 volt chạy qua người bạn. Mọi dây thần kinh như nổ tung.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-45", "mp": "-20" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_acid_rain",
+    "name": "Mưa Axit Ăn Mòn",
+    "weight": 7,
+    "min_age": 18,
+    "text": "Làn sương bỗng hóa thành những giọt mưa xanh lét, bốc khói khi chạm vào giáp trụ của bạn!",
+    "choices": [
+      { "text": "Tìm nơi trú ẩn ngay lập tức", "next": "ce_trap_acid_rain_hide" },
+      { "text": "Dùng áo choàng kháng phép", "next": "ce_trap_acid_rain_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_acid_rain_hide", "text": "Bạn nấp dưới một phiến đá lớn cho đến khi cơn mưa dứt. Thiết bị của bạn vẫn an toàn.", "choices": [{ "text": "Tiếp tục", "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_acid_rain_fail", "text": "Axit ăn mòn lớp giáp và thấm vào da thịt. Thật đau đớn.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-20", "def": "-1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_spike_pit",
+    "name": "Hố Chông Ẩn Giấu",
+    "weight": 14,
+    "min_age": 2,
+    "text": "Mặt đất dưới chân bạn bỗng nhiên đổ sụp! Bên dưới là một hố chông nhọn hoắt.",
+    "choices": [
+      { "text": "Dùng tay bám vào mép hố (Cần 18 STR)", "requires": { "stats": { "str": ">=18" } }, "next": "ce_trap_spike_pit_pass" },
+      { "text": "Cố gắng nhảy sang bên kia (Cần 18 DEX)", "requires": { "stats": { "dex": ">=18" } }, "next": "ce_trap_spike_pit_pass" },
+      { "text": "Rơi xuống", "next": "ce_trap_spike_pit_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_spike_pit_pass", "text": "Bạn thoát hiểm trong gang tấc. Tim đập loạn nhịp.", "choices": [{ "text": "Tiếp tục", "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_spike_pit_fail", "text": "Bạn rơi xuống chông. Cơn đau nhức nhối khắp cơ thể.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-35", "con": "-1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_swinging_blade",
+    "name": "Lưỡi Dao Đu Đưa",
+    "weight": 12,
+    "min_age": 6,
+    "text": "Một lưỡi dao khổng lồ từ trần nhà bất ngờ văng xuống theo hình vòng cung!",
+    "choices": [
+      { "text": "Cúi người thật thấp (Cần 15 AGI)", "requires": { "stats": { "agi": ">=15" } }, "next": "ce_trap_swinging_blade_pass" },
+      { "text": "Đỡ đòn (Cần 22 STR)", "requires": { "stats": { "str": ">=22" } }, "next": "ce_trap_swinging_blade_pass" },
+      { "text": "Không kịp phản ứng", "next": "ce_trap_swinging_blade_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_swinging_blade_pass", "text": "Lưỡi dao lướt qua trên đầu bạn, chỉ cắt đứt vài sợi tóc.", "choices": [{ "text": "Tiếp tục", "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_swinging_blade_fail", "text": "Lưỡi dao chém ngang lưng bạn. Vết thương rất sâu.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-40" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_skill_shadow_grasp",
+    "name": "Bóng Tối Thì Thầm",
+    "weight": 6,
+    "min_age": 18,
+    "text": "Bạn bước vào một khu vực bóng tối đặc quánh. Những tiếng thì thầm mời gọi bạn nắm giữ sức mạnh của bóng đêm.",
+    "choices": [
+      { "text": "Nắm lấy bóng tối", "sets": { "addSkill": "shadow_grasp", "stats": { "cha": "-2" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_barrier",
+    "name": "Lá Chắn Cổ Đại",
+    "weight": 7,
+    "min_age": 14,
+    "text": "Bạn tìm thấy một tấm bia đá ghi chép kỹ thuật tạo ra rào chắn bằng năng lượng tinh khiết.",
+    "choices": [
+      { "text": "Nghiên cứu bia đá", "sets": { "addSkill": "barrier", "stats": { "int": "+1" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_trap_quicksand",
+    "name": "Cát Lún Tử Thần",
+    "weight": 11,
+    "min_age": 4,
+    "text": "Vùng đất phía trước không phải là đất cứng, mà là một hố cát lún đang từ từ kéo bạn xuống!",
+    "choices": [
+      { "text": "Nằm ngang người để phân tán trọng lượng", "next": "ce_trap_quicksand_pass" },
+      { "text": "Cố gắng vùng vẫy thoát ra", "next": "ce_trap_quicksand_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_quicksand_pass", "text": "Bạn từ từ bò thoát ra khỏi vùng cát lún. Bạn lấm lem bùn đất nhưng an toàn.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "con": "+1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_quicksand_fail", "text": "Bạn càng lún sâu hơn. Phải mất rất nhiều thời gian và MP bạn mới thoát ra được.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-10", "mp": "-30" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_magic_rune",
+    "name": "Cổ Tự Ma Thuật Bùng Nổ",
+    "weight": 9,
+    "min_age": 10,
+    "text": "Bạn dẫm lên một cổ tự phát sáng dưới mặt đất. Nó bắt đầu nạp năng lượng để nổ tung!",
+    "choices": [
+      { "text": "Thanh tẩy cổ tự (Cần 22 INT)", "requires": { "stats": { "int": ">=22" } }, "next": "ce_trap_magic_rune_pass" },
+      { "text": "Dùng khiên ma thuật đỡ (Cần 20 WIS)", "requires": { "stats": { "wis": ">=20" } }, "next": "ce_trap_magic_rune_pass" },
+      { "text": "Chịu đựng vụ nổ", "next": "ce_trap_magic_rune_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_magic_rune_pass", "text": "Bạn vô hiệu hóa được cổ tự trước khi nó nổ.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "mp": "+10" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_magic_rune_fail", "text": "Vụ nổ năng lượng hất văng bạn ra xa. Tâm trí bạn quay cuồng.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-20", "mp": "-20" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_skill_execute",
+    "name": "Đòn Kết Liễu",
+    "weight": 4,
+    "min_age": 25,
+    "text": "Một bóng ma chiến binh xuất hiện và biểu diễn một đòn đánh tàn bạo. 'Ngươi có dám thực hiện nó không?'",
+    "choices": [
+      { "text": "Học Đòn Kết Liễu", "sets": { "addSkill": "execute", "stats": { "cha": "-5" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_haste",
+    "name": "Bí Pháp Tốc Độ",
+    "weight": 5,
+    "min_age": 20,
+    "text": "Bạn tìm thấy một đôi giày cũ nát nhưng có khắc các cổ tự gia tốc cực kỳ tinh xảo.",
+    "choices": [
+      { "text": "Nghiên cứu đôi giày", "sets": { "addSkill": "haste", "stats": { "agi": "+2" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_heavy_strike",
+    "name": "Kỹ Thuật Đòn Đánh Nặng",
+    "weight": 10,
+    "min_age": 5,
+    "text": "Bạn gặp một võ sư già đang luyện tập. Ông gật đầu tán thưởng chí khí của bạn và đề nghị truyền dạy một kỹ năng.",
+    "choices": [
+      { "text": "Học Đòn Đánh Nặng", "sets": { "addSkill": "heavy_strike" }, "next": "resume" },
+      { "text": "Từ chối", "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_fireball",
+    "name": "Cuộn Giấy Hỏa Cầu",
+    "weight": 8,
+    "min_age": 8,
+    "text": "Trong đống tro tàn của một thư viện cũ, bạn tìm thấy một cuộn giấy ma thuật vẫn còn nguyên vẹn.",
+    "choices": [
+      { "text": "Đọc cuộn giấy", "sets": { "addSkill": "fireball", "stats": { "mp": "-10" } }, "next": "resume" },
+      { "text": "Bỏ qua", "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_heal",
+    "name": "Suối Nguồn Sự Sống",
+    "weight": 7,
+    "min_age": 10,
+    "text": "Bạn tìm thấy một dòng suối lấp lánh. Khi uống nước, tâm trí bạn bỗng nhiên thấu hiểu cách chữa lành vết thương.",
+    "choices": [
+      { "text": "Uống nước suối", "sets": { "addSkill": "heal", "stats": { "hp": "+50" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_ice_spike",
+    "name": "Linh Hồn Băng Giá",
+    "weight": 8,
+    "min_age": 12,
+    "text": "Một tinh thể băng khổng lồ tỏa ra hơi lạnh thấu xương. Bạn cảm thấy một sức mạnh băng giá muốn hòa nhập vào tâm trí.",
+    "choices": [
+      { "text": "Tiếp nhận sức mạnh", "sets": { "addSkill": "ice_spike", "stats": { "res": "+2" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_whirlwind",
+    "name": "Vũ Điệu Gió",
+    "weight": 9,
+    "min_age": 15,
+    "text": "Bạn nhìn thấy một cơn lốc xoáy nhỏ cuốn theo những chiếc lá. Cách chúng di chuyển gợi cho bạn cảm hứng về một kỹ năng kiếm thuật mới.",
+    "choices": [
+      { "text": "Luyện tập theo cơn lốc", "sets": { "addSkill": "whirlwind", "stats": { "agi": "+2" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_trap_poison_gas",
+    "name": "Bẫy Khí Độc",
+    "weight": 15,
+    "min_age": 3,
+    "text": "Bạn dẫm phải một phiến đá lún xuống. Một làn khói xanh nhạt bắt đầu tràn ra từ các khe tường!",
+    "choices": [
+      { "text": "Nín thở và chạy nhanh (Cần 15 CON)", "requires": { "stats": { "con": ">=15" } }, "next": "ce_trap_poison_gas_pass" },
+      { "text": "Dùng vải ướt che mũi", "next": "ce_trap_poison_gas_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_poison_gas_pass", "text": "Bạn băng qua làn khói an toàn.", "choices": [{ "text": "Tiếp tục", "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_poison_gas_fail", "text": "Làn khói quá nồng nặc. Bạn cảm thấy chóng mặt và tức ngực.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-15", "con": "-1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_arrows",
+    "name": "Mưa Tên Phục Kích",
+    "weight": 14,
+    "min_age": 5,
+    "text": "Tiếng 'clack' vang lên khô khốc. Từ hai bên vách đá, hàng loạt mũi tên lao thẳng về phía bạn!",
+    "choices": [
+      { "text": "Dùng khiên/vũ khí gạt tên (Cần 18 DEX)", "requires": { "stats": { "dex": ">=18" } }, "next": "ce_trap_arrows_pass" },
+      { "text": "Lăn người né tránh", "next": "ce_trap_arrows_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_arrows_pass", "text": "Bạn gạt bay mọi mũi tên một cách điệu nghệ.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "xp": "+30" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_arrows_fail", "text": "Vài mũi tên cắm phập vào vai và chân bạn. Cơn đau thật thấu xương.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-25" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_illusion",
+    "name": "Ảo Giác Mê Cung",
+    "weight": 12,
+    "min_age": 10,
+    "text": "Con đường phía trước bỗng nhân đôi, rồi nhân ba. Bạn nhận ra mình đang lạc vào một mê trận ảo giác.",
+    "choices": [
+      { "text": "Tập trung tâm trí (Cần 20 WIS)", "requires": { "stats": { "wis": ">=20" } }, "next": "ce_trap_illusion_pass" },
+      { "text": "Đi theo bản năng", "next": "ce_trap_illusion_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_illusion_pass", "text": "Bạn nhìn thấu màn sương giả tạo và tiến bước.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "int": "+2" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_illusion_fail", "text": "Bạn đi vòng vèo trong vô vọng cho đến khi mệt lả.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "mp": "-20", "hp": "-5" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_falling_rocks",
+    "name": "Đá Lở Đột Ngột",
+    "weight": 13,
+    "min_age": 8,
+    "text": "Mặt đất rung chuyển. Những hòn đá lớn từ trên đỉnh núi bắt đầu rơi xuống!",
+    "choices": [
+      { "text": "Phá nát đá (Cần 20 STR)", "requires": { "stats": { "str": ">=20" } }, "next": "ce_trap_falling_rocks_pass" },
+      { "text": "Nấp vào khe đá nhỏ", "next": "ce_trap_falling_rocks_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_falling_rocks_pass", "text": "Bạn đấm nát những hòn đá cản đường. Sức mạnh thật đáng kinh ngạc.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "str": "+1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_falling_rocks_fail", "text": "Khe đá quá hẹp. Một hòn đá lớn rơi trúng chân bạn.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-30", "agi": "-1" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_skill_thunder",
+    "name": "Tia Sét Trong Chai",
+    "weight": 5,
+    "min_age": 20,
+    "text": "Bạn tìm thấy một chiếc chai thủy tinh chứa một tia sét nhỏ đang nhấp nháy. Nó dường như chứa đựng bí mật của thiên lôi.",
+    "choices": [
+      { "text": "Mở chai", "sets": { "addSkill": "thunder_bolt", "stats": { "hp": "-10" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_skill_pierce",
+    "name": "Bí Quyết Xuyên Tâm",
+    "weight": 6,
+    "min_age": 22,
+    "text": "Trên một bức tường đá cũ, ai đó đã khắc lại những tư thế tấn công cực kỳ hiểm hóc.",
+    "choices": [
+      { "text": "Nghiên cứu bức vẽ", "sets": { "addSkill": "pierce", "stats": { "int": "-2", "wis": "+1" } }, "next": "resume" }
+    ]
+  },
+  {
+    "id": "ce_trap_web",
+    "name": "Tơ Nhện Kết Dính",
+    "weight": 15,
+    "min_age": 4,
+    "text": "Bạn vướng vào một mạng nhện khổng lồ. Những sợi tơ cực kỳ bền và dính.",
+    "choices": [
+      { "text": "Dùng lửa đốt tơ", "next": "ce_trap_web_burn" },
+      { "text": "Cố gắng vùng vẫy", "next": "ce_trap_web_fail" }
+    ]
+  },
+  {
+    "id": "ce_trap_web_burn", "text": "Tơ nhện cháy rụi, bạn thoát ra được nhưng hơi nóng làm bạn bỏng nhẹ.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-5" } }, "next": "resume" }]
+  },
+  {
+    "id": "ce_trap_web_fail", "text": "Càng vùng vẫy bạn càng bị cuốn chặt. Bạn mất rất nhiều sức lực mới thoát ra được.", "choices": [{ "text": "Tiếp tục", "sets": { "stats": { "hp": "-10", "mp": "-10" } }, "next": "resume" }]
+  }
+]

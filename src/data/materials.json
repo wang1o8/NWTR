@@ -1,0 +1,43 @@
+{
+  "materials": [
+    {"id":"iron_ore","name":"Quặng Sắt","icon":"🪨","rarity":"common","world":"fantasy","sources":["mine","shop","enemy:skeleton"],"sellPrice":5},
+    {"id":"leather","name":"Da Thuộc","icon":"🧶","rarity":"common","world":"fantasy","sources":["enemy:wolf","shop"],"sellPrice":5},
+    {"id":"wood","name":"Gỗ Tốt","icon":"🪵","rarity":"common","world":"fantasy","sources":["gather:forest","shop"],"sellPrice":3},
+    {"id":"mana_crystal","name":"Tinh Thể Mana","icon":"💎","rarity":"rare","world":"fantasy","sources":["enemy:mage","mine:cave"],"sellPrice":30},
+    {"id":"mithril_ingot","name":"Thỏi Mithril","icon":"🥈","rarity":"very_rare","world":"fantasy","sources":["mine:deep","craft"],"sellPrice":80},
+    {"id":"dragon_scale","name":"Vảy Rồng","icon":"🐉","rarity":"very_rare","world":"fantasy","sources":["enemy:dragon"],"sellPrice":100},
+    {"id":"holy_essence","name":"Tinh Chất Thánh","icon":"✨","rarity":"boss_drop","world":"fantasy","sources":["boss:fantasy"],"sellPrice":200},
+
+    {"id":"scrap_metal","name":"Sắt Phế Liệu","icon":"🔩","rarity":"common","world":"scifi","sources":["gather:ruins","shop","enemy:drone"],"sellPrice":5},
+    {"id":"circuits","name":"Mạch Điện","icon":"🔌","rarity":"uncommon","world":"scifi","sources":["enemy:robot","disassemble"],"sellPrice":15},
+    {"id":"energy_core","name":"Lõi Năng Lượng","icon":"🔋","rarity":"rare","world":"scifi","sources":["enemy:elite_robot","craft"],"sellPrice":40},
+    {"id":"nano_fiber","name":"Sợi Nano","icon":"🧵","rarity":"uncommon","world":"scifi","sources":["shop","enemy:android"],"sellPrice":12},
+    {"id":"alien_alloy","name":"Hợp Kim Ngoài Hành Tinh","icon":"🛸","rarity":"very_rare","world":"scifi","sources":["enemy:alien"],"sellPrice":90},
+    {"id":"quantum_processor","name":"Bộ Xử Lý Lượng Tử","icon":"💻","rarity":"boss_drop","world":"scifi","sources":["boss:scifi"],"sellPrice":200},
+    {"id":"plasma_cell","name":"Tế Bào Plasma","icon":"⚡","rarity":"common","world":"scifi","sources":["shop","enemy:drone"],"sellPrice":8},
+
+    {"id":"bamboo","name":"Tre","icon":"🎋","rarity":"common","world":"eastern","sources":["gather:forest","shop"],"sellPrice":3},
+    {"id":"silk","name":"Lụa","icon":"🧵","rarity":"uncommon","world":"eastern","sources":["enemy:spider","shop"],"sellPrice":12},
+    {"id":"jade","name":"Ngọc Bích","icon":"💚","rarity":"rare","world":"eastern","sources":["mine:mountain"],"sellPrice":35},
+    {"id":"spirit_essence","name":"Tinh Hoa Linh Hồn","icon":"👻","rarity":"rare","world":"eastern","sources":["enemy:spirit","gather:shrine"],"sellPrice":40},
+    {"id":"dragon_tooth","name":"Răng Rồng","icon":"🦷","rarity":"very_rare","world":"eastern","sources":["enemy:dragon"],"sellPrice":95},
+    {"id":"celestial_jade","name":"Ngọc Thiên","icon":"🌟","rarity":"boss_drop","world":"eastern","sources":["boss:eastern"],"sellPrice":220},
+    {"id":"talisman_paper","name":"Giấy Bùa","icon":"📜","rarity":"common","world":"eastern","sources":["shop","gather:temple"],"sellPrice":4},
+
+    {"id":"bone_fragment","name":"Mảnh Xương","icon":"🦴","rarity":"common","world":"dark_fantasy","sources":["enemy:skeleton","enemy:ghoul"],"sellPrice":4},
+    {"id":"shadow_cloth","name":"Vải Bóng Tối","icon":"🖤","rarity":"uncommon","world":"dark_fantasy","sources":["enemy:wraith","gather:crypt"],"sellPrice":15},
+    {"id":"cursed_gem","name":"Ngọc Nguyền Rủa","icon":"💜","rarity":"rare","world":"dark_fantasy","sources":["enemy:demon"],"sellPrice":45},
+    {"id":"soul_shard","name":"Mảnh Linh Hồn","icon":"💀","rarity":"rare","world":"dark_fantasy","sources":["enemy:boss_minion","gather:altar"],"sellPrice":50},
+    {"id":"void_crystal","name":"Tinh Thể Hư Không","icon":"🕳️","rarity":"very_rare","world":"dark_fantasy","sources":["enemy:void_creature"],"sellPrice":110},
+    {"id":"lich_phylactery","name":"Bình Hồn Quỷ Vương","icon":"⚱️","rarity":"boss_drop","world":"dark_fantasy","sources":["boss:dark_fantasy"],"sellPrice":250},
+    {"id":"dark_iron","name":"Sắt Đen","icon":"⬛","rarity":"common","world":"dark_fantasy","sources":["mine:crypt","shop"],"sellPrice":6},
+
+    {"id":"rusty_parts","name":"Phụ Tùng Rỉ","icon":"⚙️","rarity":"common","world":"postapoc","sources":["gather:ruins","enemy:raider"],"sellPrice":4},
+    {"id":"fuel_cell","name":"Tế Bào Nhiên Liệu","icon":"🛢️","rarity":"uncommon","world":"postapoc","sources":["gather:station","enemy:mutant"],"sellPrice":12},
+    {"id":"rad_crystal","name":"Tinh Thể Phóng Xạ","icon":"☢️","rarity":"rare","world":"postapoc","sources":["enemy:mutant_elite","gather:crater"],"sellPrice":40},
+    {"id":"titan_plate","name":"Tấm Titan","icon":"🛡️","rarity":"very_rare","world":"postapoc","sources":["enemy:mech","gather:bunker"],"sellPrice":85},
+    {"id":"nuke_core","name":"Lõi Hạt Nhân","icon":"☢️","rarity":"boss_drop","world":"postapoc","sources":["boss:postapoc"],"sellPrice":230},
+    {"id":"salvaged_wire","name":"Dây Điện Phế Liệu","icon":"🔌","rarity":"common","world":"postapoc","sources":["gather:ruins","shop"],"sellPrice":3},
+    {"id":"clean_water","name":"Nước Sạch","icon":"💧","rarity":"uncommon","world":"postapoc","sources":["gather:well","shop"],"sellPrice":10}
+  ]
+}

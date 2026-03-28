@@ -1,0 +1,65 @@
+[
+
+  {
+    "id": "eg_mystic_barrier",
+    "name": "Rào Chắn Ma Thuật",
+    "description": "Một bức tường ánh sáng ngăn chặn lối đi.",
+    "options": [
+      { "text": "Giải mã ấn ký (INT >= 15)", "requirement": { "INT": 15 }, "success": "Rào chắn tan biến, nhận 50 EXP.", "failure": "Bị giật điện, -10 MP." },
+      { "text": "Cảm nhận luồng mana (WIS >= 14)", "requirement": { "WIS": 14 }, "success": "Tìm ra khe hở, nhận 1 Memory Fragment.", "failure": "Bị choáng váng, -10 Sanity." }
+    ]
+  },
+
+  {
+    "id": "eg_falling_rocks",
+    "name": "Đá Lở",
+    "description": "Đất đá từ trên cao đổ xuống bất ngờ!",
+    "options": [
+      { "text": "Né tránh (DEX >= 15)", "requirement": { "DEX": 15 }, "success": "Không vết trầy xước.", "failure": "Bị đá đè, -20 HP." },
+      { "text": "Chống đỡ (CON >= 16)", "requirement": { "CON": 16 }, "success": "Sức bền tuyệt vời, chỉ mất 2 HP.", "failure": "Kiệt sức, -10 HP, -10 MP." }
+    ]
+  },
+  {
+    "id": "eg_ancient_altar",
+    "name": "Bàn Thờ Cổ",
+    "description": "Một bàn thờ toả ra uy áp nặng nề.",
+    "options": [
+      { "text": "Thành tâm cầu nguyện (WIS >= 18)", "requirement": { "WIS": 18 }, "success": "Nhận chúc phúc, +5 All Stats (tạm thời).", "failure": "Thần linh phẫn nộ, -20 Max HP." },
+      { "text": "Hiến tế linh hồn (Soul >= 10)", "requirement": { "Soul": 10 }, "success": "Đổi Soul lấy kỹ năng mới.", "failure": "Linh hồn bị tổn thương, -5 Soul." }
+    ]
+  },
+  {
+    "id": "eg_heavy_gate",
+    "name": "Cổng Đá Ngàn Cân",
+    "description": "Cánh cổng này cần sức mạnh cực lớn để đẩy ra.",
+    "options": [
+      { "text": "Dùng hết sức bình sinh (STR >= 25)", "requirement": { "STR": 25 }, "success": "Cổng mở ra lối tắt bí mật.", "failure": "Bị thoát vị đĩa đệm, -3 STR (tạm thời)." }
+    ]
+  },
+  {
+    "id": "eg_poisonous_fog",
+    "name": "Sương Độc",
+    "description": "Một làn sương xanh lè bao phủ khu rừng.",
+    "options": [
+      { "text": "Nín thở vượt qua (CON >= 14)", "requirement": { "CON": 14 }, "success": "Vượt qua an toàn.", "failure": "Bị trúng độc, HP giảm mỗi lượt." },
+      { "text": "Dùng phép thanh tẩy (MP >= 20, INT >= 12)", "requirement": { "INT": 12, "mp": 20 }, "success": "Xua tan sương mù cho cả đội.", "failure": "Phép thuật thất bại, tốn 20 MP vô ích." }
+    ]
+  },
+
+  {
+    "id": "eg_riddle_statue",
+    "name": "Bức Tượng Câu Đố",
+    "description": "Bức tượng hỏi: 'Cái gì càng lấy đi càng lớn?'",
+    "options": [
+      { "text": "Trả lời: 'Cái hố' (INT >= 14)", "requirement": { "INT": 14 }, "success": "Mở ra hầm ngầm.", "failure": "Bị nhốt vào bẫy cát, -10 Sanity." }
+    ]
+  },
+  {
+    "id": "eg_tightrope_bridge",
+    "name": "Cầu Dây Leo",
+    "description": "Chiếc cầu rung bần bật trên vực thẳm.",
+    "options": [
+      { "text": "Giữ thăng bằng (DEX >= 16)", "requirement": { "DEX": 16 }, "success": "Qua cầu nhanh chóng.", "failure": "Rơi xuống vực, -50 HP, mất 1 mạng." }
+    ]
+  }
+]

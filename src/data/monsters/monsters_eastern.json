@@ -1,0 +1,553 @@
+{
+  "east_ninja": {
+    "id": "east_ninja",
+    "name": "Genin Ninja",
+    "world": "eastern",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 25,
+      "max_hp": 25,
+      "minDmg": 4,
+      "maxDmg": 7,
+      "exp": 15
+    },
+    "traits": [
+      "fast",
+      "dodge"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "shuriken",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_ninja_monster/200/200"
+  },
+  "east_bandit": {
+    "id": "east_bandit",
+    "name": "Mountain Bandit",
+    "world": "eastern",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 35,
+      "max_hp": 35,
+      "minDmg": 3,
+      "maxDmg": 6,
+      "exp": 12
+    },
+    "traits": [
+      "cowardly",
+      "group_tactics"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "gold_pouch",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_bandit_monster/200/200"
+  },
+  "east_kappa": {
+    "id": "east_kappa",
+    "name": "Kappa",
+    "world": "eastern",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 30,
+      "max_hp": 30,
+      "minDmg": 2,
+      "maxDmg": 5,
+      "exp": 14
+    },
+    "traits": [
+      "water_affinity",
+      "regenerate_in_water"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "kappa_shell",
+          "chance": 0.1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_kappa_monster/200/200"
+  },
+  "east_yokai_fire": {
+    "id": "east_yokai_fire",
+    "name": "Hitodama",
+    "world": "eastern",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 17,
+      "max_hp": 17,
+      "minDmg": 5,
+      "maxDmg": 8,
+      "exp": 12
+    },
+    "traits": [
+      "flying",
+      "fire_dmg",
+      "ethereal"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "spirit_dust",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_yokai_fire_monster/200/200"
+  },
+  "east_bamboo_snake": {
+    "id": "east_bamboo_snake",
+    "name": "Bamboo Viper",
+    "world": "eastern",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 20,
+      "max_hp": 20,
+      "minDmg": 4,
+      "maxDmg": 10,
+      "exp": 15
+    },
+    "traits": [
+      "stealth",
+      "poison"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "snake_venom",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_bamboo_snake_monster/200/200"
+  },
+  "east_samurai": {
+    "id": "east_samurai",
+    "name": "Ronin",
+    "world": "eastern",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 70,
+      "max_hp": 70,
+      "minDmg": 8,
+      "maxDmg": 12,
+      "exp": 35
+    },
+    "traits": [
+      "high_dmg",
+      "defensive"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "broken_blade",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_samurai_monster/200/200"
+  },
+  "east_chunir": {
+    "id": "east_chunir",
+    "name": "Chunin Ninja",
+    "world": "eastern",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 50,
+      "max_hp": 50,
+      "minDmg": 10,
+      "maxDmg": 15,
+      "exp": 38
+    },
+    "traits": [
+      "fast",
+      "poison_dart",
+      "smoke_bomb"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "smoke_bomb",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_chunir_monster/200/200"
+  },
+  "east_monk": {
+    "id": "east_monk",
+    "name": "Corrupted Monk",
+    "world": "eastern",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 80,
+      "max_hp": 80,
+      "minDmg": 6,
+      "maxDmg": 10,
+      "exp": 32
+    },
+    "traits": [
+      "martial_arts",
+      "counter_attack"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "monk_beads",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_monk_monster/200/200"
+  },
+  "east_tengu": {
+    "id": "east_tengu",
+    "name": "Lesser Tengu",
+    "world": "eastern",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 57,
+      "max_hp": 57,
+      "minDmg": 8,
+      "maxDmg": 14,
+      "exp": 36
+    },
+    "traits": [
+      "flying",
+      "wind_magic"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "tengu_feather",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_tengu_monster/200/200"
+  },
+  "east_oni_red": {
+    "id": "east_oni_red",
+    "name": "Red Oni",
+    "world": "eastern",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 100,
+      "max_hp": 100,
+      "minDmg": 12,
+      "maxDmg": 18,
+      "exp": 45
+    },
+    "traits": [
+      "aggressive",
+      "brute_strength",
+      "weak_magic"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "oni_horn",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_oni_red_monster/200/200"
+  },
+  "east_master": {
+    "id": "east_master",
+    "name": "Sword Master",
+    "world": "eastern",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 90,
+      "max_hp": 90,
+      "minDmg": 15,
+      "maxDmg": 25,
+      "exp": 80
+    },
+    "traits": [
+      "iaijutsu",
+      "critical_focus",
+      "intelligent"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "master_scroll",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_master_monster/200/200"
+  },
+  "east_oni_blue": {
+    "id": "east_oni_blue",
+    "name": "Blue Oni",
+    "world": "eastern",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 135,
+      "max_hp": 135,
+      "minDmg": 10,
+      "maxDmg": 16,
+      "exp": 75
+    },
+    "traits": [
+      "defensive",
+      "ice_magic",
+      "high_def"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "oni_horn",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_oni_blue_monster/200/200"
+  },
+  "east_ninetails": {
+    "id": "east_ninetails",
+    "name": "Fox Spirit Illusion",
+    "world": "eastern",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 80,
+      "max_hp": 80,
+      "minDmg": 18,
+      "maxDmg": 28,
+      "exp": 70
+    },
+    "traits": [
+      "charm_magic",
+      "ethereal",
+      "dodge"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "fox_fire",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_ninetails_monster/200/200"
+  },
+  "east_dragon": {
+    "id": "east_dragon",
+    "name": "River Dragon",
+    "world": "eastern",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 175,
+      "max_hp": 175,
+      "minDmg": 14,
+      "maxDmg": 20,
+      "exp": 95
+    },
+    "traits": [
+      "water_magic",
+      "immune_water",
+      "high_hp"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "dragon_scale",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_dragon_monster/200/200"
+  },
+  "east_shinobi": {
+    "id": "east_shinobi",
+    "name": "Jonin Assassin",
+    "world": "eastern",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 70,
+      "max_hp": 70,
+      "minDmg": 20,
+      "maxDmg": 30,
+      "exp": 85
+    },
+    "traits": [
+      "stealth",
+      "execute",
+      "poison"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "ninja_scroll",
+          "chance": 0.6
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_shinobi_monster/200/200"
+  },
+  "east_boss_shogun": {
+    "id": "east_boss_shogun",
+    "name": "Demon Shogun",
+    "world": "eastern",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 375,
+      "max_hp": 375,
+      "minDmg": 25,
+      "maxDmg": 35,
+      "exp": 600
+    },
+    "traits": [
+      "boss",
+      "summon_ronins",
+      "dark_aura"
+    ],
+    "specialEffect": "dark_aura",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "shogun_armor",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_boss_shogun_monster/200/200"
+  },
+  "east_boss_yokai": {
+    "id": "east_boss_yokai",
+    "name": "Kitsune Prime",
+    "world": "eastern",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 300,
+      "max_hp": 300,
+      "minDmg": 20,
+      "maxDmg": 40,
+      "exp": 550
+    },
+    "traits": [
+      "boss",
+      "illusion_clones",
+      "charm"
+    ],
+    "specialEffect": "illusion",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "nine_tails",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_boss_yokai_monster/200/200"
+  },
+  "east_boss_dragon_king": {
+    "id": "east_boss_dragon_king",
+    "name": "Dragon King",
+    "world": "eastern",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 550,
+      "max_hp": 550,
+      "minDmg": 30,
+      "maxDmg": 45,
+      "exp": 850
+    },
+    "traits": [
+      "boss",
+      "storm_caller",
+      "massive_aoe"
+    ],
+    "specialEffect": "storm",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "dragon_pearl",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/east_boss_dragon_king_monster/200/200"
+  }
+}

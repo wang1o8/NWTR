@@ -1,0 +1,550 @@
+{
+  "pa_roach": {
+    "id": "pa_roach",
+    "name": "Rad-Roach",
+    "world": "postapoc",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 22,
+      "max_hp": 22,
+      "minDmg": 2,
+      "maxDmg": 4,
+      "exp": 10
+    },
+    "traits": [
+      "high_def",
+      "irradiated"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "bug_meat",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_roach_monster/200/200"
+  },
+  "pa_raider": {
+    "id": "pa_raider",
+    "name": "Scavenger",
+    "world": "postapoc",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 35,
+      "max_hp": 35,
+      "minDmg": 4,
+      "maxDmg": 7,
+      "exp": 15
+    },
+    "traits": [
+      "cowardly",
+      "use_stim"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "scrap_metal",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_raider_monster/200/200"
+  },
+  "pa_dog": {
+    "id": "pa_dog",
+    "name": "Wild Dog",
+    "world": "postapoc",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 27,
+      "max_hp": 27,
+      "minDmg": 3,
+      "maxDmg": 6,
+      "exp": 12
+    },
+    "traits": [
+      "fast",
+      "pack_hunter"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "dog_meat",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_dog_monster/200/200"
+  },
+  "pa_drone": {
+    "id": "pa_drone",
+    "name": "Rusted Drone",
+    "world": "postapoc",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 25,
+      "max_hp": 25,
+      "minDmg": 2,
+      "maxDmg": 8,
+      "exp": 14
+    },
+    "traits": [
+      "flying",
+      "mechanical",
+      "weak_thunder"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": [
+        {
+          "id": "circuit_board",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_drone_monster/200/200"
+  },
+  "pa_mutant": {
+    "id": "pa_mutant",
+    "name": "Weak Mutant",
+    "world": "postapoc",
+    "tier": 1,
+    "type": "monster",
+    "stats": {
+      "hp": 40,
+      "max_hp": 40,
+      "minDmg": 4,
+      "maxDmg": 8,
+      "exp": 16
+    },
+    "traits": [
+      "aggressive",
+      "poison_blood"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 5,
+      "goldMax": 15,
+      "items": []
+    },
+    "image": "https://picsum.photos/seed/pa_mutant_monster/200/200"
+  },
+  "pa_raider_veteran": {
+    "id": "pa_raider_veteran",
+    "name": "Raider Vet",
+    "world": "postapoc",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 70,
+      "max_hp": 70,
+      "minDmg": 8,
+      "maxDmg": 12,
+      "exp": 35
+    },
+    "traits": [
+      "aggressive",
+      "use_grenade",
+      "cover"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "ammo",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_raider_veteran_monster/200/200"
+  },
+  "pa_ghoul": {
+    "id": "pa_ghoul",
+    "name": "Feral Ghoul",
+    "world": "postapoc",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 55,
+      "max_hp": 55,
+      "minDmg": 6,
+      "maxDmg": 10,
+      "exp": 30
+    },
+    "traits": [
+      "fast",
+      "irradiated",
+      "regenerate_in_rads"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "glowing_blood",
+          "chance": 0.2
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_ghoul_monster/200/200"
+  },
+  "pa_synth": {
+    "id": "pa_synth",
+    "name": "Renegade Synth",
+    "world": "postapoc",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 80,
+      "max_hp": 80,
+      "minDmg": 7,
+      "maxDmg": 14,
+      "exp": 40
+    },
+    "traits": [
+      "mechanical",
+      "accurate",
+      "intelligent"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "synth_component",
+          "chance": 0.6
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_synth_monster/200/200"
+  },
+  "pa_scorpion": {
+    "id": "pa_scorpion",
+    "name": "Rad-Scorpion",
+    "world": "postapoc",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 90,
+      "max_hp": 90,
+      "minDmg": 5,
+      "maxDmg": 9,
+      "exp": 45
+    },
+    "traits": [
+      "high_def",
+      "poison_sting"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "scorpion_tail",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_scorpion_monster/200/200"
+  },
+  "pa_hound": {
+    "id": "pa_hound",
+    "name": "Mutant Hound",
+    "world": "postapoc",
+    "tier": 2,
+    "type": "monster",
+    "stats": {
+      "hp": 60,
+      "max_hp": 60,
+      "minDmg": 8,
+      "maxDmg": 14,
+      "exp": 32
+    },
+    "traits": [
+      "fast",
+      "bleed_attack"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 10,
+      "goldMax": 30,
+      "items": [
+        {
+          "id": "mutant_meat",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_hound_monster/200/200"
+  },
+  "pa_deathclaw": {
+    "id": "pa_deathclaw",
+    "name": "Death-Beast",
+    "world": "postapoc",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 175,
+      "max_hp": 175,
+      "minDmg": 18,
+      "maxDmg": 28,
+      "exp": 90
+    },
+    "traits": [
+      "berserker",
+      "high_dmg",
+      "armor_piercing"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "death_claw",
+          "chance": 0.8
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_deathclaw_monster/200/200"
+  },
+  "pa_raider_boss": {
+    "id": "pa_raider_boss",
+    "name": "Raider Captain",
+    "world": "postapoc",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 135,
+      "max_hp": 135,
+      "minDmg": 12,
+      "maxDmg": 18,
+      "exp": 80
+    },
+    "traits": [
+      "intelligent",
+      "rally_cry",
+      "use_stim"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "combat_armor",
+          "chance": 0.3
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_raider_boss_monster/200/200"
+  },
+  "pa_sentry": {
+    "id": "pa_sentry",
+    "name": "Sentry Bot",
+    "world": "postapoc",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 160,
+      "max_hp": 160,
+      "minDmg": 15,
+      "maxDmg": 25,
+      "exp": 85
+    },
+    "traits": [
+      "mechanical",
+      "high_def",
+      "overheat"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "fusion_core",
+          "chance": 0.5
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_sentry_monster/200/200"
+  },
+  "pa_mutant_behemoth": {
+    "id": "pa_mutant_behemoth",
+    "name": "Super Mutant",
+    "world": "postapoc",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 225,
+      "max_hp": 225,
+      "minDmg": 14,
+      "maxDmg": 20,
+      "exp": 100
+    },
+    "traits": [
+      "slow",
+      "brute_strength",
+      "regenerate"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "mutant_blood",
+          "chance": 0.7
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_mutant_behemoth_monster/200/200"
+  },
+  "pa_stalker": {
+    "id": "pa_stalker",
+    "name": "Wasteland Stalker",
+    "world": "postapoc",
+    "tier": 3,
+    "type": "monster",
+    "stats": {
+      "hp": 90,
+      "max_hp": 90,
+      "minDmg": 20,
+      "maxDmg": 30,
+      "exp": 75
+    },
+    "traits": [
+      "stealth",
+      "critical_focus",
+      "fast"
+    ],
+    "specialEffect": null,
+    "loot": {
+      "goldMin": 15,
+      "goldMax": 45,
+      "items": [
+        {
+          "id": "stealth_boy",
+          "chance": 0.4
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_stalker_monster/200/200"
+  },
+  "pa_boss_behemoth": {
+    "id": "pa_boss_behemoth",
+    "name": "The Behemoth",
+    "world": "postapoc",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 450,
+      "max_hp": 450,
+      "minDmg": 25,
+      "maxDmg": 40,
+      "exp": 650
+    },
+    "traits": [
+      "boss",
+      "radiation_aura",
+      "stomp"
+    ],
+    "specialEffect": "rad_aura",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "behemoth_heart",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_boss_behemoth_monster/200/200"
+  },
+  "pa_boss_mad_dog": {
+    "id": "pa_boss_mad_dog",
+    "name": "Mad Dog Raider Boss",
+    "world": "postapoc",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 325,
+      "max_hp": 325,
+      "minDmg": 20,
+      "maxDmg": 35,
+      "exp": 500
+    },
+    "traits": [
+      "boss",
+      "summon_raiders",
+      "stim_overdose"
+    ],
+    "specialEffect": "summon",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "chainsaw",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_boss_mad_dog_monster/200/200"
+  },
+  "pa_boss_overseer": {
+    "id": "pa_boss_overseer",
+    "name": "AI Overseer",
+    "world": "postapoc",
+    "tier": 4,
+    "type": "boss",
+    "stats": {
+      "hp": 500,
+      "max_hp": 500,
+      "minDmg": 22,
+      "maxDmg": 38,
+      "exp": 750
+    },
+    "traits": [
+      "boss",
+      "laser_grid",
+      "mechanical",
+      "shielded"
+    ],
+    "specialEffect": "laser_grid",
+    "loot": {
+      "goldMin": 20,
+      "goldMax": 60,
+      "items": [
+        {
+          "id": "overseer_chip",
+          "chance": 1
+        }
+      ]
+    },
+    "image": "https://picsum.photos/seed/pa_boss_overseer_monster/200/200"
+  }
+}

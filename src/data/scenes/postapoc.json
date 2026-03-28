@@ -1,0 +1,217 @@
+{
+  "postapoc_start": {
+    "id": "postapoc_start",
+    "world": "postapoc",
+    "speaker": null,
+    "text": "Thế giới thứ tư. Một vùng đất hoang tàn đầy rỉ sét và bụi bặm. Bầu trời mang một màu tím bầm dập. Nó làm tôi nhớ đến quê nhà, ngay trước ngày tận thế.",
+    "choices": [
+      { "text": "Tìm kiếm trong đống đổ nát.", "next": "postapoc_ruins" },
+      { "text": "Đi về phía cột khói.", "next": "postapoc_trader" }
+    ]
+  },
+  "postapoc_ruins": {
+    "id": "postapoc_ruins",
+    "world": "postapoc",
+    "speaker": null,
+    "text": "Tôi đào bới đống xà bần. Một con chuột cống khổng lồ đột biến lao ra, nhe nanh. Nó đang chết đói. Tôi cũng vậy.",
+    "battle": { 
+      "monsterId": "giant_rat",
+      "winScene": "postapoc_end",
+      "loseScene": "game_over"
+    }
+  },
+  "postapoc_trader": {
+    "id": "postapoc_trader",
+    "world": "postapoc",
+    "speaker": "trader",
+    "text": "Một thương nhân ngồi bên đống lửa, đang nướng một thứ gì đó không thể nhận ra. 'Trông cậu như thể vừa đi bộ cả ngàn dặm vậy. Tôi có áo giáp, nếu cậu có tiền.'",
+    "choices": [
+      { "text": "Mua nâng cấp áo giáp (20 Vàng)", "requires": { "stats": { "gold": ">=20" } }, "sets": { "stats": { "gold": "-20", "armor": "+1" } }, "next": "postapoc_end" },
+      { "text": "\"Tôi không cần áo giáp. Tôi cần câu trả lời.\"", "next": "postapoc_trader_talk" }
+    ]
+  },
+  "postapoc_trader_talk": {
+    "id": "postapoc_trader_talk",
+    "world": "postapoc",
+    "speaker": "trader",
+    "text": "Hắn bật cười, một âm thanh khô khốc, lách cách. 'Câu trả lời ư? Ở vùng đất hoang này sao? Câu trả lời duy nhất ở đây là sinh tồn. Nhưng tôi có tìm thấy hòn đá lấp lánh này. Của cậu với giá 10 vàng.'",
+    "choices": [
+      { "text": "Mua Mảnh Ký Ức (10 Vàng)", "requires": { "stats": { "gold": ">=10" } }, "sets": { "stats": { "gold": "-10", "memoryFragments": "+1" } }, "next": "postapoc_end" },
+      { "text": "\"Giữ lấy đi.\"", "next": "postapoc_end" }
+    ]
+  },
+  "postapoc_end": {
+    "id": "postapoc_end",
+    "world": "postapoc",
+    "speaker": null,
+    "text": "Tôi đứng ở rìa vùng đất hoang. Gió rít gào. Tôi đã thu thập được những mảnh vỡ của quá khứ, nhưng bức tranh vẫn chưa hoàn chỉnh. Liệu đây có phải là tất cả?",
+    "choices": [
+      { "text": "Đối mặt với Sự Thật (Cần 3 Mảnh Ký Ức)", "requires": { "stats": { "memoryFragments": ">=3" } }, "next": "true_ending" },
+      { "text": "Kêu gọi những mối liên kết (Cần Hảo Cảm Pháp Sư & Hồ Ly)", "requires": { "stats": { "affection_mage": ">=1", "affection_fox": ">=1" } }, "next": "secret_ending" },
+      { "text": "Tiếp tục lang thang.", "next": "start" }
+    ]
+  },
+  "secret_ending": {
+    "id": "secret_ending",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Tôi nhắm mắt lại, không phải để nhớ về quá khứ, mà là nhớ về những người tôi đã gặp. Nụ cười buồn bã của cô pháp sư, tiếng cười tinh nghịch của nàng hồ ly. Hư Không dường như không còn quá trống rỗng nữa. Tôi không cần phải xây dựng lại thế giới cũ. Tôi đã có một thế giới mới.",
+    "choices": [
+      { "text": "Bắt đầu lại", "next": "start", "sets": { "stats": { "hp": 20, "memoryFragments": 0, "affection_mage": 0, "affection_fox": 0 } } }
+    ]
+  },
+  "true_ending": {
+    "id": "true_ending",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Những mảnh vỡ cộng hưởng. Một ánh sáng chói lòa. Tôi nhớ ra rồi. Tôi nhớ ngọn lửa. Tôi nhớ những khuôn mặt. Đó không phải lỗi của tôi. Nhưng tôi đã không thể ngăn cản nó. Điểm Nối mở ra một con đường cuối cùng.",
+    "choices": [
+      { "text": "Bước vào ánh sáng. Cố gắng xây dựng lại.", "next": "ending_rebuild" },
+      { "text": "Quay lưng lại. Tìm một ngôi nhà mới trong đống tro tàn.", "next": "ending_wander" }
+    ]
+  },
+  "ending_rebuild": {
+    "id": "ending_rebuild",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Tôi bước qua. Thật khó khăn. Thật đau đớn. Nhưng lần đầu tiên sau một thời gian dài, tôi cảm thấy một điều gì đó khác ngoài sự trống rỗng. Tôi cảm thấy hy vọng. [KẾT CỤC THỰC SỰ: NGƯỜI KIẾN TẠO]",
+    "choices": [
+      { "text": "Bắt đầu lại", "next": "start", "sets": { "stats": { "hp": 20, "memoryFragments": 0, "affection_mage": 0, "affection_fox": 0 } } }
+    ]
+  },
+  "ending_wander": {
+    "id": "ending_wander",
+    "world": "tutorial",
+    "background": "void",
+    "speaker": null,
+    "text": "Tôi để những mảnh vỡ tan biến vào Hư Không. Quá khứ đã chết. Tôi là Kẻ Lang Thang. Và vẫn còn những thế giới cần đến tôi. [KẾT CỤC THỰC SỰ: KẺ LANG THANG VĨNH CỬU]",
+    "choices": [
+      { "text": "Bắt đầu lại", "next": "start", "sets": { "stats": { "hp": 20, "memoryFragments": 0, "affection_mage": 0, "affection_fox": 0 } } }
+    ]
+  },
+  "postapoc_event_rad_leak": {
+    "id": "postapoc_event_rad_leak",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Máy đo Geiger của bạn kêu lạch cạch liên hồi. Một thùng chứa phế thải hạt nhân gần đó đang rò rỉ mãnh liệt.",
+    "choices": [
+      { "text": "Băng qua nhanh (-10 HP)", "sets": { "stats": { "hp": "-10" } }, "next": "resume" },
+      { "text": "Dùng Anti-Rad (Có Item: Radaway)", "requires": { "flags": ["has_radaway"] }, "sets": { "stats": { "xp": "+20" } }, "next": "resume" }
+    ]
+  },
+  "postapoc_event_tribe_war": {
+    "id": "postapoc_event_tribe_war",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Hai băng đảng phế liệu đang đọ súng dữ dội vì một can xăng. Đạn bay lạc tứ tung.",
+    "choices": [
+      { "text": "Can thiệp giải hòa (CHA >= 16)", "requires": { "stats": { "cha": ">=16" } }, "sets": { "stats": { "rep": "+15", "xp": "+100" } }, "next": "resume" },
+      { "text": "Phục kích kẻ thắng cuộc", "roll": { "stat": "dex", "target": 14, "successScene": "postapoc_event_tribe_loot", "failScene": "postapoc_event_tribe_fail" } },
+      { "text": "Luồn lách rời đi", "next": "resume" }
+    ]
+  },
+  "postapoc_event_tribe_loot": {
+    "id": "postapoc_event_tribe_loot",
+    "text": "Bạn quét sạch tàn dư và thu nhặt được chiến lợi phẩm xịn.",
+    "choices": [ { "text": "Tuyệt! (+50 Vàng, +Weapon)", "sets": { "stats": { "gold": "+50" }, "generateWeapon": true }, "next": "resume" } ]
+  },
+  "postapoc_event_tribe_fail": {
+    "id": "postapoc_event_tribe_fail",
+    "text": "Chúng nó nhận ra bạn và quay súng bắn bạn lên bờ xuống ruộng.",
+    "choices": [ { "text": "Bỏ chạy (-20 HP)", "sets": { "stats": { "hp": "-20" } }, "next": "resume" } ]
+  },
+  "postapoc_event_salvage_run": {
+    "id": "postapoc_event_salvage_run",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Bạn tìm thấy xác một chiếc xe bọc thép bị lật. Bên trong có vẻ vẫn còn vài món hời.",
+    "choices": [
+      { "text": "Phá cửa xe (STR >= 15)", "requires": { "stats": { "str": ">=15" } }, "sets": { "addItem": "scrap_metal", "stats": { "gold": "+30" } }, "next": "resume" },
+      { "text": "Bỏ qua vì tốn sức", "next": "resume" }
+    ]
+  },
+  "postapoc_event_water_crisis": {
+    "id": "postapoc_event_water_crisis",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Bạn khát khô cỏ họng dưới cái nắng thiêu đốt. Bạn tìm thấy một vũng nước nhỏ, nhưng nó có màu rỉ sét.",
+    "choices": [
+      { "text": "Uống (CON >= 14)", "requires": { "stats": { "con": ">=14" } }, "sets": { "stats": { "hp": "+10" } }, "next": "resume" },
+      { "text": "Uống bất chấp (CON < 14)", "requires": { "stats": { "con": "<14" } }, "sets": { "stats": { "hp": "-5", "sanity": "-2" } }, "next": "resume" },
+      { "text": "Nhịn khát (-5 HP)", "sets": { "stats": { "hp": "-5" } }, "next": "resume" }
+    ]
+  },
+  "postapoc_event_mutant_hunt": {
+    "id": "postapoc_event_mutant_hunt",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 7,
+    "text": "Một nhóm thợ săn đang bủa lưới quái vật đột biến. Họ thiếu người vác đồ.",
+    "choices": [
+      { "text": "Nhận làm khuân vác (Cần STR >= 12)", "requires": { "stats": { "str": ">=12" } }, "sets": { "stats": { "gold": "+40", "xp": "+20" } }, "next": "resume" },
+      { "text": "Không làm rảnh đâu", "next": "resume" }
+    ]
+  },
+  "postapoc_event_old_radio": {
+    "id": "postapoc_event_old_radio",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Bạn nhặt được một chiếc radio cổ. Chỉnh rà sóng, bạn nghe thấy giọng một ai đó khóc than rồi im bặt.",
+    "choices": [
+      { "text": "Dò kênh khác (INT >= 12)", "requires": { "stats": { "int": ">=12" } }, "sets": { "stats": { "sanity": "+5", "xp": "+30" } }, "next": "resume" },
+      { "text": "Lắng nghe ám ảnh", "sets": { "stats": { "sanity": "-5" } }, "next": "resume" }
+    ]
+  },
+  "postapoc_event_bunker_door": {
+    "id": "postapoc_event_bunker_door",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 5,
+    "text": "Bạn phát hiện một cánh cửa hầm ngầm phủ đầy cát. Bảng mật mã vẫn còn chút năng lượng.",
+    "choices": [
+      { "text": "Hack (INT >= 16)", "requires": { "stats": { "int": ">=16" } }, "sets": { "generateWeapon": true, "stats": { "gold": "+100" } }, "next": "resume" },
+      { "text": "Đấm vỡ bảng điện (-5 HP)", "sets": { "stats": { "hp": "-5" } }, "next": "resume" }
+    ]
+  },
+  "postapoc_event_sandstorm": {
+    "id": "postapoc_event_sandstorm",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 10,
+    "text": "Bão cát ập tới che mờ tầm nhìn. Gió thổi bay mọi thứ.",
+    "choices": [
+      { "text": "Ghì người xuống chịu đựng (-10 HP)", "sets": { "stats": { "hp": "-10" } }, "next": "resume" },
+      { "text": "Tìm hốc đá (WIS >= 12)", "requires": { "stats": { "wis": ">=12" } }, "sets": { "stats": { "xp": "+10" } }, "next": "resume" }
+    ]
+  },
+  "postapoc_event_crazed_bot": {
+    "id": "postapoc_event_crazed_bot",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 8,
+    "text": "Robot giúp việc bị chập mạch lao ra đon đả mời bạn ăn món súp mọc nấm rêu.",
+    "choices": [
+      { "text": "Thử ăn (Nhận Buff)", "sets": { "stats": { "hp": "+20", "sanity": "-5" } }, "next": "resume" },
+      { "text": "Đạp đổ nồi súp", "sets": { "stats": { "rep": "-1" } }, "next": "resume" }
+    ]
+  },
+  "postapoc_event_oasis_mirage": {
+    "id": "postapoc_event_oasis_mirage",
+    "world": "postapoc",
+    "priority": "world_specific",
+    "weight": 6,
+    "text": "Giữa sa mạc, bạn thấy một ốc đảo tuyệt đẹp. Nhưng tâm trí bạn mách bảo đó có thể chỉ là ảo ảnh.",
+    "choices": [
+      { "text": "Nhìn thấu ảo ảnh (WIS >= 15)", "requires": { "stats": { "wis": ">=15" } }, "sets": { "stats": { "sanity": "+10" } }, "next": "resume" },
+      { "text": "Lao tới uống nước (Mất tỉnh táo)", "sets": { "stats": { "sanity": "-15", "mp": "-10" } }, "next": "resume" }
+    ]
+  }
+}

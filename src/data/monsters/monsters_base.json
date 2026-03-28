@@ -1,0 +1,13 @@
+{
+  "stat_pool": [
+    "physAtk", "magAtk", "dodge", "physicalResist", "magicResist", "critChance", "critDamage", "lck"
+  ],
+  "drop_table": {
+    "COMMON": { "nothing": 0.70, "common": 0.25, "uncommon": 0.05 },
+    "UNCOMMON": { "nothing": 0.50, "common": 0.30, "uncommon": 0.15, "rare": 0.05 },
+    "RARE": { "nothing": 0.30, "common": 0.30, "uncommon": 0.25, "rare": 0.10, "epic": 0.05 },
+    "EPIC": { "nothing": 0.10, "common": 0.20, "uncommon": 0.30, "rare": 0.25, "epic": 0.10, "legendary": 0.05 },
+    "LEGENDARY": { "nothing": 0.0, "common": 0.10, "uncommon": 0.20, "rare": 0.30, "epic": 0.25, "legendary": 0.10, "mythic": 0.05 },
+    "MYTHIC": { "nothing": 0.0, "common": 0.0, "uncommon": 0.10, "rare": 0.20, "epic": 0.30, "legendary": 0.30, "mythic": 0.10 }
+  }
+}

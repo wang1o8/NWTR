@@ -1,0 +1,6 @@
+{
+  "world": [
+    { "id": "t_w_ea_1", "name": "Chân Khí Hộ Thể", "effect": { "maxHp": 20, "DEF": 3 }, "lore": "Luyện khí từ nhỏ, nội công thâm hậu." },
+    { "id": "t_w_ea_2", "name": "Kiếm Tâm Thông Minh", "effect": { "STR": 5, "CRIT_DMG": 20 }, "lore": "Sinh ra đã có duyên với kiếm đạo." }
+  ]
+}

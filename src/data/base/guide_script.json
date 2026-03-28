@@ -1,0 +1,152 @@
+{
+  "categories": [
+    {
+      "id": "combat",
+      "label": "Chiến đấu & Kỹ năng",
+      "icon": "⚔️",
+      "questions": [
+        {
+          "id": "how_to_attack",
+          "question": "Làm sao để tấn công?",
+          "answer": "Trong màn hình chiến đấu, chọn Tấn Công rồi chọn kỹ năng muốn dùng. Mỗi kỹ năng tốn MP khác nhau. Đừng lãng phí sức lực vô ích.",
+          "followups": ["what_is_crit", "how_to_use_skills"]
+        },
+        {
+          "id": "what_is_crit",
+          "question": "Chí mạng là gì?",
+          "answer": "Chí mạng (Crit) gây 150% sát thương. Tỉ lệ crit tăng theo DEX. Một số kỹ năng đảm bảo crit, hãy tận dụng chúng.",
+          "followups": ["how_to_increase_dex", "combat_strategy"]
+        },
+        {
+          "id": "how_to_use_skills",
+          "question": "Sử dụng kỹ năng như thế nào?",
+          "answer": "Kỹ năng tiêu tốn MP. Bạn có thể trang bị tối đa 8 kỹ năng tùy theo cấp độ. Chọn kỹ năng phù hợp với kẻ thù để tối ưu sát thương.",
+          "followups": ["skill_slots", "mana_management"]
+        },
+        {
+          "id": "dodge_mechanic",
+          "question": "Làm sao để né tránh?",
+          "answer": "Né tránh phụ thuộc vào chỉ số DEX của bạn. Mỗi 2 điểm DEX tăng 1% tỉ lệ né. Nếu không thể né, hãy hy vọng bộ giáp của bạn đủ dày.",
+          "followups": ["how_to_increase_dex", "physical_resist"]
+        },
+        {
+          "id": "combat_strategy",
+          "question": "Chiến thuật chiến đấu cơ bản?",
+          "answer": "Luôn giữ HP trên mức an toàn. Quan sát điểm yếu của kẻ thù. Đôi khi rút lui là lựa chọn khôn ngoan nhất để giữ mạng.",
+          "followups": ["how_to_attack", "mana_management"]
+        }
+      ]
+    },
+    {
+      "id": "equipment",
+      "label": "Trang bị & Vật phẩm",
+      "icon": "🎒",
+      "questions": [
+        {
+          "id": "weapon_rarity",
+          "question": "Phẩm chất vũ khí là gì?",
+          "answer": "Vũ khí có 6 phẩm cấp từ Phàm Cấp đến Thần Cấp. Phẩm cấp càng cao, chỉ số cộng thêm càng mạnh và có thể có hiệu ứng đặc biệt. Đừng mong đợi tìm thấy Thần Cấp ở bãi rác.",
+          "followups": ["how_to_get_weapons", "special_effects"]
+        },
+        {
+          "id": "how_to_get_weapons",
+          "question": "Làm sao để có vũ khí mới?",
+          "answer": "Bạn có thể tìm thấy chúng trong rương, mua từ thương nhân hoặc nhặt từ xác kẻ thù. May mắn (LCK) ảnh hưởng lớn đến chất lượng món đồ bạn tìm thấy.",
+          "followups": ["weapon_rarity", "luck_stat"]
+        },
+        {
+          "id": "special_effects",
+          "question": "Hiệu ứng đặc biệt là gì?",
+          "answer": "Một số vũ khí hiếm có hiệu ứng như Hút Máu, Phá Hồn hay Quá Tải. Chúng có thể xoay chuyển cục diện trận đấu nếu biết cách dùng.",
+          "followups": ["weapon_rarity", "combat_strategy"]
+        },
+        {
+          "id": "inventory_limit",
+          "question": "Giới hạn hành trang?",
+          "answer": "Sức chứa hành trang phụ thuộc vào chỉ số STR. Mỗi 3 điểm STR tăng thêm 1 ô chứa đồ. Đừng tham lam nhặt mọi thứ nếu không muốn bước đi nặng nề.",
+          "followups": ["how_to_increase_str", "carry_weight"]
+        },
+        {
+          "id": "cursed_items",
+          "question": "Vật phẩm bị nguyền rủa?",
+          "answer": "Một số món đồ mang lại sức mạnh to lớn nhưng đi kèm cái giá đắt đỏ. Hãy cân nhắc kỹ trước khi đeo chúng vào người. Lời nguyền không dễ gỡ bỏ đâu.",
+          "followups": ["sanity_system", "special_effects"]
+        }
+      ]
+    },
+    {
+      "id": "world",
+      "label": "Thế giới & Cốt truyện",
+      "icon": "🗺️",
+      "questions": [
+        {
+          "id": "what_is_this_world",
+          "question": "Thế giới này là gì?",
+          "answer": "Một mảnh vỡ của thực tại, nơi những kẻ lữ hành bị kẹt lại. Không có đường về, chỉ có sự sinh tồn hoặc tan biến vào hư không.",
+          "followups": ["world_jump", "memory_fragments"]
+        },
+        {
+          "id": "world_jump",
+          "question": "Làm sao để chuyển thế giới?",
+          "answer": "Khi hoàn thành chương hoặc tìm thấy cổng không gian, bạn sẽ bị đẩy sang một thế giới khác. Mỗi nơi có quy luật và hiểm nguy riêng. Đừng mong chờ sự ổn định.",
+          "followups": ["what_is_this_world", "soul_stat"]
+        },
+        {
+          "id": "memory_fragments",
+          "question": "Mảnh ký ức dùng làm gì?",
+          "answer": "Chúng là những gì còn sót lại của quá khứ. Thu thập đủ có thể giúp bạn hiểu về nguồn gốc của sự hỗn loạn này. Hoặc có thể chúng chỉ là những ảo ảnh vô nghĩa.",
+          "followups": ["what_is_this_world", "lore_knowledge"]
+        },
+        {
+          "id": "sanity_system",
+          "question": "Hệ thống Tâm trí (Sanity)?",
+          "answer": "Thế giới này bào mòn lý trí của bạn. Sanity thấp dẫn đến ảo giác và điên loạn. Giữ cho tâm trí tỉnh táo nếu không muốn mất quyền kiểm soát bản thân.",
+          "followups": ["how_to_restore_sanity", "cursed_items"]
+        },
+        {
+          "id": "reputation",
+          "question": "Danh tiếng (Reputation)?",
+          "answer": "Cách thế giới nhìn nhận bạn. Nó ảnh hưởng đến giá cả và cách NPC đối xử với bạn. Làm kẻ tốt hay kẻ xấu đều có cái giá của nó.",
+          "followups": ["merchant_prices", "affection_system"]
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "label": "Chỉ số & Traits",
+      "icon": "📊",
+      "questions": [
+        {
+          "id": "core_attributes",
+          "question": "Các thuộc tính cốt lõi?",
+          "answer": "Có 6 thuộc tính: STR, DEX, CON, INT, WIS, CHA. Chúng quyết định mọi khả năng của bạn. Hãy nâng cấp chúng một cách khôn ngoan khi lên cấp.",
+          "followups": ["how_to_increase_stats", "derived_stats"]
+        },
+        {
+          "id": "innate_traits",
+          "question": "Thiên phú bẩm sinh là gì?",
+          "answer": "Những đặc điểm bạn có từ khi sinh ra. Chúng không thể thay đổi và định hình phong cách chiến đấu của bạn. Chấp nhận định mệnh của mình đi.",
+          "followups": ["conditional_traits", "core_attributes"]
+        },
+        {
+          "id": "conditional_traits",
+          "question": "Thiên phú kích hoạt?",
+          "answer": "Những kỹ năng bị động mở khóa qua trang bị, sự kiện hoặc đạt ngưỡng chỉ số. Bạn có thể có tối đa 5 thiên phú loại này cùng lúc.",
+          "followups": ["innate_traits", "stat_thresholds"]
+        },
+        {
+          "id": "luck_stat",
+          "question": "Chỉ số May mắn (LCK)?",
+          "answer": "Ảnh hưởng đến tỉ lệ rơi đồ hiếm và các sự kiện ngẫu nhiên có lợi. Đôi khi may mắn còn quan trọng hơn cả sức mạnh. Nhưng đừng quá dựa dẫm vào nó.",
+          "followups": ["how_to_get_weapons", "core_attributes"]
+        },
+        {
+          "id": "soul_stat",
+          "question": "Chỉ số Linh hồn (SOUL)?",
+          "answer": "Năng lượng dùng cho các khả năng xuyên thế giới và chống lại sự đào thải của thực tại. Mất hết linh hồn đồng nghĩa với cái chết vĩnh viễn.",
+          "followups": ["world_jump", "what_is_this_world"]
+        }
+      ]
+    }
+  ]
+}
